@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Paras></Paras>
+  <TemplateName>SGMS</TemplateName>
+  <TemplateName1></TemplateName1>
+  <LogPath>/Log.txt</LogPath>
+  <UploadsPath>/Uploads</UploadsPath>
+  <GUIDKey>DA81DA9F-738C-D900-A097-3E18A340AC8F</GUIDKey>
+  <PromptTemplatePage>ShowPrompt.htm</PromptTemplatePage>
+  <DesktopPage>Face.ashx</DesktopPage>
+  <LoginPageName>/Mobile/Gate/Login</LoginPageName>
+
+  <!--验证相关-->
+  <AuthenticateAssemblyName>KingT.WeChat.UI</AuthenticateAssemblyName>
+  <AuthenticateTypeFullName>KingT.WeChat.UI.Authenticate</AuthenticateTypeFullName>
+  <NeedAuthenticate>False</NeedAuthenticate>
+  <!--可选值 None Simple InDepth-->
+  <DefaultAuthenticateLevel>Simple</DefaultAuthenticateLevel>
+  
+  <!--允许操作的时间差 单位秒-->
+  <AllowOperaTimeDiff>3600</AllowOperaTimeDiff>
+
+  <!--权限数据获取类信息-->
+  <RightsDataObtainClassInfo>Sgms.Rights.BLL,Sgms.Rights.BLL.RightsDataObtain</RightsDataObtainClassInfo>
+</Root>

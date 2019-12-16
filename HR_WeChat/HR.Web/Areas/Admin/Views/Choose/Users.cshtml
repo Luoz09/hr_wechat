@@ -1,0 +1,299 @@
+﻿@{
+    ViewBag.Title = "人员选择";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+@section head{
+     
+  <link href="~/Areas/Admin/Style/common.css" rel="stylesheet" />
+  <link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" /> 
+  <script src="~/Areas/Admin/plugins/layui/layui.js"></script> 
+  <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" /> 
+
+
+}
+<!DOCTYPE html> 
+<html>  
+<head> 
+    <style> 
+          body , html{
+            width:100%;
+            height:100%;
+        } 
+        #choose_second {
+           width:150px;
+           float:left;  
+           line-height:30px; 
+           margin-left:20px;
+           margin-top:30px;
+           height:400px;
+        }
+        #choose_users {
+           border:1px solid #999;
+           height:350px;  
+           overflow-y:auto;
+        }
+            #choose_users li {
+                margin-left:20px;
+            }
+        .choose {  
+            margin-left:50px;  
+            color:#0094ff;
+        }   
+    </style>
+</head> 
+<body> 
+    <div style="width:100%;height:440px">
+        <fieldset id="tree_par">
+            <legend>部门选择</legend>
+            <div id="tree"></div>
+        </fieldset>
+        <fieldset id="choose_second">
+            <legend>人员列表</legend>
+            <div id="search_se">
+                <div id="search">
+                    <input type="text" style="width:144px;margin-top:5px;margin-left:2px;border-radius:5px;outline:none;height:30px;" placeholder="搜索人员" onchange="search(this)" />
+                </div>
+                <div id="choose_child"> <ul> </ul> </div>
+            </div>
+        </fieldset>
+        <fieldset id="choose">
+            <legend>已选人员 </legend>
+            <div style="display:block;text-align:center;margin-left:100px;position:absolute;top:20px;">
+                <a href="#" class="button button-blue" onclick="submit()"><span style="height:30px!important; font-size:16px;padding-left:10px!important;padding-top:5px!important;padding-right:10px!important;">确定选择</span></a>
+                @*<a href="#" class="button button-silver"><span>取消</span></a>*@
+            </div>
+            <div id="choose_users">
+              <ul>  
+              </ul>
+            </div>
+        </fieldset>
+    </div>
+        <input type="hidden" id="dep" />  
+        <input type="hidden" id="depid" />   
+        <input type="hidden" id="parentid" value="" /> 
+</body>
+</html>
+
+<script>
+
+
+    //返回部门数据的对应字段名称
+    var ParentID = "PARENT_GUID";
+    var DepID = "GUID";
+    var DepName = "DISPLAY_NAME";
+
+    //返回人员数据的对应字段名称
+    var UserID = "GUID";
+    var UserName = "DISPLAY_NAME"
+
+
+    $(function () {
+        //调用父页面的方法 
+        //var parentid = window.parent.Value();  
+        //var parentid = "";
+            $.ajax({
+                url: "/Admin/Choose/GetBranchs",
+                success: function (data) {
+                    layui.use('tree', function () {
+                        layui.tree({
+                            elem: "#tree",
+                            nodes: trees(data), 
+                            click: function (node) {
+                                $("#dep").val(node.name);
+                                $.ajax({
+                                    url: "/Admin/Choose/GetUsers?parentID=" + node.id + "",
+                                    success: function (data) {
+                                        $("#choose_child ul li").remove();
+                                        for (var i = 0; i < data.length; i++) {
+                                            var ul = $("#choose_child ul");
+                                            if (node.name != "集团单位") {
+                                                //获取人员列表时默认勾选已选人员
+                                                if (Alchoose(data[i].USER_GUID)) {
+                                                    ul.append("<li style='cursor:pointer;' onclick='add(this)'><input type='checkbox' checked   onclick='Beforeadd(this)'  id='" + JSON.stringify(data[i]) + "'  class='" + data[i][UserID] + "' value='" + data[i][UserName] + "'/>" + data[i][UserName] + "</li>")
+                                                }
+                                                else {
+                                                    ul.append("<li style='cursor:pointer;' onclick='add(this)'><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i][UserID] + "' value='" + data[i][UserName] + "'/>" + data[i][UserName] + "</li>")
+                                                }
+                                            }
+                                        }
+                                    }
+                                }) 
+                            }
+                        });
+                    }); 
+                     
+                }
+            }) 
+    })
+      
+    //判断已选人员是否在人员列表中
+    function Alchoose(id) {
+        for (var i = 0; i < $("#choose_users ul li").size() ; i++) {
+            var userid = $("#choose_users ul li:eq(" + i + ")")[0].id;
+            if (userid == id) {
+              return true
+            } 
+        }
+        return false;
+    }
+    
+    //筛选人员列表
+    function search(dom) {
+        var str = dom.value;
+        if ($("#dep").val() == "" || $("#dep").val() == "集团单位") {
+            var ul = $("#choose_child ul");
+            if (str == "") {
+                $(ul).find("li").remove();
+            }
+            $.ajax({
+                url: "/Admin/Choose/SearchUsers?str=" + str + "",
+                success: function (data) {
+                    $(ul).find("li").remove();
+                    for (var i = 0; i < data.length; i++) {
+                        var path = data[i].ALL_PATH_NAME.split('\\');
+                        path = path[path.length - 2];
+                        ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + path + "><input type='checkbox' onclick='Beforeadd(this)'  id='" + JSON.stringify(data[i]) + "'  class='" + data[i].USER_GUID + "' value='" + data[i].DISPLAY_NAME + "'/>" + data[i].DISPLAY_NAME + "</li>")
+                    }
+                }
+            })
+        }
+        else {
+            for (var i = 0; i < $("#choose_child li").size() ; i++) {
+                if ($("#choose_child li:eq(" + i + ")").text().indexOf(str) < 0) {
+                    $("#choose_child li:eq(" + i + ")").addClass("hide");
+                }
+                else {
+                    $("#choose_child li:eq(" + i + ")").removeClass("hide");
+                }
+            }
+        }
+    }
+
+    function Beforeadd(dom) {
+        if (dom.checked) {
+            dom.checked = false;
+        }
+        else {
+            dom.checked = true;
+        } 
+    }
+
+    //添加已选人员
+    function add(dom) {
+        if (!dom.firstChild.checked) {
+            if ($("#dep").val() != "" && $("#dep").val() != "集团单位") {
+                $("#choose_users ul").append("<li id='" + JSON.parse(dom.firstChild.id)["UserID"] + "' class='"+dom.firstChild.id+"'>" + $("#dep").val() + ":<br/><span class='choose'>" + dom.firstChild.value + "</span><span class='chlist' onclick='cancel(this)'/></span></li>")
+            }
+            else {
+                $("#choose_users ul").append("<li id='" + JSON.parse(dom.firstChild.id)["UserID"] + "' class='" + dom.firstChild.id + "'>" + dom.className + ":<br/><span class='choose'>" + dom.firstChild.value + "</span><span class='chlist' onclick='cancel(this)'/></span></li>")
+            }
+            dom.firstChild.checked = true;
+        }
+        else {
+            $("#choose_users ul #" + JSON.parse(dom.firstChild.id)["USER_GUID"] + "").remove();
+            dom.firstChild.checked = false;
+        }
+         
+    }
+
+    //取消人员的选中
+    function cancel(dom) { 
+        dom = dom.parentNode;
+        $("#choose_users ul #" + dom.id + "").remove();
+        for (var i = 0; i < $("#choose_child  ." + dom.id + "").size() ; i++) {
+           $("#choose_child  ." + dom.id + "")[i].checked = false;
+        }
+    }
+
+
+    function submit() {
+
+        //获取父页面需要填充已选人员的元素id
+        var item = window.parent.Item().split(",");
+
+        for (var j = 0; j < item.length; j++) {
+            var msg = "";
+            var Dom = item[j].split("/");
+            for (var i = 0; i < $("#choose_users ul li").size() ; i++) {
+                msg +=JSON.parse($("#choose_users ul li:eq(" + i + ")")[0].className)[Dom[1]] + ",";
+            }
+            msg = msg.substr(0, msg.length - 1);
+            //为父页面的元素赋值
+            window.parent.$(Dom[0]).val(msg);
+            window.parent.$(Dom[0]).change();//手动失去焦点)
+        }
+        
+        //调用父页面的方法
+        window.parent.close();
+        //是否调用页面中的回调事件
+        var url=location.href.split("?")
+        if (url.length > 1 && url[1].split("=")[1]=="true") {
+            window.parent.CallBack();
+        }
+
+    }
+     
+    //获取树形数据
+    function trees(rows) { 
+        var nodes = []; 
+        //获取最高级父节点
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i]; 
+            if (!exists(rows, row[ParentID])) {
+                nodes.push({
+                    id: row[DepID],
+                    name: row[DepName],
+                    spread:true,
+                });
+            }
+        }
+
+        var toDo = [];
+        for (var i = 0; i < nodes.length; i++) {
+            toDo.push(nodes[i]);
+        }
+        while (toDo.length) {
+            //父节点
+            var node = toDo.shift();  
+            // 获取子节点
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                if (row[ParentID] == node.id) {
+                    //存在子节点，不展开子节点
+                    //if (HasChildren(rows, row.GUID)) {
+                    // var child = { id: row.GUID, text: row.DISPLAY_NAME, state: "closed", };
+                    //} 
+                    //else {
+                    //    var child = { id: row.GUID, text: row.DISPLAY_NAME, state: "open", };
+                    //}
+                    var child = { id: row[DepID], name: row[DepName], state: "closed", };
+                    if (node.children) {
+                        node.children.push(child);
+                    } else {
+                        node.children = [child];
+                    }
+                    toDo.push(child);
+                }
+            }
+        }
+        return nodes;
+    }
+     
+    //是否存在父节点
+    function exists(rows, parentId) {
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i][DepID] == parentId) return true;
+        }
+        return false;
+    }
+
+    //是否存在子节点
+    function HasChildren(rows, guid) {
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i][ParentID] == guid) return true;
+        }
+        return false;
+    }
+     
+</script>

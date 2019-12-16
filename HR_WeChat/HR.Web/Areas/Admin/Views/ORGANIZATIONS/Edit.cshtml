@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_EditLayout.cshtml"; 
+}
+ 
+@model ORGANIZATIONS 
+
+@Html.HiddenFor(m => m.ID) 
+ 
+<div class="layui-collapse" style="margin-top:10px;" lay-filter="Info">
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">部门信息</h2>
+        <div class="layui-colla-content"> 
+            <div class="layui-form-item">
+                <label class="layui-form-label">部门名称</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.DISPLAY_NAME, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">父部门</label>
+                <div class="layui-input-block"> 
+                    <input type="text" class="layui-input" name="ParentName" id="ParentName" value="@ViewBag.DepName"  onclick="ChooseDepInfo()"/> 
+                </div>
+                @Html.HiddenFor(m => m.PARENT_GUID) 
+                <input type="hidden" name="allPathName" id="allPathName"  /> 
+            </div> 
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">排序</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.INNER_SORT, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                    })
+                </div>
+            </div>
+
+        </div>
+    </div>   
+</div>
+  
+<script>
+
+    function ChooseDepInfo()
+    {
+        $(".item").val("#ParentName/DISPLAY_NAME,#PARENT_GUID/GUID,#allPathName/ALL_PATH_NAME");
+        if (navigator.userAgent.match(/mobile/i)) {
+            OpenChooseMB("部门选择", $(window).width(), $(window).height(), "Branch", false)
+        }
+        else {
+            OpenChooseW5("部门选择", "Branch", false)
+        }
+    }
+
+</script>
+
+ 
+   

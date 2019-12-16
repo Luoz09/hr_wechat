@@ -1,0 +1,195 @@
+﻿@{
+    //ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_EditLayout.cshtml"; 
+}
+@model HR.Models.USERS
+
+@Html.HiddenFor(m=>m.ID)
+<div class="layui-collapse" style="margin-top:10px;" lay-filter="Info">
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">基础信息</h2>
+        <div class="layui-colla-content">
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 姓</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.LAST_NAME, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                        { "onchange","setLoginName()" },
+                      })
+                </div>
+            </div> 
+            <div class="layui-form-item">
+                <label class="layui-form-label">名</label>
+                <div class="layui-input-block">
+                   @Html.TextBoxFor(m => m.FIRST_NAME, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                        { "onchange","setLoginName()" },
+                      })
+                </div>
+                <input type="hidden" name="allPathName" id="allPathName" />
+            </div> 
+            <div class="layui-form-item">
+                <label class="layui-form-label">登录名</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.LOGON_NAME, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                        { "readonly","true" }
+                    })
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <select class="form-control" name="SEX" lay-value="@Model.SEX">
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                </div>
+            </div>   
+            <div class="layui-form-item">
+                <label class="layui-form-label">岗位</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.SYSCONTENT1, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                    })
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系电话</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.MOBILE, new Dictionary<string, object>{
+                        { "class", "layui-input" }, 
+                    })
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-block">
+                    <input type="password" class="layui-input" name="USER_PWD" value="@Model.USER_PWD" />
+                </div>
+            </div> 
+            @*<div class="layui-form-item">
+                <label class="layui-form-label">年龄</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.AGE, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                    })
+                </div>
+            </div>*@ 
+        </div>
+    </div>
+
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">其他信息</h2>
+        <div class="layui-colla-content"> 
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 岗位</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.RANK_CODE, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 紧急电话</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.EmergencyTel, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 家庭住址</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.BIRTHADDR, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div> 
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 出生日期</label>
+                <div class="layui-input-block">
+                    <input type="date" class="layui-input" name="BIRTHDAY" value="@HR.Web.Areas.Admin.Controllers.USERSController.DateFormat(Model.BIRTHDAY)" />
+                </div>
+            </div> 
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 身份证</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.CARDID, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>  
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 户口所在地</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.REGADDR, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>   
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 户口性质</label>
+                <div class="layui-input-block">
+                    <select class="form-control" name="Registered" lay-value="@Model.Registered">
+                        <option value=""></option>
+                        <option value="1">城市</option>
+                        <option value="2">农村</option>
+                    </select>
+                </div>
+            </div>  
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 毕业学校</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.SCHOOL, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>  
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 专业</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.PROFESSION, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>  
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 毕业时间</label>
+                <div class="layui-input-block">
+                    <input type="date" class="layui-input" name="GRADUATETIME" value="@Model.GRADUATETIME" />
+                </div>
+            </div> 
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 入职时间</label>
+                <div class="layui-input-block">
+                    <input type="date" class="layui-input" name="JOINCOMTIME" value="@HR.Web.Areas.Admin.Controllers.USERSController.DateFormat(Model.JOINCOMTIME)" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 合同开始时间</label>
+                <div class="layui-input-block">
+                    <input type="date" class="layui-input" name="CONTRACTTIME" value="@HR.Web.Areas.Admin.Controllers.USERSController.DateFormat(Model.CONTRACTTIME)" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"> 合同结束时间</label>
+                <div class="layui-input-block">
+                    <input type="date" class="layui-input" name="CONTRACTTLEN" value="@HR.Web.Areas.Admin.Controllers.USERSController.DateFormat(Model.CONTRACTTLEN)" />
+                </div>
+            </div>
+              
+        </div>
+    </div> 
+</div>  
+<script>
+
+    function setLoginName() {
+        var lastName = $("#LAST_NAME").val();
+        var firstName = $("#FIRST_NAME").val();
+        $("#LOGON_NAME").val(lastName+firstName)
+    }
+     
+
+</script>

@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "打卡记录";
+    Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+}
+
+@section search{
+    <table class="SearchTable">
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    打卡人 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" name="CheckUserName" id="CheckUserName" placeholder="请输入打卡人">
+            </td>
+
+            <th>
+                <label class="control-label">
+                    打卡部门 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" name="CheckDepName" id="CheckDepName" placeholder="请输入打卡类型">
+            </td>
+
+            <th>
+                <label class="control-label">
+                    打卡时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="CheckDate" isminvalue="true" name="InputDate" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="CheckDate" ismaxvalue="true" name="InputDate" autocomplete="off">
+                </div>
+            </td>
+        </tr>
+
+
+    </table>
+
+}
+
+<table id="grid">
+    <thead>
+        <tr>
+            <th data-options="field:'CheckUserName',width:'15%',align:'center',sortable:true">
+                打卡人
+            </th>
+            <th data-options="field:'CheckDepName',width:'15%',align:'center',sortable:true">
+                打卡人部门
+            </th>
+            <th data-options="field:'CheckDate',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                打卡时间
+            </th>
+            <th data-options="field:'CheckType',width:'15%',align:'center',sortable:true">
+                打卡类型
+            </th> 
+        </tr>
+    </thead>
+</table>
+
+<script>
+
+    $(".add , .del").remove();
+
+</script>

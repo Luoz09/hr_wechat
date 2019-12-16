@@ -1,0 +1,78 @@
+﻿  body , html{  
+        } 
+        ul {
+           margin:0;
+           padding:0;
+        } 
+        li {
+           list-style:none;
+           line-height:30px;
+        } 
+        .hide{
+            display:none;
+        }
+        #tree_par {
+          width: 200px;
+          float:left; 
+          line-height:30px;   
+          margin-left:30px;
+          margin-top:30px; 
+          height:400px; 
+        }
+        #tree {
+            border:1px solid #999;
+            height:350px; 
+            overflow-y:auto;
+        }
+        #choose_second {
+           width:200px;
+           float:left;  
+           line-height:30px; 
+           margin-left:20px;
+           margin-top:30px;
+           height:400px;
+        }
+        #search_se {
+           height:350px;
+           border:1px solid #999;
+        }
+        #search {
+           height:30px;
+        }
+        #choose_child { 
+           height:308px;
+           margin-top:10px;
+           overflow-y:auto; 
+        }
+        #choose_child li{
+            margin-left:20px;
+        }
+         #choose {
+           width:200px;
+           float:left;  
+           line-height:30px; 
+           margin-left:30px;
+           margin-top:30px;
+           height:400px;   
+        } 
+        .choose {  
+            margin-left:50px;  
+            color:#0094ff;
+        } 
+        .chlist {  
+            border: 1px solid #999;
+            color: #999;
+            border-radius: 50%;
+            line-height: 15px;
+            text-align: center;   
+            margin-top:5px; 
+            height: 18px;
+            float:right;
+            margin-right:10px;
+            width: 18px; 
+            padding: 1px; 
+            cursor:pointer; 
+        }
+        .chlist::before {
+          content: "\2716";
+        } 

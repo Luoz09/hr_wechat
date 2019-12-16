@@ -1,0 +1,92 @@
+﻿  body , html{
+            width:100%;  
+            height:85%;
+        } 
+        ul {
+           margin:0;
+           padding:0;
+        } 
+        li {
+           list-style:none;
+           line-height:30px;
+        } 
+        .hide{
+            display:none;
+        }
+
+        /*导航栏相关*/
+        .leader {
+            height: 30px;
+            overflow: hidden;
+        }
+
+            .leader li {
+                float: left;
+                font-size: 18px;
+            }
+
+                .leader li a:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                } 
+
+            .leader > li + li:before {
+                color: #CCCCCC;
+                content: " / ";
+                padding: 0 5px;
+            }
+
+
+          /*搜索结果显示相关*/
+          .search_item {
+            border-bottom: 1px solid #f8f8f8;
+            cursor: pointer;
+            height: 48px;
+            line-height: 48px;
+            font-size: 18px;
+            width: 75%;
+            margin-left: 5%;
+            float: left;
+            z-index: 99;
+        }
+
+        /*数据显示相关*/
+        #tree_par { 
+          width:90%;
+          float:left; 
+          height:85%; 
+          line-height:30px;   
+          margin-left:5%;
+          margin-top:10px;  
+          overflow-y:auto;
+        }
+
+        .tree_item {
+            border-bottom:1px solid #f8f8f8;
+            cursor:pointer;
+            height:50px;
+            line-height:50px;
+            font-size:14px;
+            width:75%;
+            float:left;  
+            overflow:hidden;
+        }   
+
+        .li_checkbox {
+            height: 40px;
+            width: 25px;
+            margin: 5px;
+            float: left;
+        }
+         
+        /*已选*/
+        .AlChoose {
+            width: 45%; 
+            float: left;
+            line-height: 40px;
+            overflow: hidden;
+        }
+
+        .AlChoose span {
+             cursor:pointer;
+        }

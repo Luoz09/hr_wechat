@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "部门列表";
+    Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+} 
+
+<style>
+  
+</style>
+
+
+@section search{
+    <table class="SearchTable"> 
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    部门 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" name="DISPLAY_NAME" id="DISPLAY_NAME" placeholder="输入部门">
+            </td> 
+        </tr> 
+         
+    </table>
+
+}
+
+<table id="grid">
+    <thead>
+        <tr>
+            <th data-options="field:'DISPLAY_NAME',width:'15%',align:'center',sortable:true">
+                部门名称
+            </th>
+            <th data-options="field:'PARENT_GUID',width:'10%',align:'center',sortable:true,formatter:formatterDepName">
+                父部门
+            </th> 
+            <th data-options="field:'CREATE_TIME',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                录入时间
+            </th>
+            <th data-options="field:'MODIFY_TIME',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                最后更新时间
+            </th>
+        </tr>
+    </thead>
+</table>
+
+<script>
+    var params = {
+        sortName: "PARENT_GUID",
+        sortOrder: "asc",
+    }
+
+
+
+    function formatterDepName(value)
+    {
+        $.ajax({
+            url: "@Url.Action("GetDepByGuid")?Guid=" + value,
+            async: false,
+            success: function (data) {
+                if(data)
+                  value = data.DISPLAY_NAME
+            }
+        })
+        return value;
+    }
+
+</script>

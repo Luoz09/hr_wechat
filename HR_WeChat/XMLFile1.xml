@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Activities>
+  <ActivityInfo ActivityDefineKey="N3">
+    <SelectedData>
+      <OUData>
+        <NodesSelected>
+          <object OBJECTCLASS="USERS" ALL_PATH_NAME="集团单位\十杰装饰\北镇运营中心\北仑运营二部\陈琪雯" DISPLAY_NAME="陈琪雯" OBJ_NAME="陈琪雯" GUID="65691909-57ca-4ff4-9f3d-ea1e477a41c2" />
+        </NodesSelected>
+      </OUData>
+    </SelectedData>
+  </ActivityInfo>
+</Activities>
+
+<MessageData>
+  <FromUserID>e2118ce9-0fbe-4c47-938c-33787fc5394f</FromUserID>
+  <ResourceID>8533a4e0-f458-48dd-bda5-7334b278c26e</ResourceID>
+  <Title>会面设计师</Title>
+  <Content><![CDATA[]]></Content>
+  <URL></URL>
+  <AppID>CUSTOMERSOURCE</AppID>
+  <ProgramID></ProgramID>
+</MessageData>
+
+
+<MessageData>
+  <FromUserID>abbbb22f-2b5d-4a46-8cc2-cdbc325efb38</FromUserID>
+  <Title>[费用报销申请]编号：FY15030163,报销人：</Title>
+  <Content><![CDATA[]]></Content>
+  <URL>/DecorationERP/ExpenseReport/ExpenseReport_Edit.aspx?WorkFlowID=&amp;KeyValue=a1b3eebe-806f-4b94-b214-5a7912f3ff8d</URL>
+  <AppID>FEE</AppID>
+  <ProgramID></ProgramID>
+  <Device></Device>
+</MessageData>
+
+
+<MessageData>
+  <FromUserID>e2118ce9-0fbe-4c47-938c-33787fc5394f</FromUserID>
+  <ResourceID>8533a4e0-f458-48dd-bda5-7334b278c26e</ResourceID>
+  <Title>会面设计师</Title>
+  <Content><![CDATA[]]></Content>
+  <URL></URL>
+  <AppID>CUSTOMERSOURCE</AppID>
+  <ProgramID></ProgramID>
+</MessageData>

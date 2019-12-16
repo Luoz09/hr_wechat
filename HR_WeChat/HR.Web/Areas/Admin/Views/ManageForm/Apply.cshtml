@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "事务申请统计";
+    Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+}
+  
+@section search{
+    <table class="SearchTable">
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    申请人 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" id="ApplyUserName" name="ApplyUserName" placeholder="请选择申请人" readonly onclick="ChooseApplyUser()">
+            </td>
+
+            <th>
+                <label class="control-label">
+                    申请时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" isminvalue="true" name="InputDate">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" ismaxvalue="true" name="InputDate">
+                </div>
+            </td>
+
+        </tr> 
+
+    </table>
+
+}
+
+<table id="grid">
+    <thead>
+        <tr>
+            <th data-options="field:'ApplyUserName',width:'15%',align:'center',sortable:true">
+                申请人
+            </th>
+            <th data-options="field:'LeaveCount',width:'10%',align:'center',sortable:true">
+                请假申请
+            </th>
+            <th data-options="field:'OutCount',width:'15%',align:'center',sortable:true">
+                外出申请
+            </th>
+            <th data-options="field:'BusinessCount',width:'15%',align:'center',sortable:true">
+                出差申请
+            </th>
+            <th data-options="field:'ExtWorkCount',width:'15%',align:'center',sortable:true">
+                加班申请
+            </th>
+            <th data-options="field:'SupplementCount',width:'15%',align:'center',sortable:true">
+                补卡申请
+            </th>
+        </tr>
+    </thead>
+</table>
+
+ 
+<script>
+
+    $(".breadcrumb li:eq(1)").text("事务申请统计列表")
+    $(".add , .del").remove();
+
+
+    var params = {
+        sortName: "ApplyCode",
+        sortOrder: "asc",
+        pagination: false,
+        frozenColumns: true,
+        url:"@Url.Action("GetApplyTypeCount")"
+    }
+     
+
+</script>

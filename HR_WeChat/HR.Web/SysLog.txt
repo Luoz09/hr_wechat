@@ -1,0 +1,210 @@
+[2019-04-24 11:08:11]
+SubmitToDb:err无法更新 EntitySet“HR_WeChatBind”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2019-04-24 11:09:02]
+SubmitToDb:err无法更新 EntitySet“HR_WeChatBind”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2019-04-24 11:11:40]
+SubmitToDb:err无法更新 EntitySet“HR_WeChatBind”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2019-04-24 15:42:37]
+SubmitToDb:err无法更新 EntitySet“HR_UserInfo”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2019-04-24 15:43:41]
+SubmitToDb:err无法更新 EntitySet“HR_UserInfo”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2019-04-24 15:44:30]
+SubmitToDb:err无法更新 EntitySet“HR_UserInfo”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2019-05-06 15:56:12]
+SubmitToDb:err无法更新 EntitySet“HR_DepInfo”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2019-05-06 15:56:33]
+SubmitToDb:err无法更新 EntitySet“HR_DepInfo”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2019-05-08 14:52:21]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 14:55:56]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 14:57:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 14:57:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 14:59:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:00:06]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:00:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:10:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:13:45]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:14:06]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:14:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:20:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:28:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:41:16]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:49:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:51:55]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:53:05]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:53:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 15:55:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:19:43]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:29:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:32:44]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:33:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:33:30]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:37:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:39:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-08 16:43:57]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2019-05-10 10:04:48]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-05-10 10:05:45]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-05-10 10:05:48]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-05-10 10:07:23]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-05-10 10:07:25]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-05-10 10:10:06]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2019-05-10 10:10:06]
+SubmitToDb:err RANK_CODE 字段是必需的。
+[2019-05-10 10:16:57]
+SubmitToDb:err ValidJson 字段是必需的。
+[2019-05-10 10:52:42]
+SubmitToDb:err OBJ_NAME 字段是必需的。
+[2019-05-10 10:54:15]
+SubmitToDb:err RANK_CODE 字段是必需的。
+[2019-05-10 10:54:21]
+SubmitToDb:err RANK_CODE 字段是必需的。
+[2019-08-16 15:42:32]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:42:32]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:43:06]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:43:06]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:43:20]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:43:20]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:44:33]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-08-16 15:44:33]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-14 14:05:41]
+SubmitToDb:err OFVIRTEL 字段是必需的。
+[2019-10-14 14:13:44]
+SubmitToDb:err OFVIRTEL 字段是必需的。
+[2019-10-14 14:13:57]
+SubmitToDb:err OFVIRTEL 字段是必需的。
+[2019-10-14 14:24:01]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-14 14:24:48]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 11:26:29]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 11:26:29]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 11:26:29]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 11:27:45]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 11:28:15]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 11:28:42]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:20:40]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:20:40]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:25:33]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:25:33]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:26:07]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:26:08]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:26:35]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:26:35]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:28:39]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:28:39]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:33:40]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:34:43]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:40:02]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-10-21 13:41:33]
+SubmitToDb:errThe changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'HR.Models.GROUP_USERS' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+[2019-10-21 13:41:33]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-14 10:16:54]
+SubmitToDb:err RANK_CODE 字段是必需的。
+[2019-11-15 09:48:18]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-15 09:50:35]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-15 09:51:13]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-15 09:52:44]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-15 10:11:49]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-15 14:10:40]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-15 14:11:56]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-15 14:13:03]
+SubmitToDb:err DISPLAY_NAME 字段是必需的。FIRST_NAME 字段是必需的。
+[2019-11-21 10:46:32]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-21 13:31:45]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-21 13:38:19]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-21 14:25:52]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-21 14:27:29]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-21 14:29:30]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-21 14:29:38]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-21 14:29:40]
+SubmitToDb:err FIRST_NAME 字段是必需的。
+[2019-11-21 14:34:07]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:37:11]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:45:28]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:46:42]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:48:21]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:48:36]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 09:54:11]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.
+[2019-11-22 14:17:18]
+SubmitToDb:errAn error occurred while updating the entries. See the inner exception for details.

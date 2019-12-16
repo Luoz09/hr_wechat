@@ -1,0 +1,3660 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sgms.Frame</name>
+    </assembly>
+    <members>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Filter(System.Data.SqlClient.SqlConnection,System.String,System.String,Sgms.Frame.Entities.DataFilterInfo,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="connection"></param>
+            <param name="tableName"></param>
+            <param name="filterInfo"></param>
+            <param name="searchFields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Filter(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="connection"></param>
+            <param name="tableName"></param>
+            <param name="searchStr"></param>
+            <param name="searchFields"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Filter(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="connection"></param>
+            <param name="tableName"></param>
+            <param name="advancedSearchJson"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <param name="advancedUseOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Filter(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="connection"></param>
+            <param name="tableName"></param>
+            <param name="searchStr"></param>
+            <param name="searchFields"></param>
+            <param name="advancedSearchJson"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <param name="advancedUseOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Search(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            普通查询
+            </summary>
+            <param name="fields"></param>
+            <param name="searchStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.AdvancedSearch(System.String,System.Boolean)">
+            <summary>
+            高级查询
+            </summary>
+            <param name="advancedSearchJson"></param>
+            <param name="useOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.OrderBy(System.String,System.Boolean,System.String)">
+            <summary>
+            排序
+            </summary>
+            <param name="field"></param>
+            <param name="isDesc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.ADO.ADOFilter.Paging(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <param name="connection"></param>
+            <param name="tableName"></param>
+            <param name="whereSql"></param>
+            <param name="orderSql"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.BLL.BLLHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.BLL.BLLHelper.GetService``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:Sgms.Frame.BLL.EmptyManager.Service">
+            <summary>
+            数据访问层的实例
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.BLL.Manager`1">
+            <summary>
+            仅包含查询操作的数据访问层
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.BLL.Manager`1.LastCount">
+            <summary>
+            最后一次查询的长度
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.BLL.Manager`1.RunMessage">
+            <summary>
+            执行中的系统消息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.BLL.Manager`1.Service">
+            <summary>
+            数据访问层的实例
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.BLL.Manager`1.GetEntity(System.String)">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.BLL.Manager`1.GetData">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.BLL.Manager`1.GetFilteredData">
+            <summary>
+            过滤数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.BLL.Manager`1.GetListData">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.BLL.OperationManager`1">
+            <summary>
+            包含增删改查操作的业务逻辑层基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.BLL.OperationManager`1.CurService">
+            <summary>
+            数据访问层的实例
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.BLL.OperationManager`1.ImportExcel(System.Data.DataTable)">
+            <summary>
+            导入Excel
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="T:Sgms.Frame.BLL.TreeManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.BLL.TreeManager`1.CurService">
+            <summary>
+            数据访问层的实例
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.BLL.TreeManager`1.GetTree">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.BLL.TreeManager`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.BLL.TreeOperationManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.BLL.TreeOperationManager`1.CurService">
+            <summary>
+            数据访问层的实例
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.BLL.TreeOperationManager`1.GetTree">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.BLL.TreeOperationManager`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="topName"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.DAL.TreeOperation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetTree``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetTree``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="nodeID"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="nodeID"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetDepth``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetParent``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetParents``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetChildrenNodes``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetDescendantsNodes``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetChildrenNodes``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            获取子孙节点集合 递归用
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="parentID"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:Sgms.Frame.DAL.TreeOperation.GetTreeWithTop``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="topName"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMChildTableProcess`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMChildTableProcess`1.GetChanges(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <param name="foreignKeyField"></param>
+            <param name="foreignKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMChildTableProcess`1.SaveToCache(Sgms.Frame.Interface.DAL.IOperationService{`0},System.Collections.Generic.List{System.Collections.Generic.IEnumerable{`0}})">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMChildTableProcess`1.SaveToCache(Sgms.Frame.Interface.DAL.IOperationService{`0},System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="json"></param>
+            <param name="foreignKeyField"></param>
+            <param name="foreignKey"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMChildTableProcess`1.Save(Sgms.Frame.Interface.DAL.IOperationService{`0},System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="json"></param>
+            <param name="foreignKeyField"></param>
+            <param name="foreignKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Filter``1(System.Linq.IQueryable{``0},Sgms.Frame.Entities.DataFilterInfo)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="filterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Filter``1(System.Linq.IQueryable{``0},System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="searchStr"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Filter``1(System.Linq.IQueryable{``0},System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="advancedSearchJson"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <param name="advancedUseOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Filter``1(System.Linq.IQueryable{``0},System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="searchStr"></param>
+            <param name="advancedSearchJson"></param>
+            <param name="sortField"></param>
+            <param name="isDesc"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <param name="advancedUseOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Search``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            普通查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="searchStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.AdvancedSearch``1(System.Linq.IQueryable{``0},System.String,System.Boolean)">
+            <summary>
+            高级查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="advancedSearchJson"></param>
+            <param name="useOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.OrderBy``1(System.Linq.IQueryable{``0},System.String,System.Boolean)">
+            <summary>
+            排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="field"></param>
+            <param name="isDesc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.Paging``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData"></param>
+            <param name="pageSize"></param>
+            <param name="curPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.GetSearchExpression``1(System.String,System.Type)">
+            <summary>
+            模糊查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchStr">查询的内容</param>
+            <param name="tType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMFilter.GetAdvancedSearchExpression``1(System.String,System.Type,System.Boolean)">
+            <summary>
+            高级查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchJson"></param>
+            <param name="tType"></param>
+            <param name="useOrSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMOperationService`1">
+            <summary>
+            实体数据模型 数据操作类
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.InsertToCache(`0)">
+            <summary>
+            将一个实体插入到缓存中(在调用SubmitToDb()前不提交给数据库)
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.InsertToCache(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将一组实体集合插入到缓存中(在调用SubmitToDb()前不提交给数据库)
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Insert(`0)">
+            <summary>
+            插入一个实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Insert(System.Collections.IEnumerable)">
+            <summary>
+            插入一组实体集合
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.ModifyToCache(`0)">
+            <summary>
+            更新实体到缓存 非数据库查询结果
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.ModifyToCache(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            更新实体到缓存 非数据库查询结果
+            </summary>
+            <param name="entities"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Modify(`0)">
+            <summary>
+            更新实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(`0)">
+            <summary>
+            更新实体到缓存（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            批量更新实体到缓存（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(`0)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(System.Collections.IEnumerable)">
+            <summary>
+            批量更新实体
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteToCache(System.String)">
+            <summary>
+            根据ID将实体在缓存中删除（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteToCache(`0)">
+            <summary>
+            将实体在缓存中删除（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteToCache(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            根据一组ID在缓存中删除包含这些ID的记录（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteToCache(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            根据一组实体集合在缓存中删除记录（在调用SubmitToDb()前不提交给数据库）
+            </summary>
+            <param name="entities"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteFast(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            快速删除
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.DeleteFast(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            快速删除
+            </summary>
+            <param name="entities"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Delete(System.String)">
+            <summary>
+            根据ID删除一条记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Delete(`0)">
+            <summary>
+            根据实体删除一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Delete(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            根据一组ID删除包含这些ID的记录
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.Delete(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            根据一组实体集合删除记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMOperationService`1.SubmitToDb">
+            <summary>
+            提交至数据库，若出错则获取错误信息
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMService`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMService`1.RunMessage">
+            <summary>
+            执行中的系统消息
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.EDM.DAL.EDMService`1._TmpDbContextType">
+            <summary>
+            DataContext 类型的名称
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.CreateTransaction">
+            <summary>
+            事务单件模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMService`1.DbContext">
+            <summary>
+            ObjectContext
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMService`1.IsWebApp">
+            <summary>
+            判断当前应用是否是Web应用
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.EDM.DAL.EDMService`1._TmpDbSet">
+            <summary>
+            Table
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMService`1.DbSet">
+            <summary>
+            Table
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.SynObjectContext``1(Sgms.Frame.EDM.DAL.EDMService{``0})">
+            <summary>
+            同步数据源
+            </summary>
+            <param name="objectContext"></param>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetFirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            构析函数
+            </summary>
+            <summary>
+            获取第一个
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetEntity(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetData">
+            <summary>
+            获取查询信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetData(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取查询信息
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetFilteredData(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取过滤的数据
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetFilteredData">
+            <summary>
+            获取过滤的数据
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.SqlQueryForDataTatable(System.String)">
+            <summary>
+            根据sql 语句返回datatable
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.GetPrimaryKey">
+            <summary>
+            获取主键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMService`1.Filter``1(System.Linq.IQueryable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <param name="dataSrc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1">
+            <summary>
+            树形数据操作类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.TreeOperation">
+            <summary>
+            数据过滤
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetTree">
+            <summary>
+            获取整棵树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetTree(System.Func{`0,System.Boolean})">
+            <summary>
+            根据条件获取整棵树（此条件也会应用到子孙节点）
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetChildrenTree(System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetChildrenTree(System.String,System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetChildrenTree(System.String,System.Func{`0,System.Boolean})">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetDepth(`0)">
+            <summary>
+            获取深度(0开始计算)
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetParent(`0)">
+            <summary>
+            获取父节点
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetParents(`0)">
+            <summary>
+            获取父节点集合
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetChildrenNodes(System.String)">
+            <summary>
+            获取子节点结合  不会遍历孙节点 执行效率较高
+            </summary>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetDescendantsNodes(`0)">
+            <summary>
+            获取子孙节点集合
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeOperationService`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            获取包含顶级节点的树
+            </summary>
+            <param name="topName"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.EDM.DAL.EDMTreeService`1">
+            <summary>
+            树形数据访问类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.EDM.DAL.EDMTreeService`1.TreeOperation">
+            <summary>
+            数据过滤
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetTree">
+            <summary>
+            获取整棵树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetTree(System.Func{`0,System.Boolean})">
+            <summary>
+            根据条件获取整棵树（此条件也会应用到子孙节点）
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetChildrenTree(System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetChildrenTree(System.String,System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetChildrenTree(System.String,System.Func{`0,System.Boolean})">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetDepth(`0)">
+            <summary>
+            获取深度(0开始计算)
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetParent(`0)">
+            <summary>
+            获取父节点
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetParents(`0)">
+            <summary>
+            获取父节点集合
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetChildrenNodes(System.String)">
+            <summary>
+            获取子节点结合  不会遍历孙节点 执行效率较高
+            </summary>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetDescendantsNodes(`0)">
+            <summary>
+            获取子孙节点集合
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.EDM.DAL.EDMTreeService`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            获取包含顶级节点的树
+            </summary>
+            <param name="topName"></param>
+            <param name="filterID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Entities.DataFilterInfo">
+            <summary>
+            过滤信息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.PageSize">
+            <summary>
+            每页多少条
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.CurPage">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.IsDesc">
+            <summary>
+            是否逆序
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.SearchStr">
+            <summary>
+            查询的字段
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.AdvancedSearchJson">
+            <summary>
+            高级查询用的JSON
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.DataFilterInfo.AdvancedUseOrSearch">
+            <summary>
+            高级查询使用或查询
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.IEntity">
+            <summary>
+            实体类接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.IEntity.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.IFullPathTree">
+            <summary>
+            包含FULLPATH的树
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.IFullPathTree.FullPath">
+            <summary>
+            用 / 隔开
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.IFullPathTree.GlobalSort">
+            <summary>
+            全局排序
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.FullPathTree">
+            <summary>
+            包含FULLPATH的树的树形实体接口实现
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.FullPathTree.FullPath">
+            <summary>
+            完整路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.FullPathTree.GlobalSort">
+            <summary>
+            全局排序
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.ITree">
+            <summary>
+            树形实体接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.ITree.Text">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.ITree.ParentID">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.ITree.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.ITree.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.Tree">
+            <summary>
+            树形实体接口实现
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Tree.ID">
+            <summary>
+            节点ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Tree.Text">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Tree.ParentID">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Tree.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Tree.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.LinkInfo">
+            <summary>
+            超链接信息
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Entities.LinkInfo.DefaultTarget">
+            <summary>
+            默认目标 值：_self
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.LinkInfo.Text">
+            <summary>
+            超链接文本
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.LinkInfo.Href">
+            <summary>
+            超链接地址
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.LinkInfo.Target">
+            <summary>
+            默认 DefaultTarget   DefaultTarget的默认值"_self"
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Result.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.Result.Message">
+            <summary>
+            附加信息
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Entities.SysConfig">
+            <summary>
+            系统配置实体
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.TemplateName">
+            <summary>
+            模板路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.LogPath">
+            <summary>
+            日志路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.UploadsPath">
+            <summary>
+            上传文件路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.PromptTemplatePage">
+            <summary>
+            提示页面文件名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.DesktopPage">
+            <summary>
+            进去的欢迎页面
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.Lang">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.LoginPageName">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.PCLoginPageName">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Entities.SysConfig._TmpMobileLoginPageName">
+            <summary>
+            Mobile登陆页名 默认值：Login.ashx
+            </summary>
+            
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.RebackUrl">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.NoRightsPageName">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.DALAssemblyName">
+            <summary>
+            数据访问层程序集名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.BLLAssemblyName">
+            <summary>
+            业务逻辑层程序集名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.DefaultAuthenticateLevel">
+            <summary>
+            默认认证级别
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.GUIDKey">
+            <summary>
+            GUIDKey
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.AllowOperaTimeDiff">
+            <summary>
+            允许操作的时间差
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.RightsDataObtainClassInfo">
+            <summary>
+            权限数据获取类信息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.AllowLoginFailureTimes">
+            <summary>
+            允许登录失败次数
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Entities.SysConfig.LoginFailureInterval">
+            <summary>
+            登录出错时间间隔单位 分钟
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Entities.Transform.ToList``1(System.Data.DataTable)">
+            <summary>
+            DataTable 转换为List 集合
+            </summary>
+            <typeparam name="TResult">类型</typeparam>
+            <param name="dt">DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Entities.Transform.ToDataTable(System.Collections.IEnumerable)">
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Entities.Transform.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.AuthenticateLevel">
+            <summary>
+            认证级别
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.AuthenticateLevel.None">
+            <summary>
+            不认证
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.AuthenticateLevel.Simple">
+            <summary>
+            简单认证 就认证用户是否登录
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.AuthenticateLevel.InDepth">
+            <summary>
+            深入的认证 认证权限
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Exs.Ex">
+            <summary>
+            扩展类
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Exs.Ex.Replace(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            替换
+            </summary>
+            <param name="str">要替换的字符串</param>
+            <param name="oldValue">要替换的内容</param>
+            <param name="newValue">替换成的内容</param>
+            <param name="times">替换几次</param>
+            <returns>替换的结果</returns>
+        </member>
+        <member name="T:Sgms.Frame.Exs.OrderByEx">
+            <summary>
+            排序扩展
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.OrderBy``1(System.Linq.IQueryable{``0},System.String,System.Type)">
+            <summary>
+            顺序排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <param name="genericArgumentsType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.OrderByDescending``1(System.Linq.IQueryable{``0},System.String,System.Type)">
+            <summary>
+            逆序排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <param name="genericArgumentsType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.OrderBy``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            顺序排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.OrderByDescending``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            逆序排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.ThenBy``1(System.Linq.IOrderedQueryable{``0},System.String,System.Type)">
+            <summary>
+            ThenBy
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.ThenByDescending``1(System.Linq.IOrderedQueryable{``0},System.String,System.Type)">
+            <summary>
+            ThenByDescending
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Exs.OrderByEx.OrderUsingSortExpression``1(System.Linq.IQueryable{``0},System.String,System.Type)">
+            <summary>
+            采用表达式排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="source"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Sgms.Frame.Interface.BLL.IEmptyManager.RunMessage">
+            <summary>
+            运行的消息
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Interface.BLL.IManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Interface.BLL.IManager`1.FilterInfo">
+            <summary>
+            过滤信息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Interface.BLL.IManager`1.LastCount">
+            <summary>
+            最后一条记录长度
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.BLL.IManager`1.GetFilteredData">
+            <summary>
+            过滤数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.BLL.IManager`1.GetListData">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.BLL.IOperationManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Sgms.Frame.Interface.BLL.ITreeManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.Interface.BLL.ITreeManager`1.GetTree">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.BLL.ITreeManager`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.BLL.ITreeOperationManager`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.IChildTableProcess`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.Interface.DAL.IChildTableProcess`1.GetChanges(System.String,System.String,System.String)">
+            <summary>
+            0 新增 1 编辑 2 删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.DAL.IChildTableProcess`1.Save(Sgms.Frame.Interface.DAL.IOperationService{`0},System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="json"></param>
+            <param name="foreignKeyField"></param>
+            <param name="foreignKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.IChildTable">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.Interface.DAL.IChildTable.Update(System.Object,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <param name="childTableJson"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.DAL.IChildTable.Insert(System.Object,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <param name="childTableJson"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Sgms.Frame.Interface.DAL.IEmptyService.RunMessage">
+            <summary>
+            执行中的系统消息
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.IOperationService`1">
+            <summary>
+            带数据操作的数据访问层类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.IService`1">
+            <summary>
+            数据访问层类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Interface.DAL.IService`1.FilterInfo">
+            <summary>
+            过滤信息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Interface.DAL.IService`1.LastCount">
+            <summary>
+            最后一条记录长度
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.DAL.IService`1.GetFilteredData">
+            <summary>
+            获取过滤好的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.ITreeOperationService`1">
+            <summary>
+            带数据操作的数据访问层类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Sgms.Frame.Interface.DAL.ITreeService`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataAccess`1.GetData">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataAccess`1.GetEntity(System.String)">
+            <summary>
+            根据ID获取单个实体
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.IDataFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Interface.IDataOperation`1">
+            <summary>
+            数据操作
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Insert(`0)">
+            <summary>
+            插入一个实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Insert(System.Collections.IEnumerable)">
+            <summary>
+            插入一组实体集合
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Update(`0)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Update(System.Collections.IEnumerable)">
+            <summary>
+            批量更新实体
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Delete(System.String)">
+            <summary>
+            根据ID删除一条记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Delete(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            根据一组ID删除包含这些ID的记录
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.IDataOperation`1.Delete(`0)">
+            <summary>
+            根据实体删除
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.ITreeDataProcess`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetTree">
+            <summary>
+            获取整棵树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetTree(System.Func{`0,System.Boolean})">
+            <summary>
+            根据条件获取树
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetChildrenTree(System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID">节点ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetChildrenTree(System.String,System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID">节点ID</param>
+            <param name="filterID">过滤ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetChildrenTree(System.String,System.Func{`0,System.Boolean})">
+            <summary>
+            获取子树
+            </summary>
+            <param name="nodeID"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetDepth(`0)">
+            <summary>
+            获取深度(0开始计算)
+            </summary>
+            <param name="node">节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetParent(`0)">
+            <summary>
+            获取父节点
+            </summary>
+            <param name="node">节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetParents(`0)">
+            <summary>
+            获取所有父级节点
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetChildrenNodes(System.String)">
+            <summary>
+            获取某个节点了的子节点（集合）
+            </summary>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetDescendantsNodes(`0)">
+            <summary>
+            获取子孙节点
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeDataProcess`1.GetTreeWithTop(System.String,System.String)">
+            <summary>
+            获取包含顶级的树
+            </summary>
+            <param name="filterID"></param>
+            <param name="topName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.ITreeOperation">
+            <summary>
+            树形数据访问
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetTree``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            获取整棵树
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="srcData">数据源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetTree``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            根据条件获取树
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="nodeID">节点ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            获取子树
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="nodeID">节点ID</param>
+            <param name="filterID">过滤ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetChildrenTree``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Boolean})">
+            <summary>
+            获取子树
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="nodeID"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetDepth``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            获取深度(0开始计算)
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="node">节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetParent``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            获取父节点
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="node">节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetParents``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            获取所有父级节点
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetChildrenNodes``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            获取某个节点了的子节点（集合）
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="nodeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetDescendantsNodes``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            获取子孙节点
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.ITreeOperation.GetTreeWithTop``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            获取包含顶级的树
+            </summary>
+            <param name="srcData">数据源</param>
+            <param name="filterID"></param>
+            <param name="topName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Interface.UI.IMVCDataDisplay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayJson(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayJson(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayJson(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayJson(System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="isSuccess"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayNoRightsPage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayNoRightsJson">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayDataOfTotal(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            需要带有总数的数据 会根据data.Count计算
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Interface.UI.IMVCDataDisplay.DisplayDataOfTotal(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            需要带有总数的数据
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Page.PageHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetManager``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetValue(System.Object,System.String)">
+            <summary>
+            反射方式获取属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDateValue(System.Object,System.String)">
+            <summary>
+            反射方式获取属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDocStatus(System.Object,System.String)">
+            <summary>
+            反射方式获取属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Object,System.String,System.Boolean,System.Int32)">
+            <summary>
+            把数字类型显示为字符，去掉多余的0
+            </summary>
+            <param name="obj">实体类</param>
+            <param name="propertyName">属性名字</param>
+            <param name="zeroShowEmpty">当数字为0时，是否显示为空字符</param>
+            <param name="digits">小数位数，负数表示先把小数点向左移的位数，处理后再向右移动回来</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Decimal,System.Int32)">
+            <summary>
+            字符串格式化,当为0是显示为0
+            </summary>
+            <param name="d">字符串</param>
+            <param name="digits">保留小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Decimal,System.Boolean,System.Int32)">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="d">字符串</param>
+            <param name="zeroShowEmpty">0是否显示为空字符串</param>
+            <param name="digits">保留小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.String,System.Boolean,System.Int32)">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="data">字符串</param>
+            <param name="zeroShowEmpty">0是否显示为空字符串</param>
+            <param name="digits">保留小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Object,System.String)">
+            <summary>
+            把数字类型显示为字符，去掉多余的0（当数字为0时，显示为空字符，去掉小数部分）
+            </summary>
+            <param name="obj">实体类</param>
+            <param name="propertyName">属性名字</param>  
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Object,System.String,System.Int32)">
+            <summary>
+            把数字类型显示为字符，去掉多余的0（当数字为0时，显示为0，去掉小数部分）
+            </summary>
+            <param name="obj">实体类</param>
+            <param name="propertyName">属性名字</param>  
+            <param name="digits">小数位数，负数表示先把小数点向左移的位数，处理后再向右移动回来</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDecimalToString(System.Object,System.String,System.Boolean)">
+            <summary>
+            把数字类型显示为字符，去掉多余的0
+            </summary>
+            <param name="obj">实体类</param>
+            <param name="propertyName">属性名字</param>
+            <param name="zeroShowEmpty">当数字为0时，是否显示为空字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.PageHelper.GetDateTimeValue(System.Object,System.String)">
+            <summary>
+            反射方式获取属性值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.DataAccessPage`1">
+            <summary>
+            MVC 数据访问类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.Manager">
+            <summary>
+            Manager
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Page.MVC.DataAccessPage`1._TmpCurEntityAssignment">
+            <summary>
+            当前实体是否赋值过
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.CurEntity">
+            <summary>
+            当前实体
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.IsDesc">
+            <summary>
+            是否为逆序
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.SearchStr">
+            <summary>
+            查询的字段
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.AdvancedSearchJson">
+            <summary>
+            高级查询用的JSON
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.PageSize">
+            <summary>
+            每页多少条
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.CurPage">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataAccessPage`1.FilterInfo">
+            <summary>
+            过滤信息
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.Details(System.String)">
+            <summary>
+            详情页
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.GetData">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.GetEntity(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.GetViewNav">
+            <summary>
+            视图页面导航
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.DisplayDataOfTotal(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            显示EasyUI Datagrid所用的Json格式
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.DisplayDataOfTotalWithLastCount(System.Collections.IEnumerable)">
+            <summary>
+            显示EasyUI Datagrid所用的Json格式
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataAccessPage`1.DisplayDataOfTotalWithDataCount(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            显示EasyUI Datagrid所用的Json格式
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.DataOperationPage`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataOperationPage`1.CurManager">
+            <summary>
+            Manager
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.Create">
+            <summary>
+            GET: /WebApi/Default1/Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.Create(System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /WebApi/Default1/Create
+            </summary>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.Edit(System.String)">
+            <summary>
+            GET: /WebApi/Default1/Edit/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.Edit(System.String,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /WebApi/Default1/Edit/5
+            </summary>
+            <param name="id"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.Delete(System.String,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /WebApi/Default1/Delete/5
+            </summary>
+            <param name="ids"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.GetAddNav">
+            <summary>
+            添加页面导航
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.GetEditNav">
+            <summary>
+            编辑页面导航
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.GetDetailsNav">
+            <summary>
+            详情页面导航
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.DataOperationPage`1.NonAutoPopField">
+            <summary>
+            不要自动填充的字段
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.DataOperationPage`1.FillEntity(`0)">
+            <summary>
+            填充实体
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.MVCDataDisplay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayJson(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayJson(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayJson(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayJson(System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="isSuccess"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayNoRightsPage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayDataOfTotal(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayDataOfTotal(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.MVCDataDisplay.DisplayNoRightsJson">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.NormalPage">
+            <summary>
+            MVC普通页面类
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.Request">
+            <summary>
+            Request
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.Response">
+            <summary>
+            Response
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.Server">
+            <summary>
+            Server
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.Application">
+            <summary>
+            Application
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.DataDisplay">
+            <summary>
+            数据展示
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Page.MVC.NormalPage.Nav">
+            <summary>
+            导航
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.PageCName">
+            <summary>
+            页面中文名
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Page.MVC.NormalPage.CurAction">
+            <summary>
+            当前Action
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Page.MVC.NormalPage.CurController">
+            <summary>
+            当前Controller
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.CurAuthenticateLevel">
+            <summary>
+            认证级别
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.NormalPage.PageName">
+            <summary>
+            页面名
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.Authenticate(System.String)">
+            <summary>
+            认证
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            权限判断
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.Index">
+            <summary>
+            首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.GetListNav">
+            <summary>
+            获取列表页面的导航
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayJson(System.String)">
+            <summary>
+            显示JSON字符串
+            </summary>
+            <param name="jsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayJson(System.Boolean,System.String)">
+            <summary>
+            显示JSON字符串
+            </summary>
+            <param name="success"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayJson(System.Object)">
+            <summary>
+            显示JSON字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayJson(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            显示JSON字符串
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayText(System.String)">
+            <summary>
+            显示文本
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayNoRightsPage">
+            <summary>
+            显示没有权限的页面
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.DisplayNoRightsJson">
+            <summary>
+            显示没有权限的Json
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.NormalPage.FillRequestInfo``1(``0)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.TreeDataAccessPage`1">
+            <summary>
+            树形数据访问页面
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.TreeDataAccessPage`1.CurManager">
+            <summary>
+            Manager
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.TreeDataAccessPage`1.GetTree">
+            <summary>
+            获取树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.TreeDataAccessPage`1.GetTreeWithTop">
+            <summary>
+            获取包含顶级的树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Page.MVC.TreeDataOperationPage`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Sgms.Frame.Page.MVC.TreeDataOperationPage`1.CurManager">
+            <summary>
+            Manager
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.TreeDataOperationPage`1.GetTree">
+            <summary>
+            获取树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Page.MVC.TreeDataOperationPage`1.GetTreeWithTop">
+            <summary>
+            获取包含顶级的树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IAction">
+            <summary>
+            功能接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IAction.Name">
+            <summary>
+            功能名（key用做对应Action）
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IAction.DisplayName">
+            <summary>
+            中文名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IAction.AppID">
+            <summary>
+            所属应用
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IApp">
+            <summary>
+            应用接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IApp.Name">
+            <summary>
+            应用名（key用做对应App）
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IApp.DisplayName">
+            <summary>
+            中文名
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.Sort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IMenu.Icon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IOrganization">
+            <summary>
+            部门接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IOrganization.Name">
+            <summary>
+            部门名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IOrganization.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IOrganization.ParentID">
+            <summary>
+            父部门
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IOrganizationUser">
+            <summary>
+            部门用户对应关系接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IOrganizationUser.OrganizationID">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IOrganizationUser.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IRole">
+            <summary>
+            角色接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRole.Name">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRole.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IRoleAction">
+            <summary>
+            角色对应应用/操作接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleAction.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleAction.ActionID">
+            <summary>
+            功能ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleAction.ActionName">
+            <summary>
+            功能Key
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleAction.AppID">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleAction.AppName">
+            <summary>
+            应用KEY
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IRoleOrganization">
+            <summary>
+            角色部门关系接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleOrganization.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleOrganization.OrganizationID">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IRoleUser">
+            <summary>
+            角色用户接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleUser.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IRoleUser.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.Entities.IUser">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IUser.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IUser.DisplayName">
+            <summary>
+            中文名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IUser.LoginIp">
+            <summary>
+            当前最后登录IP
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.Entities.IUser.LoginTime">
+            <summary>
+            当前最后登录时间
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Rights.IRightsDataObtain">
+            <summary>
+            权限数据获取接口
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.IRightsDataObtain.CurUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.Login">
+            <summary>
+            登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetAdminByCode(System.String)">
+            <summary>
+            根据钉钉返回用户信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetRoleActions">
+            <summary>
+            获取角色功能列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetOrganizations">
+            <summary>
+            获取部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetOrganizationUsers">
+            <summary>
+            获取部门用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetRoleOrganizations">
+            <summary>
+            获取角色部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.IRightsDataObtain.GetRoleUsers">
+            <summary>
+            获取角色用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Rights.RightsProcess">
+            <summary>
+            权限处理
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Rights.RightsProcess.SessionPrefix">
+            <summary>
+            Session前缀
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Rights.RightsProcess._RoleAction">
+            <summary>
+            角色Action 对象关系
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Rights.RightsProcess.RoleIDs">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.#ctor(Sgms.Frame.Rights.IRightsDataObtain)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="rightsData"></param>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.GetOrganizationIDs(System.String)">
+            <summary>
+            根据 userID获取所在部门
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.GetParentOrganization(Sgms.Frame.Rights.Entities.IOrganization)">
+            <summary>
+            获取所有的父部门
+            </summary>
+            <param name="org"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.GetRoles">
+            <summary>
+            获取人员角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.GetRoles(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            获取部门角色
+            </summary>
+            <param name="organizationIDs">部门</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Rights.RightsProcess.Authenticate(System.String,System.String)">
+            <summary>
+            验证
+            </summary>
+            <param name="appName"></param>
+            <param name="actionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysCache">
+            <summary>
+            系统缓存
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysCache.DALAssemblyDic">
+            <summary>
+            DAL层程序集
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysCache.BLLAssemblyDic">
+            <summary>
+            BLL层程序集
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysKeys">
+            <summary>
+            系统常量值
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.TAG_BR">
+            <summary>
+            &lt;br /&gt;
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_IDS">
+            <summary>
+            IDs
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_WEB">
+            <summary>
+            .Web
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_WEB_PAGE_CLASSNAME">
+            <summary>
+            Handler
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_MVC_PAGE_CLASSNAME">
+            <summary>
+            Controller
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_BLL">
+            <summary>
+            .BLL
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_BLL_CLASSNAME">
+            <summary>
+            Manager
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_DAL">
+            <summary>
+            .DAL
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_MODEL">
+            <summary>
+            MODEL
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_DAL_CLASSNAME">
+            <summary>
+            Service
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.TAG_A_DEFAULT_TARGET">
+            <summary>
+            _self
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_UP_URL">
+            <summary>
+            UpUrl
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_PROMPT">
+            <summary>
+            Prompt
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.URL_LIST_PAGE">
+            <summary>
+            ?action=list
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_TEMPLATE_VIEW">
+            <summary>
+            View.htm
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_TEMPLATE_EDIT">
+            <summary>
+            Edit.htm
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_TEMPLATE_ADD">
+            <summary>
+            Add.htm
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.SUFFIX_TEMPLATE_LIST">
+            <summary>
+            List.htm
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_REQUEST_TYPE">
+            <summary>
+            requestType
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.STR_AJAX">
+            <summary>
+            ajax
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_ACTION">
+            <summary>
+            Action
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_PAGE_C_NAME">
+            <summary>
+            PageCName
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.KEY_TEMPLATE_PATH">
+            <summary>
+            TemplatePath
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.VAR_DEFAULT_ACTION">
+            <summary>
+            pagelist
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.DIR_TEMPLATES">
+            <summary>
+            Templates
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.MIME_JSON">
+            <summary>
+            application/json
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysKeys.FORMATTER_DISPLAY_RESULT_JSON">
+            <summary>
+            {{\"Message\":\"{0}\",\"Success\":{1}}}
+            </summary>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysLang">
+            <summary>
+            系统语言
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.COULD_NOT_GET_IP">
+            <summary>
+            未获取用户IP
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.ILLEGAL_PARAMETER">
+            <summary>
+            非法参数
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.ENTITY_DELETED">
+            <summary>
+            实体可能已被删除
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.EXIST_CHILD_NODE_CAN_NOT_DELETE">
+            <summary>
+            存在子节点，无法删除
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.PREFIX_SYSTEM_ERROR_REASON">
+            <summary>
+            系统内部错误原因为：
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.FORMATTER_ACTION_NOT_EXIST">
+            <summary>
+            Action【{0}】不存在
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.GO_TO_LIST_PAGE">
+            <summary>
+            返回列表页
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.GO_BACK_DESKTOP">
+            <summary>
+            返回首页
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.NO_RIGHTS">
+            <summary>
+            没有权限
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.TEXT_TOP">
+            <summary>
+            顶级
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysLang.COULD_NOT_GET_ID">
+            <summary>
+            无法获取ID
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysLang.GetWords(System.String)">
+            <summary>
+            获取文字
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysMessage">
+            <summary>
+            系统消息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysMessage.HasMessage">
+            <summary>
+            是否有消息
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.Append(System.String)">
+            <summary>
+            追加系统消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.Append(System.Exception)">
+            <summary>
+            追加系统消息
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.Union(Sgms.Frame.Sys.SysMessage)">
+            <summary>
+            系统消息合并
+            </summary>
+            <param name="sysMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.ToHtmlString">
+            <summary>
+            转成以&lt;br /&gt;隔开的消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.ToOnelineString">
+            <summary>
+            转成以空格隔开的消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.ToString">
+            <summary>
+            转成以/r/n隔开的消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysMessage.ToString(System.String)">
+            <summary>
+            转成以自定义分隔符隔开的消息
+            </summary>
+            <param name="separator">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysPara">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.BLLAssemblyName">
+            <summary>
+            业务逻辑层程序集名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.DALAssemblyName">
+            <summary>
+            数据访问层程序集名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.DefaultAuthenticateLevel">
+            <summary>
+            默认认证级别
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.DesktopPage">
+            <summary>
+            进去的欢迎页面
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.GUIDKey">
+            <summary>
+            GUIDKey
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.Lang">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.LoginPageName">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.PCLoginPageName">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.RebackUrl">
+            <summary>
+            登陆页名 默认值：Login.ashx
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.NoRightsPageName">
+            <summary>
+            没权限页面
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.LogPath">
+            <summary>
+            日志路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.PromptTemplatePage">
+            <summary>
+            提示页面文件名
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.TemplateName">
+            <summary>
+            模板路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.UploadsPath">
+            <summary>
+            上传文件路径
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.RightsDataObtainClassInfo">
+            <summary>
+            权限数据获取类信息
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.AllowLoginFailureTimes">
+            <summary>
+            允许登录失败次数
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.LoginFailureInterval">
+            <summary>
+            登录出错时间间隔单位 分钟
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.AllowOperaTimeDiff">
+            <summary>
+            允许操作的时间差 0为不限制
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.AdminSessionName">
+            <summary>
+            管理员Session名 CurAdmin 需要用到这个变量
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Sys.SysPara.CurAdmin">
+            <summary>
+            当前登录管理员
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysPara.JArrayToEntities``1(System.String)">
+            <summary>
+            把json转为JArray，在转为List />
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysPara.JArrayToEntities``1(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            将JSON转换出来的JArray类型数据转成实体
+            </summary>
+            <param name="jArray">JArray类型的数据</param>
+            <param name="foreignKeyField">外键字段名</param>
+            <param name="foreignKey">外键值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Sys.SysUtil">
+            <summary>
+            系统工具
+            </summary>
+        </member>
+        <member name="F:Sgms.Frame.Sys.SysUtil.LogPath">
+            <summary>
+            日志文件的路径
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.WriteLog(System.String)">
+            <summary>
+            写日志
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.WriteLog(System.Exception)">
+            <summary>
+            写日志
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.GetAppSettings(System.String)">
+            <summary>
+            获取AppSettings
+            </summary>
+            <param name="key"></param>
+            <returns>不存在返回null</returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.GetGetSection(System.String)">
+            <summary>
+            获取GetGetSection
+            </summary>
+            <param name="sectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.GetDBName(System.String)">
+            <summary>
+            获取数据库连接字符串名称
+            </summary>
+            <param name="dbKey"></param>
+        </member>
+        <member name="M:Sgms.Frame.Sys.SysUtil.GetValueByDescription``1(System.String)">
+            <summary>
+            根据Description获取枚举值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Utils.AppSettingUtil">
+            <summary>
+            AppSetting工具
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.AppSettingUtil.GetAppSetting(System.String)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.ChildTableUtil.ProcessChildTable``1(System.Data.Entity.DbContext,System.String,System.String,System.String,System.String)">
+            <summary>
+            填充子表
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Utils.EncryptUtil">
+            <summary>
+            加密相关
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.SetKeyIV(System.String,System.String)">
+            <summary>
+            设置 key和iv
+            </summary>
+            <param name="key"></param>
+            <param name="iv"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.SetKeyIV(System.String)">
+            <summary>
+            截取guid 0-7位作为Key 8-15位作为IV 
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.PwdCalculate(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strPwdType"></param>
+            <param name="strPwd"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.DesDecrypt(System.String)">
+            <summary>
+            Des减密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.DesEncrypt(System.String)">
+            <summary>
+            Des加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.Md5(System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.Md5(System.Byte[])">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.Sha1(System.String)">
+            <summary>
+            基于Sha1的自定义加密字符串方法：输入一个字符串，返回一个由40个字符组成的十六进制的哈希散列（字符串）。
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>加密后的十六进制的哈希散列（字符串）</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EncryptUtil.GetSign(System.String,System.Object[])">
+            <summary>
+            获取签名
+            </summary>
+            <param name="encryptType">可选值MD5 sha1</param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.GetEnumDescription(System.Enum)">
+            <summary>
+            获取枚举类子项描述信息（注意：使用DescriptionAttribute这个类需要引入using System.ComponentModel;这个命名空间，别引错了。）
+            </summary>
+            <param name="enumSubitem">枚举类子项</param>        
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.GetEnumName``1(System.Int32)">
+            <summary>
+            根据枚举的值获取枚举名称
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="status">枚举的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.GetNamesArr``1">
+            <summary>
+            获取枚举名称集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.getEnumDic``1">
+            <summary>
+            将枚举转换成字典集合
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.getEnumJson``1">
+            <summary>
+            将枚举转换成字典集合
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.EnumUtil.GetDic``1">
+            <summary>
+            将枚举转换成字典
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Utils.FileUtil">
+            <summary>
+            文件处理工具类
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.IsOfficeFile(System.String,System.Boolean)">
+            <summary>
+            带 "." 的扩展名 不区分大小写
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="ignoreDot">是否忽略点 如果为True 例如：传入"doc" 返回则认为是office文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.GetExtName(System.String,System.Boolean)">
+            <summary>
+            获取带"."小写的扩展名
+            </summary>
+            <param name="fileName"></param>
+            <param name="ignoreDot">是否忽略点 如果为True 例如：传入"doc" 返回则返回 ".doc" 否则返回 String.Empty</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.CreateDirByRelativePath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="relativePath"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.CreateDirByRelativePath(System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="relativePath"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.SaveFileByRelativePathWithExtName(System.IO.Stream,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <param name="extName">需要带"."</param>
+            <param name="msg"></param>
+            <returns>保存失败返回 String.Empty</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.SaveFileByRelativePath(System.IO.Stream,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <param name="relativePath"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.FileUtil.GetImageSizeByRelativePath(System.String)">
+            <summary>
+            根据相对路径获取尺寸
+            </summary>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.OrderUtil.GetOrder(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="prefix">前缀</param>
+            <param name="appID">应用标识</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Utils.SpellUtil">
+            <summary>
+            拼音相关的工具
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.SpellUtil.GetChineseSpellCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="unicodeString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.SpellUtil.GetFirstPYLetter(System.String)">
+            <summary>  
+            从字符串中获取汉字拼音首字母，不是汉字则原样输出  
+            </summary>  
+            <param name="transName"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Sgms.Frame.Utils.SpellUtil.GetAllPYLetters(System.String)">
+            <summary>  
+            把汉字转换成拼音(全拼)  
+            </summary>  
+            <param name="transName">汉字字符串</param>  
+            <returns>转换后的拼音(全拼)字符串</returns>  
+        </member>
+        <member name="T:Sgms.Frame.Utils.TypeUtil">
+            <summary>
+            类型处理工具类
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToEntity``1(System.Data.DataTable)">
+            <summary>
+            dataTable 转 实体集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.IntToEnum``1(System.Int32)">
+            <summary>
+            Int 转 枚举
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.IsGUID(System.String)">
+            <summary>
+            判断一个字符串是否为guid
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToBool(System.Double)">
+            <summary>
+            数值转bool
+            </summary>
+            <param name="value"></param>
+            <returns>0为false 其他为true</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToBool(System.String,System.Boolean)">
+            <summary>
+            string 转 bool
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">defaultValue 转换失败 返回这个值</param>
+            <returns>"true"返回 true "false" 返回 false 不区分大小写</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToByte(System.String,System.Byte)">
+            <summary>
+            字符串转byte
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">转换失败 返回这个值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToDouble(System.String,System.Double)">
+            <summary>
+            字符串转double
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">转换失败 返回这个值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToInt(System.String,System.Int32)">
+            <summary>
+            字符串转Int
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">转换失败 返回这个值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToLong(System.String,System.Int64)">
+            <summary>
+            字符串转Long
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">转换失败 返回这个值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToDecimal(System.String,System.Decimal)">
+            <summary>
+            字符串转Decimal
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Sgms.Frame.Utils.TypeUtil.SqlMinDateTime">
+            <summary>
+            Sql的日期最小值
+            </summary>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToDateTime(System.String)">
+            <summary>
+            如果转换不了 默认值为 1753-1-1
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToDateTime(System.String,System.DateTime)">
+            <summary>
+            字符串转DateTime
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue">转换失败 返回这个值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToDateTimeNullable(System.String)">
+            <summary>
+            转换成可空的DateTime 
+            </summary>
+            <param name="value"></param>
+            <returns>转换失败返回null string为null 返回null</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.ToTimeStamp(System.DateTime)">
+            <summary>
+            日期转时间戳
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.CopyProperty``1(System.Object)">
+            <summary>
+            同名属性拷贝
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="copiedObject">被拷贝的对象</param>
+            <returns>新的 T 类型的实例</returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.CopyProperty(System.Object,System.Object,System.Boolean)">
+            <summary>
+            同名属性拷贝
+            </summary>
+            <param name="copyObject">要拷贝的对象</param>
+            <param name="copiedObject">被拷贝的对象</param>
+            <param name="ignoreNull">是否忽略null 不忽略则连null 一起拷贝</param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.CreateInstance``1(System.String)">
+            <summary>
+            根据classInfo创建实例
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="classInfo">格式：程序集,完整类名。  格式不正确Throw  创建失败返回null</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.GetValue(System.Object,System.String)">
+            <summary>
+            根据对象、属性名获取值
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.TypeUtil.GetValue``1(System.Object,System.String)">
+            <summary>
+            根据对象、属性名获取值
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Sgms.Frame.Utils.UrlUtil.Test" -->
+        <member name="M:Sgms.Frame.Utils.UrlUtil.GetQueryValue(System.String,System.String)">
+            <summary>
+            地址串中取值
+            </summary>
+            <param name="queryString"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.UrlUtil.GetQueryString(System.String)">
+            <summary>
+            将查询字符串解析转换为名值集合.
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.UrlUtil.GetQueryString(System.String,System.Text.Encoding,System.Boolean)">
+            <summary>
+            将查询字符串解析转换为名值集合.
+            </summary>
+            <param name="queryString"></param>
+            <param name="encoding"></param>
+            <param name="isEncoded"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.UrlUtil.MyUrlDeCode(System.String,System.Text.Encoding)">
+            <summary>
+            解码URL.
+            </summary>
+            <param name="encoding">null为自动选择编码</param>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sgms.Frame.Utils.WebUtil">
+            <summary>
+            Web相关的工具
+            </summary>
+        </member>
+        <member name="P:Sgms.Frame.Utils.WebUtil.ClientIp">
+            <summary>
+            获取web客户端ip
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.SetCookies(System.String,System.String,System.DateTime)">
+            <summary>
+            保存cookies
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="expires"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.GetCookies(System.String)">
+            <summary>
+            获取cookies
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.SetTicket(System.String[])">
+            <summary>
+            设置凭证COOKIES
+            </summary>
+            <param name="ticket"></param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.GetTicket">
+            <summary>
+            获取凭证COOKIES
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.SetAbsCache(System.String,System.Object,System.DateTime)">
+            <summary>
+            设置时间间隔缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="absTime">时间间隔</param>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.GetCacheValue``1(System.String)">
+            <summary>
+            获取缓存的值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.Post(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Net.ICredentials)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.Post(System.String,System.String,System.Text.Encoding,System.Collections.Generic.Dictionary{System.String,System.String},System.Net.ICredentials)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.PostJson(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Net.ICredentials)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.PostJson(System.String,System.String,System.Text.Encoding,System.Collections.Generic.Dictionary{System.String,System.String},System.Net.ICredentials)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.DoGet(System.String)">
+            <summary>
+            Get
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.DoGet(System.String,System.Text.Encoding)">
+            <summary>
+            Get
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.DoRequest(System.String,System.String,System.Text.Encoding,System.String,System.String)">
+            <summary>
+            Post
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sgms.Frame.Utils.WebUtil.WriteLog(System.String)">
+            <summary>
+            把信息写入日志文件
+            </summary>
+            <param name="msg"></param>
+        </member>
+    </members>
+</doc>

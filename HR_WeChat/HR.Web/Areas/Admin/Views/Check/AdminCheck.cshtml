@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "考勤管理";
+    Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+} 
+
+<script src="~/Areas/Admin/scripts/Choose.js"></script>
+<link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" />
+
+
+@section search{
+    <table class="SearchTable  layui-form">  
+
+        <tr class="Trbgc_Top"> 
+            <th>
+                <label class="control-label">
+                    打卡人 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" id="CheckUserName" placeholder="请选择打卡人" readonly onclick="ChooseCheckUser()">
+                <input type="hidden" name="EmpSysID" id="EmpSysID" />
+            </td>
+             
+            <th>
+                <label class="control-label">
+                    签卡时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="KeyinDay">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="KeyinDay">
+                </div>
+            </td>
+
+        </tr>
+         
+    </table>
+
+}
+
+<table id="grid">
+    <thead>
+        <tr>
+            <th data-options="field:'EmpSysID',width:'15%',align:'center',sortable:true">
+                打卡人
+            </th> 
+            <th data-options="field:'KqDate',width:'15%',align:'center',sortable:true,formatter:formatterDateTime">
+                打卡日期
+            </th>
+            <th data-options="field:'KqTime',width:'15%',align:'center',sortable:true">
+                打卡时间
+            </th>
+            <th data-options="field:'DevID',width:'15%',align:'center',sortable:true,formatter:formatterCheckType">
+                打卡类型
+            </th>
+            <th data-options="field:'IsKeyin',width:'15%',align:'center',sortable:true">
+                是否手工签卡
+            </th>
+            <th data-options="field:'IsKouKuan',width:'15%',align:'center',sortable:true">
+                是否扣款
+            </th>
+            <th data-options="field:'KeyinDay',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                签卡日期
+            </th> 
+        </tr>
+    </thead>
+</table>
+
+<div id="Choose"></div>
+<input type="hidden" class="item" /> 
+
+
+<script>
+
+    var params = {
+        sortName: "KeyinDay",
+        sortOrder: "desc",
+        frozenColumns: true,
+        url:"@Url.Action("GetAdminKQData")"
+    }
+
+    $(".add , .del").remove();
+
+      
+    function ChooseCheckUser()
+    {
+        $(".item").val("#CheckUserName/DISPLAY_NAME,#EmpSysID/USER_GUID");
+        OpenChooseW7("人员选择", "Users", false) 
+    }
+
+</script>

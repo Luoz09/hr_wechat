@@ -1,0 +1,259 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+} 
+@section head{  
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="~/Areas/Admin/Style/DefaultUI.css" rel="stylesheet" /> 
+    <link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" /> 
+    <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Style/common.css" rel="stylesheet" /> 
+    <link href="~/Areas/Admin/plugins/jquery-easyui-1.4.3/themes/gray/easyui.css" rel="stylesheet" />
+     
+  
+    <script src="~/Areas/Mobile/scripts/Choose.js"></script>
+    <script src="~/Areas/Admin/plugins/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="~/Areas/Admin/scripts/DefaultUI.js"></script>
+    <script src="~/Areas/Admin/scripts/Choose.js"></script> 
+    <script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+    <script src="~/Areas/Admin/scripts/workflow.js"></script>
+
+} 
+    
+
+<style>
+    #main {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .btn 
+    { 
+    padding: 6px 12px; 
+    font-size: 14px;  
+    text-align: center; 
+    cursor: pointer;   
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width:130px;
+    margin:0px 5px;
+}
+     
+    .btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4; 
+}
+     
+
+    .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+    }
+
+      .container {
+        padding:0px!important;
+    }
+
+    .row {
+       margin:0px;
+    }
+     
+
+</style>
+
+<div class="wrapper container" id="main" >
+      
+    <div class="row" id="top-bar">
+        <ol class="breadcrumb">
+            @foreach (var elem in ViewBag.Nav)
+            {
+                if (!@String.IsNullOrEmpty(@elem.Href))
+                {
+                    <li><a href="@elem.Href">@elem.Text</a></li>
+                }
+                else
+                {
+                    <li>@elem.Text</li>
+                }
+            }
+        </ol>
+         
+        <div id="toolbar" style="top:20px;">
+             
+            <a href="javascript:location.reload()" title="刷新页面"><i class="fa fa-refresh"></i></a>
+            <a href="javascript:history.back()" title="返回上个页面"><i class="fa fa-reply"></i></a>
+            <a href="@Url.Action("Index")" title="返回上级导航">
+                <i class="fa fa-arrow-up" style="font-size: 20px;">
+                </i>
+            </a><a href="@Url.Action("Desktop", "Home")" title="返回桌面">
+                <i class="fa fa-desktop"
+                   style="font-size: 16px;"></i>
+            </a>
+        </div>
+    </div>
+
+
+    @using (Html.BeginForm((string)@ViewBag.Action, (string)@ViewBag.Controller + "", FormMethod.Post, new { @class = "form-horizontal layui-form layui-form-pane", role = "form" }))
+    {
+        @RenderBody()
+    }
+
+    <div style="width:100%;text-align:center;margin:10px 0;">
+        <button type="button" class="btn btn-primary" id="Save" onclick="Save()">
+            提交
+        </button>
+
+        <button type="button" class="btn btn-default" id="Return" onclick="history.back(-1)">
+            返回列表页
+        </button>
+    </div>
+</div>
+
+
+@*选择框相关*@
+<div id="Choose"></div>
+<input type="hidden" class="item" />
+<input type="hidden" class="id" />
+<input type="hidden" class="parentid" />
+
+@*附件相关*@
+<input type="hidden" name="Files" id="Files" /> @*记录上传文件的文件名*@
+<input type="hidden" name="UploadTime" id="UploadTime" />  @*上传时间*@
+ 
+<script>
+
+    ////判断当前页面是否为只读
+    //if (getUrlParam("View") == "1")
+    //{
+    //    $("#WorkFlow").closest(".layui-colla-item").remove();
+    //    $("#Save").remove();
+    //}
+
+     
+    $(function ()
+    { 
+        if (IsMobile()) { $("#top-bar").remove(); $("#main").css({ "height": $(window).height() }); }
+         
+        if ("@ViewBag.Action".indexOf("Create") > 0) {
+            $("#ApplyUserName").val("@SysPara.CurAdmin.DisplayName")
+            $("#ApplyUserID").val("@SysPara.CurAdmin.ID")
+        }
+         
+         
+        layui.use(["form", "laydate"], function ()
+        {
+            laydate = layui.laydate;
+
+            //日期时间选择
+            lay(".Date").each(function () {
+                laydate.render({
+                    elem: this,
+                    type: "datetime",
+                    change: function (value, date) {
+                        $(".laydate-btns-time").click();
+                    }
+                })
+            })
+
+            //日期选择
+            lay(".Day").each(function () {
+                laydate.render({
+                    elem: this,
+                    type: "date", 
+                })
+            })
+
+
+            //日期选择
+            lay(".Time").each(function () {
+                laydate.render({
+                    elem: this,
+                    type: "time",
+                })
+            })
+
+
+
+        })
+
+    })
+
+
+    function Save()
+    {
+        if (beforeSubmit()) {
+            $.ajax({
+                url: $("form").attr("action"),
+                cache: false,
+                type: "post",
+                data: $('form').serialize(),
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    // 状态码
+                    console.log(XMLHttpRequest.status);
+                    // 状态
+                    console.log(XMLHttpRequest.readyState);
+                    // 错误信息
+                    console.log(textStatus);
+                    window.saveError && saveError();
+                    $.messager.alert('系统错误', '系统错误请稍后再试！', 'error');
+                },
+                success: function (data) {
+                    if (!data.Success) {
+                        window.saveError && saveError(data.Title, data.Message);
+                        $.messager.alert(data.Title || "保存失败", data.Message, 'error');
+                    } else {
+                        $.messager.alert('保存成功', '保存成功', 'info', function () {
+                            window.saveSuccess && saveSuccess();
+                             var Href = location.href;
+                             var tagname = Href.split('/')[Href.split('/').length - 2];
+                             var indexname = Href.split('/')[Href.split('/').length - 1]; 
+                             if (IsMobile())
+                             {
+                                 var flag = indexname.replace(new RegExp("Create|Edit"), "");
+                                 var type = 0
+                                 switch (flag) {
+                                     case "Leave": type = 1; break;
+                                     case "Out": type = 2; break;
+                                     case "Business": type = 3; break;
+                                     case "ExtWork": type = 4; break;
+                                     case "SuppleCard": type = 5; break;
+                                 }
+                                 location.href = '/Mobile/' + tagname + '?type='+type
+                             }
+                             else{
+                                 location.href = indexname.replace(new RegExp("Create|Edit"), "Index");
+                            }
+                      });
+                  }
+              }
+          })
+        }
+    }
+
+
+    function IsMobile()
+    {
+        if (navigator.userAgent.match(/Mobile/i)) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+    function ChooseApplyName() {
+        $(".item").val("#ApplyUserID/USER_GUID,#ApplyUserName/DISPLAY_NAME");
+        if (navigator.userAgent.match(/mobile/i)) {
+            OpenChooseMB("人员选择", $(window).width(), $(window).height(), "Users", false)
+        }
+        else {
+            OpenChooseW7("人员选择", "Users", false)
+        }
+    }
+
+
+
+
+</script>

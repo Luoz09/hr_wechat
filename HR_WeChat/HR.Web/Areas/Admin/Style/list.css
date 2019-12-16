@@ -1,0 +1,21 @@
+﻿body { background: #e8ebf2; }
+#main { overflow: hidden; padding: 15px; position: absolute; top: 51px; bottom: 10px; left: 15px; width: 100%; }
+/*easyui扩展*/
+.datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber { font-size: 14px; }
+.datagrid-btable td div { line-height: 30px; }
+.datagrid-body td div { line-height: 30px; }
+.tree-title { font-size: 12px; }
+.datagrid-row-selected a { color: #FFF; }
+/*easyui扩展*/
+
+.oper { margin-left: 8px; }
+.oper:first-child { margin-left: 0; }
+.oper.edit i { font-size: 15px; }
+.oper.delete i { font-size: 16px; }
+#toolbar .input-group { margin-right: 14px; width: 220px; }
+#toolbar .input-group i { color: #337ab7; }
+
+#toolbar .form-control { height: 24px; }
+#toolbar .input-group-addon { padding: 4px 8px; }
+.grid-container { height: 100%; position: relative; width:100%}
+#datagrid { display: none; }

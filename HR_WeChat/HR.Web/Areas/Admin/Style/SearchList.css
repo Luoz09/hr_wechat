@@ -1,0 +1,48 @@
+﻿.btns{
+    float:right;
+    margin-bottom:10px;
+    margin-right:5px;
+    margin-top:5px;
+}
+.SearchTable{
+    width:95%;
+    margin:0 auto;
+    padding-top:10px;
+}
+.SearchTable th{
+    text-align:right;
+    border-left:1px dotted #CCC;
+}
+.SearchTable tr{
+    line-height:35px;
+    
+}
+.SearchTable tr:nth-child(even){
+    background-color: #fafafa;
+}
+.Trbgc_Top{
+    border-top:1px dotted #CCC;
+}
+.Trbgc_But{
+    border-bottom:1px dotted #CCC;
+}
+.Trbgc_Left{
+     
+}
+.Trbgc_Right{
+      border-right:1px dotted #CCC;
+}
+.SearchTable td>input[type="text"],
+.SearchTable td>select
+{
+    width:200px;
+}
+.SearchTableDT{
+    width:200px;
+    margin-left:-15px;
+}
+.advanced-search{
+        background-color: rgb(255, 255, 255);
+    margin-left: -15px;
+    margin-right: -15px;
+}

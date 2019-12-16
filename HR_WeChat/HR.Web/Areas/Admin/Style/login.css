@@ -1,0 +1,21 @@
+html, body {height: 100%}
+body {overflow: hidden;/*background-size:contain;*/ background:#b2bbcc}
+header {height: 40px;background: url(../Images/Login/TopBg.png);position:fixed;top:0;left:0;width:100%;z-index:99;}
+footer {height: 40px;position: fixed;bottom: 0;width: 100%;background: url(../Images/Login/BottomBg.png);text-align: center;color: #fff;line-height: 40px;z-index:99;}
+
+#main{background: url(../Images/MainBg.png) repeat-x; background-size:contain}
+#main,#main > .row ,#main > .row > .col-lg-6{ height:100%}
+#main .col-lg-6{ position:relative;}
+#main .col-lg-6:first-child{background: url(../Images/Login/LeftMainBg.png) top right no-repeat; background-size:contain}
+.left,.right{position: absolute;top: 45%;width:350px;}
+.left{right:0; margin-top:-200px; margin-right:50px;}
+.left h2{color:#0375e5; margin-bottom:30px;}
+.left div{ line-height:30px;}
+.left div strong{ color:#F60}
+.left ul{ margin-top:5px;}
+.fa{ color:#008fcc; font-size:18px;}
+.right{ margin-left:50px;margin-top:-130px;}
+.form-group{ margin-left:0 !important; margin-right:0 !important;}
+#code{ width:100px}
+.code-image{padding-left:10px;}
+small{ padding-left:10px;}

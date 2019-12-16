@@ -1,0 +1,444 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+ 
+<script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+<link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+
+
+<style>
+    #tree {
+        width: 25%;
+        overflow-y: auto;
+        float: left;
+        margin-right: 5%;
+    }
+
+    .TitleText {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .PowerName {
+        width: 100%;
+        background-color: #82A6F5;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #FFF;
+        border-bottom: 1px solid #9C9EA1;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+
+    .CName {
+        width: 25%;
+        float: left;
+    }
+
+    .CCheck {
+        margin-left: 20px !important;
+        width: 20px;
+        height: 20px;
+    }
+
+    .fl {
+        float: left;
+    }
+</style>
+
+<div id="DictionaryTree">
+    <div id="tree"></div>
+    <div class="layui-row" id="Dictionary" style="float:left; width:65%;margin-right:5%">
+        <div class="TitleText">
+            全选：<input type="checkbox" id="ALLPower" name="ALLPower" style="width:20px;height:20px;" onchange="ChangeAllPower()" />  &emsp;
+            当前选中： <span class="Title"></span>
+            <input type="text" value="保存" id="Add" class="layui-btn layui-btn-blue" style="cursor:pointer;width:100px!important;height:30px!important;float:right; margin-top:5px" readonly onclick="SavePower()" />
+        </div>
+    </div>
+</div>
+<input type="hidden" id="PowerList" name="PowerList" />
+<input type="hidden" id="ChooseName" />
+<input type="hidden" id="ChooseID" />
+<input type="hidden" id="ChooseType" />
+
+<script>
+
+    $("#tree").css({ height: $(window).height() })
+
+
+    //返回部门数据的对应字段名称
+    var ParentID = "PARENT_GUID";
+    var DepID = "GUID";
+    var DepName = "DISPLAY_NAME";
+     
+
+    //返回人员数据的对应字段名称
+    var UserID = "USER_GUID";
+    var UserName = "DISPLAY_NAME"
+    var Sort = "GLOBAL_SORT"
+
+    $(function () {
+
+        $.ajax({
+            url: "@Url.Action("GetUsers")",
+            async:false,
+            success: function (data) {
+                layui.use('tree', function () {
+                    layui.tree({
+                        elem: "#tree",
+                        nodes: trees(data),
+                        click: function (node)
+                        {
+                            $(".Title").text(node.name)
+                            $("#ChooseName").val(node.name)
+                            $("#ChooseID").val(node.id)
+                            $("#ChooseType").val(node.type)
+                            SetUsersPower(node.name)
+
+                        }
+                    });
+               });
+            }
+        })
+
+        GetPowerList();
+
+    })
+
+
+    //获取所有的权限列表
+    function GetPowerList()
+    {
+        $.ajax({
+            url: "@Url.Action("GetPowerList")",
+            async: false,
+            success: function (data)
+            {
+               SetPowerList(data);
+            }
+        })
+    }
+
+    //显示权限列表
+    function SetPowerList(jsonObj)
+    {
+        for (var i = 0; i < jsonObj.length; i++)
+        {
+            var Text = "<div id=\"D_" + jsonObj[i].ID + "\" class=\"PowerName fl\"><input type=\"checkbox\" name=\"" + jsonObj[i].ID + "\" id=\""
+                        + jsonObj[i].ID + "\" class=\"CCheck\"  onchange=\"ChangePower('" + jsonObj[i].ID + "')\"/><label for=\"" + jsonObj[i].ID + "\" >"
+                        + jsonObj[i].Name + "</label>" + "<div style=\"float:right;margin-right: 20px;\"><a id=\"AShrink\" href=\"javascript:ChangeStatus('" + jsonObj[i].ID +
+                        "')\"><i class=\"fa fa-arrow-up\" aria-hidden=\"true\"></i></a></div></div>"
+            $("#Dictionary").append(Text);
+            Text = "<div id=\"C_" + jsonObj[i].ID + "\" class=\"w100 fl\">"
+            if (jsonObj[i].children != null)
+            {
+                for (var j = 0; j < jsonObj[i].children.length; j++) {
+                    var codeName = jsonObj[i].children[j].Code_Name;
+                    var Description = jsonObj[i].children[j].Description;
+                    var tips = codeName + "\n" + (Description || "")
+                    Text += '<div class="CName" id=' + jsonObj[i].children[j].ID + ' >';
+                    Text += '<input type="checkbox"  name=' + jsonObj[i].children[j].ID + ' class="CCheck" onchange=setPowerData("' + jsonObj[i].children[j].ID + '")><label title="'+tips+'">' + jsonObj[i].children[j].Name + '</label></div>';
+                }
+            }
+            Text += "</div>"
+            $("#Dictionary").append(Text);
+        }
+    }
+
+
+
+    //获取当前选中人员具有的权限
+    function SetUsersPower(name)
+    {
+        usersPower = "";
+        $.ajax({
+            url: "@Url.Action("GetUserPowerList")?Name=" + name,
+            async: false,
+            success: function (data) {
+                usersPower = data;
+            }
+        })
+
+        $(".CName input").removeAttr("checked");
+        powerID = "";
+        for (var item in usersPower)
+        {
+            self = usersPower[item];
+            $("#" + self.ROLE_ID).find("input").prop("checked", true);
+            powerID += self.ROLE_ID + ",";
+        }
+        $("#PowerList").val(powerID);
+    }
+
+
+    //通过选择应用全选对应应用下的全部权限
+    function ChangePower(id)
+    {
+        if ($(".Title").text().length > 0) {
+            var cid = "#" + id;
+            var ids = "#C_" + id + " input[type=checkbox]";
+            if ($(cid).is(":checked")) {
+                $(ids).prop("checked", true);
+                $.each($(ids), function () {
+                    if ($("#PowerList").val().indexOf(this.name) < 0)
+                        $("#PowerList").val($("#PowerList").val() + this.name + ",")
+                });
+            }
+            else {
+                $(ids).removeAttr("checked");
+                $.each($(ids), function () {
+                    if ($("#PowerList").val().indexOf(this.name) >= 0)
+                        $("#PowerList").val($("#PowerList").val().replace("," + this.name, ''))
+                });
+            }
+        }
+        else {
+            alert("请先选择要修改权限的人员")
+            $("#" + id).removeAttr("checked")
+        }
+
+    }
+
+    //显示/隐藏 选中应用
+    function ChangeStatus(ID) {
+        var Name = "#C_" + ID;
+        var DName = "#D_" + ID + " a";
+        if ($(Name).is(':visible')) {
+            $(Name).hide();
+            $(DName).html("<i class=\"fa fa-arrow-down\" aria-hidden=\"true\"></i>");
+        }
+        else {
+            $(Name).show();
+            $(DName).html("<i class=\"fa fa-arrow-up\" aria-hidden=\"true\"></i>");
+        }
+    }
+
+    //是否全选所有的权限
+    function ChangeAllPower() {
+        var powerbox = $("#Dictionary input[type=checkbox]");
+        if ($("#ALLPower").is(":checked"))
+        {
+            powerbox.prop("checked", true);
+            $.each($(".CName"), function () {
+                if ($("#PowerList").val().indexOf($(this).attr("id")) < 0)
+                    $("#PowerList").val($("#PowerList").val() + $(this).attr("id") + ",")
+            });
+        }
+        else {
+            powerbox.removeAttr("checked");
+            $("#PowerList").val("");
+        }
+    }
+
+
+    function setPowerData(id)
+    {
+        if ($(".Title").text().length > 0) {
+            if ($("#" + id + " input").is(":checked")) {
+                if ($("#PowerList").val().indexOf(id) < 0)
+                    $("#PowerList").val($("#PowerList").val() + id + ",")
+            }
+            else {
+                if ($("#PowerList").val().indexOf("," + id) < 0) {
+                    $("#PowerList").val($("#PowerList").val().replace(id+",", ""))
+                }
+                else {
+                    $("#PowerList").val($("#PowerList").val().replace(","+id, ""))
+                }
+            }
+        }
+        else {
+            alert("请先选择要修改权限的人员")
+            $("#" + id + " input").removeAttr("checked");
+        }
+    }
+
+
+    //保存权限的修改
+    function SavePower()
+    {
+        if ($(".Title").text().length > 0)
+        {
+            powerData = $("#PowerList").val();
+            powerData = powerData.substring(0, powerData.length - 1);
+            chooseName = $("#ChooseName").val();
+            chooseID = $("#ChooseID").val();
+            chooseType = $("#ChooseType").val();
+           $.ajax({
+               url: "@Url.Action("SaveChoosePower")?powerData=" + powerData + "&Name=" + chooseName+"&ID="+chooseID+"&Type="+chooseType,
+               async: false,
+               success: function (data) {
+                   if (!data.Success) {
+                       window.saveError && saveError(data.Title, data.Message);
+                       $.messager.alert(data.Title || "保存失败", data.Message, 'error');
+                       self.removeAttr("disabled");
+                       self.removeClass("disabled")
+                   } else {
+                       $.messager.alert('保存成功', '保存成功', 'info', function () {
+                           window.saveSuccess && saveSuccess();
+                           SetUsersPower($(".Title").text())
+                       });
+                   }
+               }
+           })
+        }
+        else {
+            alert("修改权限的人员不能为空！")
+
+        }
+    }
+
+    userdata = ""; 
+
+    //获取树形数据
+    function trees(rows) {
+        orgdata  = JSON.parse(rows.OrgData);
+        userdata = JSON.parse(rows.UserData);
+
+        var TopTree = [];
+        var nodes = [];
+        var topTree = [];
+        //获取最高级父节点
+        for (var item in orgdata) {
+            nodes = [];
+            for (var i = orgdata.length-1; i >=0; i--)
+            {
+                var row = orgdata[i];
+                if (row[ParentID] == "" || row[ParentID] == null)
+                {
+                    nodes.push({
+                        id: row[DepID],
+                        name: row[DepName],
+                        sort: row[Sort],
+                        parentID: row[ParentID],
+                        type: "ORGANIZATIONS",
+                        spread: true,
+                    });
+                }
+            }
+            var toDo = [];
+            for (var i = 0; i < nodes.length ; i++)
+            {
+                toDo.push(nodes[i]);
+            }
+
+            while (toDo.length)
+            {
+                //父节点
+                var node = toDo.shift();
+                // 获取子节点
+                for (var i = 0; i < orgdata.length ; i++)
+                {
+                    var row = orgdata[i];
+                    if (row[ParentID] == node.id)
+                    {
+                        var child = {
+                            id: row[DepID],
+                            name: row[DepName],
+                            sort: row[Sort],
+                            parentID: row[ParentID],
+                            type: "ORGANIZATIONS",
+                        };
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }
+                        toDo.push(child);
+                    }
+                }
+                if (node.children) {
+                    node.children.sort(function (a, b) {
+                        return a.sort - b.sort;
+                    })
+                }
+            }
+
+        }
+
+
+        for (var item in nodes)
+        {
+            existsChild("", nodes[item]);
+            nodes[item] = JSON.parse(sessionStorage.getItem(nodes[item].id));
+        }
+
+        sessionStorage.clear()
+        return nodes;
+
+ }
+
+
+    function existsChild(oldObj, newObj)
+    {
+        for (var item in userdata)
+        {
+            users = userdata[item];
+            if (users[ParentID] == newObj.id)
+            {
+                var child = {
+                    id: users[UserID],
+                    name: users[UserName],
+                    sort: users[Sort],
+                    parentID: users[ParentID],
+                    type: "USERS"
+                };
+                if (newObj.children) {
+                    newObj.children.push(child);
+                }
+                else {
+                    newObj.children = [child];
+                }
+            }
+        }
+         
+        if (newObj.children && newObj.type == "ORGANIZATIONS")
+        {
+            sessionStorage.removeItem(newObj.id || "0");
+            sessionStorage.setItem(newObj.id || "0", JSON.stringify(newObj));
+        }
+        for (var i in newObj.children)
+        {
+            if (newObj.children[i])
+            {
+                return existsChild(newObj , newObj.children[i]);
+            }
+        }
+         
+
+        SetData(newObj)
+
+    }
+
+    function SetData(newObj)
+    {
+        if (newObj.parentID) {
+            topData = JSON.parse(sessionStorage.getItem(newObj.parentID));
+            for (var item in topData.children)
+            {
+                if (parseInt(item) < topData.children.length) {
+                    if (topData.children[item].id == newObj.id) {
+                        topData.children[item] = newObj;
+                        sessionStorage.removeItem(topData.id);
+                        sessionStorage.setItem(topData.id, JSON.stringify(topData));
+                        if (parseInt(item) < topData.children.length - 1) {
+                            existsChild(topData, topData.children[parseInt(item) + 1]);
+                        }
+                        else {
+                            SetData(topData);
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            sessionStorage.removeItem(newObj.id);
+            sessionStorage.setItem(newObj.id, JSON.stringify(newObj));
+        }
+    }
+
+</script>

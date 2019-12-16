@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44EF4FEA-825A-4672-B3A4-E6782C6980FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sgms.Frame</RootNamespace>
+    <AssemblyName>Sgms.Frame</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Sgms.Frame.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Sgms.Frame.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADO\Classes\ADOFilter.cs" />
+    <Compile Include="BLL\Classes\BLLHelper.cs" />
+    <Compile Include="BLL\EmptyManager.cs" />
+    <Compile Include="BLL\Manager.cs" />
+    <Compile Include="BLL\OperationManager.cs" />
+    <Compile Include="BLL\TreeDataAccessManager.cs" />
+    <Compile Include="BLL\TreeDataOperationManager.cs" />
+    <Compile Include="DAL\Classes\TreeOperation.cs" />
+    <Compile Include="EDM\Classes\EDMChildTableProcess.cs" />
+    <Compile Include="EDM\Classes\EDMFilter.cs" />
+    <Compile Include="EDM\DAL\EDMOperationService.cs" />
+    <Compile Include="EDM\DAL\EDMService.cs" />
+    <Compile Include="EDM\DAL\EDMTreeOperationService.cs" />
+    <Compile Include="EDM\DAL\EDMTreeService.cs" />
+    <Compile Include="Entities\DataFilterInfo.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\IFullPathTree.cs" />
+    <Compile Include="Entities\ITree.cs" />
+    <Compile Include="Entities\LinkInfo.cs" />
+    <Compile Include="Entities\Result.cs" />
+    <Compile Include="Entities\ResultStatus.cs" />
+    <Compile Include="Entities\SysConfig.cs" />
+    <Compile Include="Entities\Transform.cs" />
+    <Compile Include="Enums\AuthenticateLevel.cs" />
+    <Compile Include="Exs\Exs.cs" />
+    <Compile Include="Exs\OrderByEx.cs" />
+    <Compile Include="Interface\Base\BLL\IEmptyManager.cs" />
+    <Compile Include="Interface\Base\BLL\IManager.cs" />
+    <Compile Include="Interface\Base\BLL\IOperationManager.cs" />
+    <Compile Include="Interface\Base\BLL\ITreeManager.cs" />
+    <Compile Include="Interface\Base\BLL\ITreeOperationManager.cs" />
+    <Compile Include="Interface\Base\DAL\IChildTableProcess.cs" />
+    <Compile Include="Interface\Base\DAL\IChildTableService.cs" />
+    <Compile Include="Interface\Base\DAL\IEmptyService.cs" />
+    <Compile Include="Interface\Base\DAL\IOperationService.cs" />
+    <Compile Include="Interface\Base\DAL\IService.cs" />
+    <Compile Include="Interface\Base\DAL\ITreeOperationService.cs" />
+    <Compile Include="Interface\Base\DAL\ITreeService.cs" />
+    <Compile Include="Interface\Base\IDataAccess.cs" />
+    <Compile Include="Interface\Base\IDataFilter.cs" />
+    <Compile Include="Interface\Base\IDataOperation.cs" />
+    <Compile Include="Interface\Base\ITreeDataProcess.cs" />
+    <Compile Include="Interface\Base\ITreeOperation.cs" />
+    <Compile Include="Interface\Page\IMVCDataDisplay.cs" />
+    <Compile Include="Page\Classes\PageHelper.cs" />
+    <Compile Include="Page\MVC\DataAccessPage.cs" />
+    <Compile Include="Page\MVC\DataOperationPage.cs" />
+    <Compile Include="Page\MVC\MVCDataDisplay.cs" />
+    <Compile Include="Page\MVC\NormalPage.cs" />
+    <Compile Include="Page\MVC\TreeDataAccessPage.cs" />
+    <Compile Include="Page\MVC\TreeDataOperationPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rights\Entities\IAction.cs" />
+    <Compile Include="Rights\Entities\IApp.cs" />
+    <Compile Include="Rights\Entities\IMenu.cs" />
+    <Compile Include="Rights\Entities\IOrganization.cs" />
+    <Compile Include="Rights\Entities\IOrganizationUser.cs" />
+    <Compile Include="Rights\Entities\IRole.cs" />
+    <Compile Include="Rights\Entities\IRoleAction.cs" />
+    <Compile Include="Rights\Entities\IRoleOrganization.cs" />
+    <Compile Include="Rights\Entities\IRoleUser.cs" />
+    <Compile Include="Rights\Entities\IUser.cs" />
+    <Compile Include="Rights\IRightsDataObtain.cs" />
+    <Compile Include="Rights\RightsProcess.cs" />
+    <Compile Include="Sys\SysCache.cs" />
+    <Compile Include="Sys\SysKeys.cs" />
+    <Compile Include="Sys\SysLang.cs" />
+    <Compile Include="Sys\SysMessage.cs" />
+    <Compile Include="Sys\SysPara.cs" />
+    <Compile Include="Sys\SysUtil.cs" />
+    <Compile Include="Utils\AppSettingUtil.cs" />
+    <Compile Include="Utils\ChildTableUtil.cs" />
+    <Compile Include="Utils\EncryptUtil.cs" />
+    <Compile Include="Utils\EnumUtil.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
+    <Compile Include="Utils\OrderUtil.cs" />
+    <Compile Include="Utils\SpellUtil.cs" />
+    <Compile Include="Utils\TypeUtil.cs" />
+    <Compile Include="Utils\UrlUtil.cs" />
+    <Compile Include="Utils\WebUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\NPOI.dll" />
+    <Content Include="bin\Debug\Sgms.Excel.dll" />
+    <Content Include="bin\Debug\Sgms.Excel.pdb" />
+    <Content Include="bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="bin\Debug\System.Web.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.Razor.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.WebPages.resources.dll" />
+    <Content Include="bin\Release\NPOI.dll" />
+    <Content Include="bin\Release\Sgms.Excel.dll" />
+    <Content Include="bin\Release\Sgms.Excel.pdb" />
+    <Content Include="Config.xml" />
+    <Content Include="obj\Debug\Sgms.Frame.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Sgms.Frame.dll" />
+    <Content Include="obj\Debug\Sgms.Frame.pdb" />
+    <Content Include="obj\Release\Sgms.Frame.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Sgms.Frame.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Sgms.Frame.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Sgms.Frame.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\x86\Debug\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

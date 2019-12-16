@@ -1,0 +1,54 @@
+﻿ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="~/Areas/Mobile/scripts/jquery-1.10.2.js"></script>  
+    <link href="~/Areas/Mobile/Style/bootstrap.min.css" rel="stylesheet" />
+
+
+</head>
+ 
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .input {
+       margin:20px 10px;
+       line-height:30px;
+    }
+     
+</style>
+
+ 
+<form>
+    <div style="text-align:center;margin-top:20px;">
+        原密码： <input type="password" class="input" name="oldpwd" /><br />
+        新密码： <input type="password" class="input" name="newpwd" />
+    </div> 
+</form>
+<div style="text-align:center;">
+    <input type="button" class="btn btn-primary" id="btn-cancel" value="确  定" style="width:120px;text-align:center;" onclick="ChangePwd()" />
+</div>
+<script>
+    function ChangePwd()
+    {
+        $.ajax({
+            url: "@Url.Action("ChangePassWord")",
+            async: false,
+            type: "post",
+            data: $("form").serialize(),
+            success: function (data)
+            {
+                if (!data.Success) {
+                    alert(data.Message)
+                } else {
+                    alert("修改密码成功");
+                }
+            }
+        })
+    }
+
+
+</script>
+ 
+ 

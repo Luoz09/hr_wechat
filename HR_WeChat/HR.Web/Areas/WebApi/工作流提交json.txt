@@ -1,0 +1,73 @@
+﻿{
+	"UserID": "AAAAA",
+	"UserName": "",
+	"ResourceID": "",
+	"ProcessInstanceID": "",
+	"ActivityInstanceID": "",
+	"WorkItemID": "",
+	"IsWithdraw": false,
+	"IsExitNode": false,
+	"ProcessDinfineKey": "",
+	"ActivityDecCode": "",
+	"AppName": "",
+	"AutoSendFeedback": 1,
+	"DepID": "",
+	"UserFullPath": "",
+	"TaskSubject": "",
+	"TaskUrl": "",
+	"Activities": [{
+
+			"SelectedNextActivity": "",
+			"Users": [{
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}, {
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}, {
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}]
+
+		},
+		{
+
+			"SelectedNextActivity": "",
+			"Users": [{
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}, {
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}, {
+				"UserID": "",
+				"UserName": "",
+				"AllPathName": ""
+			}]
+
+		}
+
+
+	],
+	"WFRelativeDatas": [{
+			"RelativeType": "",
+			"VariableName": "",
+			"VariableType": "",
+			"VariableValue": ""
+		},
+		{
+			"RelativeType": "",
+			"VariableName": "",
+			"VariableType": "",
+			"VariableValue": ""
+		}
+	]
+
+
+
+}

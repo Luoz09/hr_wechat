@@ -1,0 +1,66 @@
+进仓操作 》 进仓订单 》 保税进仓订单 （ 进港日期  订单日期  订单状态 ）   
+
+                        非保税进仓订单（进港日期  订单日期  订单状态 ）
+
+            拖车计划 》 提货计划 （进仓类型）
+            
+            还箱确认 》 补录还箱信息（还箱日期 ）  
+    
+            代垫费添加 》 司机报销费用 （集装箱号）  <<<
+         
+            历史记录 》 入库确认历史记录 （入库类型 ） <<<
+
+货权转让 》 转入信息查询（ 入库类型 ）  <<<
+          
+仓储管理 》 现存货物查询 （ 入库类型 ）  <<<
+
+费用结算 》 收入管理 》 费用结算单 （ 收款状态  ） <<<
+
+
+
+[{"user_id":"","emp_id":"","name":"","sex":"","tel":"","org_code":"","flag1":"","bcount":"","online_flag":""},
+ {"user_id":"","emp_id":"","name":"","sex":"","tel":"","org_code":"","flag1":"","bcount":"","online_flag":""}] 
+
+/Charge.aspx?UserID=&Money=&TimeStamp=&Sign= 
+
+md5(UserID+Money+timestamp(yyyy-MM-dd HH:mm:ss)+key）
+
+
+ $obj.next().find(".file-preview-thumbnails > .file-preview-frame .file-footer-caption").each(function (i, o) {
+                var o = $(o)
+                var fileName = o.attr("title");
+                if (fileName != undefined) {
+                    result.push({
+                        fileName: fileName, 
+                    })
+                }
+                //else {
+                //    o = $(o).find(".file-preview-image");
+                //    fileName=o.attr("title");
+                //    if (fileName != undefined) {
+                //        result.push({
+                //            fileName: fileName,
+                //        })
+                //    }
+                //    else {
+                //        if (o.length > 0) {
+                //            result.push({
+                //                id: o[0].dataset.id,
+                //            })
+                //        }
+                //    }
+
+                //}
+                //if (id) {
+                //    result.push({
+                //        id: id
+                //    });
+                //} else {
+                //    result.push({
+                //        srcName: o.attr("data-src-name"),
+                //        fileName: o.attr("data-file-name")
+                //    });
+                //}
+            })
+            return result;
+        },

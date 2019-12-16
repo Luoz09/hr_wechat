@@ -1,0 +1,117 @@
+﻿<p>
+    获取当前工作流信息
+
+
+
+</p>
+
+
+<p>
+    获取工作流审批日志
+</p>
+
+<P>
+    获取下一步可选活动
+    WebApi/WorkFlow/GetNextActivitiesList
+    示例
+    http://localhost:10159/WebApi/WorkFlow/GetNextActivitiesList?processDKey=FEE_BX
+
+</P>
+
+
+
+
+<P>
+
+    获取下一步选中人员资源
+    WebApi/WorkFlow/GetNextActivityResource
+
+    http://localhost:10159/WebApi/WorkFlow/GetNextActivityResource?processDKey=CustomerSourceSussess&userID=e2118ce9-0fbe-4c47-938c-33787fc5394f&activityKey=N3
+    </p>
+
+
+<p>
+
+    写入工作流引擎
+    WebApi/WorkFlow/WriteWfEngine
+
+    http://localhost:10159/WebApi/WorkFlow/WriteWfEngine?EngineData=json格式
+
+
+    json格式如下
+
+    {
+    "UserID": "AAAAA",
+    "UserName": "",
+    "ResourceID": "",
+    "ProcessInstanceID": "",
+    "ActivityInstanceID": "",
+    "WorkItemID": "",
+    "IsWithdraw": false,
+    "IsExitNode": false,
+    "ProcessDinfineKey": "",
+    "ActivityDecCode": "",
+    "AppName": "",
+    "AutoSendFeedback": 1,
+    "DepID": "",
+    "UserFullPath": "",
+    "TaskSubject": "",
+    "TaskUrl": "",
+    "Activities": [{
+
+    "SelectedNextActivity": "",
+    "Users": [{
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }, {
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }, {
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }]
+
+    },
+    {
+
+    "SelectedNextActivity": "",
+    "Users": [{
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }, {
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }, {
+    "UserID": "",
+    "UserName": "",
+    "AllPathName": ""
+    }]
+
+    }
+
+
+    ],
+    "WFRelativeDatas": [{
+    "RelativeType": "",
+    "VariableName": "",
+    "VariableType": "",
+    "VariableValue": ""
+    },
+    {
+    "RelativeType": "",
+    "VariableName": "",
+    "VariableType": "",
+    "VariableValue": ""
+    }
+    ]
+
+
+
+    }
+
+    </p>

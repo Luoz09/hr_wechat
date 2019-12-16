@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Paras></Paras>
+  <TemplateName>SGMS-bootstrap</TemplateName>
+  <TemplateName1></TemplateName1>
+  <LogPath>/Log.txt</LogPath>
+  <ConnectionString>Data Source=qinyuan.jeedaa.com;Initial Catalog=Jeedaa_Qinyuan;uid=sa;pwd=jeedaa_sa_705</ConnectionString>
+  <UploadsPath>/upload</UploadsPath>
+  <GUIDKey>DA81DA9F-738C-D900-A097-3E18A340AC8F</GUIDKey>
+  <!--<BLLAssemblyName>Jeedaa.TalentAlliance.BLL</BLLAssemblyName>-->
+  <PromptTemplatePage>ShowPrompt.htm</PromptTemplatePage>
+  <DesktopPage>/Admin/Home/Desktop</DesktopPage>
+  <LoginPageName>/Mobile/Gate/Login</LoginPageName><!--手机版的-->
+  <PCLoginPageName>/Admin/Gate/Login</PCLoginPageName>后台管理版的
+  <RebackUrl>http://inner.HR.com:8184</RebackUrl>
+
+
+  <!--<LoginPageName><![CDATA[https://oapi.dingtalk.com/connect/qrconnect?appid=dingoafpfngc5fa3b9wzrl&response_type=code&scope=snsapi_login&state=STATE&redirect_uri={0}]]></LoginPageName>-->
+  <!--电脑版后台-->
+
+
+  <NoRightsPageName>/Admin/Gate/NoRights</NoRightsPageName>  
+
+  <NeedAuthenticate>False</NeedAuthenticate>
+  <!--可选值 None Simple InDepth-->
+  <DefaultAuthenticateLevel>Simple</DefaultAuthenticateLevel>   
+
+  <!--允许操作的时间差 单位秒-->
+  <AllowOperaTimeDiff>3600</AllowOperaTimeDiff>
+
+  <!--权限数据获取类信息-->
+  <RightsDataObtainClassInfo>HR.BLL,HR.BLL.RightsDataObtain</RightsDataObtainClassInfo>
+</Root>

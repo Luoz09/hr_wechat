@@ -1,0 +1,55 @@
+﻿.breadcrumb{ margin-top:10px}
+.wrapper{ width:100% ; height:100%;}
+#top-bar{ position:relative;}
+#top-bar ol{ margin-bottom:5px;}
+
+#toolbar{ position:absolute;right: 20px;top: 16px;font-size: 18px;}
+#toolbar a{ margin-right:10px; text-decoration:none}
+#main{ background-color:#FFF; /*margin-top:10px;*/ overflow-x:hidden; overflow-y:scroll;box-shadow:1px 1px 1px 1px #dce1e4;}
+
+.tree-icon{font:normal normal normal 14px/1 FontAwesome;/*margin-top: 8px !important;*/ padding-top:2px; background:none; color:#337ab7}
+.tree-folder:before{content:"\f07b"}
+.tree-folder-open:before{content:"\f07c";}
+.tree-file:before{content:"\f15b"}
+
+a.fa{ text-decoration:none}
+ .choose {
+        width:80%;
+    }
+   .button{           
+             margin: 5px 10px;           
+             text-decoration: none;           
+             font: bold 1.2em 'Trebuchet MS',Arial, Helvetica; /*Change the em value to scale the button*/           
+             display: inline-block;           
+             text-align: center;  
+             color: #fff;                       
+             border: 1px solid rgba(0, 0, 0, 0.05); /* Fallback style */   
+             text-shadow: 0 1px 0 rgba(0,0,0,0.4);                      
+             box-shadow: 0 0 .05em rgba(0,0,0,0.4);                        
+        } 
+         .button span{      
+              display: block;         
+              padding: 0.5em 2.5em;    
+              text-decoration:none; 
+              background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(0, 0, 0, 0.05)), color-stop(.25, transparent), to(transparent)),                              -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(0, 0, 0, 0.05)), color-stop(.25, transparent), to(transparent)),                              -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, rgba(0, 0, 0, 0.05))),-webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, rgba(0, 0, 0, 0.05)));            background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent),                              -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent),                              -moz-linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%),                              -moz-linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%);                        
+	          background-size: 3px 3px;			   
+        }  
+         .button-blue{                 
+            background: -webkit-gradient(linear, left top, left bottom, from(#5ec6ed), to(#54e4f2) );   
+         } 
+         .button-blue:hover{                    
+             background: -webkit-gradient(linear, left top, left bottom, from(#54e4f2), to(#5ec6ed) );   
+             text-decoration:none;   
+             color:white;
+         }
+         .button-blue:active{  background: #54e4f2;  text-decoration:none;color:white;    }   
+         .button-khaki {    background: -webkit-gradient(linear, left top, left bottom, from(#BDD1B4), to(#A2B598) );}
+         .button-khaki:hover {background: -webkit-gradient(linear, left top, left bottom, from(#A2B598), to(#BDD1B4) );text-decoration: none;color: white;}
+        .button-khaki:active{ background: #A2B598;    text-decoration:none;color:white; }
+.button-green {background: -webkit-gradient(linear, left top, left bottom, from(#c8dd95), to(#428739) );}
+.button-green:hover{     background: -webkit-gradient(linear, left top, left bottom, from(#428739), to(#c8dd95) );    text-decoration:none;   color:white;   }                
+.button-green:active{   background: #428739; text-decoration:none;color:white;          }           
+.button-red  {  background: -webkit-gradient(linear, left top, left bottom, from(#E84B6E), to(#D82741) );    }       
+.button-red:hover{ background: -webkit-gradient(linear, left top, left bottom, from(#D82741), to(#E84B6E) );   text-decoration:none;   color:white; }                
+
+ 

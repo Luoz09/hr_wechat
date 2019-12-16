@@ -1,0 +1,885 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+ 
+<script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+<link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+<link href="~/Areas/Admin/Style/soulTable.css" rel="stylesheet" /> 
+<style>
+    #tree {
+        width: 25%;
+        overflow-y: auto;
+        float: left;
+        margin-right: 5%;
+        height: calc(100% - 20px);
+    }
+
+    .demoTable {
+        margin:10px;
+    }
+     
+    .TitleText {
+       font-size:16px; 
+       line-height:40px;
+    }
+
+    .layui-form-pane .layui-form-item {
+        width:90%!important;
+        margin-left:5%!important;
+    }
+
+    .layui-table-view {
+        max-height:calc(100% - 60px)
+    }
+
+     
+   .TitleText  .layui-icon {
+        cursor:pointer;
+        border:1px solid #000000;
+    }
+
+   .operationBtn {
+       cursor:pointer;
+       width:100px!important;
+       height:30px!important;
+       float:right; 
+       margin-top:5px;
+       margin-left:20px!important;
+   }
+
+   .import {
+       cursor:pointer;
+       width:100px!important;
+       height:30px!important;   
+       margin: 15px 0;  
+   }
+
+   #ImportType div{
+       width:50%;
+       text-align:center;
+       float:left;
+   }
+
+    #DownloadExcel div{
+       width:50%;
+       text-align:center;
+       float:left;
+   }
+
+   #DownloadExcel a:hover, a:active {
+       text-decoration:none;
+   }
+   
+</style>
+
+<div id="DictionaryTree" style="overflow:hidden;">
+    <div id="tree" style="padding:10px 0px;"></div>
+    <div class="layui-row" id="Dictionary" style="float:left; width:65%;margin-right:5%">
+        <div class="TitleText" style="padding-top:5px;line-height:45px;">
+            当前部门： <span class="Title">  </span>
+            <div class="operationDep" style="display:none;margin-left:10px;">
+                <i class="layui-icon layui-icon-add-1" onclick="addDep()"></i>
+                <i class="layui-icon layui-icon-edit" onclick="editDep()"></i>
+                <i class="layui-icon layui-icon-delete" onclick="delDep()"></i>  
+            </div>  
+            <input type="text" value="通讯录添加" id="AddFromUsers" class="layui-btn layui-btn-blue operationBtn" style="width:120px!important" readonly onclick="AddUser()" />
+            <input type="text" value="新增人员" id="AddNew" class="layui-btn layui-btn-blue operationBtn" readonly onclick="AddNewUser()" />
+            <input type="text" value="导入" id="Import" class="layui-btn layui-btn-blue operationBtn" style="width:120px!important" readonly onclick="ImportTypeChoose()" />
+            <input type="text" value="模板下载" id="DownLoad" class="layui-btn layui-btn-blue operationBtn" style="width:120px!important" readonly onclick="DownLoadTypeChoose()" />
+        </div>
+        <table class="layui-table" style="margin-left:30%;width:65%!important;margin-top:0px!important;margin-right:10%!important;display:none;" id="DictionaryTable"></table>
+    </div>
+    @*<div class="layui-row" id="Dictionary" style="float:left; width:68%;margin-right:2%; height:100%;overflow-y:auto;">
+        <div class="TitleText">
+            全选：<input type="checkbox" id="ALLPower" name="ALLPower" style="width:20px;height:20px;" onchange="ChangeAllPower()" />  &emsp;
+            当前人员： <span class="Title"></span>
+            <input type="text" value="保存" id="Add" class="layui-btn layui-btn-blue" style="cursor:pointer;width:100px!important;height:30px!important;float:right;margin-right:30px;  margin-top:5px" readonly onclick="SavePower()" />
+        </div>
+    </div>*@
+</div>
+  
+
+<!--人员新增-->
+<form class="layui-form-pane layui-form" id="UserAdd" style="display:none">
+    <input type="hidden" class="layui-input" readonly id="depID"  name="depID" />
+    <input type="hidden" class="layui-input" readonly id="userID" name="userID" />
+    @*<div class="layui-form-item" style="margin-top:20px">
+        <label class="layui-form-label">姓</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="LAST_NAME" name="LAST_NAME" onchange="setLoginName()" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="FIRST_NAME" name="FIRST_NAME" onchange="setLoginName()" />
+        </div>
+    </div>*@
+    <div class="layui-form-item"  style="margin-top:20px">
+        <label class="layui-form-label">登录名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="LOGON_NAME" name="LOGON_NAME"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">岗位</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="SYSCONTENT1" name="SYSCONTENT1" />
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <select class="form-control" lay-value="1" name="SEX" id="SEX">
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+        </div>
+    </div> 
+    <div class="layui-form-item">
+        <label class="layui-form-label">联系电话</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="MOBILE" name="MOBILE" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">排序</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="Sort" name="Sort" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">部门</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" readonly id="DepName" name="DepName" />
+        </div>
+    </div> 
+</form>
+
+<!--部门新增-->
+<div class="layui-form-pane layui-form" id="depAdd" style="display:none;">
+    <input type="hidden" class="layui-input" readonly id="parentDepID" name="parentDepID" />
+    <div class="layui-form-item" style="margin-top:20px">
+        <label class="layui-form-label">部门名称</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="depName" name="depName" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">排序</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="Sort" name="Sort" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父部门</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" readonly id="parentDepName" name="parentDepName" />
+        </div>
+    </div>
+</div> 
+
+
+<!--通讯录人员选择-->
+<div class="layui-row layui-form" id="CustomerChoose" style="display: none;">
+    <div class="demoTable">
+        <span class="Title"></span>
+        <div class="layui-inline">
+            <input class="layui-input" name="SearchStr" id="SearchStr" autocomplete="off">
+        </div>
+        <input class="layui-btn SearchBtn" data-type="reload" value="搜索" onclick="Search()" readonly style="width:100px!important;" />
+        &emsp; &emsp; 是否兼职：<input type="checkbox" id="sideLine" />
+    </div>
+    <table class="layui-hide" id="CustomerTable" lay-filter="Customer"></table>
+</div>
+
+
+<!--选择导入的数据-->
+
+<div id="ImportType" class="layui-form" style="display:none;">
+    <div>
+        <button type="button" class="layui-btn" style="width:120px!important;margin: 20px 0;" id="orgUpload"><i class="layui-icon"></i>部门导入</button>
+        @*<input type="text" value="部门导入" class="layui-btn layui-btn-blue import" style="width:120px!important" readonly onclick="ImportOrg()" />*@
+    </div>
+    <div>
+        <button type="button" class="layui-btn" style="width:120px!important;margin: 20px 0;" id="userUpload"><i class="layui-icon"></i>人员导入</button>
+    </div>
+</div>
+
+<!--数据模板下载-->
+
+<div id="DownloadExcel" class="layui-form" style="display:none;">
+    <div>
+        <button type="button" class="layui-btn" style="width:120px!important;margin: 20px 0;" id="orgDownLoad">
+            <i class="layui-icon layui-icon-download-circle"></i>
+            <a href="~/template/部门导入模板.xls" style="color:white;" download="部门导入模板.xls">部门模板</a>
+        </button> 
+    </div>
+    <div>
+        <button type="button" class="layui-btn" style="width:120px!important;margin: 20px 0;" id="userDownLoad">
+            <i class="layui-icon layui-icon-download-circle"></i>
+            <a href="~/template/人员导入模板.xls" style="color:white;" download="人员导入模板.xls">人员模板</a>
+        </button>
+       
+    </div>
+</div>
+
+ 
+<input type="hidden" id="ChooseName" />
+<input type="hidden" id="ChooseID" />
+<input type="hidden" id="ChooseDepPath" />
+
+<script>
+
+    $("#DictionaryTree").css({ height: $(window).height() })
+
+    var chooseresult = "";
+
+    var form = ""
+    var table = "";
+    var tableSortList = [] // 人员排序数组
+    var treeData = []; //后台返回的部门数据
+
+
+    //function setLoginName() {
+    //    var lastName = $("#LAST_NAME").val();
+    //    var firstName = $("#FIRST_NAME").val();
+    //    $("#LOGON_NAME").val(lastName + firstName)
+    //}
+
+    $(function () {
+        //引入拖动脚本
+        layui.config({
+            base: '/Areas/Admin/plugins/layui/trigger/',   // 模块目录
+        }).extend({
+            soulTable: 'soulTable'  // 模块别名
+        });
+
+        layui.use(["form", "table","upload"], function () {
+            form = layui.form
+            table = layui.table
+            upload = layui.upload;
+
+            //单选框选中事件
+            form.on('radio(ChooseData)', function (data) {
+                //获取选中的的数据
+                var elem = $(data.elem).parents("tr").first();
+                var index = elem.attr("data-index")
+                chooseresult = table.cache.DemoReload[index];
+            })
+
+            //指定允许上传的文件类型
+            upload.render({
+                elem: '#orgUpload',
+                url: '@Url.Action("Import","Attach")',
+                data: { type: "org" },
+                type: "post",
+                accept: 'file', //普通文件
+                done: function (res) {
+                    if (res) {
+                        layer.msg("数据导入成功！", { icon: "1" });
+                        $(".importChoose .layui-layer-close1").click();
+                        GetTreeData(); 
+                    }
+                    else {
+                        layer.msg("数据导入失败！", { icon: "2" })
+                    }
+                }
+            });
+
+            //指定允许上传的文件类型
+            upload.render({
+                elem: '#userUpload',
+                url: '@Url.Action("Import","Attach")',
+                type: "post",
+                data: { type: "user" },
+                accept: 'file', //普通文件
+                exts: 'xls',
+                done: function (res) {
+                    if (res) {
+                        layer.msg("数据导入成功！", { icon: "1" });
+                        $(".importChoose .layui-layer-close1").click();
+                        ItemTypeTable("");
+                    }
+                    else {
+                        layer.msg("数据导入失败！", { icon: "2" })
+                    }
+                }
+            });
+        })
+
+        GetTreeData();
+        ItemTypeTable("");
+    })
+
+    //人员列表
+    function ItemTypeTable(name) {
+        layui.use(['form', 'layer', 'table', 'soulTable'], function () {
+            var form = layui.form,
+                table = layui.table,
+                soulTable = layui.soulTable;
+
+            $(".Title").text(name);
+            tableSortList = [];
+            table.render({
+                elem: '#DictionaryTable',
+                url: "@Url.Action("GetUserData","OUUser")?id=" + $("#ChooseID").val(),
+                cols: [[
+                    {
+                        field: 'USER_GUID', fixed: 'left', width: 140, align: 'center',
+                        templet: function (value) {
+                            var html = [
+                                        '<a class="layui-btn layui-btn-xs" onclick=EditItemType("' + value.USER_GUID + '")>编辑</a>',
+                                        '<a class="layui-btn layui-btn-danger layui-btn-xs" onclick=DelItemType("' + value.USER_GUID + '","' + value.SIDELINE + '")>删除</a>'
+                            ].join('');
+
+                            tableSortList.push(value.INNER_SORT)
+                            return html;
+                        }
+                    },
+                    { field: 'DISPLAY_NAME', title: '用户名', align: 'center', width: 120 },
+                    { field: 'MOBILE', title: '手机', align: 'center', width: 140 },
+                    { field: 'ALL_PATH_NAME', title: '部门', align: 'left', width: 200 },
+                    {
+                        field: 'SIDELINE', title: '是否兼职', align: 'center', width: 100,
+                        templet: function (value) {
+                            return value.SIDELINE == 1 ? '<span style="color: red">是</span>' : '否'
+                        }
+                    },
+                ]],
+                id: 'Dictionaryload',
+                page: false,
+                width: $(window).width() * 0.65,
+                height: $(window).height() - 60,
+                rowDrag: {
+                    //trigger: 'row', //可以触发拖动的列;
+                    done: function (obj) {
+
+                        UpdateSortChange(obj.cache)
+                        // 完成时（松开时）触发
+                        // 如果拖动前和拖动后无变化，则不会触发此方法
+                        //console.log(obj.row) // 当前行数据
+                        //console.log(obj.cache) // 改动后表格数据
+                        //console.log(obj.oldIndex) // 原来的数据索引
+                        //console.log(obj.newIndex) // 改动后数据索引
+                    }
+                },
+                done: function () {
+                    soulTable.render(this);
+                }
+            });
+        })
+    }
+
+    function GetTreeData() {
+        $("#tree").empty();
+        $.ajax({
+            url: "@Url.Action("GetOrgData", "OUUser")",
+            async: false,
+            success: function (data) {
+                layui.use(['tree'], function () {
+                    treeData = data;
+                    layui.tree({
+                        elem: "#tree",
+                        nodes: trees(data),
+                        click: function (node) {
+                            $(".Title").text(node.name)
+                            $(".operationDep").css({
+                                display: "inline-block"
+                            })
+                            $("#ChooseName").val(node.name)
+                            $("#ChooseID").val(node.id)
+                            $("#ChooseDepPath").val(node.path)
+                            ItemTypeTable(node.name)
+                        }
+                    });
+                });
+            }
+        })
+    }
+
+    //从人员通讯录选人
+    function AddUser() {
+        if ($("#ChooseID").val().length == 0) {
+            layer.msg("请选择人员要添加的部门", { icon: 2 });
+            return
+        }
+        layui.use(['form', 'layer', 'table'], function () {
+            var form = layui.form;
+            $(".demoTable .Title").text("搜索：");
+            var table = layui.table;
+            $("#SearchStr").val("")
+            //客户选择数据渲染
+            table.render({
+                elem: '#CustomerTable',
+                url: '@Url.Action("GetAddressUser")?str=' + $("#SearchStr").val(),
+                cols: [[
+                    {
+                        width: 55,
+                        templet: function (value) {
+                            return '<input type="radio" name="GUID" class="Radio" lay-filter="ChooseData"  />';
+                        }
+                    },
+                    { field: 'LOGON_NAME', title: '用户名', width: 100 },
+                    { field: 'MOBILE', title: '手机', width: 120 },
+                    { field: 'OFVIRTEL', title: '归属部门', width: 300, align: 'left', sort: true },
+                ]],
+                id: 'DemoReload',
+                page: true,
+                height: 370,
+            });
+
+
+            layer.open({
+                type: 1,
+                title: "通讯录人员选择",
+                skin: "myclass",
+                area: ["50%"],
+                content: $("#CustomerChoose"),
+                move: false,
+                btn: ['确定'],
+                success: function (layero) {
+                    $("#CustomerChoose #sideLine").removeAttr("checked");
+                    $("#CustomerChoose #sideLine").next().removeClass("layui-form-checked");
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        onclick: "SaveResult()"
+                    });
+                }
+            });
+        })
+    }
+
+    //通讯录选人结果保存
+    function SaveResult() {
+        if ($("#ChooseDepPath").val() + "\\" + chooseresult.LOGON_NAME == chooseresult.Post) {
+            layer.msg("当前人员已经在归属该部门！", { icon: 2 })
+            return
+        }
+        var sort = 0;
+        if (tableSortList.length > 0) {
+            sort = Math.max(...tableSortList) + 1
+        }
+        var isSideLine = $("#CustomerChoose #sideLine").is(":checked");
+        $.ajax({
+            url: "@Url.Action("ChangeDep")",
+            data: { depID: $("#ChooseID").val(), userID: chooseresult.GUID, sort, isSideLine, LOGON_NAME: chooseresult.LOGON_NAME },
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("操作成功", { icon: "1" })
+                    setTimeout(ItemTypeTable($("#ChooseName").val()), 1500)
+                 }
+                else {
+                        layer.msg("操作失败", { icon: "2" })
+                }
+           }
+        })
+    }
+
+    //新增人员信息
+    function AddNewUser() {
+        if ($("#ChooseID").val().length == 0) {
+            layer.msg("请选择人员要添加的部门", { icon: 2 });
+        }
+        else {
+            Userlayer("")
+            if (tableSortList.length > 0) {
+                $("#UserAdd  #Sort").val(Math.max(...tableSortList) + 1)
+            }
+            else {
+                $("#UserAdd  #Sort").val(0)
+            }
+        }
+    }
+
+    //人员添加弹出层
+    function Userlayer(id) {
+        $("form input").val("")
+        $("#UserAdd #DepName").val($("#ChooseDepPath").val())
+        layer.open({
+            type: 1,
+            title: "人员新增",
+            skin: "myclass",
+            area: ["50%"],
+            content: $("#UserAdd"),
+            move: false,
+            btn: ['确定'],
+            success: function (layero) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.find('.layui-layer-btn0').attr({
+                    onclick: 'SaveUserInfo("' + id + '")'
+                });
+            }
+        });
+    }
+
+    //保存人员信息
+    function SaveUserInfo(id) {
+        $("#depID").val($("#ChooseID").val())
+        $("#userID").val(id)
+        $.ajax({
+            url: "@Url.Action("SaveUserInfo")",
+            data: $("form").serialize(),
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("操作成功", { icon: 1 });
+                    setTimeout(ItemTypeTable($("#ChooseName").val()), 1500)
+                }
+                else {
+                    layer.msg("操作失败", { icon: "2" })
+                }
+            }
+        })
+    }
+
+    //人员信息编辑
+    function EditItemType(id) {
+        $.ajax({
+            url: "@Url.Action("GetUserInfo")?id=" + id + "&depID=" + $("#ChooseID").val(),
+            success: function (data) {
+                if (data) { 
+                    $("#LOGON_NAME").val(data.LOGON_NAME)
+                    $("#SYSCONTENT1").val(data.SYSCONTENT1)
+                    $("#MOBILE").val(data.MOBILE)
+                    $("#DepName").val(data.ALL_PATH_NAME)
+                    $("#SEX").attr("lay-value", data.SEX)
+                    $("#UserAdd #Sort").val(parseInt(data.INNER_SORT))
+                    //$("input[type='radio']").val(data.State);
+                }
+                //下拉框默认选中
+                var selectsize = $("select");
+                for (var i = 0; i < selectsize.size() ; i++) {
+                    var _this = selectsize[i];
+                    var text = $(_this).attr("lay-value");
+                    if (text != "" && _this.id != "") {
+                        var select = 'dd[lay-value=' + text + ']';
+                        $("#" + _this.id).siblings("div.layui-form-select").find('dl').find(select).click();
+                    }
+                }
+            }
+        })
+        Userlayer(id);
+    }
+
+    //删除人员信息
+    function DelItemType(id, sideLine) {
+        $.ajax({
+            url: "@Url.Action("DelUserInfo")?id=" + id + "&sideLine=" + sideLine,
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("操作成功", { icon: 1 });
+                    setTimeout(ItemTypeTable($("#ChooseName").val()), 1500)
+                }
+                else {
+                    layer.msg("操作失败", { icon: "2" })
+                }
+            }
+        })
+    }
+
+
+    //通讯录选人搜索
+    function Search() {
+        table.reload('DemoReload', {
+            url: "@Url.Action("GetAddressUser")",
+            page: {
+                curr: 1 //重新从第 1 页开始
+            },
+            where: {
+                str: $('#SearchStr').val()
+            }
+        })
+    }
+
+    //新增部门
+    function addDep() {
+        $("#depAdd input").val("")
+        Deplayer("")
+        var broDepArr = treeData.filter((item) => {
+            return item.PARENT_GUID == $("#ChooseID").val()
+        });
+        var sort = 0;
+        if (broDepArr.length > 0) {
+            var sort = Math.max(...broDepArr.map((item) => item.INNER_SORT)) + 1
+        }
+        $("#depAdd #Sort").val(sort);
+        $("#depAdd #parentDepName").val($("#ChooseDepPath").val())
+    }
+
+    //修改部门信息
+    function editDep() {
+        $("#depAdd input").val("")
+        var id = $("#ChooseID").val()
+        $.ajax({
+            url: "@Url.Action("GetDepInfo")?id=" + id,
+            async: false,
+            success: function (data) {
+                $("#depAdd #depName").val(data.DISPLAY_NAME);
+                $("#depAdd #Sort").val(parseInt(data.INNER_SORT));
+                $("#depAdd #parentDepID").val(data.PARENT_GUID);
+                if (data.PARENT_GUID == null) {
+                    $("#depAdd #parentDepName").val("")
+                }
+                else {
+                    $("#depAdd #parentDepName").val(data.ALL_PATH_NAME.replace("\\" + data.DISPLAY_NAME, ""))
+                }
+            }
+        })
+        Deplayer(id)
+    }
+
+    //删除部门信息
+    function delDep() {
+        $.ajax({
+            url: "@Url.Action("delDepInfo")?id=" + $("#ChooseID").val(),
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("操作成功！", { icon: 1 })
+                    setTimeout(location.reload(), 1500)
+                }
+                else {
+                    layer.msg(data.Message, { icon: 2 })
+                }
+            }
+        })
+         
+    }
+
+    //部门添加弹出层
+    function Deplayer(id) {
+        layer.open({
+            type: 1,
+            title: "部门新增",
+            skin: "myclass",
+            area: ["50%"],
+            content: $("#depAdd"),
+            move: false,
+            btn: ['确定'],
+            success: function (layero) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.find('.layui-layer-btn0').attr({
+                    onclick: 'SaveDepInfo("' + id + '")'
+                });
+            }
+        });
+    }
+
+    //保存部门修改结果
+    function SaveDepInfo(id) {
+        if ($("#depAdd #depName").val() == "") {
+            layer.msg("部门名称不能为空", { icon: 2 });
+            return
+        }
+        $.ajax({
+            url: "@Url.Action("SaveDepInfo")",
+            data: { id: id, parentDepID: $("#parentDepID").val(), depName: $("#depName").val(), sort: $("#depAdd #Sort").val() },
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("操作成功！", { icon: "1" })
+                    if (id != "") {
+                        ItemTypeTable($("#depName").val())
+                    }
+                    $("#tree").empty();
+                    setTimeout(GetTreeData(), 1500)
+                }
+            }
+        })
+    }
+
+    //保存修改后的人员排序
+    function UpdateSortChange(data) {
+        var changeSortList = [];
+        
+        var beginSort = 0;
+        var minSort = Math.min(...tableSortList)
+        var maxSort = Math.max(...tableSortList)
+
+        if (minSort - data.length >= 0) {
+            beginSort = minSort - data.length
+        }
+        else {
+            beginSort = maxSort + 1
+        }
+        
+        data.forEach((item, index) => {
+            changeSortList.push({
+                //name: item.DISPLAY_NAME,
+                userID: item.USER_GUID,
+                sideLine: item.SIDELINE,
+                sort: beginSort + index
+            })
+            tableSortList[index] = beginSort + index
+        })
+          
+
+
+        $.ajax({
+            url: "@Url.Action("UpdateSortChange","OUUser")",
+            async: false,
+            data: { changeSortList: JSON.stringify(changeSortList), parentID: $("#ChooseID").val(), },
+            success: function (data) {
+                if (data) {
+                    layer.msg("修改成功!", { icon: 1 })
+                }
+                else {
+                    layer.msg("修改失败!", { icon: 2 })
+                    setTimeout(ItemTypeTable($("#ChooseName").val()), 1000)
+                }
+                    
+            }
+        })
+    }
+
+    //导入数据类型选择
+    function ImportTypeChoose() {
+        layer.open({
+            type: 1,
+            title: "导入数据选择",
+            skin: "myclass importChoose",
+            area: ["30%"],
+            content: $("#ImportType"),
+            move: false, 
+            success: function (layero) { 
+            }
+        });
+    }
+
+
+    function DownLoadTypeChoose() {
+        layer.open({
+            type: 1,
+            title: "数据模板下载",
+            skin: "myclass downLoadChoose",
+            area: ["30%"],
+            content: $("#DownloadExcel"),
+            move: false,
+            success: function (layero) {
+            }
+        });
+    }
+
+  
+
+    //树形数据初始化
+    function trees(rows) {
+        orgdata = rows
+
+        var TopTree = [];
+        var nodes = [];
+        var topTree = [];
+        //获取最高级父节点
+        for (var item in orgdata) {
+            nodes = [];
+            for (var i = orgdata.length - 1; i >= 0; i--) {
+                var row = orgdata[i];
+                if (row.PARENT_GUID == "" || row.PARENT_GUID == null) {
+                    nodes.push({
+                        id: row.GUID,
+                        name: row.DISPLAY_NAME,
+                        sort: row.INNER_SORT,
+                        parentID: row.PARENT_GUID,
+                        path: row.ALL_PATH_NAME,
+                        spread: true,
+                    });
+
+                }
+            }
+            var toDo = [];
+            for (var i = 0; i < nodes.length ; i++) {
+                toDo.push(nodes[i]);
+            }
+
+            while (toDo.length) {
+                //父节点
+                var node = toDo.shift();
+                // 获取子节点
+                for (var i = 0; i < orgdata.length ; i++) {
+                    var row = orgdata[i];
+                    if (row.PARENT_GUID == node.id) {
+                        var child = {
+                            id: row.GUID,
+                            name: row.DISPLAY_NAME,
+                            sort: row.INNER_SORT,
+                            parentID: row.PARENT_GUID,
+                            path: row.ALL_PATH_NAME,
+                        };
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }
+                        toDo.push(child);
+                    }
+                }
+                //if (node.children) {
+                //    node.children.sort(function (a, b) {
+                //        return a.sort - b.sort;
+                //    })
+                //}
+            }
+        }
+
+        for (var item in nodes) {
+            existsChild("", nodes[item]);
+            nodes[item] = JSON.parse(sessionStorage.getItem(nodes[item].id));
+        }
+
+        sessionStorage.clear()
+        return nodes;
+
+    }
+
+    function existsChild(oldObj, newObj) {
+
+        if (newObj.children) {
+            sessionStorage.removeItem(newObj.id || "0");
+            sessionStorage.setItem(newObj.id || "0", JSON.stringify(newObj));
+        }
+
+
+        for (var i in newObj.children) {
+            if (newObj.children[i]) {
+                return existsChild(newObj, newObj.children[i]);
+            }
+        }
+
+
+        SetData(newObj)
+
+    }
+
+    function SetData(newObj) {
+        if (newObj.parentID) {
+            topData = JSON.parse(sessionStorage.getItem(newObj.parentID));
+            for (var item in topData.children) {
+                var aa = newObj.id;
+                if (parseInt(item) < topData.children.length) {
+                    if (topData.children[item].id == newObj.id) {
+                        topData.children[item] = newObj;
+                        sessionStorage.removeItem(topData.id);
+                        sessionStorage.setItem(topData.id, JSON.stringify(topData));
+                        if (parseInt(item) < topData.children.length - 1) {
+                            existsChild(topData, topData.children[parseInt(item) + 1]);
+                        }
+                        else {
+                            SetData(topData);
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            sessionStorage.removeItem(newObj.id);
+            sessionStorage.setItem(newObj.id, JSON.stringify(newObj));
+        }
+    }
+
+
+
+</script>

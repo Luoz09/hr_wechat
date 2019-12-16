@@ -1,0 +1,1473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Main.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APPLICATIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+          <Property Name="SORT_ID" Type="int" Nullable="false" />
+          <Property Name="RESOURCE_LEVEL" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CHILDREN_COUNT" Type="int" Nullable="false" />
+          <Property Name="ADD_SUBAPP" Type="nchar" MaxLength="1" />
+          <Property Name="USE_SCOPE" Type="nchar" MaxLength="1" />
+          <Property Name="INHERITED_STATE" Type="int" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+          <Property Name="URL1" Type="varchar" MaxLength="1000" />
+          <Property Name="URL2" Type="varchar" MaxLength="1000" />
+          <Property Name="URL3" Type="varchar" MaxLength="1000" />
+          <Property Name="MENU" Type="varchar" MaxLength="1" />
+          <Property Name="PARA1" Type="varchar" MaxLength="50" />
+          <Property Name="PARA2" Type="varchar" MaxLength="50" />
+          <Property Name="TARGET" Type="varchar" MaxLength="255" />
+          <Property Name="DEVICE" Type="nvarchar" MaxLength="100" />
+          <Property Name="DEVICETYPE" Type="nchar" MaxLength="1" />
+          <Property Name="WORKTYPE" Type="varchar" MaxLength="1" />
+          <Property Name="SelectType" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="EXPRESSIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="ROLE_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="EXPRESSION" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="350" Nullable="false" />
+          <Property Name="SORT_ID" Type="int" Nullable="false" />
+          <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+          <Property Name="CLASSIFY" Type="int" />
+          <Property Name="MODIFY_TIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FUNCTIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="APP_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+          <Property Name="SORT_ID" Type="int" Nullable="false" />
+          <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+          <Property Name="CLASSIFY" Type="nchar" MaxLength="1" />
+          <Property Name="MODIFY_TIME" Type="datetime" />
+          <Property Name="URL1" Type="varchar" MaxLength="1000" />
+          <Property Name="URL2" Type="varchar" MaxLength="1000" />
+          <Property Name="URL3" Type="varchar" MaxLength="1000" />
+          <Property Name="MENU" Type="varchar" MaxLength="1" />
+          <Property Name="PARA1" Type="varchar" MaxLength="50" />
+          <Property Name="PARA2" Type="varchar" MaxLength="50" />
+          <Property Name="TARGET" Type="varchar" MaxLength="255" />
+          <Property Name="DEVICE" Type="varchar" MaxLength="100" />
+          <Property Name="DEVICETYPE" Type="nchar" MaxLength="1" />
+          <Property Name="WORKTYPE" Type="varchar" MaxLength="1" />
+          <Property Name="SelectType" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="GROUP_USERS">
+          <Key>
+            <PropertyRef Name="GROUP_GUID" />
+            <PropertyRef Name="USER_GUID" />
+            <PropertyRef Name="USER_PARENT_GUID" />
+          </Key>
+          <Property Name="GROUP_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="USER_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="USER_PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="ATTRIBUTES" Type="int" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+          <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+          <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+          <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+          <Property Name="gty" Type="int" />
+          <Property Name="backPeople" Type="nvarchar" MaxLength="100" />
+          <Property Name="rzzg" Type="nvarchar" MaxLength="100" />
+          <Property Name="Minnum" Type="int" />
+          <Property Name="Maxnum" Type="int" />
+        </EntityType>
+        <EntityType Name="HR_ApplyInfo">
+          <Key>
+            <PropertyRef Name="ApplyID" />
+          </Key>
+          <Property Name="ApplyID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="ApplyCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApplyType" Type="int" />
+          <Property Name="ApplyUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApplyUserID" Type="nvarchar" MaxLength="255" />
+          <Property Name="LeaveType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtWorkType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtWorkIsOut" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vehicle" Type="nvarchar" MaxLength="50" />
+          <Property Name="BusinessType" Type="int" />
+          <Property Name="StartCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="DestinationCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="SuppleTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SuppleType" Type="int" />
+          <Property Name="ApplyDays" Type="float" />
+          <Property Name="ApplyReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="int" />
+          <Property Name="TogetherIDs" Type="nvarchar" MaxLength="255" />
+          <Property Name="TogetherNames" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputUserDepID" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputUserDepName" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputDate" Type="datetime" />
+          <Property Name="LastModifyUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastModifyUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastModifyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HR_Check">
+          <Key>
+            <PropertyRef Name="CheckID" />
+          </Key>
+          <Property Name="CheckID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CheckUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckDepID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckDepName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckDate" Type="datetime" />
+          <Property Name="CheckType" Type="int" />
+          <Property Name="InputUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputDate" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HR_WeChatBind">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BindID" Type="nvarchar" MaxLength="50" />
+          <Property Name="OpenID" Type="nvarchar" MaxLength="50" />
+          <Property Name="BindDate" Type="datetime" />
+          <Property Name="UnBindDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LoginTimes" Type="int" />
+        </EntityType>
+        <EntityType Name="KQ_DayoffType">
+          <Key>
+            <PropertyRef Name="DayoffTypeSysID" />
+          </Key>
+          <Property Name="DayoffTypeSysID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="DayoffTypeNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DayoffTypeName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DayoffIsGongshang" Type="char" MaxLength="1" />
+          <Property Name="DayoffIsYear" Type="char" MaxLength="1" />
+          <Property Name="DayoffIsDefault" Type="char" MaxLength="1" />
+          <Property Name="CalcItemEExpr" Type="text" />
+          <Property Name="CalcItemCExpr" Type="text" />
+          <Property Name="YearCalcItemEExpr" Type="text" />
+          <Property Name="YearCalcItemCExpr" Type="text" />
+        </EntityType>
+        <EntityType Name="KQ_KqData">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="EmpSysID" Type="varchar" MaxLength="36" />
+          <Property Name="KqDate" Type="datetime" />
+          <Property Name="KqTime" Type="int" />
+          <Property Name="IsKeyin" Type="char" MaxLength="1" />
+          <Property Name="IsKouKuan" Type="char" MaxLength="1" />
+          <Property Name="Remark" Type="varchar" MaxLength="100" />
+          <Property Name="ResultMark" Type="varchar" MaxLength="20" />
+          <Property Name="IsModified" Type="char" MaxLength="1" />
+          <Property Name="DevID" Type="smallint" />
+          <Property Name="KeyinOprtNo" Type="varchar" MaxLength="20" />
+          <Property Name="KeyinDay" Type="datetime" />
+          <Property Name="LotNoGUID" Type="varchar" MaxLength="36" />
+          <Property Name="CardID" Type="bigint" />
+          <Property Name="ReaderID" Type="tinyint" />
+          <Property Name="IsInvalid" Type="char" MaxLength="1" />
+          <Property Name="kqdatetime" Type="datetime" />
+          <Property Name="cardsn" Type="varchar" MaxLength="50" />
+          <Property Name="phototime" Type="varchar" MaxLength="50" />
+          <Property Name="isok" Type="int" />
+          <Property Name="svrip" Type="varchar" MaxLength="50" />
+          <Property Name="devip" Type="varchar" MaxLength="50" />
+          <Property Name="cardphoto" Type="image" />
+        </EntityType>
+        <EntityType Name="KQ_OtType">
+          <Key>
+            <PropertyRef Name="OtTypeSysID" />
+          </Key>
+          <Property Name="OtTypeSysID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="OtTypeNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="OtTypeName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="OtIsOffSet" Type="char" MaxLength="1" />
+          <Property Name="OtIsDefault" Type="char" MaxLength="1" />
+          <Property Name="CalcItemEExpr" Type="text" />
+          <Property Name="CalcItemCExpr" Type="text" />
+        </EntityType>
+        <EntityType Name="MATERIAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="APPLICATION_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="PROGRAM_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="RESOURCE_ID" Type="nvarchar" MaxLength="36" />
+          <Property Name="SORT_ID" Type="int" Nullable="false" />
+          <Property Name="CLASS" Type="nvarchar" MaxLength="32" />
+          <Property Name="TITLE" Type="nvarchar" MaxLength="128" />
+          <Property Name="PAGE_QUANTITY" Type="int" />
+          <Property Name="FILE_PATH" Type="nvarchar" MaxLength="200" />
+          <Property Name="ORIGINAL_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="CREATOR" Type="nvarchar" MaxLength="255" />
+          <Property Name="LAST_UPLOAD_TAG" Type="nvarchar" MaxLength="36" />
+          <Property Name="CREATE_DATETIME" Type="datetime" />
+          <Property Name="CHECKOUT_USER" Type="nvarchar" MaxLength="64" />
+          <Property Name="CHECKOUT_TIME" Type="datetime" />
+          <Property Name="LAST_MODIFY_TIME" Type="datetime" />
+          <Property Name="EXTRA_DATA" Type="nvarchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="ORGANIZATIONS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" />
+          <Property Name="RANK_CODE" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ORG_CLASS" Type="int" Nullable="false" />
+          <Property Name="ORG_TYPE" Type="int" Nullable="false" />
+          <Property Name="CHILDREN_COUNTER" Type="int" Nullable="false" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="CUSTOMS_CODE" Type="nvarchar" MaxLength="4" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+          <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+          <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+          <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="OU_USERS">
+          <Key>
+            <PropertyRef Name="PARENT_GUID" />
+            <PropertyRef Name="USER_GUID" />
+          </Key>
+          <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="USER_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="SIDELINE" Type="int" Nullable="false" />
+          <Property Name="RANK_NAME" Type="nvarchar" MaxLength="32" />
+          <Property Name="ATTRIBUTES" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="START_TIME" Type="datetime" Nullable="false" />
+          <Property Name="END_TIME" Type="datetime" Nullable="false" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+          <Property Name="OUSYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+          <Property Name="OUSYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+          <Property Name="OUSYSCONTENT1" Type="nvarchar" MaxLength="32" />
+          <Property Name="OUSYSCONTENT2" Type="nvarchar" MaxLength="64" />
+          <Property Name="OUSYSCONTENT3" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="ROLE_TO_FUNCTIONS">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="FUNC_ID" />
+          </Key>
+          <Property Name="ROLE_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="FUNC_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="APP_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+          <Property Name="CLASSIFY" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="SORT_ID" Type="int" Nullable="false" />
+          <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+          <Property Name="ALLOW_DELEGATE" Type="nchar" MaxLength="1" />
+          <Property Name="MODIFY_TIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SYS_DICTIONARY">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParentID" Type="varchar" MaxLength="50" />
+          <Property Name="ItemTypeID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ItemText" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ItemValue" Type="varchar" MaxLength="500" />
+          <Property Name="ItemAttribute1" Type="varchar" MaxLength="500" />
+          <Property Name="ItemAttribute2" Type="varchar" MaxLength="500" />
+          <Property Name="ItemAttribute3" Type="varchar" MaxLength="500" />
+          <Property Name="ItemAttribute4" Type="varchar" MaxLength="500" />
+          <Property Name="ItemAttribute5" Type="varchar" MaxLength="500" />
+          <Property Name="Notes" Type="varchar" MaxLength="500" />
+          <Property Name="SortID" Type="int" />
+          <Property Name="State" Type="tinyint" Nullable="false" />
+          <Property Name="UID" Type="varchar" MaxLength="20" />
+          <Property Name="InputDate" Type="datetime" />
+          <Property Name="OperateVer" Type="int" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="LAST_NAME" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="LOGON_NAME" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="IC_CARD" Type="nvarchar" MaxLength="18" />
+          <Property Name="PWD_TYPE_GUID" Type="nvarchar" MaxLength="36" />
+          <Property Name="USER_PWD" Type="nvarchar" MaxLength="255" />
+          <Property Name="RANK_CODE" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="E_MAIL" Type="nvarchar" MaxLength="64" />
+          <Property Name="POSTURAL" Type="int" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+          <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+          <Property Name="AD_COUNT" Type="int" Nullable="false" />
+          <Property Name="PERSON_ID" Type="nvarchar" MaxLength="7" />
+          <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+          <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+          <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+          <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+          <Property Name="OLD_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="SEX" Type="int" />
+          <Property Name="NATION" Type="int" />
+          <Property Name="BIRTHDAY" Type="smalldatetime" />
+          <Property Name="DUTY" Type="int" />
+          <Property Name="USERTYPER" Type="int" />
+          <Property Name="NATIVEPLACE" Type="nvarchar" MaxLength="60" />
+          <Property Name="BIRTHADDR" Type="nvarchar" MaxLength="60" />
+          <Property Name="REGADDR" Type="nvarchar" MaxLength="60" />
+          <Property Name="LOVE" Type="nvarchar" MaxLength="60" />
+          <Property Name="STU_EXP" Type="int" />
+          <Property Name="DEGREE" Type="int" />
+          <Property Name="SCHOOL" Type="nvarchar" MaxLength="100" />
+          <Property Name="PROFESSION" Type="nvarchar" MaxLength="60" />
+          <Property Name="GRADUATETIME" Type="nvarchar" MaxLength="10" />
+          <Property Name="CARDID" Type="nvarchar" MaxLength="20" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="60" />
+          <Property Name="OFTEL" Type="nvarchar" MaxLength="30" />
+          <Property Name="FAMTEL" Type="nvarchar" MaxLength="30" />
+          <Property Name="MOBILE" Type="nvarchar" MaxLength="30" />
+          <Property Name="VIRTEL" Type="nvarchar" MaxLength="30" />
+          <Property Name="POLFEA" Type="int" />
+          <Property Name="JOINPARTYTIME" Type="nvarchar" MaxLength="10" />
+          <Property Name="JOINPARTYINTODUCER" Type="nvarchar" MaxLength="30" />
+          <Property Name="JOINCOMTIME" Type="smalldatetime" />
+          <Property Name="CONTRACTTIME" Type="smalldatetime" />
+          <Property Name="CONTRACTTLEN" Type="smalldatetime" />
+          <Property Name="ATTENDWORKTIME" Type="nvarchar" MaxLength="20" />
+          <Property Name="PhotoImg" Type="nvarchar" MaxLength="36" />
+          <Property Name="SMSID" Type="nvarchar" MaxLength="10" />
+          <Property Name="AcdNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="SalaryNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="DisnDate" Type="smalldatetime" />
+          <Property Name="DisnCondition" Type="int" />
+          <Property Name="DisnMemo" Type="nvarchar" MaxLength="400" />
+          <Property Name="EmName" Type="nvarchar" MaxLength="60" />
+          <Property Name="EmDomain" Type="nvarchar" MaxLength="400" />
+          <Property Name="SmtpServer" Type="nvarchar" MaxLength="50" />
+          <Property Name="HughDay" Type="int" />
+          <Property Name="IsMarry" Type="int" Nullable="false" />
+          <Property Name="AGE" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="OFVIRTEL" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyContact" Type="nvarchar" MaxLength="50" />
+          <Property Name="Registered" Type="int" />
+          <Property Name="QQ" Type="nvarchar" MaxLength="50" />
+          <Property Name="WeChatOpenID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DDOpenID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DDUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidJson" Type="nvarchar(max)" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“HR.dbo.TASK_LIST_VIEW”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TASK_LIST_VIEW">
+          <Key>
+            <PropertyRef Name="TaskID" />
+            <PropertyRef Name="TaskType" />
+          </Key>
+          <Property Name="TaskID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SORT_ID" Type="int" />
+          <Property Name="APPLICATION_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="PROGRAM_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="RESOURCE_ID" Type="nvarchar" MaxLength="36" />
+          <Property Name="TASK_TITLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="LEVEL" Type="nvarchar" MaxLength="16" />
+          <Property Name="SOURCE" Type="nvarchar" MaxLength="64" />
+          <Property Name="SOURCE_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="SOURCE_LOGON_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="DESTINATION" Type="nvarchar" MaxLength="64" />
+          <Property Name="DESTINATION_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="DESTINATION_LOGON_NAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="URL" Type="nvarchar" MaxLength="4000" />
+          <Property Name="READ_TIME" Type="datetime" />
+          <Property Name="EMERGENCY" Type="nchar" MaxLength="1" />
+          <Property Name="PURPOSE" Type="nvarchar" MaxLength="64" />
+          <Property Name="EXPIRE_TIME" Type="datetime" />
+          <Property Name="DELIVER_TIME" Type="datetime" />
+          <Property Name="STATUS" Type="nchar" MaxLength="1" />
+          <Property Name="BODY" Type="nvarchar" MaxLength="4000" />
+          <Property Name="DealState" Type="int" />
+          <Property Name="TaskType" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Remind" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="MainStoreContainer">
+          <EntitySet Name="APPLICATIONS" EntityType="Self.APPLICATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EXPRESSIONS" EntityType="Self.EXPRESSIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FUNCTIONS" EntityType="Self.FUNCTIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GROUP_USERS" EntityType="Self.GROUP_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GROUPS" EntityType="Self.GROUPS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HR_ApplyInfo" EntityType="Self.HR_ApplyInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HR_Check" EntityType="Self.HR_Check" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HR_WeChatBind" EntityType="Self.HR_WeChatBind" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KQ_DayoffType" EntityType="Self.KQ_DayoffType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KQ_KqData" EntityType="Self.KQ_KqData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KQ_OtType" EntityType="Self.KQ_OtType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MATERIAL" EntityType="Self.MATERIAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORGANIZATIONS" EntityType="Self.ORGANIZATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OU_USERS" EntityType="Self.OU_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROLE_TO_FUNCTIONS" EntityType="Self.ROLE_TO_FUNCTIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_DICTIONARY" EntityType="Self.SYS_DICTIONARY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TASK_LIST_VIEW" EntityType="Self.TASK_LIST_VIEW" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TASK_LIST_VIEW].[TaskID] AS [TaskID], 
+    [TASK_LIST_VIEW].[SORT_ID] AS [SORT_ID], 
+    [TASK_LIST_VIEW].[APPLICATION_NAME] AS [APPLICATION_NAME], 
+    [TASK_LIST_VIEW].[PROGRAM_NAME] AS [PROGRAM_NAME], 
+    [TASK_LIST_VIEW].[RESOURCE_ID] AS [RESOURCE_ID], 
+    [TASK_LIST_VIEW].[TASK_TITLE] AS [TASK_TITLE], 
+    [TASK_LIST_VIEW].[LEVEL] AS [LEVEL], 
+    [TASK_LIST_VIEW].[SOURCE] AS [SOURCE], 
+    [TASK_LIST_VIEW].[SOURCE_NAME] AS [SOURCE_NAME], 
+    [TASK_LIST_VIEW].[SOURCE_LOGON_NAME] AS [SOURCE_LOGON_NAME], 
+    [TASK_LIST_VIEW].[DESTINATION] AS [DESTINATION], 
+    [TASK_LIST_VIEW].[DESTINATION_NAME] AS [DESTINATION_NAME], 
+    [TASK_LIST_VIEW].[DESTINATION_LOGON_NAME] AS [DESTINATION_LOGON_NAME], 
+    [TASK_LIST_VIEW].[URL] AS [URL], 
+    [TASK_LIST_VIEW].[READ_TIME] AS [READ_TIME], 
+    [TASK_LIST_VIEW].[EMERGENCY] AS [EMERGENCY], 
+    [TASK_LIST_VIEW].[PURPOSE] AS [PURPOSE], 
+    [TASK_LIST_VIEW].[EXPIRE_TIME] AS [EXPIRE_TIME], 
+    [TASK_LIST_VIEW].[DELIVER_TIME] AS [DELIVER_TIME], 
+    [TASK_LIST_VIEW].[STATUS] AS [STATUS], 
+    [TASK_LIST_VIEW].[BODY] AS [BODY], 
+    [TASK_LIST_VIEW].[DealState] AS [DealState], 
+    [TASK_LIST_VIEW].[TaskType] AS [TaskType], 
+    [TASK_LIST_VIEW].[Remind] AS [Remind]
+    FROM [dbo].[TASK_LIST_VIEW] AS [TASK_LIST_VIEW]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Main" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HR_ConstructionEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APPLICATIONS" EntityType="Main.APPLICATIONS" />
+          <EntitySet Name="FUNCTIONS" EntityType="Main.FUNCTIONS" />
+          <EntitySet Name="HR_Check" EntityType="Main.HR_Check" />
+          <EntitySet Name="MATERIAL" EntityType="Main.MATERIAL" />
+          <EntitySet Name="ORGANIZATIONS" EntityType="Main.ORGANIZATIONS" />
+          <EntitySet Name="OU_USERS" EntityType="Main.OU_USERS" />
+          <EntitySet Name="ROLE_TO_FUNCTIONS" EntityType="Main.ROLE_TO_FUNCTIONS" />
+          <EntitySet Name="ROLES" EntityType="Main.ROLES" />
+          <EntitySet Name="HR_WeChatBind" EntityType="Main.HR_WeChatBind" />
+          <EntitySet Name="EXPRESSIONS" EntityType="Main.EXPRESSIONS" />
+          <EntitySet Name="TASK_LIST_VIEW" EntityType="Main.TASK_LIST_VIEW" />
+          <EntitySet Name="SYS_DICTIONARY" EntityType="Main.SYS_DICTIONARY" />
+          <EntitySet Name="KQ_DayoffType" EntityType="Main.KQ_DayoffType" />
+          <EntitySet Name="KQ_OtType" EntityType="Main.KQ_OtType" />
+          <EntitySet Name="HR_ApplyInfo" EntityType="Main.HR_ApplyInfo" />
+          <EntitySet Name="KQ_KqData" EntityType="Main.KQ_KqData" />
+          <EntitySet Name="USERS" EntityType="Main.USERS" />
+          <EntitySet Name="GROUP_USERS" EntityType="Main.GROUP_USERS" />
+          <EntitySet Name="GROUPS" EntityType="Main.GROUPS" />
+        </EntityContainer>
+        <EntityType Name="APPLICATIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="RESOURCE_LEVEL" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CHILDREN_COUNT" Type="Int32" Nullable="false" />
+          <Property Name="ADD_SUBAPP" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="USE_SCOPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="INHERITED_STATE" Type="Int32" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="URL1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="URL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="URL3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="MENU" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PARA1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARA2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARGET" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DEVICE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICETYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="WORKTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SelectType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FUNCTIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="APP_ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="INHERITED" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="CLASSIFY" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Precision="3" />
+          <Property Name="URL1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="URL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="URL3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="MENU" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PARA1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARA2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARGET" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DEVICE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DEVICETYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="WORKTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SelectType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HR_Check">
+          <Key>
+            <PropertyRef Name="CheckID" />
+          </Key>
+          <Property Name="CheckID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckDepID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckDepName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckDate" Type="DateTime" Precision="3" />
+          <Property Name="CheckType" Type="Int32" />
+          <Property Name="InputUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MATERIAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PROGRAM_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="RESOURCE_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="SORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="CLASS" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="TITLE" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PAGE_QUANTITY" Type="Int32" />
+          <Property Name="FILE_PATH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ORIGINAL_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CREATOR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_UPLOAD_TAG" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATETIME" Type="DateTime" Precision="3" />
+          <Property Name="CHECKOUT_USER" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="CHECKOUT_TIME" Type="DateTime" Precision="3" />
+          <Property Name="LAST_MODIFY_TIME" Type="DateTime" Precision="3" />
+          <Property Name="EXTRA_DATA" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ORGANIZATIONS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="DISPLAY_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OBJ_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="PARENT_GUID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="RANK_CODE" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INNER_SORT" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ORIGINAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GLOBAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ALL_PATH_NAME" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ORG_CLASS" Type="Int32" Nullable="false" />
+          <Property Name="ORG_TYPE" Type="Int32" Nullable="false" />
+          <Property Name="CHILDREN_COUNTER" Type="Int32" Nullable="false" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="CUSTOMS_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SYSDISTINCT1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SYSDISTINCT2" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT1" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OU_USERS">
+          <Key>
+            <PropertyRef Name="PARENT_GUID" />
+            <PropertyRef Name="USER_GUID" />
+          </Key>
+          <Property Name="PARENT_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="USER_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="DISPLAY_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OBJ_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INNER_SORT" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ORIGINAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GLOBAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ALL_PATH_NAME" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="SIDELINE" Type="Int32" Nullable="false" />
+          <Property Name="RANK_NAME" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="ATTRIBUTES" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="START_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="END_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CREATE_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OUSYSDISTINCT1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OUSYSDISTINCT2" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OUSYSCONTENT1" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OUSYSCONTENT2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="OUSYSCONTENT3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ROLE_TO_FUNCTIONS">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="FUNC_ID" />
+          </Key>
+          <Property Name="ROLE_ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="FUNC_ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="INHERITED" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="APP_ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CLASSIFY" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="SORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="INHERITED" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="ALLOW_DELEGATE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="HR_WeChatBind">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BindID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OpenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BindDate" Type="DateTime" Precision="3" />
+          <Property Name="UnBindDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="LoginTimes" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EXPRESSIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="ROLE_ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="EXPRESSION" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="SORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="INHERITED" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="CLASSIFY" Type="Int32" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TASK_LIST_VIEW">
+          <Key>
+            <PropertyRef Name="TaskID" />
+            <PropertyRef Name="TaskType" />
+          </Key>
+          <Property Name="TaskID" Type="Guid" Nullable="false" />
+          <Property Name="SORT_ID" Type="Int32" />
+          <Property Name="APPLICATION_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PROGRAM_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="RESOURCE_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="TASK_TITLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LEVEL" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE_LOGON_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="DESTINATION" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="DESTINATION_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DESTINATION_LOGON_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="READ_TIME" Type="DateTime" Precision="3" />
+          <Property Name="EMERGENCY" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="PURPOSE" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="EXPIRE_TIME" Type="DateTime" Precision="3" />
+          <Property Name="DELIVER_TIME" Type="DateTime" Precision="3" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="BODY" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="DealState" Type="Int32" />
+          <Property Name="TaskType" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Remind" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_DICTIONARY">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ParentID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ItemTypeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ItemText" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ItemValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAttribute1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAttribute2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAttribute3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAttribute4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAttribute5" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SortID" Type="Int32" />
+          <Property Name="State" Type="Byte" Nullable="false" />
+          <Property Name="UID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="InputDate" Type="DateTime" Precision="3" />
+          <Property Name="OperateVer" Type="Int32" />
+        </EntityType>
+        <EntityType Name="KQ_DayoffType">
+          <Key>
+            <PropertyRef Name="DayoffTypeSysID" />
+          </Key>
+          <Property Name="DayoffTypeSysID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="DayoffTypeNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DayoffTypeName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DayoffIsGongshang" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DayoffIsYear" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DayoffIsDefault" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CalcItemEExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CalcItemCExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="YearCalcItemEExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="YearCalcItemCExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="KQ_OtType">
+          <Key>
+            <PropertyRef Name="OtTypeSysID" />
+          </Key>
+          <Property Name="OtTypeSysID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="OtTypeNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OtTypeName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OtIsOffSet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OtIsDefault" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CalcItemEExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CalcItemCExpr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HR_ApplyInfo">
+          <Key>
+            <PropertyRef Name="ApplyID" />
+          </Key>
+          <Property Name="ApplyID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="ApplyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApplyType" Type="Int32" />
+          <Property Name="ApplyUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApplyUserID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LeaveType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExtWorkType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vehicle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessType" Type="Int32" />
+          <Property Name="StartCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DestinationCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="SuppleTime" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SuppleType" Type="Int32" />
+          <Property Name="ApplyDays" Type="Double" />
+          <Property Name="ApplyReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="TogetherIDs" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TogetherNames" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputUserDepID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputUserDepName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InputDate" Type="DateTime" Precision="3" />
+          <Property Name="LastModifyUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifyUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtWorkIsOut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KQ_KqData">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="EmpSysID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="KqDate" Type="DateTime" Precision="3" />
+          <Property Name="KqTime" Type="Int32" />
+          <Property Name="IsKeyin" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IsKouKuan" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ResultMark" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsModified" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DevID" Type="Int16" />
+          <Property Name="KeyinOprtNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="KeyinDay" Type="DateTime" Precision="3" />
+          <Property Name="LotNoGUID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="CardID" Type="Int64" />
+          <Property Name="ReaderID" Type="Byte" />
+          <Property Name="IsInvalid" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="kqdatetime" Type="DateTime" Precision="3" />
+          <Property Name="cardsn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phototime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isok" Type="Int32" />
+          <Property Name="svrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="devip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cardphoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="FIRST_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_NAME" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="LOGON_NAME" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="IC_CARD" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="PWD_TYPE_GUID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="USER_PWD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RANK_CODE" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="E_MAIL" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="POSTURAL" Type="Int32" Nullable="false" />
+          <Property Name="CREATE_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AD_COUNT" Type="Int32" Nullable="false" />
+          <Property Name="PERSON_ID" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="SYSDISTINCT1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SYSDISTINCT2" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT1" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="OLD_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SEX" Type="Int32" />
+          <Property Name="NATION" Type="Int32" />
+          <Property Name="BIRTHDAY" Type="DateTime" Precision="0" />
+          <Property Name="DUTY" Type="Int32" />
+          <Property Name="USERTYPER" Type="Int32" />
+          <Property Name="NATIVEPLACE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHADDR" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="REGADDR" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="LOVE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="STU_EXP" Type="Int32" />
+          <Property Name="DEGREE" Type="Int32" />
+          <Property Name="SCHOOL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PROFESSION" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="GRADUATETIME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CARDID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="OFTEL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FAMTEL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MOBILE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="VIRTEL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="POLFEA" Type="Int32" />
+          <Property Name="JOINPARTYTIME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="JOINPARTYINTODUCER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="JOINCOMTIME" Type="DateTime" Precision="0" />
+          <Property Name="CONTRACTTIME" Type="DateTime" Precision="0" />
+          <Property Name="CONTRACTTLEN" Type="DateTime" Precision="0" />
+          <Property Name="ATTENDWORKTIME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PhotoImg" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="SMSID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AcdNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SalaryNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DisnDate" Type="DateTime" Precision="0" />
+          <Property Name="DisnCondition" Type="Int32" />
+          <Property Name="DisnMemo" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="EmName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="EmDomain" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="SmtpServer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HughDay" Type="Int32" />
+          <Property Name="IsMarry" Type="Int32" Nullable="false" />
+          <Property Name="AGE" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="OFVIRTEL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmergencyTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmergencyContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Registered" Type="Int32" />
+          <Property Name="QQ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WeChatOpenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DDOpenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DDUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValidJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GROUP_USERS">
+          <Key>
+            <PropertyRef Name="GROUP_GUID" />
+            <PropertyRef Name="USER_GUID" />
+            <PropertyRef Name="USER_PARENT_GUID" />
+          </Key>
+          <Property Name="GROUP_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="USER_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="USER_PARENT_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="INNER_SORT" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="PARENT_GUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="DISPLAY_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OBJ_NAME" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INNER_SORT" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ORIGINAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GLOBAL_SORT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ALL_PATH_NAME" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="ATTRIBUTES" Type="Int32" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODIFY_TIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SYSDISTINCT1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="SYSDISTINCT2" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT1" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SYSCONTENT3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="gty" Type="Int32" />
+          <Property Name="backPeople" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="rzzg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Minnum" Type="Int32" />
+          <Property Name="Maxnum" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MainStoreContainer" CdmEntityContainer="HR_ConstructionEntities">
+          <EntitySetMapping Name="APPLICATIONS">
+            <EntityTypeMapping TypeName="Main.APPLICATIONS">
+              <MappingFragment StoreEntitySet="APPLICATIONS">
+                <ScalarProperty Name="SelectType" ColumnName="SelectType" />
+                <ScalarProperty Name="WORKTYPE" ColumnName="WORKTYPE" />
+                <ScalarProperty Name="DEVICETYPE" ColumnName="DEVICETYPE" />
+                <ScalarProperty Name="DEVICE" ColumnName="DEVICE" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="PARA2" ColumnName="PARA2" />
+                <ScalarProperty Name="PARA1" ColumnName="PARA1" />
+                <ScalarProperty Name="MENU" ColumnName="MENU" />
+                <ScalarProperty Name="URL3" ColumnName="URL3" />
+                <ScalarProperty Name="URL2" ColumnName="URL2" />
+                <ScalarProperty Name="URL1" ColumnName="URL1" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="INHERITED_STATE" ColumnName="INHERITED_STATE" />
+                <ScalarProperty Name="USE_SCOPE" ColumnName="USE_SCOPE" />
+                <ScalarProperty Name="ADD_SUBAPP" ColumnName="ADD_SUBAPP" />
+                <ScalarProperty Name="CHILDREN_COUNT" ColumnName="CHILDREN_COUNT" />
+                <ScalarProperty Name="RESOURCE_LEVEL" ColumnName="RESOURCE_LEVEL" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CODE_NAME" ColumnName="CODE_NAME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUNCTIONS">
+            <EntityTypeMapping TypeName="Main.FUNCTIONS">
+              <MappingFragment StoreEntitySet="FUNCTIONS">
+                <ScalarProperty Name="SelectType" ColumnName="SelectType" />
+                <ScalarProperty Name="WORKTYPE" ColumnName="WORKTYPE" />
+                <ScalarProperty Name="DEVICETYPE" ColumnName="DEVICETYPE" />
+                <ScalarProperty Name="DEVICE" ColumnName="DEVICE" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="PARA2" ColumnName="PARA2" />
+                <ScalarProperty Name="PARA1" ColumnName="PARA1" />
+                <ScalarProperty Name="MENU" ColumnName="MENU" />
+                <ScalarProperty Name="URL3" ColumnName="URL3" />
+                <ScalarProperty Name="URL2" ColumnName="URL2" />
+                <ScalarProperty Name="URL1" ColumnName="URL1" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CLASSIFY" ColumnName="CLASSIFY" />
+                <ScalarProperty Name="INHERITED" ColumnName="INHERITED" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CODE_NAME" ColumnName="CODE_NAME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="APP_ID" ColumnName="APP_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_Check">
+            <EntityTypeMapping TypeName="Main.HR_Check">
+              <MappingFragment StoreEntitySet="HR_Check">
+                <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+                <ScalarProperty Name="InputUserName" ColumnName="InputUserName" />
+                <ScalarProperty Name="InputUserID" ColumnName="InputUserID" />
+                <ScalarProperty Name="CheckType" ColumnName="CheckType" />
+                <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
+                <ScalarProperty Name="CheckDepName" ColumnName="CheckDepName" />
+                <ScalarProperty Name="CheckDepID" ColumnName="CheckDepID" />
+                <ScalarProperty Name="CheckUserName" ColumnName="CheckUserName" />
+                <ScalarProperty Name="CheckUserID" ColumnName="CheckUserID" />
+                <ScalarProperty Name="CheckID" ColumnName="CheckID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATERIAL">
+            <EntityTypeMapping TypeName="Main.MATERIAL">
+              <MappingFragment StoreEntitySet="MATERIAL">
+                <ScalarProperty Name="EXTRA_DATA" ColumnName="EXTRA_DATA" />
+                <ScalarProperty Name="LAST_MODIFY_TIME" ColumnName="LAST_MODIFY_TIME" />
+                <ScalarProperty Name="CHECKOUT_TIME" ColumnName="CHECKOUT_TIME" />
+                <ScalarProperty Name="CHECKOUT_USER" ColumnName="CHECKOUT_USER" />
+                <ScalarProperty Name="CREATE_DATETIME" ColumnName="CREATE_DATETIME" />
+                <ScalarProperty Name="LAST_UPLOAD_TAG" ColumnName="LAST_UPLOAD_TAG" />
+                <ScalarProperty Name="CREATOR" ColumnName="CREATOR" />
+                <ScalarProperty Name="ORIGINAL_NAME" ColumnName="ORIGINAL_NAME" />
+                <ScalarProperty Name="FILE_PATH" ColumnName="FILE_PATH" />
+                <ScalarProperty Name="PAGE_QUANTITY" ColumnName="PAGE_QUANTITY" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="CLASS" ColumnName="CLASS" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="RESOURCE_ID" ColumnName="RESOURCE_ID" />
+                <ScalarProperty Name="PROGRAM_NAME" ColumnName="PROGRAM_NAME" />
+                <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORGANIZATIONS">
+            <EntityTypeMapping TypeName="Main.ORGANIZATIONS">
+              <MappingFragment StoreEntitySet="ORGANIZATIONS">
+                <ScalarProperty Name="SYSCONTENT3" ColumnName="SYSCONTENT3" />
+                <ScalarProperty Name="SYSCONTENT2" ColumnName="SYSCONTENT2" />
+                <ScalarProperty Name="SYSCONTENT1" ColumnName="SYSCONTENT1" />
+                <ScalarProperty Name="SYSDISTINCT2" ColumnName="SYSDISTINCT2" />
+                <ScalarProperty Name="SYSDISTINCT1" ColumnName="SYSDISTINCT1" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CUSTOMS_CODE" ColumnName="CUSTOMS_CODE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="CHILDREN_COUNTER" ColumnName="CHILDREN_COUNTER" />
+                <ScalarProperty Name="ORG_TYPE" ColumnName="ORG_TYPE" />
+                <ScalarProperty Name="ORG_CLASS" ColumnName="ORG_CLASS" />
+                <ScalarProperty Name="ALL_PATH_NAME" ColumnName="ALL_PATH_NAME" />
+                <ScalarProperty Name="GLOBAL_SORT" ColumnName="GLOBAL_SORT" />
+                <ScalarProperty Name="ORIGINAL_SORT" ColumnName="ORIGINAL_SORT" />
+                <ScalarProperty Name="INNER_SORT" ColumnName="INNER_SORT" />
+                <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+                <ScalarProperty Name="PARENT_GUID" ColumnName="PARENT_GUID" />
+                <ScalarProperty Name="OBJ_NAME" ColumnName="OBJ_NAME" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OU_USERS">
+            <EntityTypeMapping TypeName="Main.OU_USERS">
+              <MappingFragment StoreEntitySet="OU_USERS">
+                <ScalarProperty Name="OUSYSCONTENT3" ColumnName="OUSYSCONTENT3" />
+                <ScalarProperty Name="OUSYSCONTENT2" ColumnName="OUSYSCONTENT2" />
+                <ScalarProperty Name="OUSYSCONTENT1" ColumnName="OUSYSCONTENT1" />
+                <ScalarProperty Name="OUSYSDISTINCT2" ColumnName="OUSYSDISTINCT2" />
+                <ScalarProperty Name="OUSYSDISTINCT1" ColumnName="OUSYSDISTINCT1" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="ATTRIBUTES" ColumnName="ATTRIBUTES" />
+                <ScalarProperty Name="RANK_NAME" ColumnName="RANK_NAME" />
+                <ScalarProperty Name="SIDELINE" ColumnName="SIDELINE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ALL_PATH_NAME" ColumnName="ALL_PATH_NAME" />
+                <ScalarProperty Name="GLOBAL_SORT" ColumnName="GLOBAL_SORT" />
+                <ScalarProperty Name="ORIGINAL_SORT" ColumnName="ORIGINAL_SORT" />
+                <ScalarProperty Name="INNER_SORT" ColumnName="INNER_SORT" />
+                <ScalarProperty Name="OBJ_NAME" ColumnName="OBJ_NAME" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="USER_GUID" ColumnName="USER_GUID" />
+                <ScalarProperty Name="PARENT_GUID" ColumnName="PARENT_GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROLE_TO_FUNCTIONS">
+            <EntityTypeMapping TypeName="Main.ROLE_TO_FUNCTIONS">
+              <MappingFragment StoreEntitySet="ROLE_TO_FUNCTIONS">
+                <ScalarProperty Name="INHERITED" ColumnName="INHERITED" />
+                <ScalarProperty Name="FUNC_ID" ColumnName="FUNC_ID" />
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROLES">
+            <EntityTypeMapping TypeName="Main.ROLES">
+              <MappingFragment StoreEntitySet="ROLES">
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="ALLOW_DELEGATE" ColumnName="ALLOW_DELEGATE" />
+                <ScalarProperty Name="INHERITED" ColumnName="INHERITED" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="CLASSIFY" ColumnName="CLASSIFY" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CODE_NAME" ColumnName="CODE_NAME" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="APP_ID" ColumnName="APP_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_WeChatBind">
+            <EntityTypeMapping TypeName="Main.HR_WeChatBind">
+              <MappingFragment StoreEntitySet="HR_WeChatBind">
+                <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="UnBindDate" ColumnName="UnBindDate" />
+                <ScalarProperty Name="BindDate" ColumnName="BindDate" />
+                <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+                <ScalarProperty Name="BindID" ColumnName="BindID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EXPRESSIONS">
+            <EntityTypeMapping TypeName="Main.EXPRESSIONS">
+              <MappingFragment StoreEntitySet="EXPRESSIONS">
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CLASSIFY" ColumnName="CLASSIFY" />
+                <ScalarProperty Name="INHERITED" ColumnName="INHERITED" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="EXPRESSION" ColumnName="EXPRESSION" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TASK_LIST_VIEW">
+            <EntityTypeMapping TypeName="Main.TASK_LIST_VIEW">
+              <MappingFragment StoreEntitySet="TASK_LIST_VIEW">
+                <ScalarProperty Name="Remind" ColumnName="Remind" />
+                <ScalarProperty Name="TaskType" ColumnName="TaskType" />
+                <ScalarProperty Name="DealState" ColumnName="DealState" />
+                <ScalarProperty Name="BODY" ColumnName="BODY" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DELIVER_TIME" ColumnName="DELIVER_TIME" />
+                <ScalarProperty Name="EXPIRE_TIME" ColumnName="EXPIRE_TIME" />
+                <ScalarProperty Name="PURPOSE" ColumnName="PURPOSE" />
+                <ScalarProperty Name="EMERGENCY" ColumnName="EMERGENCY" />
+                <ScalarProperty Name="READ_TIME" ColumnName="READ_TIME" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="DESTINATION_LOGON_NAME" ColumnName="DESTINATION_LOGON_NAME" />
+                <ScalarProperty Name="DESTINATION_NAME" ColumnName="DESTINATION_NAME" />
+                <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+                <ScalarProperty Name="SOURCE_LOGON_NAME" ColumnName="SOURCE_LOGON_NAME" />
+                <ScalarProperty Name="SOURCE_NAME" ColumnName="SOURCE_NAME" />
+                <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+                <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+                <ScalarProperty Name="TASK_TITLE" ColumnName="TASK_TITLE" />
+                <ScalarProperty Name="RESOURCE_ID" ColumnName="RESOURCE_ID" />
+                <ScalarProperty Name="PROGRAM_NAME" ColumnName="PROGRAM_NAME" />
+                <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+                <ScalarProperty Name="SORT_ID" ColumnName="SORT_ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_DICTIONARY">
+            <EntityTypeMapping TypeName="Main.SYS_DICTIONARY">
+              <MappingFragment StoreEntitySet="SYS_DICTIONARY">
+                <ScalarProperty Name="OperateVer" ColumnName="OperateVer" />
+                <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="SortID" ColumnName="SortID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ItemAttribute5" ColumnName="ItemAttribute5" />
+                <ScalarProperty Name="ItemAttribute4" ColumnName="ItemAttribute4" />
+                <ScalarProperty Name="ItemAttribute3" ColumnName="ItemAttribute3" />
+                <ScalarProperty Name="ItemAttribute2" ColumnName="ItemAttribute2" />
+                <ScalarProperty Name="ItemAttribute1" ColumnName="ItemAttribute1" />
+                <ScalarProperty Name="ItemValue" ColumnName="ItemValue" />
+                <ScalarProperty Name="ItemText" ColumnName="ItemText" />
+                <ScalarProperty Name="ItemTypeID" ColumnName="ItemTypeID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KQ_DayoffType">
+            <EntityTypeMapping TypeName="Main.KQ_DayoffType">
+              <MappingFragment StoreEntitySet="KQ_DayoffType">
+                <ScalarProperty Name="YearCalcItemCExpr" ColumnName="YearCalcItemCExpr" />
+                <ScalarProperty Name="YearCalcItemEExpr" ColumnName="YearCalcItemEExpr" />
+                <ScalarProperty Name="CalcItemCExpr" ColumnName="CalcItemCExpr" />
+                <ScalarProperty Name="CalcItemEExpr" ColumnName="CalcItemEExpr" />
+                <ScalarProperty Name="DayoffIsDefault" ColumnName="DayoffIsDefault" />
+                <ScalarProperty Name="DayoffIsYear" ColumnName="DayoffIsYear" />
+                <ScalarProperty Name="DayoffIsGongshang" ColumnName="DayoffIsGongshang" />
+                <ScalarProperty Name="DayoffTypeName" ColumnName="DayoffTypeName" />
+                <ScalarProperty Name="DayoffTypeNo" ColumnName="DayoffTypeNo" />
+                <ScalarProperty Name="DayoffTypeSysID" ColumnName="DayoffTypeSysID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KQ_OtType">
+            <EntityTypeMapping TypeName="Main.KQ_OtType">
+              <MappingFragment StoreEntitySet="KQ_OtType">
+                <ScalarProperty Name="CalcItemCExpr" ColumnName="CalcItemCExpr" />
+                <ScalarProperty Name="CalcItemEExpr" ColumnName="CalcItemEExpr" />
+                <ScalarProperty Name="OtIsDefault" ColumnName="OtIsDefault" />
+                <ScalarProperty Name="OtIsOffSet" ColumnName="OtIsOffSet" />
+                <ScalarProperty Name="OtTypeName" ColumnName="OtTypeName" />
+                <ScalarProperty Name="OtTypeNo" ColumnName="OtTypeNo" />
+                <ScalarProperty Name="OtTypeSysID" ColumnName="OtTypeSysID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HR_ApplyInfo">
+            <EntityTypeMapping TypeName="Main.HR_ApplyInfo">
+              <MappingFragment StoreEntitySet="HR_ApplyInfo">
+                <ScalarProperty Name="ExtWorkIsOut" ColumnName="ExtWorkIsOut" />
+                <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
+                <ScalarProperty Name="LastModifyUserName" ColumnName="LastModifyUserName" />
+                <ScalarProperty Name="LastModifyUserID" ColumnName="LastModifyUserID" />
+                <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+                <ScalarProperty Name="InputUserDepName" ColumnName="InputUserDepName" />
+                <ScalarProperty Name="InputUserDepID" ColumnName="InputUserDepID" />
+                <ScalarProperty Name="InputUserName" ColumnName="InputUserName" />
+                <ScalarProperty Name="InputUserID" ColumnName="InputUserID" />
+                <ScalarProperty Name="TogetherNames" ColumnName="TogetherNames" />
+                <ScalarProperty Name="TogetherIDs" ColumnName="TogetherIDs" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ApplyReason" ColumnName="ApplyReason" />
+                <ScalarProperty Name="ApplyDays" ColumnName="ApplyDays" />
+                <ScalarProperty Name="SuppleType" ColumnName="SuppleType" />
+                <ScalarProperty Name="SuppleTime" ColumnName="SuppleTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="DestinationCity" ColumnName="DestinationCity" />
+                <ScalarProperty Name="StartCity" ColumnName="StartCity" />
+                <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+                <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+                <ScalarProperty Name="ExtWorkType" ColumnName="ExtWorkType" />
+                <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+                <ScalarProperty Name="ApplyUserID" ColumnName="ApplyUserID" />
+                <ScalarProperty Name="ApplyUserName" ColumnName="ApplyUserName" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="ApplyCode" ColumnName="ApplyCode" />
+                <ScalarProperty Name="ApplyID" ColumnName="ApplyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KQ_KqData">
+            <EntityTypeMapping TypeName="Main.KQ_KqData">
+              <MappingFragment StoreEntitySet="KQ_KqData">
+                <ScalarProperty Name="cardphoto" ColumnName="cardphoto" />
+                <ScalarProperty Name="devip" ColumnName="devip" />
+                <ScalarProperty Name="svrip" ColumnName="svrip" />
+                <ScalarProperty Name="isok" ColumnName="isok" />
+                <ScalarProperty Name="phototime" ColumnName="phototime" />
+                <ScalarProperty Name="cardsn" ColumnName="cardsn" />
+                <ScalarProperty Name="kqdatetime" ColumnName="kqdatetime" />
+                <ScalarProperty Name="IsInvalid" ColumnName="IsInvalid" />
+                <ScalarProperty Name="ReaderID" ColumnName="ReaderID" />
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+                <ScalarProperty Name="LotNoGUID" ColumnName="LotNoGUID" />
+                <ScalarProperty Name="KeyinDay" ColumnName="KeyinDay" />
+                <ScalarProperty Name="KeyinOprtNo" ColumnName="KeyinOprtNo" />
+                <ScalarProperty Name="DevID" ColumnName="DevID" />
+                <ScalarProperty Name="IsModified" ColumnName="IsModified" />
+                <ScalarProperty Name="ResultMark" ColumnName="ResultMark" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsKouKuan" ColumnName="IsKouKuan" />
+                <ScalarProperty Name="IsKeyin" ColumnName="IsKeyin" />
+                <ScalarProperty Name="KqTime" ColumnName="KqTime" />
+                <ScalarProperty Name="KqDate" ColumnName="KqDate" />
+                <ScalarProperty Name="EmpSysID" ColumnName="EmpSysID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="Main.USERS">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="ValidJson" ColumnName="ValidJson" />
+                <ScalarProperty Name="DDUserID" ColumnName="DDUserID" />
+                <ScalarProperty Name="DDOpenID" ColumnName="DDOpenID" />
+                <ScalarProperty Name="WeChatOpenID" ColumnName="WeChatOpenID" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="Registered" ColumnName="Registered" />
+                <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+                <ScalarProperty Name="EmergencyTel" ColumnName="EmergencyTel" />
+                <ScalarProperty Name="OFVIRTEL" ColumnName="OFVIRTEL" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="IsMarry" ColumnName="IsMarry" />
+                <ScalarProperty Name="HughDay" ColumnName="HughDay" />
+                <ScalarProperty Name="SmtpServer" ColumnName="SmtpServer" />
+                <ScalarProperty Name="EmDomain" ColumnName="EmDomain" />
+                <ScalarProperty Name="EmName" ColumnName="EmName" />
+                <ScalarProperty Name="DisnMemo" ColumnName="DisnMemo" />
+                <ScalarProperty Name="DisnCondition" ColumnName="DisnCondition" />
+                <ScalarProperty Name="DisnDate" ColumnName="DisnDate" />
+                <ScalarProperty Name="SalaryNo" ColumnName="SalaryNo" />
+                <ScalarProperty Name="AcdNo" ColumnName="AcdNo" />
+                <ScalarProperty Name="SMSID" ColumnName="SMSID" />
+                <ScalarProperty Name="PhotoImg" ColumnName="PhotoImg" />
+                <ScalarProperty Name="ATTENDWORKTIME" ColumnName="ATTENDWORKTIME" />
+                <ScalarProperty Name="CONTRACTTLEN" ColumnName="CONTRACTTLEN" />
+                <ScalarProperty Name="CONTRACTTIME" ColumnName="CONTRACTTIME" />
+                <ScalarProperty Name="JOINCOMTIME" ColumnName="JOINCOMTIME" />
+                <ScalarProperty Name="JOINPARTYINTODUCER" ColumnName="JOINPARTYINTODUCER" />
+                <ScalarProperty Name="JOINPARTYTIME" ColumnName="JOINPARTYTIME" />
+                <ScalarProperty Name="POLFEA" ColumnName="POLFEA" />
+                <ScalarProperty Name="VIRTEL" ColumnName="VIRTEL" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="FAMTEL" ColumnName="FAMTEL" />
+                <ScalarProperty Name="OFTEL" ColumnName="OFTEL" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="CARDID" ColumnName="CARDID" />
+                <ScalarProperty Name="GRADUATETIME" ColumnName="GRADUATETIME" />
+                <ScalarProperty Name="PROFESSION" ColumnName="PROFESSION" />
+                <ScalarProperty Name="SCHOOL" ColumnName="SCHOOL" />
+                <ScalarProperty Name="DEGREE" ColumnName="DEGREE" />
+                <ScalarProperty Name="STU_EXP" ColumnName="STU_EXP" />
+                <ScalarProperty Name="LOVE" ColumnName="LOVE" />
+                <ScalarProperty Name="REGADDR" ColumnName="REGADDR" />
+                <ScalarProperty Name="BIRTHADDR" ColumnName="BIRTHADDR" />
+                <ScalarProperty Name="NATIVEPLACE" ColumnName="NATIVEPLACE" />
+                <ScalarProperty Name="USERTYPER" ColumnName="USERTYPER" />
+                <ScalarProperty Name="DUTY" ColumnName="DUTY" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="NATION" ColumnName="NATION" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="OLD_NAME" ColumnName="OLD_NAME" />
+                <ScalarProperty Name="SYSCONTENT3" ColumnName="SYSCONTENT3" />
+                <ScalarProperty Name="SYSCONTENT2" ColumnName="SYSCONTENT2" />
+                <ScalarProperty Name="SYSCONTENT1" ColumnName="SYSCONTENT1" />
+                <ScalarProperty Name="SYSDISTINCT2" ColumnName="SYSDISTINCT2" />
+                <ScalarProperty Name="SYSDISTINCT1" ColumnName="SYSDISTINCT1" />
+                <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
+                <ScalarProperty Name="AD_COUNT" ColumnName="AD_COUNT" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="POSTURAL" ColumnName="POSTURAL" />
+                <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+                <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+                <ScalarProperty Name="USER_PWD" ColumnName="USER_PWD" />
+                <ScalarProperty Name="PWD_TYPE_GUID" ColumnName="PWD_TYPE_GUID" />
+                <ScalarProperty Name="IC_CARD" ColumnName="IC_CARD" />
+                <ScalarProperty Name="LOGON_NAME" ColumnName="LOGON_NAME" />
+                <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+                <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUP_USERS">
+            <EntityTypeMapping TypeName="Main.GROUP_USERS">
+              <MappingFragment StoreEntitySet="GROUP_USERS">
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="INNER_SORT" ColumnName="INNER_SORT" />
+                <ScalarProperty Name="USER_PARENT_GUID" ColumnName="USER_PARENT_GUID" />
+                <ScalarProperty Name="USER_GUID" ColumnName="USER_GUID" />
+                <ScalarProperty Name="GROUP_GUID" ColumnName="GROUP_GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPS">
+            <EntityTypeMapping TypeName="Main.GROUPS">
+              <MappingFragment StoreEntitySet="GROUPS">
+                <ScalarProperty Name="Maxnum" ColumnName="Maxnum" />
+                <ScalarProperty Name="Minnum" ColumnName="Minnum" />
+                <ScalarProperty Name="rzzg" ColumnName="rzzg" />
+                <ScalarProperty Name="backPeople" ColumnName="backPeople" />
+                <ScalarProperty Name="gty" ColumnName="gty" />
+                <ScalarProperty Name="SYSCONTENT3" ColumnName="SYSCONTENT3" />
+                <ScalarProperty Name="SYSCONTENT2" ColumnName="SYSCONTENT2" />
+                <ScalarProperty Name="SYSCONTENT1" ColumnName="SYSCONTENT1" />
+                <ScalarProperty Name="SYSDISTINCT2" ColumnName="SYSDISTINCT2" />
+                <ScalarProperty Name="SYSDISTINCT1" ColumnName="SYSDISTINCT1" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="ATTRIBUTES" ColumnName="ATTRIBUTES" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ALL_PATH_NAME" ColumnName="ALL_PATH_NAME" />
+                <ScalarProperty Name="GLOBAL_SORT" ColumnName="GLOBAL_SORT" />
+                <ScalarProperty Name="ORIGINAL_SORT" ColumnName="ORIGINAL_SORT" />
+                <ScalarProperty Name="INNER_SORT" ColumnName="INNER_SORT" />
+                <ScalarProperty Name="OBJ_NAME" ColumnName="OBJ_NAME" />
+                <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+                <ScalarProperty Name="PARENT_GUID" ColumnName="PARENT_GUID" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

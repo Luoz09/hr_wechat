@@ -1,0 +1,29 @@
+﻿body { font-family: "Microsoft YaHei" !important; }
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+
+.no-margins .content-padded { margin: 0; }
+.bar-nav a { padding: .3rem .2rem; text-align: center; }
+.bar-nav a span { display: block; font-size: .5rem; padding-top: 4px; }
+div.list-block { margin: 0; }
+.item-title.label { color: #0894ec; }
+.bar.bar-nav { height: 2.8rem; }
+.bar.bar-nav ~ .content { top: 2.8rem; }
+.fa {font-size: 3rem; }
+.fa.pull-right { margin-left: .6em; font-size: 1.5rem; }
+
+.line { height: 120px; line-height: 120px; /*background: #fff;*/ margin-bottom: 10px; background:#FFF url(../Images/Logo.png) no-repeat center center;}
+
+.fun-title { height: 30px; line-height: 30px; text-indent: .8rem; background-color: #fff; color: #333; font-size: .8rem; }
+
+.fun-list li { float: left; width: 50%; padding-bottom: 50%; overflow: hidden; position: relative; background-color: #fff; }
+.fun-list li a { border-left: 1px solid #ccc; border-top: 1px solid #ccc; display: block; width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; text-align: center; }
+.fun-list li:nth-child(2n+1) a { border-left: 0; }
+.fun-list li:last-child::after { clear: both; content: ""; }
+.fun-list li a div { width: 60%; padding-bottom: 60%; position: relative; border-radius: 5px; margin: 15% auto 5% auto; }
+.fun-list li a div i { position: absolute; color: #fff; display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; display: box; box-pack: center; box-align: center; left: 0; right: 0; top: 0; bottom: 0; /*font-size: .8rem; left:50%;top:50%;margin-left:-.6rem;margin-top:-.6rem*/ }
+.fun-list li a span { color: #111; font-size: .7rem; }
+
+.template { display:none; }
+.card-list ul.list-container{ background:none}
+
+.list-block ul ul.getf-child-table-bll { padding-left: 0; }

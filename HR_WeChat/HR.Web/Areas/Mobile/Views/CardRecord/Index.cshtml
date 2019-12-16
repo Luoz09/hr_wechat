@@ -1,0 +1,229 @@
+﻿@{
+    ViewBag.Title = "打卡记录";
+    Layout = "~/Areas/Mobile/Views/Shared/_ListLayout.cshtml"; 
+
+}
+
+
+@section head{ 
+
+      <link href="~/Areas/Mobile/plugins/layui/css/layui.css" rel="stylesheet" />
+      <script src="~/Areas/Mobile/plugins/laydate/laydate.js"></script>
+
+}
+
+ 
+
+<style>
+
+    .header {
+        line-height:50px;
+        text-align:center; 
+        font-size:16px; 
+        padding-top:10px;
+        border-bottom:2px solid white;
+    }
+
+    .content {
+       overflow-y:auto;  
+    }
+
+    .normal {
+       color:green;
+    }
+
+    .danger {
+       color:orange;
+    }
+
+
+      .layui-input-inline {
+       padding-right:2%; 
+    }
+        
+
+</style> 
+
+<div class="header">
+    <span class="StartDate"></span> - <span class="EndDate"></span>   &emsp; 打卡记录  &emsp;
+    <i class="fa fa-search-plus Icon" style="color:#61a7f3;font-size:1.5em;" onclick="ShowSearchInfo()"> </i>
+</div>
+ 
+
+<form class="SearchInfo layui-form"  style="display:none;margin-top:10px;"> 
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width:100px;">开始日期</label>
+        <div class="layui-input-inline">
+            <input type="text" style="display:block;" class="layui-input Day" value="" readonly name="MinValue" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width:100px;">结束日期</label>
+        <div class="layui-input-inline">
+            <input type="text" style="display:block;" class="layui-input Day" value="" readonly name="MaxValue" />
+        </div>
+    </div>
+     
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width:100px;">打卡类型</label>
+        <div class="layui-input-inline">
+            <input type="radio" name="CheckType" value="AllWork" lay-filter="ChangeType" title="全部" checked />
+            <input type="radio" name="CheckType" value="OnWork"  lay-filter="ChangeType" title="上班"  />
+            <input type="radio" name="CheckType" value="OutWork" lay-filter="ChangeType" title="下班" />
+        </div>
+    </div> 
+
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width:100px;">打卡状态</label>
+        <div class="layui-input-inline">
+            <input type="radio" name="CheckStatus" value="AllStatus" lay-filter="ChangeStauts" title="全部" checked />
+            <input type="radio" name="CheckStatus" value="Normal"    lay-filter="ChangeStauts" title="正常" />
+            <input type="radio" name="CheckStatus" value="Danger"    lay-filter="ChangeStauts" title="异常" />
+        </div>
+    </div> 
+     
+
+    <input type="text" class="layui-btn layui-btn-normal Reload" style="background:white; color:royalblue;height:40px;margin-top:10px; width:160px;margin-bottom:10px!important;" readonly value="查询" onclick="ReloadBySearch()" />
+
+</form>
+
+
+<div class="content">
+    <table class="layui-table" style="display:block;text-align:center;"> 
+        <thead>
+            <tr> 
+                <th style="text-align:center;">打卡时间</th>
+                <th style="text-align:center;">打卡类型</th>
+                <th style="text-align:center;">打卡状态</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>05-20 09:00 周一</td>
+                <td>上班打卡</td>
+                <td class="danger">异常</td>
+            </tr> 
+            <tr>
+                <td>05-20 19:00 周一</td>
+                <td>下班打卡</td>
+                <td class="normal">正常</td>
+            </tr> 
+            <tr>
+                <td>05-21 09:00 周二</td>
+                <td>上班打卡</td>
+                <td class="normal">正常</td>
+            </tr>
+            <tr>
+                <td>05-21 19:00 周二</td>
+                <td>下班打卡</td>
+                <td class="normal">正常</td>
+            </tr> 
+            <tr>
+                <td>05-22 09:00 周三</td>
+                <td>上班打卡</td>
+                <td class="normal">正常</td>
+            </tr>
+            <tr>
+                <td>05-22 19:00 周三</td>
+                <td>下班打卡</td>
+                <td class="normal">正常</td>
+            </tr> 
+            <tr>
+                <td>05-23 09:00 周四</td>
+                <td>上班打卡</td>
+                <td class="normal">正常</td>
+            </tr>
+            <tr>
+                <td>05-23 19:00 周四</td>
+                <td>下班打卡</td>
+                <td class="normal">正常</td>
+            </tr> 
+            <tr>
+                <td>05-24 09:00 周五</td>
+                <td>上班打卡</td>
+                <td class="normal">正常</td>
+            </tr>
+            <tr>
+                <td>05-24 19:00 周五</td>
+                <td>下班打卡</td>
+                <td class="normal">正常</td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    $(".content").css({
+        "height": $(window).height() * 0.91 - 60
+    })
+
+    $(".content table th").css({
+        "width": $(window).width() * 0.333
+    })
+
+    $(".Reload").css({
+        "margin-left": ($(".layui-form").width() - 160) / 2
+    })
+
+
+    $(function () {
+        layui.use(["form"], function () {
+            var form = layui.form;
+            var laydate = layui.laydate;
+
+            //日期选择
+            lay(".Day").each(function () {
+                laydate.render({
+                    elem: this,
+                })
+            })
+        })
+
+
+        var minDate = "@DateTime.Now.AddDays(1 - Convert.ToInt32(DateTime.Now.DayOfWeek)).ToString("yyyy-MM-dd")"; 
+        $("input[name=MinValue]").val(minDate);
+        $(".StartDate").text(minDate);
+
+        var maxDate = "@DateTime.Now.AddDays(7 - Convert.ToInt32(DateTime.Now.DayOfWeek)).ToString("yyyy-MM-dd")";
+        $("input[name=MaxValue]").val(maxDate);
+        $(".EndDate").text(maxDate);
+
+    })
+
+
+
+       function ReloadBySearch()
+       {
+           $(".content").toggle();
+           $(".SearchInfo").toggle();
+           $(".Icon").removeClass("fa-search-minus").addClass("fa-search-plus")
+           @*$.ajax({
+            url: "@Url.Action("GetDataBySearch")",
+            async: false,
+            type: "post",
+            data: $("form").serialize(),
+            success: function (data) {
+                for (var item in data) {
+
+                }
+            }
+        })*@
+    }
+
+
+
+    function ShowSearchInfo() {
+        $(".content").toggle();
+        $(".SearchInfo").toggle();
+        if ($(".SearchInfo").css("display") == "block") {
+            $(".Icon").removeClass("fa-search-plus").addClass("fa-search-minus")
+        }
+        else {
+            $(".Icon").removeClass("fa-search-minus").addClass("fa-search-plus")
+        }
+    }
+
+
+
+</script>

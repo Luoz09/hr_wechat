@@ -1,0 +1,354 @@
+﻿@{
+    ViewBag.Title = "首页";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var curUserID = SysPara.CurAdmin.ID;
+}
+ 
+  
+<div class="sgms-admin-page">
+    <header>
+        <div class="container">
+            <div class="pull-left left">
+                打卡后台管理系统
+            </div>
+            <div class="right clearfix">
+                <ul class="pull-left nav navbar-nav">
+                    <li><a class="btn" id="btn-zoom"><i class="fa fa-bars"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav" style="width: 60%;padding-left: 20px;padding-top: 5px;line-height: 25px;font-size: 25px;color: #E9F01D">
+                    <li style="width:100%">
+                        <div id="MeDiv" style="position:fixed;width:80%;line-height:35px;z-index: 99;background-color:#DDF0ED;color: #545353;display:none">
+                            <div id="marqueediv" style="width:97%;float:left;">
+                            </div>
+                            <div style="width:3%;float:left">
+                                <a href="javascript:MeDivHide();">X</a>
+                            </div>
+                        </div>
+                        <marquee id="marqueetext" onmouseout="this.start();" onmouseover="this.stop();" style="cursor:pointer"></marquee>
+                    </li>
+                </ul>
+                <ul class="pull-right nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle full-right" data-toggle="dropdown">
+                            <span>
+                                @SysPara.CurAdmin.UserName
+                            </span><b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Admin/Admin/ChangePasswd"><i class="fa fa-user"></i>修改密码</a></li>
+                            <li>
+                                <a href="javascript:logout()" target="_self">
+                                    <i class="fa fa-power-off">
+                                    </i>退出系统
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="btn"><i class="fa fa-cog"></i></a></li>
+                    <li>
+                        <a class="btn" href="javascript:logout()" target="_self">
+                            <i class="fa fa-power-off">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container theme-whbl">
+        <section>
+            <div class="sm-hidden xd-hidden logo">
+            </div>
+            <div id="sidebar-nav" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href="@Url.Action("Desktop", "Home")" onclick="return false">
+                            <i class="fa fa-desktop"></i><span>工作中心</span>
+                        </a>
+                    </li>
+
+                    <li class="apply">
+                        <a class="dropdown-toggle"> 
+                            <i class="fa fa-empire"></i>
+                            <span>事务申请</span>
+                            <i class="fa fa-chevron-circle-right drop-icon"></i>
+                        </a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="@Url.Action("LeaveIndex", "Apply")">
+                                    <span>
+                                        请假申请
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("OutIndex", "Apply")">
+                                    <span>
+                                        外出申请
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("BusinessIndex", "Apply")">
+                                    <span>
+                                        出差申请
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("ExtWorkIndex", "Apply")">
+                                    <span>
+                                        加班申请
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("SuppleCardIndex", "Apply")">
+                                    <span>
+                                        补卡申请
+                                    </span>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li>
+                    <li class="kqInfo">
+                        <a class="dropdown-toggle"> 
+                            <i class="fa fa-empire"></i>
+                            <span>考勤信息</span>
+                            <i class="fa fa-chevron-circle-right drop-icon"></i>
+                        </a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "Check")">
+                                    <span>
+                                        我的考勤
+                                    </span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("History", "Check")">
+                                    <span>
+                                        考勤历史
+                                    </span>
+                                </a>
+                            </li>
+                            @*<li class="submenu">
+                                <a href="@Url.Action("Index", "CardRecord")">
+                                    <span>
+                                        打卡记录
+                                    </span>
+                                </a>
+                            </li>*@
+                        </ul>
+                    </li> 
+                    <li class="sysManager">
+                        <a class="dropdown-toggle">
+                            <i class="fa fa-empire"></i>
+                            <span>系统管理</span>
+                            <i class="fa fa-chevron-circle-right drop-icon"></i>
+                        </a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "USERS")">
+                                <span>用户管理</span> 
+                                </a>
+                            </li>
+                            @*<li class="submenu">
+                                <a href="@Url.Action("Index", "ORGANIZATIONS")">
+                                    <span>部门管理</span>
+                                </a>
+                            </li>*@ 
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "OUUser")">
+                                    <span>机构人员管理</span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "UserToGroup")">
+                                    <span>人员组管理</span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("AdminCheck", "Check")">
+                                    <span>考勤管理</span>
+                                </a>
+                            </li>
+                            @*<li class="submenu">
+                                <a href="@Url.Action("AdminRecord", "CardRecord")">
+                                    <span>打卡管理</span>
+                                </a>
+                            </li>*@
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "RoleInfo")">
+                                    <span>角色管理</span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("Index", "PowerInfo")">
+                                    <span>权限管理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="managerCount">
+                        <a class="dropdown-toggle">
+                            <i class="fa fa-empire"></i>
+                            <span>管理统计</span>
+                            <i class="fa fa-chevron-circle-right drop-icon"></i>
+                        </a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="@Url.Action("LeaveManage", "ManageForm")">
+                                    <span>请假申请管理</span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("OutManage", "ManageForm")">
+                                    <span>外出申请管理</span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("BusinessManage", "ManageForm")">
+                                    <span>出差申请管理</span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("ExtWorkManage", "ManageForm")">
+                                    <span>加班申请管理</span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("SuppleCardManage", "ManageForm")">
+                                    <span>补卡申请管理</span>
+                                </a>
+                            </li>
+                            <li class="submenu">
+                                <a href="@Url.Action("Apply", "ManageForm")">
+                                    <span>事务申请统计</span>
+                                </a>
+                            </li> 
+                            <li class="submenu">
+                                <a href="@Url.Action("Check", "ManageForm")">
+                                    <span>考勤统计</span>
+                                </a>
+                            </li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="main">
+            <iframe id="frm-main" name="frm-main"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function MeDivHide() {
+        $("#MeDiv").hide();
+}
+    $("#MeDiv").dblclick(function () {
+        $("#MeDiv").hide();
+    })
+    $("marquee").click(function () {
+        $("#MeDiv").show();
+    })
+    $(function ()
+    {
+        $.ajax({
+            url: "@Url.Action("hasRoles", "USERS")",
+            data: { userID: "@curUserID", appCode: "HR", roleCodeNames: "XTGLY" },
+            async: false,
+            success: function (data) {
+                if (!data) { 
+                    $(".sysManager").remove();
+                    $(".managerCount").remove();
+                } 
+            }
+        }) 
+         
+
+        $(".submenu").attr("onclick", "return false");
+
+
+        var $page = $(".sgms-admin-page");
+
+        var menuItemJqObj = $("#sidebar-nav .nav>li>a");
+
+        $(".nav a").click(function () {
+            var self = $(this);
+            $(".nav a").removeClass("cur")
+            self.addClass("cur")
+            if(self.attr("href")&&self.attr("href")!= "javascript:"){
+                if (self.attr("href").indexOf("/Admin/Gate/Logout") < 0) {
+                    if (self.attr("href") != "javascript:")
+                    {
+                        setCookie("curIFrameUrl", $(this).attr("href"))
+                        $("#frm-main").attr("src", $(this).attr("href").replace("%3F", "?").replace("%3D", "="))
+                    }
+                }
+            }else{
+                var dropIcon=self.find(".drop-icon");
+                if(dropIcon.hasClass("fa-chevron-circle-right")){
+                    showChildren(self)
+                }else{
+                    hideChildren(self)
+                }
+            }
+            setCookie("curOpenedMenuIndex", getIndexInArr(menuItemJqObj, this));
+            setCookie("showChildren", !self.next("ul").is(":hidden"));
+        })
+
+        $("#btn-zoom").click(function () {
+            $page.toggleClass("enlarge")
+            
+        })
+
+        var curOpenedMenuIndex = getCookie("curOpenedMenuIndex");
+        if (!curOpenedMenuIndex) {
+            curOpenedMenuIndex = 0;
+        }
+
+        var curJqObj=menuItemJqObj.eq(curOpenedMenuIndex)
+        curJqObj.addClass("cur")
+
+        ///是否显示子元素
+        if(getCookie("showChildren")=="true"){
+            showChildren(curJqObj)
+        }else{
+            hideChildren(curJqObj)
+        }
+
+        var curIFrameUrl = getCookie("curIFrameUrl");
+        if (!curIFrameUrl || curIFrameUrl.indexOf("/Login") > 0) {
+            curIFrameUrl = "/Admin/Home/Desktop";
+        }
+        $("#frm-main").attr("src", curIFrameUrl.replace("%3F", "?").replace("%3D", "="))
+         
+    });
+
+
+    function logout() {
+        $.messager.confirm('退出系统', '你确认要退出系统吗？',function(r){
+            if(r){
+                location.href="@Url.Action("Logout", "Gate")";
+            }
+        });
+    }
+
+    function showChildren(jqObj){
+        var dropIcon=jqObj.find(".drop-icon")
+        dropIcon.removeClass("fa-chevron-circle-right")
+        dropIcon.addClass("fa-chevron-circle-down")
+        jqObj.next("ul").show();
+    }
+
+    function hideChildren(jqObj){
+        var dropIcon=jqObj.find(".drop-icon")
+        dropIcon.removeClass("fa-chevron-circle-down")
+        dropIcon.addClass("fa-chevron-circle-right")
+        jqObj.next("ul").hide();
+    }
+
+</script>

@@ -1,0 +1,277 @@
+   
+http://localhost:30996/WebApi/AddUser/EntInfo?EntCode=3090310836
+http://localhost:30996/WebApi/AdminApi/AddUserInfo?Userjson={"LoginName":"TTT","Password":"111111","UserName":"TT","ShortName":"t"}&ActionType=create&LoginName=TTT
+http://localhost:30996/WebApi/AdminApi/AddUserInfo?Userjson={"LoginName":"TTT","Password":"111111","ShortName":"t"}&ActionType=edit
+http://localhost:30996/Admin/ApiAppLog/AddUser?Userjson={"LoginName":"TTT","Password":"111111","ShortName":"t"}&ActionType=edit
+http://localhost:30996/WebApi/AdminApi/AddEntInfo?EntInfojson={"EntCode":"11111111","EntName":"测试aa","AA":"111"}&ActionType=edit
+http://localhost:30996/WebApi/AdminApi/AddEntInfo?EntInfojson={"EntCode":"1234567890","EntName":"测试1"}
+http://localhost:30996/WebApi/Recharge/EntRecharge?json={"EntCode":"1234567890","RechargeAmount":"100","RechargeDiscount":"1"}
+http://localhost:30996/WebApi/Declaration/Operation?actiontype=create&json={"ENTRY_ID":"222","I_E_PORT":"11","DECL_PORT":"22","WebApiPWD":"33","LoginTime":"2017-10-30T14:09:48.8965373+08:00"}&id=222
+http://localhost:30996/WebApi/Declaration/Operation?actiontype=create&json={"ENTRY_ID":"ede54d6e-a7bf-4678-a45b-4890faaaaa91","I_E_FLAG":true,"I_E_PORT":"admin","DECL_PORT":"pennpo_system","WebApiPWD":"system2017","LoginTime":"2017-10-30T14:09:48.8965373+08:00"}
+
+ http://api.nbeport.com/router/rest?sign=73598360c8716c11cedc1fe75ae433e1&user_id=penccl&timestamp=2018-01-16+13%3A52%3A19&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+ http://api.nbeport.com/router/rest?sign=F31C2F165D3DA6FDB8AE3C2D504E5220&user_id=penccl&timestamp=2018-01-16+13%3A52%3A02&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.subscribe.get&portcode=CNNBO&timestamp=2017-12-28 16:57:20&user_id=nbforwarder&key=2dde55e422d2461b913f510e95da73b3
+
+ billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2018-01-16 14:00:18&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+ billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2018-01-16 14:00:18&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+ 
+http://api.nbeport.com/router/rest?sign=c61c8eed328d960fc6bbb8bfdecfd65d&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+http://api.nbeport.com/router/rest?sign=A6EB165B5214EA67CB9C77C0E5F7D5EC&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+http://api.nbeport.com/router/rest?sign=C2FD02D7C869F47394B846A634D428FD&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+
+billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2017-12-28 16:57:20&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+http://api.nbeport.com/router/rest?sign=ed5924d1ffab1b1cd720ad15e37d2b2e&user_id=penccl&timestamp=2018-01-16+14%3A18%3A29&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=1&vesselname=1&voyage=1
+
+
+
+ 
+获取pooldata
+http://localhost:3333/GetPools.aspx?ICCard=1234&ActionType=充值&MoneyValue=1.1
+回调
+http://localhost:3333/CallBack.aspx?PoolID=18&sign=4ab3e4e73087b48f5fe79fd9f7e8ae00&Result=true
+
+http://localhost:3333/GetPools.aspx?LoginName=3810555&Password=111&poolid=22&time=2018-02-05 13:30:11 
+ 
+
+
+http://localhost:3333/ICCard.aspx
+http://localhost:3333/GetPools.aspx?LoginName=admin&sign=886d3a470ba8daf9f423d53e37124d0a&TimeStamp=2018-02-07%2014:53:31
+
+
+
+@{
+    ViewBag.Title = "Leave.Mobile";
+    //Layout = "~/Areas/Admin/Views/Shared/_EditLayout.cshtml";
+    int BeginH = 8;
+    int BeginM = 30;
+    int EndH = 17;
+    int EndM = 30;
+}
+@section head{
+    <!--自适应手机屏幕宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+}
+<script src="~/Areas/Admin/Plugins/laydate/laydate.js"></script>
+<link href="~/Areas/Admin/Plugins/laydate/theme/laydate.css" rel="stylesheet" />
+<style>
+    body {
+        background: #f8f8f8;
+    }
+
+    .main_table {
+        font-size: 30px;
+    }
+
+        .main_table tr {
+            height: 78px;
+            background: white;
+            border-bottom: 2px solid #f8f8f8;
+        }
+
+        .main_table td {
+            text-align: center;
+        }
+
+    .laydate-time-list ol li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .layui-laydate {
+        position: absolute;
+        left: 0 !important;
+        width: 100%;
+    }
+
+    .layui-laydate-main {
+        width: 100%;
+    }
+
+    .form-control {
+        height: 50px;
+        width: 90%;
+    }
+</style>
+<table style="width:100%;" class="main_table">
+    <tr style="line-height:78px;">
+        <td colspan="6">请假申请</td>
+    </tr>
+    <tr style="height:20px;"></tr>
+    <tr>
+        <td><span style="color:red;padding-left:-10px;">*</span>请假人员</td>
+        <td><input type="text" class="form-control" /></td>
+    </tr>
+    <tr>
+        <td><span style="color:red;padding-left:-10px;">*</span>请假类型</td>
+        <td>
+            <select id="LeaveType" class="form-control"></select>
+        </td>
+    </tr>
+    <tr>
+        <td><span style="color:red;padding-left:-10px;">*</span>开始时间</td>
+        <td><input type="text" id="StartTime" class="form-control" /></td>
+    </tr>
+    <tr>
+        <td><span style="color:red;padding-left:-10px;">*</span>结束时间</td>
+        <td><input type="text" id="EndTime" class="form-control" /></td>
+    </tr>
+    <tr>
+        <td>请假天数</td>
+        <td><input type="text" class="form-control" readonly placeholder="根据起始时间自动计算" id="LeaveDays" /></td>
+    </tr>
+    <tr>
+        <td>请假时数</td>
+        <td><input type="text" class="form-control" readonly placeholder="根据起始时间自动计算" id="LeaveHours" /></td>
+    </tr>
+    <tr>
+        <td>请假原因</td>
+        <td><textarea class="form-control" style="height:70px;"></textarea></td>
+    </tr>
+    <tr>
+        <td>审批记录</td>
+        <td>
+            <select class="form-control">
+                <option value="1" selected>部门经理审批</option>
+                <option value="2">中心总经理审批</option>
+                <option value="3">办公室</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>审批人员</td>
+        <td>
+            <input type="text" class="form-control" />
+        </td>
+    </tr>
+</table>
+<input type="button" class="button button-khaki" value="提交" style="width:98%;margin-left:1%;" />
+
+<script>
+
+
+    @*var attchs= @Html.Raw(ViewBag.Attachments);
+    $(document).ready(function () {
+        $("#Attachs").fileinputExt({
+            ext_initialData:attchs,
+            showLink:false
+        });
+    });*@
+
+
+    //计算请假天数
+    function CalDay(){
+        var start=new Date($("#StartTime").val());
+        var end=new Date($("#EndTime").val());
+        if( $("#StartTime").val() !="" &&  $("#EndTime").val() !=""){
+            if( start < end ){
+                var sday=start.getDate();
+                var shour=start.getHours();
+                var smin=start.getMinutes();
+                var eday=end.getDate();
+                var ehour=end.getHours();
+                var emin=end.getMinutes();
+
+                var days=eday-sday;
+                var min=0;
+
+                if(ehour*60+emin < @EndH*60+@EndM*1){
+                    if( ehour*60+emin > shour*60+smin && ehour*60+emin >  @BeginH*60+@BeginM*1 ){
+                        hours =ehour*60+emin;
+                    }
+                    else{
+                        hours =@EndH*60+@EndM*1-60;
+                        if(ehour*60+emin < @EndH*60+@EndM*1){
+                            days -=1;
+                        }
+                    }
+                }
+                else{
+                    hours =@EndH*60+@EndM*1;
+                }
+                if(ehour*60+emin > 11*60+30){
+                    hours -=60;
+                }
+                if(shour*60+smin > @BeginH*60+@BeginM*1){
+                    hours -=shour*60+smin;
+                }
+                else{
+                    hours -= @BeginH*60+@BeginM*1;
+                }
+
+                @*if( days > 0){
+                    if(shour*60+smin > @BeginH*60+@BeginM*1 ){
+                        days -=1;
+                    }
+                    if(ehour*60+emin < @EndH*60+@EndM*1){
+                        days -=1;
+                    }
+                }*@
+
+                $("#LeaveDays").val((days+hours/480).toFixed(1));
+                $("#LeaveHours").val(days*8+hours/60);
+                return true;
+            }
+            else{
+                alert("请选择正确的请假时间！");
+                return false;
+            }
+        }
+        if( $("#StartTime").val() !=""  ||  $("#EndTime").val() !=""){
+            return false;
+        }
+        else{
+            alert("请选择正确的请假时间！");
+            return false;
+        }
+    }
+
+
+    getLeaveClass();
+
+    function getLeaveClass() {
+        $.ajax({
+            url: "/Admin/Leave/GetleaveClass",
+            async: false,
+            type: "post",
+            success: function (data) {
+                if (data) {
+                    $("#LeaveType").select({
+                        data: data,
+                        textField: "ItemText",
+                        valueField: "ItemValue"
+                    })
+                }
+            },
+        })
+    }
+
+
+
+    $(function () {
+
+        var start = {
+            elem: '#StartTime',
+            type: 'datetime',
+            //fixed: true,
+            done: function (value, date) {
+                $("#StartTime").val(value);
+                CalDay();
+            }
+        }
+
+        var end = {
+            elem: '#EndTime',
+            type: 'datetime',
+            done: function (value, date) {
+                $("#EndTime").val(value);
+                CalDay();
+            }
+        }
+
+        laydate.render(start)
+        laydate.render(end);
+
+    })
+
+</script>

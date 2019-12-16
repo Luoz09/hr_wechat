@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "系统登录";
+    var redirectUrl = Server.UrlDecode(Request.Params["RedirectUrl"]);
+}
+ 
+
+<head>    
+    <link href="~/Areas/Admin/Style/login.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/scripts/jquery-1.10.2.js"></script>
+</head>
+  
+<div id="main">
+    <div class="row">
+        <div id="troduce" class="col-lg-6 col-md-6">
+            <div class="left" style="margin-left:15px;margin-top:-80px;">
+                <h2 class="text-center">
+                    <strong>打卡后台管理系统</strong>
+                </h2> 
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6" id="login_CLS">
+            <div class="right" id="login_CL">
+                <form role="form" class="form-horizontal">
+                    <div class="alert alert-info" id=""> 
+                        欢迎登录
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control easyui-validatebox" name="username" id="username" placeholder="请输入用户名" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock" style="font-size:21px;"></i></span>
+                            <input type="password" class="form-control easyui-validatebox" name="password" id="password" placeholder="请输入密码" /> 
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                            <button type="button" class="btn-block btn btn-info" id="login"> 登 录</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#login").click(function ()
+    {
+        if ($("#username").val() == "") {
+            alert("请输入用户名");
+            return;
+        }
+        if ($("#password").val() == "") {
+            alert("请输入密码");
+            return;
+        } 
+        $.ajax({
+            url: "@Url.Action("UserLogin")",
+            async: false,
+            type: "post",
+            data : $("form").serialize(),
+            success: function (data) 
+            {
+                if (!data.Success) {
+                    alert(data.Message)
+                } else {
+                    if ('@redirectUrl') {
+                        location.href = "@redirectUrl";
+                    }
+                    else {
+                        location.href = "@Url.Action("Index","Home")";
+                    }
+                } 
+            }
+        })
+    })
+
+
+</script>

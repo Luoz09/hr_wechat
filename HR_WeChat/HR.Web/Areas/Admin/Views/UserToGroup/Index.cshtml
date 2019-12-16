@@ -1,0 +1,544 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+<link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />  
+<style> 
+    #tree {
+        width: 25%;
+        overflow-y: auto;
+        float: left;
+        margin-right: 10%;
+        height: calc(100% - 20px);
+    }
+     
+    .TitleText {
+       font-size:16px; 
+       line-height:40px;
+    } 
+
+    .layui-table-view {
+        max-height:calc(100% - 60px)
+    }
+
+    .layui-table-box 
+    { 
+        overflow-y:auto;
+        overflow-x:hidden;  
+    }
+
+    .layui-layer-page {
+        max-height:60%;
+    }
+
+    .titleBtn {
+        cursor:pointer;
+        margin-left:20px; 
+        width:150px!important;
+        height:30px!important;
+        float:right; 
+        margin-top:5px; 
+    }
+     
+</style>
+
+<div id="DictionaryTree">
+    <div id="tree" style="padding:10px 0px;"></div>
+    @*<div id="user" style="float:left;width:47%;margin-right:3%;"> 
+        <div class="demoTable" style="text-align:center;">
+            <span class="Title"></span>
+            <div class="layui-inline">
+                <input class="layui-input" name="SearchStr" id="SearchStr" placeholder="用户名/部门搜索" autocomplete="off">
+            </div>
+            <input class="layui-btn SearchBtn" data-type="reload" value="搜索" onclick="Search()" readonly style="width:100px!important;" />
+        </div>
+        <table class="layui-table" style="display:none;width:100%;height:100%;" id="UserTable"></table>
+    </div>*@
+    <div class="layui-row" id="Group" style="float:left; width:60%;margin-right:5%">
+        <div class="TitleText" style="padding-top:5px;">
+            当前人员： <span class="Title">  </span> 
+            <input type="text" value="保存" id="Add" class="layui-btn layui-btn-blue titleBtn" style="background:#0094ff" readonly onclick="SaveResult()" />
+            <input type="text" value="未保存修改记录" id="EditRecord" class="layui-btn layui-btn-blue titleBtn"  readonly onclick="EditLog()" />
+        </div>
+        <table class="layui-table" style="display:none;" id="GroupTable"></table>
+    </div> 
+</div>
+   
+
+<script>
+
+    $("#DictionaryTree").css({ height: $(window).height() })
+
+    var chooseresult = "";
+
+    var form = ""
+    var table = "";
+
+
+    //修改后的人员组信息
+    var newUserGroupData = [];
+
+    //默认的人员组信息
+    var oldUserGroupData = [];
+
+    $(function ()
+    {
+        layui.use(["form", "table"], function () {
+             form = layui.form
+             table = layui.table
+            //单选框选中事件
+            //form.on('radio(ChooseData)', function (data) {
+            //    //获取选中的的数据
+            //    var elem = $(data.elem).parents("tr").first();
+            //    var index = elem.attr("data-index")
+            //    chooseresult = table.cache.UserDataLoad[index];
+            //    $("#Group .Title").text(chooseresult.DISPLAY_NAME)
+            //    GetUserToGroupData(chooseresult.USER_GUID);
+            //})
+
+            //复选框选中事件
+            form.on('checkbox(ChooseData)', function (data) {
+                //获取选中的的数据
+                var elem = $(data.elem).parents("tr").first();
+                var index = elem.attr("data-index")
+                var groupChoose = table.cache.GroupDataLoad[index];
+                var userGroupData = newUserGroupData.filter(item=>item.userID == chooseresult.USER_GUID)[0].userGroupData
+                if (data.elem.checked) {
+                    userGroupData.push({
+                        GROUP_GUID: groupChoose.GUID,
+                        GROUP_NAME: groupChoose.DISPLAY_NAME,
+                        USER_GUID: chooseresult.USER_GUID,
+                        USER_PARENT_GUID: chooseresult.PARENT_GUID
+                    })
+                }
+                else {
+                    for(var index in userGroupData) {
+                        var data = userGroupData[index];
+                        if (data.GROUP_GUID == groupChoose.GUID && data.USER_GUID == chooseresult.USER_GUID) {
+                              userGroupData.splice(index, 1)
+                              return
+                        }
+                    }
+                    //userGroupData.forEach((item, index) => {
+                    //    if (item.GROUP_GUID == groupChoose.GUID) {
+                    //        userGroupData.splice(index, 1)
+                    //        return
+                    //    }
+                    //})
+                }
+
+
+            })
+        })
+        UserTable()
+        GroupTable();
+    })
+
+    //人员列表
+    function UserTable() {
+        $.ajax({
+            url: "@Url.Action("GetUserData", "UserToGroup")",
+            async:false,
+            success: function (data) {
+            layui.use('tree', function () {
+                layui.tree({
+                    elem: "#tree",
+                    nodes: trees(data),
+                    rootNotClick: true,
+                    click: function (node)
+                    {  
+                        chooseresult = {
+                            USER_GUID: node.id,
+                            PARENT_GUID: node.parentID,
+                            DISPLAY_NAME: node.name,
+                            OBJ_NAME: node.depName,
+                            ALL_PATH_NAME: node.pathName,
+
+                        }
+                        $("#Group .Title").text(chooseresult.DISPLAY_NAME)
+                        GetUserToGroupData(chooseresult.USER_GUID);
+                    }
+                });
+            });
+        }
+    })
+        @*layui.use(['form','layer', 'table'], function () {
+            var form = layui.form;
+            var table = layui.table;
+
+            table.render({
+                elem: '#UserTable',
+                url: "@Url.Action("GetUserData", "UserToGroup")",
+                cols: [[
+                    {
+                        field: 'USER_GUID', fixed: 'left', width: 100, align: 'center',
+                        templet: function (value) {
+                            return '<input type="radio" name="USER_GUID" class="Radio" lay-filter="ChooseData"  />'
+                        }
+                    },
+                    { field: 'DISPLAY_NAME', title: '用户名', align: 'center' },
+                    { field: 'OBJ_NAME', title: '部门', align: 'left' },
+                ]],
+                id: 'UserDataLoad',
+                page: false,
+                width: $(window).width() * 0.47,
+                height: $(window).height() - 70,
+            });
+        })*@
+    }
+
+
+
+    //组列表
+    function GroupTable() {
+        layui.use(['form','layer', 'table'], function () {
+            var form = layui.form;
+            var table = layui.table;
+
+            table.render({
+                elem: '#GroupTable',
+                url: "@Url.Action("GetGroupData", "UserToGroup")",
+                cols: [[
+                    //{
+                    //    field: 'USER_GUID', fixed: 'left', width: 100, align: 'center',
+                    //    templet: function (value) {
+                    //        return '<input type="radio" name="USER_GUID" class="Radio" lay-filter="ChooseData"  />'
+                    //    }
+                    //},
+                    { field: 'DISPLAY_NAME', title: '组名称', align: 'center',width: 150 },
+                    { field: 'DESCRIPTION',  title: '描述', align: 'left' },
+                    {
+                        field: 'GUID', fixed: 'right', align:'center', width: 60,
+                        templet: function (value) {
+                            var flag = false;
+                            if (newUserGroupData.length > 0) {
+                                var userGroupData = newUserGroupData.filter(item=>item.userID == chooseresult.USER_GUID)[0].userGroupData
+                                flag = userGroupData.some(item=> {
+                                    return item.GROUP_GUID == value.GUID
+                                })
+                            }
+                            if (flag) {
+                                return '<input type="checkbox" name="GUID" checked  lay-filter="ChooseData"  />'
+                            }
+                            return '<input type="checkbox" name="GUID"  lay-filter="ChooseData"  />'
+                        }
+                    }
+                ]],
+            id: 'GroupDataLoad',
+            page: false,
+            width: $(window).width() * 0.60,
+            height: $(window).height() - 70,
+            });
+        })
+    }
+
+    //选中人员所在的组
+    function GetUserToGroupData(id) {
+        $.ajax({
+            url: "@Url.Action("GetUserToGroupData")?id=" + id,
+            async: false,
+            success: function (data) {
+                if (newUserGroupData.filter(item=>item.userID == chooseresult.USER_GUID).length == 0) {
+                    newUserGroupData.push({
+                        userID: chooseresult.USER_GUID,
+                        parentID: chooseresult.PARENT_GUID,
+                        depName: chooseresult.OBJ_NAME,
+                        pathName: chooseresult.ALL_PATH_NAME,
+                        userName: chooseresult.DISPLAY_NAME,
+                        userGroupData: data.map(item=> {
+                            return {
+                                GROUP_GUID: item.GROUP_GUID,
+                                GROUP_NAME: item.DISPLAY_NAME,
+                                USER_GUID: chooseresult.USER_GUID,
+                                USER_PARENT_GUID: chooseresult.PARENT_GUID
+                            }
+                        })
+                    })
+                    oldUserGroupData.push({
+                        userID: chooseresult.USER_GUID,
+                        depName: chooseresult.OBJ_NAME,
+                        pathName: chooseresult.ALL_PATH_NAME,
+                        userName: chooseresult.DISPLAY_NAME,
+                        groupData: data.map(item=> {
+                            return {
+                                GROUP_GUID: item.GROUP_GUID,
+                                GROUP_NAME: item.DISPLAY_NAME
+                            }
+                        })
+                    })
+                }
+                GroupTable()
+            }
+        })
+    }
+
+
+    function Search() {
+        table.reload('UserDataLoad', {
+            url: "@Url.Action("GetUserData", "UserToGroup")",
+            where: {
+                  str: $('#user #SearchStr').val()
+            }
+        })
+    }
+
+    function SaveResult() {
+        if (newUserGroupData.length == 0) {
+            layer.msg("没有要保存的修改!", { icon: 2 })
+            return
+        }
+        $.ajax({
+            url: "@Url.Action("SaveResult")",
+            data: { userGroupData: JSON.stringify(newUserGroupData) },
+            async: false,
+            success: function (data) {
+                if (data) {
+                    layer.msg("保存成功!", { icon: 1 })
+                    setTimeout(() => {
+                        //保存成功后重置人员组信息
+                        newUserGroupData = [];
+                        oldUserGroupData = [];
+                        GetUserToGroupData(chooseresult.USER_GUID);
+                    },1000)
+                }
+                else {
+                    layer.msg("保存失败!", { icon: 2 })
+                }
+            }
+        })
+    }
+
+
+    //修改记录
+    function EditLog() {
+        var text = "";
+        groupArr = new Array();
+        newUserGroupData.forEach((item, index) => {
+            var data = oldUserGroupData[index];
+            groupArr.push({
+                userName: item.userName,
+                depName: item.depName,
+                pathName: item.pathName,
+                groupData: []
+            })
+            //判断人员组新增的数据
+            item.userGroupData.forEach((v, i) => {
+                var compare = data.groupData.some(v1 => v1.GROUP_GUID == v.GROUP_GUID)
+                if (!compare) {
+                    groupArr[index].groupData.push({
+                        groupName: v.GROUP_NAME,
+                        type: "add"
+                    })
+                }
+            })
+        })
+
+        oldUserGroupData.forEach((item, index) => {
+            var data = newUserGroupData[index];
+            groupArr.push({
+                userName: item.userName,
+                depName: item.depName,
+                pathName: item.pathName,
+                groupData: []
+            })
+            //判断人员组减少的数据
+            item.groupData.forEach((v, i) => {
+                var compare = data.userGroupData.some(v1 => v1.GROUP_GUID == v.GROUP_GUID)
+                if (!compare) {
+                    groupArr[index].groupData.push({
+                        groupName: v.GROUP_NAME,
+                        type: "del"
+                    })
+                }
+            })
+        })
+
+
+        groupArr.forEach(item=> {
+            if (item.groupData.length == 0) return
+            text += "<ul style='line-height:30px;'>" + item.userName + " ( " + item.pathName + " )"
+            item.groupData.forEach((v) => {
+                if (v.type == "add") {
+                    text += "<li style='padding-left:30px;'><span style='color:green'>[ 新增 ]</span>：" + v.groupName + "</li>"
+                }
+                else {
+                    text += "<li style='padding-left:30px;'><span style='color:red'>[ 删除 ]</span>：" + v.groupName + "</li>"
+                }
+            })
+            text += "</ul>"
+        })
+
+        if (text == "") {
+            text = "<div style='text-align:center'>暂无修改记录</div>"
+        }
+
+        layer.open({
+            type: 1,
+            offset: 'auto',
+            id: 'layerDemo',
+            content: '<div style="padding: 20px;overflow-y:auto;">' + text + '</div>',
+            btn: ['保存', '关闭'],
+            title:"本次人员组修改记录",
+            btnAlign: 'c',
+            area: ["30%","auto"],
+            yes: function () {
+                layer.closeAll();
+            },
+            success: function (layero) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.find('.layui-layer-btn0').attr("onclick", "SaveResult()")
+            }
+        });
+         
+    }
+
+
+    //获取树形数据
+    function trees(rows) {
+        orgdata = JSON.parse(rows.OrgData);
+        userdata = JSON.parse(rows.UserData);
+
+        var TopTree = [];
+        var nodes = [];
+        var topTree = [];
+        //获取最高级父节点
+        for (var item in orgdata) {
+            nodes = [];
+            for (var i = orgdata.length - 1; i >= 0; i--) {
+                var row = orgdata[i];
+                if (row.PARENT_GUID == "" || row.PARENT_GUID == null) {
+                    nodes.push({
+                        id: row.GUID,
+                        name: row.DISPLAY_NAME,
+                        pathName: row.ALL_PATH_NAME,
+                        sort: row.GLOBAL_SORT,
+                        parentID: row.PARENT_GUID,
+                        type: "ORGANIZATIONS",
+                        spread: true,
+                    });
+
+                }
+            }
+            var toDo = [];
+            for (var i = 0; i < nodes.length ; i++) {
+                toDo.push(nodes[i]);
+            }
+
+            while (toDo.length) {
+                //父节点
+                var node = toDo.shift();
+                // 获取子节点
+                for (var i = 0; i < orgdata.length ; i++) {
+                    var row = orgdata[i];
+                    if (row.PARENT_GUID == node.id) {
+                        var child = {
+                            id: row.GUID,
+                            name: row.DISPLAY_NAME,
+                            pathName: row.ALL_PATH_NAME,
+                            sort: row.GLOBAL_SORT,
+                            parentID: row.PARENT_GUID,
+                            type: "ORGANIZATIONS",
+                        };
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }
+                        toDo.push(child);
+                    }
+                }
+                //if (node.children) {
+                //    node.children.sort(function (a, b) {
+                //        return a.sort - b.sort;
+                //    })
+                //}
+            }
+
+        }
+
+
+        for (var item in nodes) {
+            existsChild("", nodes[item]);
+            nodes[item] = JSON.parse(sessionStorage.getItem(nodes[item].id));
+        }
+
+        sessionStorage.clear()
+        return nodes;
+
+    }
+
+
+    function existsChild(oldObj, newObj) {
+
+        for (var item in userdata) {
+            users = userdata[item];
+            if (users.PARENT_GUID == newObj.id) {
+                var child = {
+                    id: users.USER_GUID,
+                    name: users.DISPLAY_NAME,
+                    sort: users.GLOBAL_SORT,
+                    parentID: users.PARENT_GUID,
+                    pathName: newObj.pathName,
+                    depName: newObj.name,
+                    type: "USERS"
+                };
+                if (newObj.children) {
+                    newObj.children.push(child);
+                }
+                else {
+                    newObj.children = [child];
+                }
+                if (newObj.children) {
+                    newObj.children.sort(function (a, b) {
+                        return a.sort - b.sort;
+                    })
+                }
+            }
+        }
+
+        if (newObj.children && newObj.type == "ORGANIZATIONS") {
+            sessionStorage.removeItem(newObj.id || "0");
+            sessionStorage.setItem(newObj.id || "0", JSON.stringify(newObj));
+        }
+
+
+        for (var i in newObj.children) {
+            if (newObj.children[i]) {
+                return existsChild(newObj, newObj.children[i]);
+            }
+        }
+
+
+        SetData(newObj)
+
+    }
+
+    function SetData(newObj) {
+        if (newObj.parentID) {
+            topData = JSON.parse(sessionStorage.getItem(newObj.parentID));
+            for (var item in topData.children) {
+                var aa = newObj.id;
+                if (parseInt(item) < topData.children.length) {
+                    if (topData.children[item].id == newObj.id) {
+                        topData.children[item] = newObj;
+                        sessionStorage.removeItem(topData.id);
+                        sessionStorage.setItem(topData.id, JSON.stringify(topData));
+                        if (parseInt(item) < topData.children.length - 1) {
+                            existsChild(topData, topData.children[parseInt(item) + 1]);
+                        }
+                        else {
+                            SetData(topData);
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            sessionStorage.removeItem(newObj.id);
+            sessionStorage.setItem(newObj.id, JSON.stringify(newObj));
+        }
+    }
+
+</script>

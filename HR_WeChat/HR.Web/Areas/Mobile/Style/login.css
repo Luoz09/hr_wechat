@@ -1,0 +1,25 @@
+html, body {margin:0px;}
+body {overflow: hidden; font-family:'Î¢ÈíÑÅºÚ'}
+header {background: url(../Images/logo.png) no-repeat;margin-top:10px; margin-left:4%; width:100%;height:80px; padding-left:25%; font-size:20px; font-weight:bold; color:#28166e; line-height:40px;}
+#main-context{ height:70%;margin-top:10px;}
+#row1{ height:30%; background-size:cover} 
+
+  
+#login-box{ height:75%; max-width:400px; background:#e6e6e6;margin-top:5px;box-shadow:0 0 2px 1px #eeeeee; border:solid #ccc; border-width:1px 2px 0 1px; padding:0 5px; color:#34608a}
+.textbox{  height:50px;  margin-top:10px;width:100%;}
+.textbox input{  padding-left:50px; width:100%; background:none; border:none; line-height:48px; font-size:16px; color:#34608a}
+#username{ background:no-repeat  16px center}
+#password{ background:no-repeat  18px center}
+
+.remember{ margin-top:10px;height:25px;}
+.remember input{ float:left;line-height:25px;}
+.remember label{ float:left; font-weight:normal; padding-left:5px;}
+.remember span{ float:right;}
+
+.btn-line{ margin-top:10px;height:45px;}
+.btn-line input{  width:141px; height:45px; border:none; color:#FFF; font-size:16px;}
+#btn-login{ float:left;}
+#btn-cancel{ float:right}
+
+#row2{color:black; text-align:center; line-height:40px;border-top:1px solid #7197b7;}
+ 

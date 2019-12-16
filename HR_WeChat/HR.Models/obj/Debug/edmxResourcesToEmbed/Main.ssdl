@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Main.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="APPLICATIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+    <Property Name="SORT_ID" Type="int" Nullable="false" />
+    <Property Name="RESOURCE_LEVEL" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="CHILDREN_COUNT" Type="int" Nullable="false" />
+    <Property Name="ADD_SUBAPP" Type="nchar" MaxLength="1" />
+    <Property Name="USE_SCOPE" Type="nchar" MaxLength="1" />
+    <Property Name="INHERITED_STATE" Type="int" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+    <Property Name="URL1" Type="varchar" MaxLength="1000" />
+    <Property Name="URL2" Type="varchar" MaxLength="1000" />
+    <Property Name="URL3" Type="varchar" MaxLength="1000" />
+    <Property Name="MENU" Type="varchar" MaxLength="1" />
+    <Property Name="PARA1" Type="varchar" MaxLength="50" />
+    <Property Name="PARA2" Type="varchar" MaxLength="50" />
+    <Property Name="TARGET" Type="varchar" MaxLength="255" />
+    <Property Name="DEVICE" Type="nvarchar" MaxLength="100" />
+    <Property Name="DEVICETYPE" Type="nchar" MaxLength="1" />
+    <Property Name="WORKTYPE" Type="varchar" MaxLength="1" />
+    <Property Name="SelectType" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="EXPRESSIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="ROLE_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="EXPRESSION" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="SORT_ID" Type="int" Nullable="false" />
+    <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+    <Property Name="CLASSIFY" Type="int" />
+    <Property Name="MODIFY_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FUNCTIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="APP_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+    <Property Name="SORT_ID" Type="int" Nullable="false" />
+    <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+    <Property Name="CLASSIFY" Type="nchar" MaxLength="1" />
+    <Property Name="MODIFY_TIME" Type="datetime" />
+    <Property Name="URL1" Type="varchar" MaxLength="1000" />
+    <Property Name="URL2" Type="varchar" MaxLength="1000" />
+    <Property Name="URL3" Type="varchar" MaxLength="1000" />
+    <Property Name="MENU" Type="varchar" MaxLength="1" />
+    <Property Name="PARA1" Type="varchar" MaxLength="50" />
+    <Property Name="PARA2" Type="varchar" MaxLength="50" />
+    <Property Name="TARGET" Type="varchar" MaxLength="255" />
+    <Property Name="DEVICE" Type="varchar" MaxLength="100" />
+    <Property Name="DEVICETYPE" Type="nchar" MaxLength="1" />
+    <Property Name="WORKTYPE" Type="varchar" MaxLength="1" />
+    <Property Name="SelectType" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GROUP_USERS">
+    <Key>
+      <PropertyRef Name="GROUP_GUID" />
+      <PropertyRef Name="USER_GUID" />
+      <PropertyRef Name="USER_PARENT_GUID" />
+    </Key>
+    <Property Name="GROUP_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="USER_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="USER_PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GROUPS">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="ATTRIBUTES" Type="int" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+    <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+    <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+    <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+    <Property Name="gty" Type="int" />
+    <Property Name="backPeople" Type="nvarchar" MaxLength="100" />
+    <Property Name="rzzg" Type="nvarchar" MaxLength="100" />
+    <Property Name="Minnum" Type="int" />
+    <Property Name="Maxnum" Type="int" />
+  </EntityType>
+  <EntityType Name="HR_ApplyInfo">
+    <Key>
+      <PropertyRef Name="ApplyID" />
+    </Key>
+    <Property Name="ApplyID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="ApplyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplyType" Type="int" />
+    <Property Name="ApplyUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplyUserID" Type="nvarchar" MaxLength="255" />
+    <Property Name="LeaveType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExtWorkType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExtWorkIsOut" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vehicle" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusinessType" Type="int" />
+    <Property Name="StartCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="DestinationCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="SuppleTime" Type="nvarchar" MaxLength="10" />
+    <Property Name="SuppleType" Type="int" />
+    <Property Name="ApplyDays" Type="float" />
+    <Property Name="ApplyReason" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TogetherIDs" Type="nvarchar" MaxLength="255" />
+    <Property Name="TogetherNames" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputUserDepID" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputUserDepName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputDate" Type="datetime" />
+    <Property Name="LastModifyUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastModifyUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastModifyDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Check">
+    <Key>
+      <PropertyRef Name="CheckID" />
+    </Key>
+    <Property Name="CheckID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckDepID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckDepName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckDate" Type="datetime" />
+    <Property Name="CheckType" Type="int" />
+    <Property Name="InputUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputDate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_WeChatBind">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BindID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OpenID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BindDate" Type="datetime" />
+    <Property Name="UnBindDate" Type="datetime" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="LoginTimes" Type="int" />
+  </EntityType>
+  <EntityType Name="KQ_DayoffType">
+    <Key>
+      <PropertyRef Name="DayoffTypeSysID" />
+    </Key>
+    <Property Name="DayoffTypeSysID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="DayoffTypeNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DayoffTypeName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DayoffIsGongshang" Type="char" MaxLength="1" />
+    <Property Name="DayoffIsYear" Type="char" MaxLength="1" />
+    <Property Name="DayoffIsDefault" Type="char" MaxLength="1" />
+    <Property Name="CalcItemEExpr" Type="text" />
+    <Property Name="CalcItemCExpr" Type="text" />
+    <Property Name="YearCalcItemEExpr" Type="text" />
+    <Property Name="YearCalcItemCExpr" Type="text" />
+  </EntityType>
+  <EntityType Name="KQ_KqData">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="EmpSysID" Type="varchar" MaxLength="36" />
+    <Property Name="KqDate" Type="datetime" />
+    <Property Name="KqTime" Type="int" />
+    <Property Name="IsKeyin" Type="char" MaxLength="1" />
+    <Property Name="IsKouKuan" Type="char" MaxLength="1" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+    <Property Name="ResultMark" Type="varchar" MaxLength="20" />
+    <Property Name="IsModified" Type="char" MaxLength="1" />
+    <Property Name="DevID" Type="smallint" />
+    <Property Name="KeyinOprtNo" Type="varchar" MaxLength="20" />
+    <Property Name="KeyinDay" Type="datetime" />
+    <Property Name="LotNoGUID" Type="varchar" MaxLength="36" />
+    <Property Name="CardID" Type="bigint" />
+    <Property Name="ReaderID" Type="tinyint" />
+    <Property Name="IsInvalid" Type="char" MaxLength="1" />
+    <Property Name="kqdatetime" Type="datetime" />
+    <Property Name="cardsn" Type="varchar" MaxLength="50" />
+    <Property Name="phototime" Type="varchar" MaxLength="50" />
+    <Property Name="isok" Type="int" />
+    <Property Name="svrip" Type="varchar" MaxLength="50" />
+    <Property Name="devip" Type="varchar" MaxLength="50" />
+    <Property Name="cardphoto" Type="image" />
+  </EntityType>
+  <EntityType Name="KQ_OtType">
+    <Key>
+      <PropertyRef Name="OtTypeSysID" />
+    </Key>
+    <Property Name="OtTypeSysID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="OtTypeNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="OtTypeName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="OtIsOffSet" Type="char" MaxLength="1" />
+    <Property Name="OtIsDefault" Type="char" MaxLength="1" />
+    <Property Name="CalcItemEExpr" Type="text" />
+    <Property Name="CalcItemCExpr" Type="text" />
+  </EntityType>
+  <EntityType Name="MATERIAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="APPLICATION_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="PROGRAM_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="RESOURCE_ID" Type="nvarchar" MaxLength="36" />
+    <Property Name="SORT_ID" Type="int" Nullable="false" />
+    <Property Name="CLASS" Type="nvarchar" MaxLength="32" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="128" />
+    <Property Name="PAGE_QUANTITY" Type="int" />
+    <Property Name="FILE_PATH" Type="nvarchar" MaxLength="200" />
+    <Property Name="ORIGINAL_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="CREATOR" Type="nvarchar" MaxLength="255" />
+    <Property Name="LAST_UPLOAD_TAG" Type="nvarchar" MaxLength="36" />
+    <Property Name="CREATE_DATETIME" Type="datetime" />
+    <Property Name="CHECKOUT_USER" Type="nvarchar" MaxLength="64" />
+    <Property Name="CHECKOUT_TIME" Type="datetime" />
+    <Property Name="LAST_MODIFY_TIME" Type="datetime" />
+    <Property Name="EXTRA_DATA" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="ORGANIZATIONS">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" />
+    <Property Name="RANK_CODE" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ORG_CLASS" Type="int" Nullable="false" />
+    <Property Name="ORG_TYPE" Type="int" Nullable="false" />
+    <Property Name="CHILDREN_COUNTER" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="CUSTOMS_CODE" Type="nvarchar" MaxLength="4" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+    <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+    <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+    <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="OU_USERS">
+    <Key>
+      <PropertyRef Name="PARENT_GUID" />
+      <PropertyRef Name="USER_GUID" />
+    </Key>
+    <Property Name="PARENT_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="USER_GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="OBJ_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="INNER_SORT" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="ORIGINAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="GLOBAL_SORT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ALL_PATH_NAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="SIDELINE" Type="int" Nullable="false" />
+    <Property Name="RANK_NAME" Type="nvarchar" MaxLength="32" />
+    <Property Name="ATTRIBUTES" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="START_TIME" Type="datetime" Nullable="false" />
+    <Property Name="END_TIME" Type="datetime" Nullable="false" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+    <Property Name="OUSYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+    <Property Name="OUSYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+    <Property Name="OUSYSCONTENT1" Type="nvarchar" MaxLength="32" />
+    <Property Name="OUSYSCONTENT2" Type="nvarchar" MaxLength="64" />
+    <Property Name="OUSYSCONTENT3" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ROLE_TO_FUNCTIONS">
+    <Key>
+      <PropertyRef Name="ROLE_ID" />
+      <PropertyRef Name="FUNC_ID" />
+    </Key>
+    <Property Name="ROLE_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="FUNC_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="APP_ID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="CODE_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="128" />
+    <Property Name="CLASSIFY" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="SORT_ID" Type="int" Nullable="false" />
+    <Property Name="INHERITED" Type="nchar" MaxLength="1" />
+    <Property Name="ALLOW_DELEGATE" Type="nchar" MaxLength="1" />
+    <Property Name="MODIFY_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SYS_DICTIONARY">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentID" Type="varchar" MaxLength="50" />
+    <Property Name="ItemTypeID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemText" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemValue" Type="varchar" MaxLength="500" />
+    <Property Name="ItemAttribute1" Type="varchar" MaxLength="500" />
+    <Property Name="ItemAttribute2" Type="varchar" MaxLength="500" />
+    <Property Name="ItemAttribute3" Type="varchar" MaxLength="500" />
+    <Property Name="ItemAttribute4" Type="varchar" MaxLength="500" />
+    <Property Name="ItemAttribute5" Type="varchar" MaxLength="500" />
+    <Property Name="Notes" Type="varchar" MaxLength="500" />
+    <Property Name="SortID" Type="int" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="UID" Type="varchar" MaxLength="20" />
+    <Property Name="InputDate" Type="datetime" />
+    <Property Name="OperateVer" Type="int" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="LOGON_NAME" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="IC_CARD" Type="nvarchar" MaxLength="18" />
+    <Property Name="PWD_TYPE_GUID" Type="nvarchar" MaxLength="36" />
+    <Property Name="USER_PWD" Type="nvarchar" MaxLength="255" />
+    <Property Name="RANK_CODE" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="E_MAIL" Type="nvarchar" MaxLength="64" />
+    <Property Name="POSTURAL" Type="int" Nullable="false" />
+    <Property Name="CREATE_TIME" Type="datetime" Nullable="false" />
+    <Property Name="MODIFY_TIME" Type="datetime" Nullable="false" />
+    <Property Name="AD_COUNT" Type="int" Nullable="false" />
+    <Property Name="PERSON_ID" Type="nvarchar" MaxLength="7" />
+    <Property Name="SYSDISTINCT1" Type="nvarchar" MaxLength="16" />
+    <Property Name="SYSDISTINCT2" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT1" Type="nvarchar" MaxLength="32" />
+    <Property Name="SYSCONTENT2" Type="nvarchar" MaxLength="64" />
+    <Property Name="SYSCONTENT3" Type="nvarchar" MaxLength="128" />
+    <Property Name="OLD_NAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="SEX" Type="int" />
+    <Property Name="NATION" Type="int" />
+    <Property Name="BIRTHDAY" Type="smalldatetime" />
+    <Property Name="DUTY" Type="int" />
+    <Property Name="USERTYPER" Type="int" />
+    <Property Name="NATIVEPLACE" Type="nvarchar" MaxLength="60" />
+    <Property Name="BIRTHADDR" Type="nvarchar" MaxLength="60" />
+    <Property Name="REGADDR" Type="nvarchar" MaxLength="60" />
+    <Property Name="LOVE" Type="nvarchar" MaxLength="60" />
+    <Property Name="STU_EXP" Type="int" />
+    <Property Name="DEGREE" Type="int" />
+    <Property Name="SCHOOL" Type="nvarchar" MaxLength="100" />
+    <Property Name="PROFESSION" Type="nvarchar" MaxLength="60" />
+    <Property Name="GRADUATETIME" Type="nvarchar" MaxLength="10" />
+    <Property Name="CARDID" Type="nvarchar" MaxLength="20" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="60" />
+    <Property Name="OFTEL" Type="nvarchar" MaxLength="30" />
+    <Property Name="FAMTEL" Type="nvarchar" MaxLength="30" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="30" />
+    <Property Name="VIRTEL" Type="nvarchar" MaxLength="30" />
+    <Property Name="POLFEA" Type="int" />
+    <Property Name="JOINPARTYTIME" Type="nvarchar" MaxLength="10" />
+    <Property Name="JOINPARTYINTODUCER" Type="nvarchar" MaxLength="30" />
+    <Property Name="JOINCOMTIME" Type="smalldatetime" />
+    <Property Name="CONTRACTTIME" Type="smalldatetime" />
+    <Property Name="CONTRACTTLEN" Type="smalldatetime" />
+    <Property Name="ATTENDWORKTIME" Type="nvarchar" MaxLength="20" />
+    <Property Name="PhotoImg" Type="nvarchar" MaxLength="36" />
+    <Property Name="SMSID" Type="nvarchar" MaxLength="10" />
+    <Property Name="AcdNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="SalaryNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="DisnDate" Type="smalldatetime" />
+    <Property Name="DisnCondition" Type="int" />
+    <Property Name="DisnMemo" Type="nvarchar" MaxLength="400" />
+    <Property Name="EmName" Type="nvarchar" MaxLength="60" />
+    <Property Name="EmDomain" Type="nvarchar" MaxLength="400" />
+    <Property Name="SmtpServer" Type="nvarchar" MaxLength="50" />
+    <Property Name="HughDay" Type="int" />
+    <Property Name="IsMarry" Type="int" Nullable="false" />
+    <Property Name="AGE" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="OFVIRTEL" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyContact" Type="nvarchar" MaxLength="50" />
+    <Property Name="Registered" Type="int" />
+    <Property Name="QQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="WeChatOpenID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DDOpenID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DDUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidJson" Type="nvarchar(max)" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“HR.dbo.TASK_LIST_VIEW”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TASK_LIST_VIEW">
+    <Key>
+      <PropertyRef Name="TaskID" />
+      <PropertyRef Name="TaskType" />
+    </Key>
+    <Property Name="TaskID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SORT_ID" Type="int" />
+    <Property Name="APPLICATION_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="PROGRAM_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="RESOURCE_ID" Type="nvarchar" MaxLength="36" />
+    <Property Name="TASK_TITLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="LEVEL" Type="nvarchar" MaxLength="16" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="64" />
+    <Property Name="SOURCE_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="SOURCE_LOGON_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="DESTINATION" Type="nvarchar" MaxLength="64" />
+    <Property Name="DESTINATION_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="DESTINATION_LOGON_NAME" Type="nvarchar" MaxLength="64" />
+    <Property Name="URL" Type="nvarchar" MaxLength="4000" />
+    <Property Name="READ_TIME" Type="datetime" />
+    <Property Name="EMERGENCY" Type="nchar" MaxLength="1" />
+    <Property Name="PURPOSE" Type="nvarchar" MaxLength="64" />
+    <Property Name="EXPIRE_TIME" Type="datetime" />
+    <Property Name="DELIVER_TIME" Type="datetime" />
+    <Property Name="STATUS" Type="nchar" MaxLength="1" />
+    <Property Name="BODY" Type="nvarchar" MaxLength="4000" />
+    <Property Name="DealState" Type="int" />
+    <Property Name="TaskType" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Remind" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="MainStoreContainer">
+    <EntitySet Name="APPLICATIONS" EntityType="Self.APPLICATIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXPRESSIONS" EntityType="Self.EXPRESSIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FUNCTIONS" EntityType="Self.FUNCTIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GROUP_USERS" EntityType="Self.GROUP_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GROUPS" EntityType="Self.GROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_ApplyInfo" EntityType="Self.HR_ApplyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Check" EntityType="Self.HR_Check" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_WeChatBind" EntityType="Self.HR_WeChatBind" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KQ_DayoffType" EntityType="Self.KQ_DayoffType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KQ_KqData" EntityType="Self.KQ_KqData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KQ_OtType" EntityType="Self.KQ_OtType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MATERIAL" EntityType="Self.MATERIAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORGANIZATIONS" EntityType="Self.ORGANIZATIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OU_USERS" EntityType="Self.OU_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLE_TO_FUNCTIONS" EntityType="Self.ROLE_TO_FUNCTIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYS_DICTIONARY" EntityType="Self.SYS_DICTIONARY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TASK_LIST_VIEW" EntityType="Self.TASK_LIST_VIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TASK_LIST_VIEW].[TaskID] AS [TaskID], 
+    [TASK_LIST_VIEW].[SORT_ID] AS [SORT_ID], 
+    [TASK_LIST_VIEW].[APPLICATION_NAME] AS [APPLICATION_NAME], 
+    [TASK_LIST_VIEW].[PROGRAM_NAME] AS [PROGRAM_NAME], 
+    [TASK_LIST_VIEW].[RESOURCE_ID] AS [RESOURCE_ID], 
+    [TASK_LIST_VIEW].[TASK_TITLE] AS [TASK_TITLE], 
+    [TASK_LIST_VIEW].[LEVEL] AS [LEVEL], 
+    [TASK_LIST_VIEW].[SOURCE] AS [SOURCE], 
+    [TASK_LIST_VIEW].[SOURCE_NAME] AS [SOURCE_NAME], 
+    [TASK_LIST_VIEW].[SOURCE_LOGON_NAME] AS [SOURCE_LOGON_NAME], 
+    [TASK_LIST_VIEW].[DESTINATION] AS [DESTINATION], 
+    [TASK_LIST_VIEW].[DESTINATION_NAME] AS [DESTINATION_NAME], 
+    [TASK_LIST_VIEW].[DESTINATION_LOGON_NAME] AS [DESTINATION_LOGON_NAME], 
+    [TASK_LIST_VIEW].[URL] AS [URL], 
+    [TASK_LIST_VIEW].[READ_TIME] AS [READ_TIME], 
+    [TASK_LIST_VIEW].[EMERGENCY] AS [EMERGENCY], 
+    [TASK_LIST_VIEW].[PURPOSE] AS [PURPOSE], 
+    [TASK_LIST_VIEW].[EXPIRE_TIME] AS [EXPIRE_TIME], 
+    [TASK_LIST_VIEW].[DELIVER_TIME] AS [DELIVER_TIME], 
+    [TASK_LIST_VIEW].[STATUS] AS [STATUS], 
+    [TASK_LIST_VIEW].[BODY] AS [BODY], 
+    [TASK_LIST_VIEW].[DealState] AS [DealState], 
+    [TASK_LIST_VIEW].[TaskType] AS [TaskType], 
+    [TASK_LIST_VIEW].[Remind] AS [Remind]
+    FROM [dbo].[TASK_LIST_VIEW] AS [TASK_LIST_VIEW]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

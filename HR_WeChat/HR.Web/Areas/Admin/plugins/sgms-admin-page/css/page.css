@@ -1,0 +1,16 @@
+﻿.sgms-admin-page header{ background:#3498db}
+.sgms-admin-page .container{ width:100%;}
+.sgms-admin-page div.theme-whbl { position:absolute; top:52px; bottom:0;left:0}
+.sgms-admin-page header .left{ height:50px; width:180px; background-color:#2980b9; margin-left:-15px; line-height:50px; color:#FFF; text-align:center;}
+.sgms-admin-page .navbar-nav > li > a{ border-radius:0; background:#3498db}
+.sgms-admin-page .navbar-nav > li > a:hover,
+.sgms-admin-page .navbar-nav > li > a:focus{ background-color:#2980b9}
+.sgms-admin-page .navbar-nav > li > a > i{ color:#FFF}
+.sgms-admin-page .dropdown > a{ color:#FFF}
+.sgms-admin-page .dropdown span{ padding-right:10px;}
+.sgms-admin-page .dropdown-menu li a{ height:30px; line-height:30px; color:#707070; font-size:12px;}
+.sgms-admin-page .dropdown-menu li a:hover{ background-color:#f6f6f6}
+.sgms-admin-page .dropdown-menu li a i{ padding-right:10px;}
+.sgms-admin-page section{ width:180px;margin-left:-15px; position:absolute;}
+.sgms-admin-page .main{ position:relative; margin-left:165px;}
+.sgms-admin-page .logo{ height:70px;}

@@ -1,0 +1,185 @@
+﻿ @{
+     ViewBag.Title = "申请列表";
+     Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+} 
+
+@section search{
+    <table class="SearchTable layui-form">
+         
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    交通工具：
+                </label>
+            </th>
+            <td style="">
+                <input type="text" class="layui-input" name="Vehicle" placeholder="请输入交通工具" />
+            </td>
+            <th>
+                <label class="control-label">
+                    出差人 ：
+                </label>
+            </th>
+            <td>
+                <input type="text" class="layui-input" id="ApplyUserName" name="ApplyUserName" placeholder="请选择出差人" readonly onclick="ChooseApplyUser()">
+            </td>
+        </tr>
+        <tr class="Trbgc_Top"> 
+            <th>
+                <label class="control-label">
+                    出发城市：
+                </label>
+            </th>
+            <td style="">
+                <input type="text" class="layui-input" name="StartCity" placeholder="请输入出发城市" />
+            </td>
+            <th>
+                <label class="control-label">
+                    目的城市：
+                </label>
+            </th>
+            <td style="">
+                <input type="text" class="layui-input" name="DestinationCity" placeholder="请输入目的城市" />
+            </td>  
+        </tr>
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    开始时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="StartTime" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="StartTime" autocomplete="off">
+                </div>
+            </td>
+
+            <th>
+                <label class="control-label">
+                    结束时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="EndTime" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="EndTime" autocomplete="off">
+                </div>
+            </td>
+        </tr>
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    状态：
+                </label>
+            </th>
+            <td style="">
+                <select class="layui-input" name="Status">
+                    <option value="">请选择</option>
+                    <option value="1">审核中</option>
+                    <option value="4">审核成功</option>
+                </select>
+            </td>
+            <th>
+                <label class="control-label">
+                    录入时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="InputDate" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="InputDate" autocomplete="off">
+                </div>
+            </td> 
+        </tr>
+
+    </table>
+      
+}
+
+<table id="grid">
+    <thead>
+        <tr> 
+            <th data-options="field:'ApplyCode',width:'15%',align:'center',sortable:true">
+                申请单号
+            </th>
+            <th data-options="field:'ApplyUserName',width:'15%',align:'center',sortable:true">
+                出差人
+            </th>
+            <th data-options="field:'Vehicle',width:'15%',align:'center',sortable:true">
+                交通工具
+            </th>
+            <th data-options="field:'BusinessType',width:'15%',align:'center',sortable:true,formatter:formatterBusinessType">
+                单程/往返
+            </th>
+            <th data-options="field:'StartCity',width:'15%',align:'center',sortable:true">
+                出发城市
+            </th> 
+            <th data-options="field:'DestinationCity',width:'15%',align:'center',sortable:true">
+                目的城市
+            </th>
+            @*<th data-options="field:'TogetherName',width:'15%',align:'center',sortable:true">
+                同行人
+            </th>*@ 
+            <th data-options="field:'StartTime',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                开始时间
+            </th>
+            <th data-options="field:'EndTime',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                结束时间
+            </th>
+            @*<th data-options="field:'ApplyDays',width:'15%',align:'center',sortable:true">
+                申请天数
+            </th>*@
+            <th data-options="field:'Status',width:'15%',align:'center',sortable:true,formatter:formatterStatus">
+                状态
+            </th>
+            <th data-options="field:'InputUserName',width:'15%',align:'center',sortable:true">
+                录入人
+            </th>
+            <th data-options="field:'InputDate',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                录入时间
+            </th>
+            <th data-options="field:'LastModifyUserID',width:'15%',align:'center',sortable:true">
+                最后更新人
+            </th>
+            <th data-options="field:'LastModifyDate',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                最后更新时间
+            </th>
+        </tr>
+    </thead>
+</table>
+
+
+<script>
+
+    $(".breadcrumb li:eq(1)").text("出差申请管理")
+    $(".del").remove();
+
+    var url = {
+        getData: "@Url.Action("GetData")?ApplyType=3",
+        edit: "@Url.Action("BusinessEdit","Apply")",
+    };
+     
+
+    function formatterBusinessType(value) {
+        return value == 0 ? "单程" : "往返";
+    }
+
+
+</script>
+ 

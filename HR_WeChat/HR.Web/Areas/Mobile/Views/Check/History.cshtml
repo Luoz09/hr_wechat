@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "考勤历史";
+    Layout = "~/Areas/Mobile/Views/Shared/_ListLayout.cshtml";
+} 
+ 
+<style>
+
+    .layui-laydate , .layui-laydate-main {
+      width:100%;
+    }
+
+    .layui-laydate-content {
+       height:250px;
+    }
+     
+
+     .dayCheck {
+        position:absolute;
+        bottom:10%;
+        left:5%; 
+        width:90%;
+        height:35%;  
+        font-size:16px;
+        line-height:35px; 
+    }
+
+        .dayCheck .title { 
+            border-bottom:1px solid #0094ff;
+        }
+
+
+        .dayCheck .type 
+        {
+            width:45%;
+            text-align:center;
+            float:left;
+            margin:2.5%; 
+            background:rgba(0, 148, 255, 0.29);
+
+        }
+
+
+        .dayCheck .checkInfo {
+             width:47%; 
+             float:left; 
+        } 
+
+        .dayCheck .Supplement {
+            border:none;
+            text-align:center;
+            width:100px; 
+            margin-left:15px;
+            height:70px;
+            background:rgba(0, 148, 255, 0.54);
+            border-radius:50%;
+            color:white;
+        }
+
+
+</style>
+
+<div class="site-demo-laydate" style="width:100%;">
+    <div id="timelist"></div>
+</div>
+
+<div class="dayCheck">  
+    <div class="title" style="width:100%;text-align:center;"><span class="DayValue">@DateTime.Now.ToString("yyyy-MM-dd")</span> &nbsp; 个人考勤情况</div>
+    <div class="checkType">
+        <div class="type">上班打卡</div>
+        <div class="type">下班打卡</div>
+    </div>
+    <div class="checkInfo" style="margin-left:2.5%">
+        <div class="info">打卡人员：<span>admin</span></div>
+        <div class="info">打卡时间：<span>11：00</span></div>
+        <div class="info">打卡状态：<span>正常</span></div>
+    </div>
+    <div class="line" style="width:0.5%;background:#0094ff;float:left;"></div>
+
+    @*<div class="checkInfo" style="margin-left:2.5%;">
+        <div class="info">打卡人员：<span>admin</span></div>
+        <div class="info">打卡时间：<span>11：00</span></div>
+        <div class="info">打卡状态：<span>正常</span></div>
+    </div>*@
+
+    <div class="checkInfo" style="margin-left:2.5%;"> 
+        <div class="info" style="text-align:center;">暂无考勤情况</div>
+        <input type="text" class="Supplement" readonly value="补卡申请" onclick="CreateApply()" />
+    </div>
+     
+</div>
+
+
+
+   
+<script>
+
+    $(".line").css({ "height": $(".checkInfo:eq(0) .info").size() * $(".info").css("line-height").slice(0, -2) })
+    $(".Supplement").css({ "margin-left": ($(window).width() * 0.9 * 0.47 - 100) / 2 })
+     
+    $(function () {
+           
+        layui.use(['laydate', "layer", 'form'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+             
+            laydate.render({
+                elem: '#timelist',
+                position: 'static',
+                showBottom: false,
+                //min: "@DateTime.Now.ToString("yyyy-MM-dd")", 
+                done: function (value, date) {
+                    GetDayCheck(value);
+                    $(".layui-field-title legend").text(value);
+                }
+            }); 
+        })
+         
+    })
+
+
+   
+
+
+
+    function GetDayCheck(day)
+    {
+        $(".DayValue").text(day); 
+
+        @*$.ajax({
+            url: "@Url.Action("GetDayCheck")?Day=" + day,
+            async:false,
+            success: function (data) {
+                alert("data")
+            }
+        })*@
+    }
+
+    function CreateApply()
+    { 
+        location.href = "/Admin/Apply/SuppleCardCreate"
+    }
+
+</script>

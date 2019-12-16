@@ -1,0 +1,338 @@
+﻿@{
+    ViewBag.Title = "人员选择";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var userid = SysPara.CurAdmin.ID; 
+}
+@section head{
+
+    <link href="~/Areas/Admin/Style/common.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+    <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" /> 
+}
+<!DOCTYPE html> 
+<html>  
+<head> 
+    <style> 
+          body , html{
+            width:100%;
+            height:100%;
+        } 
+        #choose_second {
+           width:300px;
+           float:left;  
+           line-height:30px; 
+           margin-left:20px;
+           margin-top:30px;
+           height:400px;
+        } 
+        #choose_users {
+           border:1px solid #999;
+           height:350px;  
+           overflow-y:auto;
+        }
+            #choose_users li {
+                margin-left:20px;
+            }
+        .choose {   
+            float:right!important;
+            padding-right:20px;
+            margin-left:0!important;
+            text-align:right;     
+            color:#0094ff; 
+            width:85%!important;
+        }
+        .chlist {
+            float:right;
+        }
+    </style>
+</head> 
+<body> 
+    <input type="hidden" id="GetResouceUrl" />
+    <div style="width:100%;height:440px">
+        @*<fieldset id="tree_par">
+            <legend>部门选择</legend>
+            <div class="easyui-tree" id="tree"></div>
+        </fieldset>*@
+        <fieldset id="choose_second">
+            <legend>人员列表</legend>
+            <div class="layui-unselect layui-form-checkbox" style="display:block;text-align:center;margin-left:200px;position:absolute;top:27px;" onclick="ChooseAll()">
+                 <span>全选</span><i class="layui-icon layui-icon-ok" style="height:30px!important;"></i>
+            </div>
+            <div id="search_se">
+                <div id="search">
+                    <input type="text" class="Search" style="width:294px;margin-top:5px;margin-left:2px;border-radius:5px;outline:none;height:30px;" placeholder="搜索人员" />
+                </div>
+                <div id="choose_child"><ul class="SearchUser"></ul> <ul class="NormalUser"> </ul> </div>
+            </div>
+        </fieldset>
+        <fieldset id="choose" style="width:290px;">
+            <legend>已选人员</legend>
+            <div style="display:block;text-align:center;margin-left:170px;position:absolute;top:20px;">
+                <a href="#" class="button button-blue" onclick="submit()"><span style="height:30px!important; font-size:16px;padding-left:10px!important;padding-top:5px!important;padding-right:10px!important;">确定选择&nbsp;<i class="ChooseSize"></i></span></a>
+            </div>
+            <div id="choose_users">
+              <ul>  
+              </ul>
+            </div>
+        </fieldset>
+    </div>
+        <input type="hidden" id="dep" />  
+        <input type="hidden" id="depid" />   
+        <input type="hidden" id="parentid" value="" /> 
+    @*<div style="text-align:center">   
+        <div class="layui-unselect layui-form-checkbox" onclick="ChooseAll()"><span>全选</span><i class="layui-icon layui-icon-ok" style="height:30px!important;"></i></div>
+        <a href="#" class="button button-blue" onclick="submit()"><span>确定选择&nbsp;<i class="ChooseSize"></i></span></a>
+    </div>*@
+</body>
+</html>
+
+<script>
+    $(function () {
+        GetNextUsers()
+    })
+     
+    function GetNextUsers()
+    {
+        //"01da2244-1549-4d06-b628-4a2466b487c5,N2,CUSTOMERSOURCE"
+        //WF 人员选择测试数据
+        @*$.ajax({
+            url: "/WebApi/WorkFlow/GetNextActivityResource?activityID=cd1f9397-d81b-4015-a7ac-0a2ae738449d&userID=@userid&nextActivityKey=N3&AppName=CUSTOMERSOURCE",
+            success: function (data) {
+                var ul = $("#choose_child ul");
+                for (var i = 0; i < data.length; i++) {
+                    var formtype = "";
+                    switch (data[i].UserFromType) {
+                        case "ROLES": fromtype = "角色"; break;
+                        case "USERS": fromtype = "人员"; break;
+                        case "ORGANIZATIONS": fromtype = "部门"; break;
+                    }
+                    ul.append("<li style='cursor:pointer;' onclick='add(this)'>[" + fromtype + "：" + data[i].ObjName + "]&emsp;<input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                }
+            }
+        })
+
+        if (window.parent.$(".defaultSelect").val() == "true") {
+            $(".layui-unselect").show();
+        }
+        else {
+            $(".layui-unselect").hide();
+        }*@
+         
+
+        //调用父页面的方法
+        var parentid = window.parent.Value();
+        var activityid = window.parent.GetUrlParm("ACTIVITY_ID"); 
+        var obj = "";
+        if (parentid != "") { 
+            if (activityid == null) {
+                $.ajax({
+                    url: "/WebApi/WorkFlow/GetNextActivityResource?processDKey=" + parentid.split(',')[0] + "&userID=@userid&nextActivityKey=" + parentid.split(',')[1] + "&AppName=" + parentid.split(',')[2] + "",
+                    async: false,
+                    success: function (data) {
+                        $("#GetResouceUrl").val(parentid+",New");
+                        var ul = $("#choose_child .NormalUser");
+                        for (var i = 0; i < data.length; i++) {
+                            var formtype = "";
+                            switch (data[i].UserFromType) {
+                                case "ROLES": fromtype = "角色"; break;
+                                case "USERS": fromtype = "人员"; break;
+                                case "ORGANIZATIONS": fromtype = "部门"; break;
+                            }
+                            var Lastli = ul.find("li:last");
+                            if (Lastli.attr("class") == data[i].UserFromType && obj == data[i].ObjName) {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'></div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                            }
+                            else {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'>[" + fromtype + ":" + data[i].ObjName + "]</div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                                obj = data[i].ObjName;
+                            }
+                        }
+                    }
+                })
+            }
+            else {
+                $.ajax({
+                    url: "/WebApi/WorkFlow/GetNextActivityResource?activityID=" + parentid.split(',')[0] + "&userID=@userid&nextActivityKey=" + parentid.split(',')[1] + "&AppName=" + parentid.split(',')[2] + "",
+                    async: false,
+                    success: function (data) {
+                        $("#GetResouceUrl").val(parentid+",Next");
+                        var ul = $("#choose_child .NormalUser");
+                        for (var i = 0; i < data.length; i++) {
+                            var formtype = "";
+                            switch (data[i].UserFromType) {
+                                case "ROLES": fromtype = "角色"; break;
+                                case "USERS": fromtype = "人员"; break;
+                                case "ORGANIZATIONS": fromtype = "部门"; break;
+                            }
+
+                            var Lastli = ul.find("li:last");
+                            if (Lastli.attr("class") == data[i].UserFromType && obj == data[i].ObjName) {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'></div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                            }
+                            else {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'>[" + fromtype + ":" + data[i].ObjName + "]</div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                                obj = data[i].ObjName;
+                            }
+                        }
+                    }
+                })
+            }
+            
+            //下一节点人员是否默认全选
+            if (window.parent.$(".defaultSelect").val()=="true")
+                ChooseAll();
+        }
+    }
+
+    //全选人员
+    function ChooseAll() {
+        if (!$(".layui-form-checkbox").hasClass("layui-form-checked")) {
+            $(".layui-form-checkbox").addClass("layui-form-checked");
+            $("#choose_child li input").each(function () {
+                if (!this.checked) {
+                    add(this.parentNode);
+                    $(this).attr("checked", true);
+                }
+            });
+        }
+        else {
+            $(".layui-form-checkbox").removeClass("layui-form-checked");
+            $("#choose_child li input").each(function () {
+                $(this).attr("checked", false);
+                $(".ChooseSize").text("");
+                $("#choose_users li").remove();
+            });
+        }
+
+    }
+
+    var times = 0;
+    $(".Search").off("keyup").on("keyup", function (event)
+    {
+        clearTimeout(times);
+        times = setTimeout(function () {
+            $.ajax({
+                url: '/Admin/CRM_SourceInfo/GetNextResourceSearch',
+                dataType: 'json',
+                data: { 'Search': $(".Search").val(), "parentid": $("#GetResouceUrl").val() },
+                type: 'POST',
+                success: function (data) {
+                    $(".NormalUser").hide();
+                    var ul = $("#choose_child .SearchUser");
+                    if ($(".Search").val().length == 0) {
+                        $(".NormalUser").show();
+                        ul.find("li").remove();
+                    }
+                    else {
+                        ul.find("li").remove();
+                        for (var i = 0; i < data.length; i++) { 
+                            var formtype = "";
+                            switch (data[i].UserFromType) {
+                                case "ROLES": fromtype = "角色"; break;
+                                case "USERS": fromtype = "人员"; break;
+                                case "ORGANIZATIONS": fromtype = "部门"; break;
+                            } 
+                            var Lastli = ul.find("li:last");
+                            if (Lastli.attr("class") == data[i].UserFromType && obj == data[i].ObjName) {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'></div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                            }
+                            else {
+                                ul.append("<li style='cursor:pointer;' onclick='add(this)' class=" + data[i].UserFromType + "><div style='width:140px;float:left;height:30px;'>[" + fromtype + ":" + data[i].ObjName + "]</div><input type='checkbox'   onclick='Beforeadd(this)' id='" + JSON.stringify(data[i]) + "' class='" + data[i].GUID + "' value='" + data[i].DisplayName + "'/>" + data[i].DisplayName + "</li>")
+                                obj = data[i].ObjName;
+                            }
+                        } 
+                    }
+                    
+                }
+            });
+        }, 500); 
+    })
+     
+    function Beforeadd(dom) {
+        if (dom.checked) {
+            dom.checked = false;
+        }
+        else {
+            dom.checked = true;
+        }
+    }
+
+    //添加已选人员
+    function add(dom) {
+        if (window.parent.$(".selectSingleUser").val() == "true" && $("#choose_users li").size() == 1) {
+            alert("该活动人员不能多选");
+        }
+        else {
+            var _self = dom.children[1];
+            var item = JSON.parse(_self.id);
+            if (!_self.checked) {
+
+                var path = item.AllPathName.split('\\');
+                var pathname = path[0] + "-";
+                if (path.length > 2) {
+                    pathname = "";
+                    for (var i = 1; i < path.length - 1; i++) {
+                        pathname += path[i] + "-";
+                    }
+                }
+                $("#choose_users ul").append("<li id='" + item.GUID + "' class='" + _self.id + "'>" + pathname.substr(0, pathname.length - 1) + ":<br/><span class='chlist' onclick='cancel(this)'/></span><span class='choose'>" + _self.value + "</span></li>")
+                _self.checked = true;
+                //$(".ChooseSize").text("(" + $("#choose_users li").size() + ")");
+                $("#search input").val("");
+                $("#choose_child li").removeClass("hide");
+            }
+            else {
+                $("#choose_users ul #" + item["GUID"] + "").remove();
+                //$(".ChooseSize").text("(" + $("#choose_users li").size() + ")");
+                //if ($("#choose_users li").size() == 0) {
+                //    $(".ChooseSize").text("");
+                //}
+                _self.checked = false;
+            }
+        }
+    }
+
+    //取消人员的选中
+    function cancel(dom) {
+        dom = dom.parentNode;
+        $("#choose_users ul #" + dom.id + "").remove();
+        for (var i = 0; i < $("#choose_child  ." + dom.id + "").size() ; i++) {
+            $("#choose_child  ." + dom.id + "")[i].checked = false;
+
+            $(".ChooseSize").text("(" + $("#choose_users li").size() + ")");
+            if ($("#choose_users li").size() == 0) {
+                $(".ChooseSize").text("");
+            }
+        }
+    }
+
+
+    function submit() {
+
+        //获取父页面需要填充已选人员的元素id
+        var item = window.parent.Item().split(",");
+
+        for (var j = 0; j < item.length; j++) {
+            var msg = "";
+            var Dom = item[j].split("/");
+            for (var i = 0; i < $("#choose_users ul li").size() ; i++) {
+                msg +=JSON.parse($("#choose_users ul li:eq(" + i + ")")[0].className)[Dom[1].trim()] + ",";
+            }
+            msg = msg.substr(0, msg.length - 1);
+            //为父页面的元素赋值
+            window.parent.$(Dom[0]).val(msg);
+        }
+
+        //调用父页面的方法
+        window.parent.close();
+
+        //是否调用页面中的回调事件
+        var url=location.href.split("?")
+        if (url.length > 1 && url[1].split("=")[1]=="true") {
+            window.parent.CallBack();
+        }
+
+    }
+
+</script>

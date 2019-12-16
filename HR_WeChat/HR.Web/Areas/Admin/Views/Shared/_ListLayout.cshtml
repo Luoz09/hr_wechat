@@ -1,0 +1,584 @@
+﻿ @{
+     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; 
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/x-component">
+    <title>@ViewBag.Title</title>
+      
+    <link href="~/Areas/Admin/Style/SearchList.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Style/list.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Style/common.css" rel="stylesheet" />  
+    <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+
+       
+
+    <script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+    <script src="~/Areas/Admin/plugins/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js"></script>  
+    <script src="~/Areas/Admin/plugins/sgms-controls/custom-columns/custom-columns.js"></script>
+    <script src="~/Areas/Admin/plugins/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="~/Areas/Admin/scripts/list.js"></script>
+    <script src="~/Areas/Admin/scripts/jquery.PrintArea.js"></script>
+
+    <script src="~/Areas/Admin/scripts/Choose.js"></script>
+    <link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" />
+     
+    @RenderSection("head", required: false)
+    
+</head>
+<body>
+    <script>
+    var url = {
+        getData: "@Url.Action("GetData")",
+        edit: "@Url.Action("Edit")",
+        del: "@Url.Action("Delete")",
+        create: "@Url.Action("Create")"
+    };
+    var gridJqObj = null;
+    $(function ()
+    {
+
+        layui.use(['form', 'laydate'], function () {
+            var form = layui.form;
+            var laydate = layui.laydate;
+
+            //日期选择
+            lay(".Day").each(function () {
+                laydate.render({
+                    elem: this,
+                })
+            })
+        })
+
+        //#region datagrid 相关
+
+        gridJqObj = $("#grid");
+        var datagridKey = getGridKey(gridJqObj.attr("key") || "");
+
+        window.params = window.params || {};
+
+        var defaultParams = {
+            queryParams: getQueryParams(),
+            url: url.getData,
+            pagination: true,
+            sortName: "InputDate",
+            sortOrder: "desc",
+            striped: true,
+            fitColumns: false,
+            pageList: [1, 15, 30, 50],
+            pageNumber: getPageNumber(datagridKey),
+            pageSize: getPageSize(datagridKey),
+            frozenColumns: [[
+                { field: 'ck', checkbox: true, width: 60, align: 'center' },
+                { field: 'ID', align: 'center', width: window.params.funColWidth || 55, formatter: formatterID, title: '功能' }
+            ]],
+            //onDblClickRow: function (rowIndex, rowData) {
+            //    editRow(rowData.ID);
+            //},
+            onLoadSuccess: function (data) {
+                setPagerInfo(datagridKey, gridJqObj)
+            },
+            onSortColumn: function (sort, order) {
+                setSort(datagridKey, sort)
+                setOrder(datagridKey, order)
+            }
+        };
+
+        defaultParams = $.extend(defaultParams, window.params)
+
+        gridJqObj.datagrid(defaultParams);
+        $(".datagrid-cell").css("text-align", "center");
+
+        //#endregion datagrid 相关
+
+          
+
+        //#region 布局高度相关
+
+        var contextJqObj = $(".grid-container")
+        resize()
+        $(window).resize(resize)
+        function resize() {
+            gridJqObj.datagrid("resize", {
+                height: contextJqObj.height()
+            })
+        }
+
+
+        //#endregion 布局高度相关
+        initChoseColumns();
+        initImportXls();
+
+    });
+
+    /*高级查询面板相关*/
+
+    function showSearchPanel() {
+        var jqAdvancedSearch = $(".advanced-search");
+        jqAdvancedSearch.toggle();
+        var diffHeight = 0
+        if (!jqAdvancedSearch.is(":hidden")) {
+            diffHeight = jqAdvancedSearch.height();
+        }
+        $("#main").css("top", diffHeight + 51 + "px");
+        $("#main").height($(window).height() - diffHeight - 87);
+        gridJqObj.datagrid("resize", {
+            height: $("#main").height()
+        })
+    }
+
+    @*function exportToXls() {
+        var parms = {
+            advanced: getSearchJson()
+        };
+        try {
+            parms = $.extend(parms, getExtParams());
+        }
+        catch (e) {
+        }
+        window.open("@Url.Action("Export")?" + $.param(parms) + "&columns=" + getColumn())
+        //gridJqObj.datagrid("reload", parms);
+    }*@
+
+    function exportToXls()
+    {
+         var data = $("#grid").datagrid("getData");
+         var columns = [];
+         var checkedColumns = $(".chose-columns .columns input[type='checkbox']:checked");
+         checkedColumns.each(function (i, o) {
+             columns.push($(o).parent().text());
+         })
+          
+         var cell = [];
+         for (var i in data.rows) {
+             var value = [];
+             var _self = data.rows[i];
+             for (var j = 0; j < checkedColumns.length; j++) {
+                 value.push(_self[$(checkedColumns[j])[0].defaultValue]);
+             }
+             cell.push(value.join(','))
+         }
+         var Export = document.createElement("a");
+         Export.href = "data:application/vnd.ms-excel;charset=utf-8,\ufeff" + encodeURIComponent(columns.join(',') + "\r\n" + cell.join("\r\n"));
+         Export.download = $(".breadcrumb li:eq(1)").text() + ".xls";
+         Export.click();
+        }
+
+
+    function clearSearch() {
+        var controls = $(".advanced-search").find("select,input[type!='button'],textarea");
+        controls.each(function (i, o) {
+            $(o).val("")
+        });
+    }
+
+    function advancedSearch() {
+        // $(".advanced-search").hide();
+        showSearchPanel();
+        var parms = {
+            advanced: getSearchJson()
+        };
+        try {
+            parms = $.extend(parms, getExtParams());
+        }
+        catch (e) {
+        }
+        gridJqObj.datagrid("reload", parms);
+    }
+
+    function getSearchJson() {
+        var controls = $(".advanced-search").find("select,input[type!='button'],textarea");
+
+        var params = [];
+
+        var cacheData = {}
+
+        //不是范围查询的控件
+        controls.each(function (i, o) {
+            o = $(o);
+            var name = o.attr("name");
+            var classname = o[0].className;
+
+            if (o.attr("ismaxvalue") == "true") {
+                if (cacheData[name])
+                    cacheData[name].maxValue = o.val()
+                else
+                    cacheData[name] = {
+                        maxValue: o.val()
+                    }
+            } else if (o.attr("isminvalue") == "true") {
+                if (cacheData[name])
+                    cacheData[name].minValue = o.val()
+                else
+                    cacheData[name] = {
+                        minValue: o.val()
+                    }
+            } else {
+                if (trim(o.val()) != "") {
+                    var isLike = o.attr("islike");
+                    if (isLike) {
+                        params.push({
+                            Field: name,
+                            shu:classname,
+                            IsRange: false,
+                            IsLike: isLike,
+                            SearchStr: o.val()
+                        })
+                    }
+                    else {
+                        params.push({
+                            Field: name,
+                            shu: classname,
+                            IsRange: false,
+                            SearchStr: o.val()
+                        })
+                    }
+                }
+            }
+        })
+        for (var i = 0; i < params.length; i++) {
+            pp = params[i];
+            if (pp.shu.indexOf("CheckBox") > 0) {
+                pp.SearchStr = $("#"+pp.Field).is(":checked");
+
+            }
+        }
+        for (var elem in cacheData) {
+            var rangeSearchObj = {
+                Field: elem,
+                IsRange: true,
+                MinValue: cacheData[elem]["minValue"] || "",
+                MaxValue: cacheData[elem]["maxValue"] || ""
+            }
+            if (rangeSearchObj.MinValue != "" || rangeSearchObj.MaxValue != "") {
+                params.push(rangeSearchObj)
+            }
+        }
+        return JSON.stringify(params)
+    }
+    function initImportXls(){
+        $(".import-excel-dialog").dialog({
+            closed: true,
+            modal: true,
+            buttons: [
+            {
+                text: "&nbsp;&nbsp;取消&nbsp;&nbsp;",
+                handler: function () {
+                    $(".import-excel-dialog").dialog("close")
+                }
+            }]
+        })
+    }
+
+    function importXls() {
+        if (!$(".import-excel-iframe").attr("src")) {
+            $(".import-excel-iframe").attr("src","@Url.Action("Index","Excel")?c=@ViewBag.Controller")
+        }
+        $(".import-excel-dialog").dialog("open");
+    }
+
+    //导出用
+    function getColumn() {
+        /*var columns = gridJqObj.datagrid("options").columns[0];
+        var result = [];
+        for (var i = 0, c = columns.length; i < c; i++) {
+            var elem = columns[i];
+            result.push(
+                elem.field + "," + elem.title.replace("\r\n", "").replace(/^\s+|\s+$/g, "")
+           )
+        }*/
+        var result = [];
+        var $checkedCheckboxs = $(".chose-columns .columns input:checked")
+        $checkedCheckboxs.each(function (i, o) {
+            o = $(o);
+            result.push(o.val() + "," + o.parent().text())
+        })
+        return result.join("|");
+    }
+
+    /*END高级查询面板相关*/
+
+    function initChoseColumns() {
+
+        var columns = getColumns();
+        var choseColumnsHtml = "<div>";
+        for (var i = 0, c = columns.length; i < c; i++) {
+            var elem = columns[i];
+            choseColumnsHtml += '<label><input type="checkbox" value="' + elem.field + '" checked />' + elem.title + '</label>'
+        }
+        choseColumnsHtml += "</div>"
+        $(".chose-columns .columns").html(choseColumnsHtml);
+        $(".chose-columns").dialog({
+            title: '选择打印/导出列',
+            closed: true,
+            modal: true,
+            buttons: [{
+                text: "确定",
+                iconCls: 'icon-ok',
+                handler: function () {
+                    $(".chose-columns").dialog("close")
+                }
+            },
+            {
+                text: "打印",
+                handler: function () {
+                    print()
+                }
+            },
+            {
+                text: "导出",
+                handler: function () {
+                    exportToXls()
+                }
+            }]
+        })
+    }
+
+    function getColumns() {
+        var options = gridJqObj.datagrid("options");
+        var columNames = [];
+        var columns = options.frozenColumns[0]
+        if (columns) {
+            for (var i = 0, c = columns.length; i < c; i++) {
+                var elem = columns[i];
+                if (elem.field == "ck" || elem.field == "ID") continue;
+                columNames.push({
+                    title: elem.title.replace(/^\s+|\s+$/g, "").replace("\r", "").replace("\n", ""),
+                    field: elem.field
+                })
+            }
+        }
+        columns = options.columns[0]
+        if (columns) {
+            for (var i = 0, c = columns.length; i < c; i++) {
+                var elem = columns[i];
+                if (elem.field == "ck" || elem.field == "ID") continue;
+                columNames.push({
+                    title: elem.title.replace(/^\s+|\s+$/g, "").replace("\r", "").replace("\n", ""),
+                    field: elem.field
+                })
+            }
+        }
+        return columNames;
+    }
+
+    function choseColumns() {
+        $(".chose-columns").dialog("open")
+    }
+
+    function batchChose(status, $parent) {
+        if (!$parent) {
+            $parent = $(".chose-columns .columns");
+        }
+        if (status !== undefined) {
+            $parent.find("input").prop("checked", status)
+        } else {
+            $parent.find("input").each(function (i, o) {
+                o = $(o);
+                o.prop("checked", !o.prop("checked"));
+            })
+        }
+    }
+    function print() {
+        var columns = getPrintColumns();
+        var data = getData();
+        getTable(columns, data)
+    }
+    function getPrintColumns() {
+        var result = [];
+        var $checkedCheckboxs = $(".chose-columns .columns input:checked")
+        $checkedCheckboxs.each(function (i, o) {
+            o = $(o);
+            result.push({
+                title: o.parent().text(),
+                field: o.val()
+            })
+        })
+        return result
+    }
+    function getData() {
+        return gridJqObj.datagrid("getData");
+    }
+
+    function getTable(columns, data) {
+        var $printDiv = $(".getf-print-div");
+        if ($printDiv.length == 0) {
+            $printDiv = $('<div class="getf-print-div" style="display:none"><table style="width:100%" border="1"></table></div>')
+            $printDiv.appendTo($("body"));
+        }
+        var $printTable = $printDiv.find("table");
+        $printTable.empty();
+
+        var $head = $("<tr />");
+        $head.appendTo($printTable)
+        var rows = data.rows;
+        for (var i = 0, c = columns.length; i < c; i++) {
+            var head = columns[i];
+            var $th = $("<th>" + head.title + "</th>");
+            $th.appendTo($head);
+        }
+
+
+        for (var j = 0, c1 = rows.length; j < c1; j++) {
+            var row = rows[j];
+            var $body = $("<tr />");
+            $body.appendTo($printTable)
+            for (var i = 0, c = columns.length; i < c; i++) {
+                var head = columns[i];
+                var $td = $("<td>" + (row[head.field] || "") + "</td>");
+                $td.appendTo($body);
+            }
+        }
+
+        $printDiv.printArea();
+    }
+
+    function formatterID(value, row, index) {
+        var status = row.Status;
+        parm = "id=" + value + "&View=" + (status == 0 ? "0" : "1");
+        if (status == 0) {
+            return "<a href=\"" + url.edit + "?" + parm + "\" class='oper edit' title='编辑'><i class='fa fa-pencil-square-o'></i></a>" +
+                "<a href=\"javascript:del('" + value + "')\" class='oper delete'  title='删除'><i class='fa fa-trash-o'></i></a>";
+        }
+        else {
+            return "<a href=\"" + url.edit + "?" + parm + "\" class='oper edit' title='编辑'><i class='fa fa-pencil-square-o'></i></a>"
+        }
+    }
+         
+    function formatterDate(value, row) {
+        if (!value) return "";
+        value = value.replace("T", " ").replace(/\..*/g, "").replace(/-/g, "-");
+        return value
+    }
+
+    function formatterDateTime(value, row) {
+        if (!value) return "";
+        value = value.substr(0,10);
+        return value
+    }
+
+    function formatterCheckType(value)
+    {
+        if (value == 1) {
+            value = "上班打卡";
+        }
+        if (value == 2)
+        {
+            value = "下班打卡";
+        }
+        return value;
+
+    }
+
+
+    function formatterStatus(value)
+    { 
+        switch (value) {
+            case 0 : value = "暂存"; break;
+            case 1 : value = "审核中"; break;
+            case 4 : value = "审核成功"; break;
+        }
+
+        return value;
+    }
+
+    function ChooseApplyUser() {
+        $(".item").val("#ApplyUserName/DISPLAY_NAME");
+        OpenChooseW7("人员选择", "Users", false)
+    }
+
+
+    function GetUrlParm(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+         
+
+    </script>
+
+    <div class="wrapper container">
+        <div class="row" id="top-bar">
+            <ol class="breadcrumb">
+                @foreach (var elem in ViewBag.Nav)
+            {
+                if (!@String.IsNullOrEmpty(@elem.Href))
+                {
+                        <li><a href="@elem.Href">@elem.Text</a></li>
+                    }
+                    else
+                    {
+                        <li>@elem.Text</li>
+                    }
+                }
+            </ol>
+            <div id="toolbar">
+                 
+                @RenderSection("toolbar", required: false)
+                <a href="javascript:showSearchPanel()" title="高级查询" class="search-plus">
+                    <i class="fa fa-search-plus"></i>
+                </a>
+                <a href="javascript:create();" title="添加" class="add"><i class="fa fa-plus"></i></a> 
+                <a href="javascript:deleteAll()" title="批量删除" class="del"><i class="fa fa-trash-o"></i></a>
+                <a href="javascript:choseColumns()" title="选择列" class="print">
+                    <i class="fa fa-columns"></i>
+                </a>
+                @*<a title="导入EXCEL" class="import" href="javascript:importXls()">
+                    <i class="fa fa-sign-in"></i>
+                </a>*@
+                @*<a title="自定义列" class="custom-columns">
+                    <i class="fa fa-sort-amount-asc"></i>
+                </a>*@
+                <a href="javascript:history.back()" title="返回上个页面" class="back"><i class="fa fa-reply"></i></a>
+                <a href="@Url.Action("Desktop", "Home")" title="返回上级导航" class="up"><i class="fa fa-arrow-up" style="font-size: 20px;"></i></a>
+                <a href="@Url.Action("Desktop", "Home")" title="返回桌面" class="desktop"><i class="fa fa-desktop" style="font-size: 16px;"></i></a>
+            </div>
+        </div>
+        <div class="advanced-search" style="display: none;">
+            <form class="form-horizontal" role="form">
+                <div style="padding-top:10px;">
+                    @RenderSection("search", required: false)
+                </div>
+                <div class="btns">
+                    @RenderSection("btns", required: false)
+                    <input type="button" class="btn btn-primary btn-sm" value="&nbsp;搜索&nbsp;"
+                           onclick="advancedSearch()" />&nbsp;&nbsp;
+                    <input type="button" class="btn btn-primary btn-sm" value="&nbsp;导出&nbsp;"
+                           onclick="exportToXls()" />&nbsp;&nbsp;
+                    <input type="button" class="btn btn-default btn-sm" value="&nbsp;清空&nbsp;"
+                           onclick="clearSearch()" />&nbsp;&nbsp;
+                </div>
+                <div class="clearfix">
+                </div>
+            </form>
+        </div>
+        <div class="row" id="main">
+            <div class="grid-container">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <div class="chose-columns" title="选择打印/导出列" style="width:600px;height:480px;">
+        <div>
+            <input type="button" value="全选" onclick="batchChose(true)" />
+            <input type="button" value="全不选" onclick="batchChose(false)" />
+            <input type="button" value="反选" onclick="batchChose()" />
+        </div>
+        <div class="columns"></div>
+    </div>
+    @*<div class="custom-columns-dialog" title="自定义列" style="width:600px;height:600px;">
+        <ul class="col-container"></ul>
+    </div>*@
+
+
+    <div class="import-excel-dialog" title="导入EXCEL" style="width:600px;height:600px;">
+        <iframe style="width:100%;height: 521px;border:none" class="import-excel-iframe"></iframe>
+    </div>
+
+    <div id="Choose"></div>
+    <input type="hidden" class="item" /> 
+</body>
+</html>

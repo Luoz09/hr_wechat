@@ -1,0 +1,11 @@
+﻿EntityDeleted=实体已被删除
+CouldNotGetIP=无法获取IP
+IllegalParameter=非法参数
+ExistChildNodeCanNotDelete=存在子节点，无法删除
+Prefix_SystemErrorReason=系统内部错误原因为：
+Formatter_ActionNotExist=Action【{0}】不存在
+GoToListPage=返回列表页
+GoBackDesktop=返回首页
+NoRights=没有权限
+Text_Top=顶级
+CouldNotGetID=无法获取ID

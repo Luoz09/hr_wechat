@@ -1,0 +1,510 @@
+﻿@{
+    ViewBag.Title = "人员选择";
+    Layout = "~/Areas/Mobile/Views/Shared/_Layout.cshtml";
+}
+@section head{
+    <link href="~/Areas/Mobile/Style/choose.css" rel="stylesheet" />
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            -webkit-overflow-scrolling: touch;
+            height: 100% !important;
+            overflow: hidden;
+        }
+
+        /*.tree_item {
+            width: 70% !important;
+        }*/
+
+        #tree {
+            width: 60%;
+            height: 100%;
+            overflow-y: auto;
+            float: left;
+            border-right: 1px solid #82d0f7;
+        }
+
+        #trees {
+            width: 36%;
+            margin-left: 4%;
+            height: 100%;
+            overflow-y: auto;
+            float: left;
+        }
+
+            #trees .tree_item {
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <!--标题-->
+    @*<div style="width:100%;background:white;height:60px;line-height:60px;font-size:30px;text-align:center; " class="navbar-fixed-top">
+            人员选择
+        </div>*@
+
+    <!--搜索框-->
+    <div style="margin-top:20px;width:90%;margin-left:5%;" class="input-group">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control input-group searhtext" placeholder="搜索" style="background:#f8f8f8;" oninput="search(this)" />
+    </div>
+
+    <!--显示搜索的数据-->
+    <div style="width:90%;height:90%;margin-left:5%;display:none; background:#f8f8f8;z-index:1;overflow-y:auto;" class="searchList">
+
+    </div>
+
+    <!--导航栏-->
+    <div style="margin-top:10px;width:90%;margin-left:5%;">
+        <ul class="leader"></ul>
+    </div>
+
+    <div style="width:100%;height:10px;background:#f8f8f8;margin-top:10px;"></div>
+
+    <!--数据显示-->
+    <div id="tree_par">
+        <div class="easyui-tree" id="tree">
+
+        </div>
+        <div class="easyui-tree" id="trees">
+
+        </div>
+    </div>
+
+    <!--底部已选人员详情、确认-->
+    <div style="width:92%;margin-left:4%;position:absolute;bottom:0px; border-top:2px solid #f8f8f8;height:40px!important; font-size:16px;" class="ChooseBottom">
+        <div style="width:100%;">
+            <span style="line-height:40px; float:left;">已选择：</span>
+            <div class="AlChoose"> </div>
+            <button class="btn btn-primary" style="float:right;width:25%;margin-top:2px;" onclick="submit()">确定</button>
+        </div>
+        <div style="height:80%;width:100%;margin-top:10px;overflow-y:auto;" class="Details">
+
+        </div>
+        <button class="btn btn-info" style="float:right;width:25%;display:none;" onclick="Click()">确定</button>
+    </div>
+</body>
+</html>
+
+<script>
+    var result = "";
+    var topDep = "";
+
+    //返回部门数据的对应字段名称
+    var ParentID = "PARENT_GUID";
+    var DepID = "GUID";
+    var DepName = "DISPLAY_NAME";
+    var AllPathName = "ALL_PATH_NAME"
+
+    //返回人员数据的对应字段名称
+    var UserID = "GUID";
+    var UserName = "DISPLAY_NAME"
+
+    var parentid = window.parent.Value();
+    //var parentid = "CustomerSourceInfo,N3,CUSTOMERSOURCE";
+    //var parentid = "";
+    $(function () {
+
+
+        $("#tree_par").css({
+            "height": $(window).height() - 170,
+        })
+
+        $.ajax({ 
+            url: "@Url.Action("GetTopDep","Choose")",
+            async: false,
+            success: function (data) {
+                 topDep = data;
+            }
+        })
+
+        //var activityid = window.parent.GetUrlParm("ACTIVITY_ID");
+        if (parentid != "") {
+            $.ajax({
+                url: "/Mobile/Choose/GetNextResource?parentid=" + parentid + "",
+                async:false,
+                success: function (data) {
+                    result = data;
+                    var ul = $("#choose_child ul");
+                    for (var i = 0; i < data.length; i++) {
+                        //var fromtype = "";
+                        //switch (data[i][0].UserFromType) {
+                        //    case "ROLES": fromtype = "角色"; break;
+                        //    case "USERS": fromtype = "人员"; break;
+                        //    case "ORGANIZATIONS": fromtype = "部门"; break;
+                        //}
+                        var tree_item_width = $(window).width() * 0.9 * 0.6;
+                        if (data[i][0].ObjName.length * 14 < tree_item_width-30) {
+                            html = "<span style='margin-left:5px;'> " + data[i][0].ObjName + " </span>";
+                        }
+                        else {
+                            html = "<marquee style='margin-left:5px;width:" + tree_item_width-30 + "px' scrolldelay='200'> " + data[i][0].ObjName + " </marquee>";
+                        }
+                        $("#tree").append("<div class='tree_item " + data[i][0].ObjName + "' style='width:" + tree_item_width + "px' onclick='WF_Choose(this," + i + ")' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/>"+html+"</div> ")
+                        //<div style='float:right;color:blue;width:30%; border-left:1px solid #f8f8f8;line-height:50px;font-size:16px; cursor:pointer;' onclick=Children("+i+")><span><i class='fa fa-sort-amount-asc'></i>下级 </span> </div>
+                    }
+                }
+            })
+        }
+        else {
+            $.ajax({
+                url: "/Mobile/Choose/GetSecDeps",
+                async: false,
+                success: function (data) {
+                    $("#tree div").remove();
+                    for (var i = 0; i < data.length; i++) {
+                        AppendDom(data[i])
+                    }
+                }
+            })
+        }
+
+         
+        //鼠标移出元素区域外点击事件
+        $(document).mouseup(function (e) {
+            var con = $(".ChooseBottom");
+            if (!con.is(e.target) && con.has(e.target).length == 0) {
+                con.animate({ height: "40px" }, Click());
+            }
+        });
+
+        //鼠标移出元素区域外点击事件
+        $(document).mouseup(function (e) {
+            var con = $(".searchList , .searhtext");
+            if (!con.is(e.target) && con.has(e.target).length == 0) {
+                $(".searchList div").remove();
+                $(".searhtext").val("");
+                $(".searchList").hide();
+            }
+        });
+
+    })
+
+    var count = 0;
+    //筛选列表
+    function search(dom) {
+        var str = dom.value;
+        if (parentid != "")
+        {
+            $.ajax({
+                url: "/Mobile/Choose/GetNextResource?parentid=" + parentid + "&str=" + str + "&search=1",
+                success: function (data) {
+                    $(".searchList").show();
+                    if (count == 2 || data.length > 0) {
+                        $(".searchList div").remove();
+                        count = 0;
+                    }
+                    else {
+                        count++;
+                    }
+                    for (var i = 0; i < data.length; i++) {
+                        $(".searchList").append("<div class='search_item  " + data[i].GUID + " " + data[i].DisplayName + " " + JSON.stringify(data[i]) + " '  onclick='ChooseCheck(this)'   id='" + data[i].AllPathName + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/><span style='margin-left:4%;'> " + data[i].DisplayName + " </span></div>")
+                        for (var j = 0; j < $(".AlChoose span").size() ; j++) {
+                            if ($(".AlChoose span:eq(" + j + ")").text() == data[i].DisplayName) {
+                                $(".search_item:eq(" + i + ") input").attr("checked", "true");
+                            }
+                        }
+                    }
+                }
+            })
+        }
+        else {
+            $.ajax({
+                url: "/Mobile/Choose/SearchUsers?str=" + str,
+                success: function (data) {
+                    $(".searchList").show();
+                    if (count == 2 || data.length > 0) {
+                        $(".searchList div").remove();
+                        count = 0;
+                    }
+                    else {
+                        count++;
+                    }
+                    for (var i = 0; i < data.length; i++) {
+                        $(".searchList").append("<div class='search_item  " + data[i].ID + " " + data[i][UserName] + " " + JSON.stringify(data[i]) + " '  onclick='ChooseCheck(this)'   id='" + data[i][AllPathName] + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/><span style='margin-left:4%;'> " + data[i][UserName] + " </span></div>")
+                        for (var j = 0; j < $(".AlChoose span").size() ; j++) {
+                            if ($(".AlChoose span:eq(" + j + ")").text() == data[i][UserName]) {
+                                $(".search_item:eq(" + i + ") input").attr("checked", "true");
+                            }
+                        }
+                    }
+                }
+            })
+        }
+    }
+
+    //导航栏返回相关
+    function BeforeList(depID) {
+        $.ajax({
+            url: "/Mobile/Choose/GetDepByDepID?DepID=" + depID + "",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    ChildrenList(data[i][DepID], data[i][DepName]);
+                }
+            }
+        })
+    }
+
+    //显示数据
+    function ChildrenList(GUID, DISPLAY_NAME) {
+        $.ajax({
+            url: "/Mobile/Choose/GetDepsByParentID?ParentID=" + GUID + "",
+            success: function (data) {
+                $("#tree div").remove();
+                for (var i = 0; i < data.length; i++)
+                {
+                    AppendDom(data[i])
+                    for (var j = 0; j < $("#trees .tree_item").size() ; j++) {
+                        if ($("#trees .tree_item:eq(" + j + ")")[0].classList[1] == data[i][DepID]) {
+                            $("#tree input:eq(" + i + ")").attr("checked", "true");
+                        }
+                    }
+                }
+
+                //导航栏显示相关
+                if ($(".leader li").size() == 0) {
+                    //$(".leader").append("<li id='NULL' class='ROOT'><a onclick=BeforeList('NULL')><span>地区选择</span></a></li>")
+                    $(".leader").append("<li id='" + topDep[DepID] + "'><span>" + topDep[DepName] + "</span></li>")
+                }
+                var linum = $(".leader li").size();
+                for (var i = 0 ; i < linum ; i++) {
+                    if ($(".leader li:eq(" + i + ")").text() == DISPLAY_NAME) {
+                        for (var j = i; j < $(".leader li").size() ; j++) {
+                            $(".leader li:eq(" + j + ")").remove();
+                            j--;
+                        }
+                        break;
+                    }
+                }
+
+                if ($(".leader li").size() == 0) {
+                    $(".leader").append("<li id='" + topDep[DepID] + "'><span>" + topDep[DepName] + "</span></li>")
+                }
+
+                else {
+                    var item = $(".leader li:last-child");
+                    if (item[0].id != GUID) {
+                        var text = item.text();
+                        $(item).find("span").remove();
+                        item.append("<a onclick=BeforeList('" + item[0].id + "')><span>" + text + "</span></a>")
+                    }
+                    $(".leader").append("<li id='" + GUID + "'><span>" + DISPLAY_NAME + "</span></li>");
+                }
+            }
+        })
+    }
+
+
+    function AppendDom(data)
+    {
+        var count = GetChildrenListCount(data.ID);
+        if (count == 0) {
+            var tree_item_width = $(window).width() * 0.9 * 0.58;
+        }
+        else {
+            var tree_item_width = $(window).width() * 0.9 * 0.58 - 55;
+        }
+        var width = tree_item_width - 30;
+        if (data[DepName].length * 14 < width) {
+            html = "<span style='margin-left:5px;width:" + width + "px'> " + data[DepName] + " </span>";
+        }
+        else {
+            html = "<marquee style='margin-left:5px;width:" + width + "px' scrolldelay='200'> " + data[DepName] + " </marquee>";
+        }
+        if (count.length == 0) {
+            $("#tree").append("<div class='tree_item " + data.ID + "' style='width:" + tree_item_width + "px' onclick='PutChoose(this)'  id='" + data[AllPathName] + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/>" + html + "</div>")
+        }
+        else {
+            $("#tree").append("<div class='tree_item " + data.ID + "' style='width:" + tree_item_width + "px' onclick='PutChoose(this)'  id='" + data[AllPathName] + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/>" + html + "</div><div style='float:right;color:blue;width:50px; border-left:1px solid #f8f8f8;line-height:50px;font-size:14px; cursor:pointer;' onclick=ChildrenList('" + data.ID + "','" + data[DepName] + "')><span><i class='fa fa-sort-amount-asc'></i>下级 </span> </div> ")
+        }
+    }
+
+    //获取下级数据
+    function GetChildrenListCount(GUID) {
+        var result;
+        $.ajax({
+            url: "/Mobile/Choose/GetDepsByParentID?ParentID=" + GUID + "",
+            async:false,
+            success: function (data) {
+                result = data;
+            }
+        })
+        return result;
+    }
+
+    //添加/取消选中相关 点击checkbox触发
+    function ChooseParent(obj) {
+        //PutChoose(obj.parentNode);
+        obj.checked = !obj.checked;
+    }
+
+    //WF 选择数据
+    function WF_Choose(obj, index) {
+        obj.children[0].checked = !obj.children[0].checked;
+        if (obj.children[0].checked) {
+            var AlChoose = "";
+            for (var j = 0; j < $(".AlChoose span").size() ; j++) {
+                AlChoose += $(".AlChoose span:eq(" + j + ")").text()
+            }
+            for (var i = 0; i < result[index].length; i++) {
+                var _self = result[index][i];
+                if (AlChoose.indexOf(_self.DisplayName) < 0) {
+                    $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + _self.GUID + " " + JSON.stringify(_self) + "' id='" + _self.AllPathName + "' onclick='ChooseCheck(this)'><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/><span style='margin-left:5%;'> " + _self.DisplayName + " </span></div> ")
+                }
+                else {
+                    $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + _self.GUID + " " + JSON.stringify(_self) + "' id='" + _self.AllPathName + "' onclick='ChooseCheck(this)'><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)' checked/><span style='margin-left:5%;'> " + _self.DisplayName + " </span></div> ")
+                }
+                if (result[index].length == 1)
+                {
+                    if (AlChoose.indexOf(_self.DisplayName) < 0)
+                    {
+                        ChooseCheck($("." + _self.GUID)[0]);
+                    }
+                }
+            }
+        }
+        else {
+            $("#trees ." + obj.classList[1] + "").remove();
+        }
+    }
+
+
+
+    //部门选择后显示部门下面相关人员
+    function PutChoose(obj) {
+        obj.children[0].checked = !obj.children[0].checked;
+        if (obj.children[0].checked) {
+            $.ajax({
+                url: "/Mobile/Choose/GetUsersByDepID?depID=" + obj.classList[1] + "",
+                success: function (data) {
+                    var AlChoose = "";
+                    for (var j = 0; j < $(".AlChoose span").size() ; j++) {
+                        AlChoose += $(".AlChoose span:eq(" + j + ")").text()
+                    }
+                    for (var i = 0; i < data.length; i++) {
+                        var _self = data[i];
+                        if (AlChoose.indexOf(_self.UserName) < 0) {
+                            $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + _self.ID + " " + JSON.stringify(_self) + "' id='" + _self[AllPathName] + "' onclick='ChooseCheck(this)'><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/><span style='margin-left:5%;'> " + _self[UserName] + " </span></div> ")
+                        }
+                        else {
+                            $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + _self.ID + " " + JSON.stringify(_self) + "' id='" + _self[AllPathName] + "' onclick='ChooseCheck(this)'><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)' checked/><span style='margin-left:5%;'> " + _self[UserName] + " </span></div> ")
+                        }
+                        if (data.length == 1) {
+                            if (AlChoose.indexOf(_self[UserName]) < 0) {
+                                ChooseCheck($("." + _self.ID)[0]);
+                            }
+                        }
+                    }
+                    //if (data.length == 1) {
+                    //    $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + data[0].USER_GUID + "  " + JSON.stringify(data[0]) + " ' onclick='ChooseCheck(this)'  id='" + data[0].ALL_PATH_NAME + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)' checked/><span style='margin-left:5%;'> " + data[0].DISPLAY_NAME + " </span></div> ")
+                    //}
+                    //else {
+                    //    for (var i = 0; i < data.length; i++) {
+                    //        $("#trees").append("<div class='tree_item " + obj.classList[1] + " " + data[0].USER_GUID + "  " + JSON.stringify(data[0]) + " ' onclick='ChooseCheck(this)'  id='" + data[i].ALL_PATH_NAME + "' ><input type='checkbox'  class='li_checkbox' onclick='ChooseParent(this)'/><span style='margin-left:5%;'> " + data[i].DISPLAY_NAME + " </span></div> ")
+                    //    }
+                    //}
+                }
+            })
+        }
+        else {
+            $("#trees ."+obj.classList[1]+"").remove();
+        }
+    }
+
+
+    //人员选择列表，添加已选人员
+    function ChooseCheck(obj) {
+        obj.children[0].checked = !obj.children[0].checked;
+        if (obj.children[0].checked) {
+            $(".AlChoose").append("<span class='" + obj.id + " " + obj.classList[2] + "'  id='" + obj.classList[3] + " '  style='padding-right:10px;' onclick='ShowDetails()'>" + obj.innerText + "</span>")
+        }
+        else {
+            $(".AlChoose ." + obj.classList[2] + "").remove();
+        }
+        if (obj.className.indexOf("search_item") >= 0) {
+            $(".searchList").hide();
+            $(".searhtext").val("");
+        }
+    }
+
+    //显示详情相关
+    function ShowDetails() {
+        $(".ChooseBottom").animate({
+            height: "80%",
+        }, function () {
+            $(".ChooseBottom").css({ background: "#f8f8f8" });
+            $(".Details div").remove();
+            $(".AlChoose").css({width:"70%"})
+            $(".btn-primary").hide();
+            $(".btn-info").show();
+            for (var i = 0; i < $(".AlChoose span").size() ; i++) {
+                var text = $(".AlChoose span:eq(" + i + ")")[0].classList[0].split("\\").join(" -- ");
+                $(".Details").append("<div class='alert alert-info alert-dismissable' id='" + $(".AlChoose span:eq(" + i + ")").text() + "'> <button type='button' class='close' data-dismiss='alert' onclick='Cancel(this)'> &times;</button>" + text + "</div>")
+            }
+        })
+    }
+
+    //关闭详情层
+    function Click() {
+        $(".ChooseBottom").animate({ height: "40px" });
+        $(".ChooseBottom").css({ background: "white" });
+        $(".AlChoose").css({ width: "45%" })
+        $(".Details div").remove();
+        $(".btn-primary").show();
+        $(".btn-info").hide();
+    }
+
+    //取消选择相关
+    function Cancel(obj) {
+        for (var i = 0; i < $(".AlChoose span").size() ; i++) {
+            var item = $("." + obj.className + "").closest("div");
+            if (item[0].id == $(".AlChoose span:eq(" + i + ")").text()) {
+                var id = $(".AlChoose span:eq(" + i + ")")[0].classList[1];
+                if ($("." + id + "")[0].tagName.toLowerCase() == "span") {
+                    $("." + id + "").remove();
+                }
+                else {
+                    ChooseCheck($("." + id + "")[0]);
+                }
+            }
+        }
+    }
+
+    function submit() {
+
+        //获取父页面需要填充已选人员的元素id
+        var item = window.parent.Item().split(",");
+
+        for (var j = 0; j < item.length; j++) {
+            var msg = "";
+            var Dom = item[j].split("/");
+            for (var i = 0; i < $(".AlChoose span").size() ; i++) {
+                msg += JSON.parse($(".AlChoose span:eq(" + i + ")")[0].id)[Dom[1]] + ",";
+            }
+            msg = msg.substr(0, msg.length - 1);
+            //为父页面的元素赋值
+            window.parent.$(Dom[0].trim()).val(msg);
+        }
+
+        //调用父页面的方法
+        window.parent.close();
+        window.parent.$(".BodyDiv").show();
+        //是否调用回调事件
+        var url = location.href.split("?")
+        if (url.length > 1 && url[1].split("=")[1] == "true") {
+            window.parent.CallBack();
+        }
+    }
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+
+</script>

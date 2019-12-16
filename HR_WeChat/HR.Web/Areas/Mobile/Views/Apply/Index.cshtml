@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.Title = "申请列表";
+    Layout = "~/Areas/Mobile/Views/Shared/_ListLayout.cshtml";
+}
+
+<div style="height:45px;background:#f7f7f7">
+    <p class="type" style="line-height:45px;text-align:center;margin:0;"> <span class="title">申请列表</span> ( <span class="Count"></span> ) </p>
+    <a  class="AddLink" style="position:absolute;right:4%;top:13px;" href="/Admin/Apply/LeaveCreate"><i class="fa fa-plus" style="color:#007aff;font-size:1.5em;"></i></a>
+</div>
+
+<div style="margin-top:20px;width:92%;margin-left:4%;line-height:35px;" class="input-group">
+    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+    <input type="text" class="form-control input-group SearchText" onfocus="ShowClear()" placeholder="搜索" style="background:#f8f8f8;width:80%;" />
+    <span class="layui-icon layui-icon-close-fill" style="position:absolute;right:20%;font-size:24px;z-index:99;display:none" onclick="Clear()"></span>
+    <input type="text" value="搜索" style="position:absolute;z-index:99;width:20%;max-width:60px;height:34px;text-align:center;" readonly onclick="Search()" />
+</div>
+
+
+
+<div class="DataList" style="overflow-y:auto;">
+
+</div>
+
+
+
+<script>
+
+    var _parent = $(".DataList");
+    var type = getUrlParam("type");
+
+
+    switch (type) {
+        case "1":
+            $(".title").text("请假申请列表");
+            $(".AddLink").attr("href", "/Admin/Apply/LeaveCreate");
+            break;
+        case "2":
+            $(".title").text("外出申请列表");
+            $(".AddLink").attr("href", "/Admin/Apply/OutCreate");
+            break;
+        case "3":
+            $(".title").text("出差申请列表");
+            $(".AddLink").attr("href", "/Admin/Apply/BusinessCreate");
+            break;
+        case "4":
+            $(".title").text("加班申请列表");
+            $(".AddLink").attr("href", "/Admin/Apply/ExtWorkCreate");
+            break;
+        case "5":
+            $(".title").text("补卡申请列表");
+            $(".AddLink").attr("href", "/Admin/Apply/SuppleCardCreate");
+            break;
+    }
+
+    $(function ()
+    {
+        LoadData();
+
+        _parent.Page();
+    })
+
+    function LoadData()
+    {
+        $.ajax({
+            url: "@Url.Action("GetApplyData")?Type="+type+"&SearchStr=" + $(".SearchText").val() + "&Page=" + page,
+            success: function (data)
+            {
+                $(".Count").text(data.total);
+                data = data.rows.data ? JSON.parse(data.rows.data) : data.rows;
+
+                for (var item in data)
+                {
+                    var _self = data[item];
+
+                    var html = '<div class="layui-col-md12" style="margin-top:20px;">';
+                    html += '<div class="layui-card">';
+                    html += '<div class="layui-card-header">' + _self.ApplyCode + '<span style="float:right">' + formatterStatus(_self.Status) + '</span>';
+                    html += '</div>';
+
+                    switch (type)
+                    {
+                        case "1": html += LeaveHtml(_self); break;
+                        case "2": html += OutHtml(_self); break;
+                        case "3": html += BusinessHtml(_self); break;
+                        case "4": html += ExtWorkHtml(_self); break;
+                        case "5": html += SupplementHtml(_self); break;
+                    }
+
+                    html += ' <div style="width:100%;height:40px;border-top:1px solid #f6f6f6;line-height:40px;">';
+
+                    var time = _self.InputDate.substring(0, 16).replace("T", " ");
+                    html += '<div style="float:right;margin-right:20px;font-size:14px;">' + time + '</div>';
+
+                    html += '</div>';
+                    html += '</div></div>';
+
+                    _parent.append(html);
+               }
+            }
+
+        })
+    }
+
+
+    function LeaveHtml(_self)
+    {
+        var html = '<div class="layui-card-body">';
+        html += HtmlCreate("", "申请人", _self.ApplyUserName)
+        html += HtmlCreate("<br/>", "请假类型", _self.LeaveType)
+
+        if (_self.StartTime)
+            html += HtmlCreate("<br/>", "开始时间", _self.StartTime.substring(0, 11).replace("T", ""))
+
+        if (_self.EndTime)
+            html += HtmlCreate("<br/>", "结束时间", _self.EndTime.substring(0, 11).replace("T", ""))
+
+        html += HtmlCreate("<br/>", "申请天数", _self.ApplyDays)
+        html += HtmlCreate("<br/>", "申请原因", _self.ApplyReason)
+
+        html += '</div>';
+
+        return html;
+    }
+
+
+    function OutHtml(_self)
+    {
+        var html = '<div class="layui-card-body">';
+        html += HtmlCreate("", "申请人", _self.ApplyUserName)
+
+        if (_self.StartTime)
+            html += HtmlCreate("<br/>", "开始时间", _self.StartTime.substring(0, 11).replace("T", ""))
+
+        if (_self.EndTime)
+            html += HtmlCreate("<br/>", "结束时间", _self.EndTime.substring(0, 11).replace("T", ""))
+
+        html += HtmlCreate("<br/>", "申请天数", _self.ApplyDays)
+        html += HtmlCreate("<br/>", "申请原因", _self.ApplyReason)
+        html += '</div>';
+
+        return html;
+    }
+
+
+    function BusinessHtml(_self)
+    {
+        var html = '<div class="layui-card-body">';
+        html += HtmlCreate("", "申请人", _self.ApplyUserName)
+
+        html += HtmlCreate("<br/>", "交通工具", _self.Vehicle)
+        html += HtmlCreate("<br/>", "出差类型", _self.BusinessType == 0 ? "单程" : "往返")
+        html += HtmlCreate("<br/>", "出发城市", _self.StartCity)
+        html += HtmlCreate("<br/>", "目的城市", _self.DestinationCity)
+        html += HtmlCreate("<br/>", "同行人", _self.TogetherName)
+
+        if (_self.StartTime)
+            html += HtmlCreate("<br/>", "开始时间", _self.StartTime.substring(0, 11).replace("T", ""))
+
+        if (_self.EndTime)
+            html += HtmlCreate("<br/>", "结束时间", _self.EndTime.substring(0, 11).replace("T", ""))
+
+        html += HtmlCreate("<br/>", "申请天数", _self.ApplyDays)
+        html += HtmlCreate("<br/>", "申请原因", _self.ApplyReason)
+        html += '</div>';
+
+        return html;
+    }
+
+
+    function ExtWorkHtml(_self)
+    {
+        var html = '<div class="layui-card-body">';
+        html += HtmlCreate("", "申请人", _self.ApplyUserName)
+        html += HtmlCreate("<br/>", "加班类型", _self.ExtWorkType)
+        html += HtmlCreate("<br/>", "外出打卡", _self.ExtWorkIsOut)
+        if (_self.StartTime)
+            html += HtmlCreate("<br/>", "开始时间", _self.StartTime.substring(0, 11).replace("T", ""))
+
+        if (_self.EndTime)
+            html += HtmlCreate("<br/>", "结束时间", _self.EndTime.substring(0, 11).replace("T", ""))
+
+        html += HtmlCreate("<br/>", "申请时长", _self.ApplyDays)
+        html += HtmlCreate("<br/>", "申请原因", _self.ApplyReason)
+        html += '</div>';
+
+        return html;
+    }
+
+
+    function SupplementHtml(_self)
+    {
+        var html = '<div class="layui-card-body">';
+        html += HtmlCreate("", "申请人", _self.ApplyUserName)
+
+        if (_self.StartTime)
+            html += HtmlCreate("<br/>", "开始时间", _self.StartTime.substring(0, 11).replace("T", ""))
+
+        if (_self.EndTime)
+            html += HtmlCreate("<br/>", "结束时间", _self.EndTime.substring(0, 11).replace("T", ""))
+
+        if (_self.SuppleTime)
+            html += HtmlCreate("<br/>", "打卡时间", _self.SuppleTime)
+
+        if (_self.SuppleType)
+            html += HtmlCreate("<br/>", "补卡类型", _self.SuppleType == 1 ? "上班打卡" : "下班打卡")
+
+
+        html += HtmlCreate("<br/>", "申请天数", _self.ApplyDays)
+        html += HtmlCreate("<br/>", "申请原因", _self.ApplyReason)
+        html += '</div>';
+
+        return html;
+    }
+
+
+
+
+</script>

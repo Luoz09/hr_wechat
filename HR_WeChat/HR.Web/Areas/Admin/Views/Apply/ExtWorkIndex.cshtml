@@ -1,0 +1,174 @@
+﻿ @{
+     ViewBag.Title = "申请列表";
+     Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+} 
+
+@section search{
+    <table class="SearchTable layui-form">
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    加班类型：
+                </label>
+            </th>
+            <td style="">
+                <select class="layui-input" id="ExtWorkType" name="ExtWorkType"></select>
+            </td>
+
+            <th>
+                <label class="control-label">
+                    状态：
+                </label>
+            </th>
+            <td style="">
+                <select class="layui-input" name="Status">
+                    <option value="">请选择</option>
+                    <option value="1">审核中</option>
+                    <option value="4">审核成功</option>
+                </select>
+            </td>  
+        </tr>  
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    开始时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="StartTime" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="StartTime" autocomplete="off">
+                </div>
+            </td>
+
+            <th>
+                <label class="control-label">
+                    结束时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="EndTime" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="EndTime" autocomplete="off">
+                </div>
+            </td>
+        </tr>
+
+        <tr class="Trbgc_Top">
+            <th>
+                <label class="control-label">
+                    是否外出打卡：
+                </label>
+            </th>
+            <td style="">
+                <select class="layui-input" name="ExtWorkIsOut">
+                    <option value="">请选择</option>
+                    <option value="Y">是</option>
+                    <option value="N">否</option>
+                </select>
+            </td>
+            <th>
+                <label class="control-label">
+                    录入时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartTime" isminvalue="true" name="InputDate" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndTime" ismaxvalue="true" name="InputDate" autocomplete="off">
+                </div>
+            </td>
+        </tr>
+    </table>
+      
+}
+
+<table id="grid">
+    <thead>
+        <tr> 
+            <th data-options="field:'ApplyCode',width:'11%',align:'center',sortable:true">
+                申请单号
+            </th> 
+            <th data-options="field:'ApplyUserName',width:'15%',align:'center',sortable:true">
+                加班人
+            </th>   
+            <th data-options="field:'StartTime',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                开始时间
+            </th>
+            <th data-options="field:'EndTime',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                结束时间
+            </th>
+            <th data-options="field:'ExtWorkType',width:'10%',align:'center',sortable:true">
+                加班类型
+            </th> 
+            <th data-options="field:'ExtWorkIsOut',width:'10%',align:'center',sortable:true">
+                外出打卡
+            </th> 
+            <th data-options="field:'Status',width:'10%',align:'center',sortable:true,formatter:formatterStatus">
+                状态
+            </th>
+            <th data-options="field:'InputUserName',width:'10%',align:'center',sortable:true">
+                录入人
+            </th>
+            <th data-options="field:'InputDate',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                录入时间
+            </th>
+            <th data-options="field:'LastModifyUserName',width:'10%',align:'center',sortable:true">
+                最后更新人
+            </th>
+            <th data-options="field:'LastModifyDate',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                最后更新时间
+            </th>
+        </tr>
+    </thead>
+</table>
+
+
+<script>
+
+    $(".breadcrumb li:eq(1)").text("加班申请列表")
+    $(".del").remove();
+
+
+    var url = {
+        getData: "@Url.Action("GetData")?ApplyType=4",
+        edit: "@Url.Action("ExtWorkEdit")",
+        del: "@Url.Action("Delete")",
+        create: "@Url.Action("ExtWorkCreate")"
+    };
+
+
+    $(function () {
+         $.ajax({
+            url: "@Url.Action("GetOtTypeData", "SYS_DICTIONARY")?TypeNo=JB",
+            async: false,
+            success: function (data) {
+            for (var j = 0; j < data.length; j++) {
+                var _self = data[j];
+                $("#ExtWorkType").append("<option value=" + _self.OtTypeName + ">" + _self.OtTypeName + "</option>")
+            }
+            $("#ExtWorkType").prepend("<option value='' selected>请选择</option>")
+          }
+       })
+    })
+     
+
+</script>
+ 

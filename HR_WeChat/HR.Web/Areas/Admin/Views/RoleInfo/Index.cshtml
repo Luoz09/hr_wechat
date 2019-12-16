@@ -1,0 +1,340 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+<link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+
+
+<style>
+    #tree {
+        width: 25%;
+        overflow-y: auto;
+        float: left;
+        margin-right: 5%;
+    }
+
+    .TitleText {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .PowerName {
+        width: 100%;
+        background-color: #82A6F5;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #FFF;
+        border-bottom: 1px solid #9C9EA1;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+
+    .CName {
+        width: 25%;
+        float: left;
+    }
+
+    .CCheck {
+        margin-left: 20px !important;
+        width: 20px;
+        height: 20px;
+    }
+
+    .fl {
+        float: left;
+    }
+</style>
+
+<div id="DictionaryTree">
+    <div id="tree"></div>
+    <div class="layui-row" id="Dictionary" style="float:left; width:65%;margin-right:5%">
+        <div class="TitleText">
+            全选：<input type="checkbox" id="ALLPower" name="ALLPower" style="width:20px;height:20px;" onchange="ChangeAllPower()" />  &emsp;
+            当前人员： <span class="Title"></span>
+            <input type="text" value="保存" id="Add" class="layui-btn layui-btn-blue" style="cursor:pointer;width:100px!important;height:30px!important;float:right; margin-top:5px" readonly onclick="SavePower()" />
+        </div>
+    </div>
+</div>
+<input type="hidden" id="PowerList" name="PowerList" />
+<input type="hidden" id="ChooseName" />
+<input type="hidden" id="ChooseID" /> 
+
+<script>
+
+    $("#tree").css({ height: $(window).height() })
+
+    $(function () {
+
+        $.ajax({
+            url: "@Url.Action("GetRoles")",
+            async:false,
+            success: function (data) {
+                layui.use('tree', function () {
+                    layui.tree({
+                        elem: "#tree",
+                        nodes: trees(data),
+                        click: function (node)
+                        {
+                            $(".Title").text(node.name)
+                            $("#ChooseName").val(node.name)
+                            $("#ChooseID").val(node.id) 
+                            SetRolesFunction(node.id)
+
+                        }
+                    });
+               });
+            }
+        })
+
+        GetFunctionList();
+
+    })
+
+
+    //获取所有的权限列表
+    function GetFunctionList()
+    {
+        $.ajax({
+            url: "@Url.Action("GetFunctionList")",
+            async: false,
+            success: function (data)
+            {
+               SetFunctionList(data);
+            }
+        })
+    }
+
+    //显示角色列表
+    function SetFunctionList(jsonObj)
+    {
+        for (var i = 0; i < jsonObj.length; i++)
+        {
+            var Text = "<div id=\"D_" + jsonObj[i].ID + "\" class=\"PowerName fl\"><input type=\"checkbox\" name=\"" + jsonObj[i].ID + "\" id=\""
+                        + jsonObj[i].ID + "\" class=\"CCheck\"  onchange=\"ChangePower('" + jsonObj[i].ID + "')\"/><label for=\"" + jsonObj[i].ID + "\" >"
+                        + jsonObj[i].Name + "</label>" + "<div style=\"float:right;margin-right: 20px;\"><a id=\"AShrink\" href=\"javascript:ChangeStatus('" + jsonObj[i].ID +
+                        "')\"><i class=\"fa fa-arrow-up\" aria-hidden=\"true\"></i></a></div></div>"
+            $("#Dictionary").append(Text);
+            Text = "<div id=\"C_" + jsonObj[i].ID + "\" class=\"w100 fl\">"
+            if (jsonObj[i].children != null)
+            {
+                for (var j = 0; j < jsonObj[i].children.length; j++) {
+                    var codeName = jsonObj[i].children[j].Code_Name;
+                    var Description = jsonObj[i].children[j].Description;
+                    var tips = codeName + "\n" + (Description || "")
+                    Text += '<div class="CName" id=' + jsonObj[i].children[j].ID + ' >';
+                    Text += '<input type="checkbox"  name=' + jsonObj[i].children[j].ID + ' class="CCheck" onchange=setPowerData("' + jsonObj[i].children[j].ID + '")><label title= "'+tips+'">' + jsonObj[i].children[j].Name + '</label></div>';
+                }
+            }
+            Text += "</div>"
+            $("#Dictionary").append(Text);
+        }
+    }
+
+
+
+    //获取当前选中人员具有的权限
+    function SetRolesFunction(RoleID)
+    {
+        RolesFun = "";
+        $.ajax({
+            url: "@Url.Action("GetRolesFunctionList")?RoleID=" + RoleID,
+            async: false,
+            success: function (data) {
+                RolesFun = data;
+            }
+        })
+
+        $(".CName input").removeAttr("checked");
+        FuncID = "";
+        for (var item in RolesFun)
+        {
+            self = RolesFun[item];
+            $("#" + self.FUNC_ID).find("input").prop("checked", true);
+            FuncID += self.FUNC_ID + ",";
+        }
+        $("#PowerList").val(FuncID);
+    }
+
+
+    //通过选择应用全选对应应用下的全部权限
+    function ChangePower(id)
+    {
+        if ($(".Title").text().length > 0) {
+            var cid = "#" + id;
+            var ids = "#C_" + id + " input[type=checkbox]";
+            if ($(cid).is(":checked")) {
+                $(ids).prop("checked", true);
+                $.each($(ids), function () {
+                    if ($("#PowerList").val().indexOf(this.name) < 0)
+                        $("#PowerList").val($("#PowerList").val() + this.name + ",")
+                });
+            }
+            else {
+                $(ids).removeAttr("checked");
+                $.each($(ids), function () {
+                    if ($("#PowerList").val().indexOf(this.name) >= 0)
+                        $("#PowerList").val($("#PowerList").val().replace("," + this.name, ''))
+                });
+            }
+        }
+        else {
+            alert("请先选择要修改权限的人员")
+            $("#" + id).removeAttr("checked")
+        } 
+    }
+
+    //显示/隐藏 选中应用
+    function ChangeStatus(ID) {
+        var Name = "#C_" + ID;
+        var DName = "#D_" + ID + " a";
+        if ($(Name).is(':visible')) {
+            $(Name).hide();
+            $(DName).html("<i class=\"fa fa-arrow-down\" aria-hidden=\"true\"></i>");
+        }
+        else {
+            $(Name).show();
+            $(DName).html("<i class=\"fa fa-arrow-up\" aria-hidden=\"true\"></i>");
+        }
+    }
+
+    //是否全选所有的权限
+    function ChangeAllPower() {
+        var powerbox = $("#Dictionary input[type=checkbox]");
+        if ($("#ALLPower").is(":checked"))
+        {
+            powerbox.prop("checked", true);
+            $.each($(".CName"), function () {
+                if ($("#PowerList").val().indexOf($(this).attr("id")) < 0)
+                    $("#PowerList").val($("#PowerList").val() + $(this).attr("id") + ",")
+            });
+        }
+        else {
+            powerbox.removeAttr("checked");
+            $("#PowerList").val("");
+        }
+    }
+
+
+    function setPowerData(id)
+    {
+        if ($(".Title").text().length > 0) {
+            if ($("#" + id + " input").is(":checked")) {
+                if ($("#PowerList").val().indexOf(id) < 0)
+                    $("#PowerList").val($("#PowerList").val() + id + ",")
+            }
+            else {
+                if ($("#PowerList").val().indexOf("," + id) < 0) {
+                    $("#PowerList").val($("#PowerList").val().replace(id+",", ""))
+                }
+                else {
+                    $("#PowerList").val($("#PowerList").val().replace(","+id, ""))
+                }
+            }
+        }
+        else {
+            alert("请先选择要修改权限的人员")
+            $("#" + id + " input").removeAttr("checked");
+        }
+    }
+
+
+    //保存权限的修改
+    function SavePower()
+    {
+        if ($(".Title").text().length > 0)
+        {
+            RolesFuncData = $("#PowerList").val();
+            RolesFuncData = RolesFuncData.substring(0, RolesFuncData.length - 1);
+            chooseName = $("#ChooseName").val();
+            chooseID = $("#ChooseID").val(); 
+           $.ajax({
+               url: "@Url.Action("SaveRoleFunc")?RolesFuncData=" + RolesFuncData + "&Name=" + chooseName + "&ID=" + chooseID,
+               async: false,
+               success: function (data) {
+                   if (!data.Success) {
+                       window.saveError && saveError(data.Title, data.Message);
+                       $.messager.alert(data.Title || "保存失败", data.Message, 'error');
+                       self.removeAttr("disabled");
+                       self.removeClass("disabled")
+                   } else {
+                       $.messager.alert('保存成功', '保存成功', 'info', function () {
+                           window.saveSuccess && saveSuccess();
+                           SetRolesFunction($("#ChooseID").val())
+                       });
+                   }
+               }
+           })
+        }
+        else {
+            alert("修改权限的人员不能为空！")
+
+        }
+    }
+
+    userdata = "";
+    defaultdata = [];
+
+    //获取树形数据
+    function trees(rows)
+    {
+        applicationData  =  JSON.parse(rows.Application);
+        rolesData = JSON.parse(rows.Roles);
+
+        var TopTree = [];
+        var nodes = [];
+        var topTree = [];
+        //获取最高级父节点
+        for (var item in applicationData)
+        {
+            var row = applicationData[item]; 
+            nodes = [];
+            nodes.push({
+                id: row.ID,
+                name: row.NAME,
+                //sort: row.ORIGINAL_SORT, 
+                spread: true,
+            });
+            var toDo = [];
+            for (var i = 0; i < nodes.length ; i++)
+            {
+                toDo.push(nodes[i]);
+            }
+
+            while (toDo.length)
+            {
+                //父节点
+                var node = toDo.shift();
+                // 获取子节点
+                for (var i = 0; i < rolesData.length ; i++) {
+                    var row = rolesData[i];
+                    if (row.APP_ID == node.id) {
+                        var child = {
+                            id: row.ID,
+                            name: row.NAME,
+                            //sort: row.ORIGINAL_SORT, 
+                        };
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }
+                        toDo.push(child);
+                    }
+                } 
+            }
+
+        }
+          
+        return nodes;
+
+ }
+     
+</script>
+
+
+

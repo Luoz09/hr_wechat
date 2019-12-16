@@ -1,0 +1,215 @@
+﻿@{
+    ViewBag.Title = "部门选择";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section head{
+    <link href="~/Areas/Admin/Style/common.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Style/choose.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/plugins/layui/layui.js"></script>
+    <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />
+}
+<!DOCTYPE html> 
+<html>  
+<head>
+    <meta name="viewport" content="width=device-width" />  
+</head> 
+<body> 
+    <div style="width:100%;height:440px">
+        <fieldset id="tree_par">
+            <legend>部门选择</legend>
+            <div id="tree"></div>
+        </fieldset>
+        <fieldset id="choose_second">
+            <legend>部门列表</legend>
+            <div id="search_se">
+                <div id="search">
+                    <input type="text" style="width:98%;margin-top:5px;margin-left:2px;border-radius:5px;outline:none;height:30px;" placeholder="搜索部门" onchange="search(this)" />
+                </div>
+                <div id="choose_child"> <ul> </ul> </div>
+            </div>
+        </fieldset> 
+    </div>  
+        <input type="hidden" id="parentid" value="" />
+        <input type="hidden" id="dep" />  
+    <div style="display:block;text-align:center;margin-left:20px;">
+        @*<a href="#" class="button button-blue" onclick="submit()"><span>确定选择</span></a>*@ 
+    </div>
+</body>
+</html>
+
+<script>
+
+    //返回部门数据的对应字段名称
+    var ParentID = "PARENT_GUID";
+    var DepID = "GUID";
+    var DepName = "DISPLAY_NAME";
+
+
+    $(function () { 
+        $.ajax({
+            url: "/Admin/Choose/GetBranchs",
+            success: function (data) {
+                layui.use('tree', function () {
+                    layui.tree({
+                        elem: "#tree",
+                        nodes: trees(data),
+                        click: function (node) {
+                            $("#dep").val(node.name); 
+                            //$(this).tree(node.state == 'closed' ? 'expand' : 'collapse', node.target); //点击展开/收起子节点
+
+                            $("#choose_child ul li").remove();
+                            var ul = $("#choose_child ul");
+                            $.ajax({
+                                url: "/Admin/ORGANIZATIONS/GetEntity?id=" + node.id + "",
+                                async:false,
+                                success: function (data)
+                                {
+                                    if(data)
+                                    ul.append("<li style='cursor:pointer;' onclick='submit(this)'  class='" + JSON.stringify(data) + "' ><input type='checkbox' />" + data[DepName] + "</li>")
+                                }
+                            }) 
+                            $.ajax({
+                                url: "/Admin/Choose/GetDepByParentID?Guid=" + node.id + "",
+                                async:false,
+                                success: function (data) { 
+                                    for (var i = 0; i < data.length; i++)
+                                    { 
+                                        ul.append("<li style='cursor:pointer;' onclick='submit(this)'  class='" + JSON.stringify(data[i]) + "' ><input type='checkbox' />" + data[i][DepName] + "</li>")
+
+                                    }
+                                }
+                            })
+                        }
+                    })  
+                });
+            }
+        });
+                
+    })
+     
+    //筛选列表
+    function search(dom) {
+        var str = dom.value;
+        if ($("#dep").val() == "" || $("#dep").val() == "集团单位") {
+            var ul = $("#choose_child ul");
+            if (str == "") {
+                $(ul).find("li").remove();
+            }
+            $.ajax({
+                url: "/Admin/Choose/SearchDeps?str=" + str + "",
+                success: function (data) {
+                    $(ul).find("li").remove();
+                    for (var i = 0; i < data.length; i++) {
+                        ul.append("<li style='cursor:pointer;' onclick='submit(this)'  class='" + JSON.stringify(data[i]) + "' ><input type='checkbox' />" + data[i][DepName] + "</li>")
+                    }
+                }
+            })
+        }
+        else {
+            for (var i = 0; i < $("#choose_child li").size() ; i++) {
+                if ($("#choose_child li:eq(" + i + ")").text().indexOf(str) < 0) {
+                    $("#choose_child li:eq(" + i + ")").addClass("hide");
+                }
+                else {
+                    $("#choose_child li:eq(" + i + ")").removeClass("hide");
+                }
+            }
+        }
+    }
+
+    function submit(dom) {
+          
+        //var wo =JSON.parse(dom.className)[aa];
+        var item = window.parent.Item().split(","); 
+        for (var i = 0; i < item.length; i++) {
+            var Dom = item[i].split("/");
+            var Domm = Dom[0].split("-");
+            for (var j = 0; j < Domm.length; j++) {
+                window.parent.$(Domm[0]).val(JSON.parse(dom.className)[Dom[1]]);
+            }
+        } 
+        window.parent.close();
+
+        var url = location.href.split("?")
+        if (url.length > 1 && url[1].split("=")[1] == "true") {
+            window.parent.CallBack();
+        }
+
+     
+    }
+     
+    //获取树形数据
+    function trees(rows) { 
+        var nodes = []; 
+        //获取最高级父节点
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            if (!exists(rows, row[ParentID])) {
+                nodes.push({
+                    id: row[DepID],
+                    name: row[DepName],
+                    spread: true,
+                });
+            }
+        }
+
+        var toDo = [];
+        for (var i = 0; i < nodes.length; i++) {
+            toDo.push(nodes[i]);
+        }
+        while (toDo.length) {
+            //父节点
+            var node = toDo.shift();  
+            // 获取子节点
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                if (row[ParentID] == node.id) {
+                    //存在子节点，不展开子节点
+                    if (HasChildren(rows, row[DepID])) {
+                        var child = { id: row[DepID], name: row[DepName]};
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }   
+                        toDo.push(child);
+                    } 
+                    else {
+                        var child = { id: row[DepID], name: row[DepName] };
+                        if (node.children) {
+                            node.children.push(child);
+                        } else {
+                            node.children = [child];
+                        }
+                        toDo.push(child);
+                    }
+                    //var child = { id: row.GUID, name: row.DISPLAY_NAME, state: "closed", };
+                    //if (node.children) {
+                    //    node.children.push(child);
+                    //} else {
+                    //    node.children = [child];
+                    //}
+                    //toDo.push(child);
+                }
+            }
+        }
+        return nodes;
+    }
+     
+    //是否存在父节点
+    function exists(rows, parentId) {
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i][DepID] == parentId) return true;
+        }
+        return false;
+    }
+
+    //是否存在子节点
+    function HasChildren(rows, guid) {
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i][ParentID] == guid) return true;
+        }
+        return false;
+    }
+     
+</script>

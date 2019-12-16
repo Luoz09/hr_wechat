@@ -1,0 +1,3790 @@
+[2018-04-20 15:23:13]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-05-03 09:22:50]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-05-03 09:24:32]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-05-03 09:34:47]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-05-11 14:21:52]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-05-11 14:22:59]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-05-11 14:23:02]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-05-29 14:51:37]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-06 13:23:19]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-11 09:32:44]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-11 14:10:01]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-11 14:10:29]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-11 14:57:44]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 09:55:35]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 10:08:56]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 10:24:08]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 10:28:57]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 10:33:10]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 10:52:45]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 11:01:46]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 11:02:55]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 11:03:58]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 11:17:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 11:30:35]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:20:15]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:28:49]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:32:43]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:41:36]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:46:56]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:52:16]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-12 13:53:00]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:53:09]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 13:53:46]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-12 13:56:48]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-12 14:00:53]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-12 14:11:57]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-14 15:22:42]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-14 15:54:14]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-14 16:26:02]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-15 09:50:10]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-15 11:05:16]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-15 11:29:45]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-15 13:13:45]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-15 14:18:22]
+SubmitToDb:err无法更新 EntitySet“CRM_SalesNote”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-06-15 14:20:14]
+SubmitToDb:err无法更新 EntitySet“CRM_SalesNote”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-06-15 14:23:38]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-15 14:24:10]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-15 14:24:28]
+SubmitToDb:err无法更新 EntitySet“CRM_SalesNote”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-06-19 10:01:54]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-19 13:49:21]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-19 17:20:02]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-19 17:35:43]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-20 09:50:09]
+SubmitToDb:err无法更新 EntitySet“SRM_MaxCode”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <UpdateFunction> 元素。
+[2018-06-20 17:33:16]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-20 17:37:40]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-20 17:38:12]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-20 17:38:21]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-20 17:38:54]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-22 16:28:08]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:30:02]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:32:48]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:40:21]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:42:22]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:42:29]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:53:53]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 10:58:03]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-26 10:58:19]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-26 10:58:42]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-06-26 14:03:31]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:24:09]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:24:34]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:25:15]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:25:25]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:26:15]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:26:22]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:30:41]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:31:03]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:31:32]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:31:42]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 14:32:32]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-26 16:39:38]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 10:27:45]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:02:47]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:17:42]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:19:18]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:19:30]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:21:26]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-06-29 14:22:05]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-03 17:59:35]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 10:52:05]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 13:42:33]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 14:36:46]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 14:46:23]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 15:07:53]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 15:11:50]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-04 15:58:46]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:56:48]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:05]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:05]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:21]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:27]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 14:58:32]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 15:00:02]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 15:00:17]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 15:00:17]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:35:34]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:36:01]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:36:01]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:37:25]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:47:11]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:48:11]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 16:51:38]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:07:51]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:08:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:08:39]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:09:02]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:09:33]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:09:37]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:09:37]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:10:26]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:10:45]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:10:47]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:25:00]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:25:04]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-06 17:25:04]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 11:00:46]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 11:05:41]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 11:05:41]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 11:05:41]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 11:16:37]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:19:08]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:22:49]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:25:15]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:25:26]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:30:02]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:32:30]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 14:38:40]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-07 15:04:39]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 10:15:13]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 10:21:04]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 10:21:33]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 10:22:01]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 10:23:08]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-09 10:27:48]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-09 10:44:38]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 13:27:37]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 13:28:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 13:42:43]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-09 15:40:53]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-09 17:05:54]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-09 17:06:33]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:43:28]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:44:01]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:44:03]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:44:05]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:45:47]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-10 13:46:28]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-10 13:50:29]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-11 10:10:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-12 14:07:40]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-12 14:09:23]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-12 14:10:07]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-12 14:10:12]
+SubmitToDb:err对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+[2018-07-13 11:26:40]
+SubmitToDb:errStore update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+[2018-07-20 17:08:08]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-07-21 11:18:34]
+SubmitToDb:errDepID 字段是必需的。
+[2018-07-21 11:22:40]
+SubmitToDb:errDepID 字段是必需的。
+[2018-07-23 11:05:09]
+SubmitToDb:err字段 Linker 必须是最大长度为“10”的字符串或数组类型。
+[2018-07-23 11:06:49]
+SubmitToDb:err字段 Linker 必须是最大长度为“10”的字符串或数组类型。
+[2018-07-26 17:55:13]
+SubmitToDb:err字段 ProductName 必须是最大长度为“36”的字符串或数组类型。
+[2018-07-26 17:56:36]
+SubmitToDb:err字段 ProductName 必须是最大长度为“36”的字符串或数组类型。
+[2018-08-03 16:28:52]
+SubmitToDb:errName 字段是必需的。
+[2018-08-10 10:51:54]
+SubmitToDb:errFollowID 字段是必需的。
+[2018-08-10 10:57:46]
+SubmitToDb:errFollowID 字段是必需的。
+[2018-08-27 16:53:53]
+SubmitToDb:err ItemTypeID 字段是必需的。
+[2018-08-27 17:12:23]
+SubmitToDb:err ItemTypeID 字段是必需的。
+[2018-08-27 17:14:33]
+SubmitToDb:err ItemTypeID 字段是必需的。
+[2018-08-28 11:16:20]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 11:18:51]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:55:56]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:55:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:59:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:59:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:59:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:59:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 13:59:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:05:15]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:05:15]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:05:15]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:06:51]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:08:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:08:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:08:55]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:08:55]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:32]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:53]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:53]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:53]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:09:53]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:10:43]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:10:43]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:11:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:38]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:38]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:13:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:03]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:08]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:08]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:08]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:08]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:14:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:15:07]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:15:07]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:15:14]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:15:14]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:15:14]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:17:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:17:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:17:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:18:01]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 14:18:01]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:06:46]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:05]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:06]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:18]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:18]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:18]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:24]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:07:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:20]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:20]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:20]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:08:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:22]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:42]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:09:58]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:04]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:30]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:30]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:30]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:39]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:10:54]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:00]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:16]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:16]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:16]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:12:36]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:11]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:20]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:23]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:13:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:14:25]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:14:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:14:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:14:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:14:29]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:28]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 15:16:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-08-28 16:52:02]
+SubmitToDb:err ProductID 字段是必需的。
+[2018-08-30 17:27:10]
+没有找到指定的流程定义信息
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfDescriptorLoader.LoadDescriptor(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfProcessMgr..ctor(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfWorkflowMgr.GetProcessMgr(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessDescriptorByKey(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetNextActivitiesInfo(String strProcessDespCode, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 636
+[2018-08-30 17:27:53]
+没有找到指定的流程定义信息
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfDescriptorLoader.LoadDescriptor(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfProcessMgr..ctor(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfWorkflowMgr.GetProcessMgr(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessDescriptorByKey(String processDescKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetNextActivitiesInfo(String strProcessDespCode, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 636
+[2018-08-31 09:54:13]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 09:56:01]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 10:38:28]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:38:28]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:38:28]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:38:28]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:38:28]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:39:12]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:39:12]
+SubmitToDb:err CustomerSourceStatus 字段是必需的。
+[2018-08-31 10:42:02]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 10:43:12]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 10:47:36]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 10:50:17]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 10:53:27]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:00:10]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:00:30]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:01:36]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:03:07]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:06:56]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-08-31 11:07:17]
+键字段“CustomerID”不能有 null 值。类型“CRM_CustomerSourceInfo”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.Update(CRM_CustomerSourceInfo entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 628
+[2018-09-03 14:04:52]
+不能找到流程记录(ID:494d2714-4f04-46fa-9e80-91d8f235b38f)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:05:14]
+不能找到流程记录(ID:49482714-4f04-46fa-9e80-91d8f235b38f)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:08:13]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:08:23]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:09:22]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:10:14]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:11:43]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:16:16]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:16:37]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:16:49]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:17:47]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:18:05]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:18:29]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:25:19]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:25:25]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 14:29:32]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 15:56:49]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 133
+[2018-09-03 15:56:49]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 203
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 381
+[2018-09-03 15:57:22]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 133
+[2018-09-03 15:57:22]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 203
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 381
+[2018-09-03 15:58:05]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 133
+[2018-09-03 15:59:25]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 133
+[2018-09-03 15:59:26]
+未将对象引用设置到对象的实例。
+   在 Sgms.Frame.Utils.EnumUtil.GetEnumDescription(Enum enumSubitem) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\Utils\EnumUtil.cs:行号 23
+   在 JidaIT.BLL.Ding_CustomerFollowManager.InsertCustomerFollow(Ding_CustomerUser newUser) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 531
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 203
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 381
+[2018-09-03 15:59:42]
+不能找到流程记录(ID:c35e7bd3-79cb-44b2-8230-6ac0a9fcd294)
+   在 Jeedaa.Framework.WFManagement.WfException.TrueThrow(Boolean bCondition, Type exceptionType, String strMessage, String ApplicationData)
+   在 Jeedaa.Framework.WFManagement.WfException.FalseThrow(Boolean bCondition, Type exceptionType, String strMessage)
+   在 Jeedaa.Framework.WFManagement.WfActivity.InnerRetrieve(IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfActivity..ctor(String strKey, IWfCreator creator)
+   在 Jeedaa.Framework.WFManagement.WfCreator.CreateActivity(String actInstanceKey)
+   在 Jeedaa.Framework.WFManagement.WfDescriptionReader.GetProcessNextActivitiesInfo(String strActInstKey, WfContext context)
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.GetNextActivitiesList() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 641
+[2018-09-03 16:24:26]
+未将对象引用设置到对象的实例。
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.WriteWFEngine() 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.Web\Areas\WebApi\Controllers\WorkFlowController.cs:行号 929
+[2018-09-06 14:03:10]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:03:10]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-06 14:05:12]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:05:12]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-06 14:05:34]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:05:35]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-06 14:11:05]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:11:05]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-06 14:11:22]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:11:22]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-06 14:12:31]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-06 14:12:31]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-07 09:47:50]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-09-10 10:15:54]
+SubmitToDb:err PassWord 字段是必需的。
+[2018-09-10 16:29:52]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-09-27 09:42:30]
+键字段“FollowID”不能有 null 值。类型“Ding_CustomerFollow”上定义的键字段要求值不得为 null。
+   在 System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   在 System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClass2.<Attach>b__1()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   在 System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   在 System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.UpdateToCache(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 125
+   在 Sgms.Frame.EDM.DAL.EDMOperationService`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\EDM\DAL\EDMOperationService.cs:行号 147
+   在 Sgms.Frame.BLL.OperationManager`1.Update(T entity) 位置 D:\DingD\Getf.ShiJieDing.Api\Sgms.Frame\BLL\OperationManager.cs:行号 57
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Update(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 453
+[2018-09-27 10:06:21]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-27 10:06:21]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-27 10:08:54]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-27 10:08:54]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-27 10:10:44]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-27 10:10:48]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-27 10:11:13]
+SubmitToDb:err FollowID 字段是必需的。
+[2018-09-27 10:11:33]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-27 10:11:33]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-27 10:13:14]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 198
+[2018-09-27 10:13:14]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.Ding_CustomerUserManager.Insert(Ding_CustomerUser entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerUserManager.cs:行号 225
+   在 JidaIT.BLL.Ding_CustomerFollowManager.Insert(Ding_CustomerFollow entity) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFollowManager.cs:行号 378
+[2018-09-29 17:09:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-29 17:21:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-29 17:32:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-29 17:34:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-29 17:34:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-29 17:52:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 09:20:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 09:35:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 09:50:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:15:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:26:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:34:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:38:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:41:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:45:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 10:56:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 11:02:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 11:27:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:15:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:15:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:15:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:19:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:28:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:30:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:38:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:45:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:47:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:49:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:55:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 13:59:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:05:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:08:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:14:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:19:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:22:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:22:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:27:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:28:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:31:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:33:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:37:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:43:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:43:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:46:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:46:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:46:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 14:59:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:05:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:13:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:15:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:15:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:18:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:28:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:46:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 15:57:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 16:00:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 16:04:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-09-30 16:16:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 09:46:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 09:53:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 10:35:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 10:35:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 10:53:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 11:00:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 13:21:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 13:50:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 14:38:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 14:38:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-08 17:24:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 08:58:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 09:54:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 09:57:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:06:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:10:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:19:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:19:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:21:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:31:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 10:47:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 11:12:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 11:12:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 11:18:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 13:31:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 13:43:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 13:51:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 14:02:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 14:10:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 16:09:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 16:29:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 16:32:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-09 17:04:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:36:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:38:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:46:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:49:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:52:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 10:54:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 11:23:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 13:16:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 13:54:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 13:54:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 14:11:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 14:11:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:07:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:12:01]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:16:30]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:16:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:16:35]
+SubmitToDb:err CardUser 字段是必需的。
+[2018-10-10 15:16:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:17:14]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:17:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:17:50]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:17:50]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:17:50]
+SubmitToDb:err CardUser 字段是必需的。
+[2018-10-10 15:18:05]
+SubmitToDb:err CardUser 字段是必需的。
+[2018-10-10 15:19:01]
+SubmitToDb:err CardUser 字段是必需的。
+[2018-10-10 15:20:37]
+SubmitToDb:err OrderID 字段是必需的。
+[2018-10-10 15:20:41]
+SubmitToDb:err OrderID 字段是必需的。
+[2018-10-10 15:22:48]
+SubmitToDb:err OrderID 字段是必需的。
+[2018-10-10 15:24:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:27:01]
+SubmitToDb:err No_ID 字段是必需的。
+[2018-10-10 15:27:42]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:29:16]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:29:24]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:32:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:41:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:41:42]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:42:20]
+SubmitToDb:err更新条目时出错。有关详细信息，请参阅内部异常。
+[2018-10-10 15:48:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 15:57:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:00:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:00:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:25:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:29:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:29:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 16:43:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-10 17:15:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 08:56:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 09:22:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 09:26:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 09:47:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 10:03:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 10:18:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 10:19:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 10:27:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 10:39:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 11:11:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 11:22:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 11:24:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 11:28:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 13:16:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 13:23:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 14:35:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 14:38:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 14:54:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 15:38:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 15:38:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:38:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:38:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:38:34]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:46:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 15:47:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 15:50:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:50:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:50:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:51:10]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 15:56:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 16:10:57]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:11:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:11:56]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:52:48]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:53:33]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:55:08]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:55:26]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:05]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:05]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:19]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:56:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:57:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 16:57:09]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:00:37]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:01:52]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:03:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 17:03:31]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:03:31]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:05:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 17:06:01]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:06:07]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:06:07]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:06:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:06:27]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:06:59]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:07:12]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-11 17:11:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-11 17:19:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 08:55:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:09:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:19:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:26:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:27:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:28:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:30:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:33:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:33:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:35:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:37:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:39:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 09:44:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:16:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:21:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:23:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:25:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:26:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:28:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:35:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 10:54:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 13:10:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 13:18:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 13:29:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 15:06:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 15:34:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 16:01:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 16:37:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-12 17:14:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 08:53:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 09:38:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 09:40:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 09:44:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 09:50:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 10:24:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 10:41:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 13:33:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 13:54:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 14:51:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 14:54:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 14:54:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:03:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:18:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:22:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:48:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:51:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 15:59:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 16:03:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 16:05:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-13 16:55:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-15 08:54:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-15 09:35:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-15 10:35:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-16 09:11:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-16 16:59:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-16 17:01:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-16 19:46:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 08:59:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 09:21:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:04:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:06:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:30:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:31:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:48:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:53:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 15:54:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:03:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:15:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:21:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:28:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:31:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:38:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:47:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 16:47:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 17:01:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-17 17:08:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 08:39:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 08:56:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:08:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:13:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:17:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:20:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:23:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 09:39:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:11:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:34:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:46:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:47:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:47:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:49:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 10:56:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:02:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:09:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:12:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:18:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:24:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:25:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:32:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 11:32:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 13:16:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 13:39:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 13:56:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 14:14:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 14:21:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 14:26:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 14:35:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:04:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:04:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:04:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:29:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:47:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:49:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:50:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 15:54:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:13:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:14:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:28:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:31:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:43:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:47:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-18 16:48:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 08:44:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 09:23:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 09:37:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 09:44:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 09:58:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 10:06:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 10:09:17]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-19 10:09:17]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-19 10:11:40]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-19 10:29:49]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-19 10:32:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 10:37:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 10:38:31]
+SubmitToDb:err在提供程序连接上启动事务时出错。有关详细信息，请参阅内部异常。
+[2018-10-19 11:16:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 11:26:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 13:15:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 13:35:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 13:35:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 13:38:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 13:43:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 14:00:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 14:53:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 16:15:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 16:19:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 16:23:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 16:57:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 16:57:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 17:00:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 17:17:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-19 17:24:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 09:07:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 09:45:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 09:59:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:09:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:09:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:19:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:33:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:40:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:42:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:44:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:48:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:50:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 10:51:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:02:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:03:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:08:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:10:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:12:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 11:15:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 13:15:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 14:21:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 15:01:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 15:01:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 15:14:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 15:26:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-22 16:01:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 08:50:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 09:04:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 09:08:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 09:48:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 09:51:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 09:54:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 10:33:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 10:36:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 10:49:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 10:49:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 11:03:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 11:11:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 11:23:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 11:31:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 13:14:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 13:49:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:11:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:12:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:17:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:20:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:23:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:27:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:29:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 16:43:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-23 17:07:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 08:50:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 09:26:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 09:28:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 09:46:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 09:53:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 09:58:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 10:09:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 10:42:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 10:55:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 11:00:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 11:06:29]
+SubmitToDb:err ItemID 字段是必需的。
+[2018-10-24 11:06:34]
+SubmitToDb:err ItemID 字段是必需的。
+[2018-10-24 11:07:42]
+SubmitToDb:err ItemID 字段是必需的。
+[2018-10-24 11:14:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 11:14:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 11:14:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 11:14:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 13:53:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 13:55:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 13:58:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 15:00:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 15:02:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 15:03:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 15:21:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 15:22:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 16:04:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 16:13:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 17:15:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 17:17:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-24 17:17:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 09:12:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 09:12:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 09:12:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 09:18:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 09:35:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:13:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:16:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:18:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:23:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:46:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:50:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 10:54:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:07:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:09:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:17:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:17:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:22:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:23:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:26:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:30:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:34:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 11:35:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 13:14:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:05:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:08:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:11:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:18:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:19:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:19:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 14:51:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:03:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:05:39]
+SubmitToDb:err无法更新 EntitySet“DCR_WorkerItem”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-10-25 15:11:24]
+SubmitToDb:err无法更新 EntitySet“DCR_WorkerItem”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-10-25 15:15:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:21:44]
+SubmitToDb:err无法更新 EntitySet“DCR_WorkerItem”，因为它有一个 DefiningQuery，而 <ModificationFunctionMapping> 元素中没有支持当前操作的 <InsertFunction> 元素。
+[2018-10-25 15:24:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:33:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:35:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:37:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 15:43:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 16:54:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-25 17:18:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 10:40:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 10:50:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 10:52:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 10:58:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 11:05:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 11:10:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 11:11:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 11:22:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 11:24:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 13:37:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 14:53:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 15:27:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 15:33:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 15:55:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 16:12:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 16:12:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 16:18:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 16:21:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 16:45:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-26 17:03:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 09:00:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 09:00:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 09:43:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 09:54:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:00:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:02:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:13:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:17:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:20:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 10:53:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 11:05:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 11:09:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 11:16:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 11:31:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 13:17:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 13:30:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 14:13:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 14:17:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 14:29:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 14:46:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 14:53:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-27 16:21:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 09:04:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 09:59:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 11:21:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 13:22:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 13:49:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 13:53:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 13:53:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 13:53:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 14:02:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 14:51:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 14:55:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 15:30:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 15:32:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 16:39:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 16:45:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-29 17:30:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 09:07:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 09:07:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 09:13:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 11:13:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 11:17:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 11:21:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 11:23:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 11:23:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:14:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:19:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:23:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:35:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:35:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:38:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 13:49:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 14:11:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 14:20:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 14:48:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 15:31:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 15:35:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 15:38:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 15:53:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:00:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:05:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:10:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:21:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:25:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:42:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 16:48:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 17:15:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 17:26:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-30 18:26:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 08:50:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 09:26:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 09:37:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 11:09:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 13:23:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 13:40:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 13:41:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 14:00:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 14:04:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 14:19:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 14:23:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 14:41:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 15:08:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 15:10:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 16:08:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-10-31 16:52:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 08:46:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 09:13:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 09:57:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 10:18:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 10:20:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 10:29:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 11:16:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 11:23:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:14:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:21:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:30:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:41:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:44:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 13:50:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 14:00:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 14:05:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 14:38:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-01 15:23:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 08:51:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 08:59:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 10:17:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 11:02:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 11:29:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:14:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:43:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:44:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:48:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:52:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:53:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 13:56:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:12:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:24:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:38:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 14:43:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:02:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:03:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:04:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:07:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:10:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:12:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:14:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:29:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:29:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:29:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 15:37:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 16:35:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 16:38:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 16:42:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 16:50:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-02 17:12:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 08:54:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:24:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:36:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:39:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:45:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:46:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:48:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:51:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:54:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 09:56:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 10:14:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 10:21:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 10:30:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 10:32:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 10:49:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:16:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:26:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:27:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:27:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:38:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 13:41:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 14:14:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 14:15:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:18:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:18:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:22:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:32:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:32:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 15:39:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 16:51:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-05 17:20:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 08:53:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 09:27:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 09:42:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:23:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:38:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:41:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:41:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:48:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:50:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:52:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:52:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:52:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:52:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:54:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:56:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 10:58:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 11:12:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 11:21:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 13:16:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 13:22:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 13:36:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 14:26:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 14:29:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 14:33:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 14:39:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 14:59:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 15:02:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 15:04:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 15:07:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 15:34:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 15:36:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 16:21:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 17:06:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 18:34:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 18:46:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 18:50:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 18:51:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 18:58:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 19:05:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 19:12:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 19:17:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-06 19:50:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 08:53:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 09:23:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 09:27:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 09:32:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 09:35:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 09:40:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 10:26:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 10:43:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 10:48:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 11:06:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 11:09:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 11:10:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 11:10:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 11:19:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 13:14:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 13:29:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 13:53:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 13:55:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 14:33:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 15:12:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 15:15:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 15:18:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 15:31:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 16:03:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 16:17:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 16:24:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-07 17:19:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 09:04:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 09:38:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 09:49:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:00:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:00:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:05:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:14:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:15:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 10:15:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 11:09:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 13:15:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 13:37:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 13:45:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 14:27:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 14:30:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 14:47:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 14:48:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 15:41:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 15:41:04]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 15:49:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 15:49:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 16:01:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-08 16:03:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 08:51:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 09:05:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 09:20:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 09:59:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 10:15:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 10:50:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 10:50:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 11:13:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 11:20:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 11:22:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 13:17:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 13:23:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 13:33:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 13:37:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 14:00:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 14:44:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 14:51:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 15:08:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 17:02:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 17:06:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-09 17:18:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 09:13:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 09:33:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 09:37:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 09:39:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 10:10:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 10:21:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 10:24:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 10:26:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 10:29:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 13:14:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 13:54:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:06:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:30:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:31:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:40:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:43:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:47:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:50:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 14:58:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-12 16:45:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 09:04:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 09:29:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 09:35:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 09:44:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 11:28:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 11:28:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 13:19:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 13:49:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 13:55:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 13:56:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 13:57:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:04:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:04:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:04:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:06:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:06:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:08:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:12:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 14:12:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 16:20:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 19:38:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-13 19:39:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:01:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:01:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:01:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:33:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:45:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 09:46:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 10:42:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 10:55:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 10:55:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 11:04:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 13:13:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 14:43:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 14:43:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:29:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:37:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:38:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:41:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:43:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-14 16:43:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 09:12:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 09:17:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 09:24:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 09:53:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 10:05:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 10:26:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 10:45:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 11:03:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 11:18:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 11:20:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 13:13:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 13:23:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 13:31:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 13:44:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 13:44:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:00:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:30:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:42:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:42:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:45:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:45:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 14:50:43]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 15:03:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-15 16:07:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 09:07:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 09:37:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 10:13:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 14:29:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 15:05:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 16:12:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 16:15:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 16:16:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 16:33:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-16 17:19:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 09:26:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 09:55:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 10:03:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 10:31:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 10:38:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 10:51:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 10:57:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 11:06:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 11:28:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 13:15:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 13:38:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 15:51:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 15:57:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-17 16:52:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 10:23:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 10:23:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 10:55:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 10:56:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 11:25:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 11:25:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 11:31:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 11:31:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:19:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:38:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:38:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:43:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:43:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:43:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 13:53:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 14:20:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 14:28:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 14:36:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 14:40:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 14:47:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 15:40:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 16:19:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 16:48:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:10:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:10:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:11:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:13:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:17:55]
+未将对象引用设置到对象的实例。
+   在 JidaIT.Web.Areas.WebApi.Controllers.WorkflowController.WriteWFEngine()
+[2018-11-19 17:18:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-19 17:20:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 08:59:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 09:06:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 09:24:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:01:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:01:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:14:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:18:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:18:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:45:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:48:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 10:53:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 11:15:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 11:17:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 11:20:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 11:22:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 13:18:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 13:21:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 13:23:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 13:55:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:19:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:21:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:27:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:34:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:34:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 14:43:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 15:39:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:08:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:12:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:31:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:33:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:35:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:37:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:39:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:39:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:42:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 16:44:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 17:15:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 17:17:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-20 19:09:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-21 09:16:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-21 13:44:30]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-21 14:05:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-21 15:32:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-21 17:07:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 13:19:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 13:35:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 13:37:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 13:46:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 13:58:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 14:00:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 14:13:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 14:17:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 15:14:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 15:23:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-11-30 15:53:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-01 15:46:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-01 15:47:18]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 08:54:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 14:08:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 14:34:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 14:41:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 14:56:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-03 15:02:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-04 08:56:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:07:52]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:08:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:15:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:16:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:16:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:16:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-05 10:55:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-06 15:34:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-07 08:59:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-07 09:36:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-07 09:36:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-10 15:28:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-10 15:30:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2018-12-10 15:30:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 08:57:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:06:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:10:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:27:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:28:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:42:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:42:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 09:42:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 10:20:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 10:49:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 10:53:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 10:54:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 11:04:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 11:04:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 11:06:35]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 13:15:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:03:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:09:41]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:11:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:18:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:19:25]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 14:43:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-26 15:29:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 09:04:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 09:07:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 09:18:55]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 09:31:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 09:32:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:32:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:33:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:39:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:47:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:50:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 10:53:47]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 11:03:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 11:27:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 11:27:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 13:16:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:12:19]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:16:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:21:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:21:26]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:23:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:34:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:35:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:44:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 14:56:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 15:57:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 16:37:57]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 16:38:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 16:57:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 16:58:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-28 16:58:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 09:00:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 09:20:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 09:35:02]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 09:59:11]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 10:12:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 10:34:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 10:43:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 11:24:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 11:33:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 13:14:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 13:18:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 13:31:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 13:32:22]
+SubmitToDb:err ACTIVITY_DESC_CODE 字段是必需的。
+[2019-01-29 13:36:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 13:57:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 14:14:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 14:20:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 14:34:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 15:10:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 15:46:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 16:02:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-29 16:12:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 09:00:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 09:54:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 11:15:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 11:20:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 13:17:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 14:12:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 14:58:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 15:03:50]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 15:41:08]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 15:41:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 15:44:56]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 16:07:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 16:38:42]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 16:43:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-01-30 16:54:09]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-12 15:31:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-12 15:47:53]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-12 17:18:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 08:58:38]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 09:42:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 09:44:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 09:46:54]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 10:10:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 10:23:21]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 10:42:15]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 10:43:29]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 13:14:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 13:28:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 13:29:06]
+SubmitToDb:err ACTIVITY_DESC_CODE 字段是必需的。
+[2019-02-13 13:38:57]
+SubmitToDb:err ACTIVITY_DESC_CODE 字段是必需的。
+[2019-02-13 13:55:07]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:04:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:06:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:12:59]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:17:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:33:32]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:38:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:42:39]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:44:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 14:54:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 15:07:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 16:05:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 17:09:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 17:12:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 17:14:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-13 17:17:49]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 08:57:23]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 09:52:00]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 10:06:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 10:07:27]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 10:08:34]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 11:23:51]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 13:28:28]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 14:24:44]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 14:39:10]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 14:39:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-14 15:39:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:01:40]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:23:14]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:31:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:40:05]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:41:13]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:43:01]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:44:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:46:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 09:49:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 10:29:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 13:18:16]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 15:15:03]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-15 16:44:48]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 13:43:58]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 13:47:20]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 14:09:31]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 14:40:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 15:03:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-18 16:22:36]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 14:42:46]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 15:58:06]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:02:17]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:05:45]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:07:22]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:08:33]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:11:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-02-19 16:12:12]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-03-05 16:29:37]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-03-14 09:46:33]
+SubmitToDb:err基础提供程序在 Open 上失败。
+[2019-03-14 09:48:01]
+SubmitToDb:err基础提供程序在 Open 上失败。
+[2019-03-18 13:38:24]
+SubmitToDb:err DDOpenID 字段是必需的。
+[2019-03-27 13:54:08]
+未将对象引用设置到对象的实例。
+   在 JidaIT.BLL.CRM_CustomerSourceInfoManager.CheckDepCustomerCount(String depID, CustomerStatus status, CRMUserType userType) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\CRM_CustomerSourceInfoManager.cs:行号 1255
+   在 JidaIT.BLL.Ding_CustomerFlowManager.DestributeSalesCustomer(String customerID, String uid, String depID) 位置 D:\DingD\Getf.ShiJieDing.Api\JidaIT.BLL\Ding_CustomerFlowManager.cs:行号 67

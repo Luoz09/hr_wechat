@@ -1,0 +1,39 @@
+   
+http://localhost:30996/WebApi/AddUser/EntInfo?EntCode=3090310836
+http://localhost:30996/WebApi/AdminApi/AddUserInfo?Userjson={"LoginName":"TTT","Password":"111111","UserName":"TT","ShortName":"t"}&ActionType=create&LoginName=TTT
+http://localhost:30996/WebApi/AdminApi/AddUserInfo?Userjson={"LoginName":"TTT","Password":"111111","ShortName":"t"}&ActionType=edit
+http://localhost:30996/Admin/ApiAppLog/AddUser?Userjson={"LoginName":"TTT","Password":"111111","ShortName":"t"}&ActionType=edit
+http://localhost:30996/WebApi/AdminApi/AddEntInfo?EntInfojson={"EntCode":"11111111","EntName":"测试aa","AA":"111"}&ActionType=edit
+http://localhost:30996/WebApi/AdminApi/AddEntInfo?EntInfojson={"EntCode":"1234567890","EntName":"测试1"}
+http://localhost:30996/WebApi/Recharge/EntRecharge?json={"EntCode":"1234567890","RechargeAmount":"100","RechargeDiscount":"1"}
+http://localhost:30996/WebApi/Declaration/Operation?actiontype=create&json={"ENTRY_ID":"222","I_E_PORT":"11","DECL_PORT":"22","WebApiPWD":"33","LoginTime":"2017-10-30T14:09:48.8965373+08:00"}&id=222
+http://localhost:30996/WebApi/Declaration/Operation?actiontype=create&json={"ENTRY_ID":"ede54d6e-a7bf-4678-a45b-4890faaaaa91","I_E_FLAG":true,"I_E_PORT":"admin","DECL_PORT":"pennpo_system","WebApiPWD":"system2017","LoginTime":"2017-10-30T14:09:48.8965373+08:00"}
+
+ http://api.nbeport.com/router/rest?sign=73598360c8716c11cedc1fe75ae433e1&user_id=penccl&timestamp=2018-01-16+13%3A52%3A19&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+ http://api.nbeport.com/router/rest?sign=F31C2F165D3DA6FDB8AE3C2D504E5220&user_id=penccl&timestamp=2018-01-16+13%3A52%3A02&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.subscribe.get&portcode=CNNBO&timestamp=2017-12-28 16:57:20&user_id=nbforwarder&key=2dde55e422d2461b913f510e95da73b3
+
+ billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2018-01-16 14:00:18&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+ billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2018-01-16 14:00:18&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+ 
+http://api.nbeport.com/router/rest?sign=c61c8eed328d960fc6bbb8bfdecfd65d&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+http://api.nbeport.com/router/rest?sign=A6EB165B5214EA67CB9C77C0E5F7D5EC&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+http://api.nbeport.com/router/rest?sign=C2FD02D7C869F47394B846A634D428FD&user_id=penccl&timestamp=2018-01-16+15%3A20%3A26&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=MCC&vesselname=&voyage=
+
+billno=EGLV143783838263A&carrieren=MCC&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&timestamp=2017-12-28 16:57:20&user_id=penccl&key=4d52dbfab56549f68b4e8396a0a64685
+http://api.nbeport.com/router/rest?sign=ed5924d1ffab1b1cd720ad15e37d2b2e&user_id=penccl&timestamp=2018-01-16+14%3A18%3A29&format=json&method=eportyun.trade.flow.get&portcode=CNNBO&billno=EGLV143783838263A&carrieren=1&vesselname=1&voyage=1
+
+
+
+ 
+获取pooldata
+http://localhost:3333/GetPools.aspx?ICCard=1234&ActionType=充值&MoneyValue=1.1
+回调
+http://localhost:3333/CallBack.aspx?PoolID=18&sign=4ab3e4e73087b48f5fe79fd9f7e8ae00&Result=true
+
+http://localhost:3333/GetPools.aspx?LoginName=3810555&Password=111&poolid=22&time=2018-02-05 13:30:11 
+ 
+
+
+http://localhost:3333/ICCard.aspx
+http://localhost:3333/GetPools.aspx?LoginName=admin&sign=886d3a470ba8daf9f423d53e37124d0a&TimeStamp=2018-02-07%2014:53:31

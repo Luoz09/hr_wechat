@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "考勤历史";
+    Layout = "~/Areas/Admin/Views/Shared/_ListLayout.cshtml";
+}
+
+@section search{
+    <table class="SearchTable layui-form">
+
+        <tr class="Trbgc_Top"> 
+            <th>
+                <label class="control-label">
+                    打卡类型 ：
+                </label>
+            </th>
+            <td>
+                <select class="layui-input" name="ResultMark" id="ResultMark">
+                    <option value="">请选择</option>
+                    <option value="上班打卡">上班打卡</option>
+                    <option value="下班打卡">下班打卡</option>
+                </select>
+            </td>
+
+            <th>
+                <label class="control-label">
+                    签卡时间：
+                </label>
+            </th>
+            <td style="">
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="StartDate" isminvalue="true" name="KeyinDay" autocomplete="off">
+                </div>
+                <div class="col-sm-1">
+                    ~
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="layui-input Day" id="EndDate" ismaxvalue="true" name="KeyinDay" autocomplete="off">
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+}
+
+<table id="grid">
+    <thead>
+        <tr>
+            @*<th data-options="field:'CheckUserName',width:'15%',align:'center',sortable:true">
+                    打卡人
+                </th>
+                <th data-options="field:'CheckDepName',width:'15%',align:'center',sortable:true">
+                    打卡人部门
+                </th>*@
+            <th data-options="field:'KqDate',width:'15%',align:'center',sortable:true,formatter:formatterDateTime">
+                打卡日期
+            </th>
+            <th data-options="field:'KqTime',width:'15%',align:'center',sortable:true">
+                打卡时间
+            </th>
+            <th data-options="field:'DevID',width:'15%',align:'center',sortable:true, formatter:formatterCheckType">
+                打卡类型
+            </th>
+            <th data-options="field:'IsKeyin',width:'15%',align:'center',sortable:true">
+                是否手工签卡
+            </th>
+            <th data-options="field:'IsKouKuan',width:'15%',align:'center',sortable:true">
+                是否扣款
+            </th>
+            <th data-options="field:'KeyinDay',width:'15%',align:'center',sortable:true,formatter:formatterDate">
+                签卡日期
+            </th>
+        </tr>
+    </thead>
+</table>
+
+
+<script>
+
+
+    var params = {
+        sortName: "KeyinDay",
+        sortOrder: "desc",
+        frozenColumns: true,
+        url:"@Url.Action("GetUsersKQData")"
+    }
+
+    $(function ()
+    {
+        $(".add , .del").remove();
+    })
+
+</script>

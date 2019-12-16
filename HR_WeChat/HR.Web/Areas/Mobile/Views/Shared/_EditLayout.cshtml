@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Areas/Mobile/Views/Shared/_Layout.cshtml";
+} 
+@section head{    
+    <link href="~/Areas/Mobile/Style/DefaultUI.css" rel="stylesheet" />   
+    <link href="~/Areas/Mobile/Style/choose.css" rel="stylesheet" /> 
+    <script src="~/Areas/Mobile/scripts/DefaultUI.js"></script> 
+    <script src="~/Areas/Mobile/scripts/Choose.js"></script>  
+    <script src="~/Areas/Mobile/scripts/workflow.js"></script>
+} 
+    
+
+<style>
+
+    body, html {
+        height:100%;
+    }
+    
+    #main {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .btn {
+       width:130px;
+       margin:0 5px!important;
+    }
+
+
+    .layui-colla-content{ 
+        padding: 10px 5px;  
+    }
+     
+
+</style>
+
+<div class="" id="main" style="height:100%;overflow-y:auto;">
+    @using (Html.BeginForm((string)@ViewBag.Action, (string)@ViewBag.Controller + "", FormMethod.Post, new { @class = "form-horizontal layui-form layui-form-pane", role = "form" }))
+    {
+        @RenderBody()
+    }
+
+    <div style="width:100%;text-align:center;margin:10px 0;">
+        <button type="button" class="btn btn-primary" id="Save" lay-submit="" lay-filter="Save">
+            提交
+        </button>
+
+        <button type="button" class="btn btn-default" id="Return" onclick="location.href='@Url.Action("Index")'">
+            返回列表页
+        </button>
+    </div>
+</div>
+
+<div id="Choose"></div>
+<input type="hidden" class="item" />
+<input type="hidden" class="id" />
+<input type="hidden" class="parentid" />
+
+  
+<script>
+
+    $(function () {
+         
+        layui.use(["form", "laydate"], function ()
+        {
+            laydate = layui.laydate;
+
+            //日期时间选择
+            lay(".Date").each(function () {
+                laydate.render({
+                    elem: this,
+                    type: "datetime",
+                    value:new Date(),
+                    change: function (value, date) {
+                        $(".laydate-btns-time").click(); 
+                    }
+                })
+            })
+        })
+    })
+
+</script>

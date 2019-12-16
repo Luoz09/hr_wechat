@@ -1,0 +1,286 @@
+﻿ 
+.layui-form-label {
+       width:12%!important; 
+       float:left;  
+       text-align:center!important;
+    }
+
+.layui-form-item {
+    margin-bottom:20px; 
+}
+
+    .layui-input-block .layui-input {
+       width:88%!important; 
+       padding-right:0!important;
+    }
+    .layui-input-block {
+         margin-left:0!important;
+    }
+    .layui-anim-upbit {
+        width:88%!important;
+        min-width:0!important;
+        margin-left:12%!important;
+    }
+
+      .layui-input-block .layui-edge{ 
+         left:98%!important;
+    }
+
+    select {
+        overflow:visible;
+    }
+
+
+.layui-input-inline .layui-edge {
+    left:90%!important;
+}
+      
+   .layui-textarea {
+       width:100%!important;
+    } 
+     
+    .layui-input-inline .layui-anim-upbit  { 
+        width:100%!important;
+        min-width:0!important; 
+        margin-left:0!important;
+    }
+
+    .layui-input-inline .layui-edge{ 
+         left:80%;
+    }
+     
+    .xm-select-parent { 
+       width:88%!important;
+       float:left!important;
+    } 
+    .xm-select-label span{
+        height:25px!important; 
+    }
+    .xm-select-title {
+       height:38px!important;
+    } 
+    .myclass .layui-layer-content{padding: 20px; padding-bottom:0px!important;height:450px!important;}
+    .myclass .layui-layer-btn{padding-top:0!important;padding-right:30px!important;}
+    .myclass .layui-table-main{height:290px!important}
+    .myclass .layui-table-view{margin-bottom:0px!important;
+
+    }
+    
+
+@media only screen and (max-width:1100px) and (min-width:900px) {
+    .layui-form-label {
+       width:15%!important;    
+       float:left; 
+    }
+    .layui-input-block .layui-input {
+       width:85%!important;   
+       padding-right:0!important;
+    } 
+    .layui-input-block .layui-edge{ 
+         left:96%!important;
+    } 
+     .layui-anim-upbit {
+        width:85%!important;
+        min-width:0!important;
+        margin-left:15%!important;
+    }
+
+    .layui-input-inline {
+       width:23%!important;    
+    } 
+    .layui-input-inline .layui-form-select{
+        width:100%!important;    
+        float:left;
+    }   
+
+    .myclass .layui-layer-content{padding: 20px; padding-bottom:0px!important;height:350px!important;overflow-y:hidden!important;}
+    .myclass .layui-layer-btn{padding-top:0!important;padding-right:30px!important;height:30px!important;}
+    .myclass .layui-table-main{height:210px!important}
+    .myclass .layui-table-view{margin-bottom:0px!important;} 
+    .myclass .layui-input , .SearchBtn{
+        height:30px!important;
+    }
+    .myclass .layui-layer-btn0 {
+        margin:0px!important;
+    }
+}
+
+@media only screen and (min-width:899px) {
+       
+    .myclass .layui-layer-content{padding: 20px; padding-bottom:0px!important;height:450px!important;}
+    .myclass .layui-layer-btn{padding-top:0!important;padding-right:30px!important;}
+    .myclass .layui-table-main{height:290px!important}
+    .myclass .layui-table-view{margin-bottom:0px!important;}
+}
+
+/*@media only screen and (max-width:799px) and (min-width:500px) {
+    .layui-form-label {
+       width:25%!important;   
+       float:left; 
+    }
+    .layui-input-block .layui-input {
+       width:75%!important;   
+       padding-right:0!important;
+    }
+    .layui-input-inline {
+       width:23%!important;    
+    } 
+
+     .layui-input-block .layui-anim-upbit {  
+        width:75%!important;  
+        margin-left:25%!important;   
+    }
+    .layui-input-inline .layui-form-select{
+        width:100%!important;    
+        float:left;
+    }  
+     .layui-input-inline {
+       width:75%!important;   
+       margin-right:0!important;    
+       height:40px!important; 
+       float:left;
+    } 
+
+    .layui-input-inline .layui-edge  {  
+         left:95%!important;  
+    }
+    .layui-input-block .layui-edge {
+        left:95%!important;
+    }
+}*/
+
+@media only screen and (max-width:810px) and (min-width:450px) { 
+    .layui-form-label {
+       width:25%!important;     
+       text-align:center!important;  
+       height:38px!important;    
+    } 
+    .WFLog .layui-form-label {
+       width:100%!important;
+    }
+
+    .layui-input-block .layui-input {
+       width:75%!important;       
+       margin-bottom:1px!important;  
+       height:38px!important;  
+    }    
+      
+    .layui-input-block .layui-anim-upbit {  
+        width:100%!important;  
+        margin-left:0%!important;   
+    }
+      .layui-input-block .layui-edge , .layui-input-inline .layui-edge  {  
+         left:95%!important;  
+    }  
+    .layui-input-block .layui-form-select{
+        width:75%!important;      
+        float:left;    
+    }   
+
+     .layui-input-inline {  
+          height:38px!important;     
+          padding-left:1px!important;  
+          width:75%!important;    
+          float:right!important;
+          margin-right:0!important; 
+          margin-bottom:2px!important;
+    }
+     
+
+    .layui-select-title .layui-input {
+        width:100%!important; 
+    } 
+    .layui-rate .layui-inline {
+       float:left!important;  
+    } 
+     
+    .layui-input-inline .layui-input {
+        height:38px!important;  
+    } 
+}
+
+@media only screen and (max-width:449px){
+
+
+    .layui-layer {
+      left:5%!important;
+      width:90%!important;
+    }
+
+    #SearchStr {
+       width:80%!important; 
+    }
+    .SearchBtn {
+         position:absolute;
+         right:20px;
+    } 
+    .layui-table-page {
+       display:none;
+    }
+
+    #main {
+        -webkit-overflow-scrolling:touch; 
+    }  
+
+    .layui-form-item {
+       padding:0!important;
+       margin:0!important; 
+       margin-bottom:10px!important;   
+    } 
+
+    .layui-form-label {
+       width:30%!important;        
+       float:left;  
+       margin-bottom:0; 
+       /*border-bottom:none!important;*/
+       text-align:center!important; 
+       height:38px!important;
+    }
+    
+    .WFLog .layui-form-label {
+       width:100%!important;
+    } 
+    .layui-input-block .layui-input {
+       width:70%!important;   
+       margin-right:0!important;    
+       /*border-bottom:none;*/   
+       height:38px!important;  
+    }
+    .layui-input-block .layui-anim-upbit {  
+        width:100%!important;  
+        margin-left:0%!important;   
+    }
+      .layui-input-block .layui-edge{  
+         left:90%!important;
+    } 
+    .layui-input-block .layui-form-select{
+        width:70%!important;      
+        float:left;     
+    }   
+    .layui-select-title .layui-input {
+        width:100%!important; 
+    }
+    
+    .Bottom {
+       border-bottom:1px solid #e6e6e6!important;
+    }
+
+    .SelectBottom .layui-select-title { 
+        border-bottom:1px solid #e6e6e6!important;
+    } 
+
+    .layui-rate .layui-inline {
+       float:left!important;  
+    }
+     
+    .layui-input-inline {  
+          height:38px!important;  
+          margin-left:30%!important;   
+          padding-left:4px;    
+          width:70%!important; 
+          margin-bottom:1px!important;
+    }
+        .layui-input-inline .layui-input {
+            height:38px!important;   
+        } 
+}

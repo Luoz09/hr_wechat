@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RestList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>欢迎登陆({0})！</name>
+  <FontColor>#3d4145</FontColor>
+  <IMG1>/Areas/Mobile/Images/IMG/1.jpg</IMG1>
+  <IMG2>/Areas/Mobile/Images/IMG/2.jpg</IMG2>
+  <IMG3>/Areas/Mobile/Images/IMG/3.jpg</IMG3>
+  <IMG4>/Areas/Mobile/Images/IMG/4.jpg</IMG4>
+</RestList>

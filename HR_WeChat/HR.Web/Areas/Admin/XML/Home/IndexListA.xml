@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAPPList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <APPList>
+    <Name>继续跟进</Name>
+    <ICO>fa-eercast</ICO>
+    <power>1</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#d3d3d3</BGColor>
+    <FRColor>#6cffc5</FRColor>
+  </APPList>
+  <APPList>
+    <Name>成功见面</Name>
+    <ICO>fa-eye</ICO>
+    <power>1</power>
+    <CornerMark>5</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#b7ba6b</BGColor>
+    <FRColor>#D9BFD2</FRColor>
+  </APPList>
+  <APPList>
+    <Name>已付定金</Name>
+    <ICO>fa-gavel</ICO>
+    <power>1</power>
+    <CornerMark>25</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#C1D169</BGColor>
+    <FRColor>#fedcbd</FRColor>
+  </APPList>
+  <APPList>
+    <Name>成功签单</Name>
+    <ICO>fa-handshake-o</ICO>
+    <power>1</power>
+    <CornerMark>2</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#9BA88D</BGColor>
+    <FRColor>#FF84BA</FRColor>
+  </APPList>
+  <APPList>
+    <Name>新增客户</Name>
+    <ICO>fa-pencil</ICO>
+    <power>1</power>
+    <CornerMark>34</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#008573</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>公海客源</Name>
+    <ICO>fa-user-circle</ICO>
+    <power>1</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#84C2B7</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>功能A7</Name>
+    <ICO>fa-balance-scale</ICO>
+    <power>2</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#483C32</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>功能A8</Name>
+    <ICO>fa-bicycle</ICO>
+    <power>2</power>
+    <CornerMark>99</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#495A80</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>Null</Name>
+    <ICO />
+    <power>ALL</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#2a5caa</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>Null</Name>
+    <ICO />
+    <power>ALL</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#2a5caa</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>访客计划</Name>
+    <ICO>fa-plane</ICO>
+    <power>1</power>
+    <CornerMark>0</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#06B9D1</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>协同工单</Name>
+    <ICO>fa-users</ICO>
+    <power>1</power>
+    <CornerMark>5</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#005687</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>跟进记录</Name>
+    <ICO>fa-circle-o-notch</ICO>
+    <power>1</power>
+    <CornerMark>67</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#1E90FF</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>回款记录</Name>
+    <ICO>fa-book</ICO>
+    <power>1</power>
+    <CornerMark>99</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#00BFFF</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>漏斗分析</Name>
+    <ICO>fa-filter</ICO>
+    <power>1</power>
+    <CornerMark>299</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#483C32</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>跟进统计</Name>
+    <ICO>fa-bars</ICO>
+    <power>1</power>
+    <CornerMark>9</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#96582a</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>业绩统计</Name>
+    <ICO>fa-cube</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#fdb933</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>PK榜</Name>
+    <ICO>fa-hand-rock-o</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#b69968</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>楼盘一览</Name>
+    <ICO>fa-map</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#9966CC</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>新增楼盘</Name>
+    <ICO>fa-hand-rock-o</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#6f599c</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>客户归属评定申请</Name>
+    <ICO>fa-universal-access</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#99758D</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+  <APPList>
+    <Name>目标设定</Name>
+    <ICO>fa-paper-plane-o</ICO>
+    <power>1</power>
+    <CornerMark>49</CornerMark>
+    <URL>HTTP://www.baidu.com</URL>
+    <BGColor>#C1A3B8</BGColor>
+    <FRColor>#FDFCF9</FRColor>
+  </APPList>
+</ArrayOfAPPList>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<Process key="CustomerSourceInfo">
+  <Name>客源基本信息</Name>
+  <AppName>CUSTOMERSOURCE</AppName>
+  <ProgramName />
+  <Url />
+  <Description>客源基本信息</Description>
+  <Version>0</Version>
+  <Priority>0</Priority>
+  <Enabled>y</Enabled>
+  <Activities>
+    <Activity key="N1">
+      <CodeName />
+      <Name>客源基本信息录入</Name>
+      <Priority>1</Priority>
+      <Description />
+      <TemplateID />
+      <ActivityURL />
+      <DefaultSelectUsers>false</DefaultSelectUsers>
+      <SelectSingleUser>false</SelectSingleUser>
+      <ActivitySpecial>ActivityEntry</ActivitySpecial>
+      <AllowSelectNextActivity>true</AllowSelectNextActivity>
+      <SmsAudit>false</SmsAudit>
+      <ShowMessageItem>false</ShowMessageItem>
+      <ShowLog>true</ShowLog>
+      <ExpireTime>0</ExpireTime>
+      <SceneName />
+      <AutoItem>false</AutoItem>
+      <ShowWorkItem>false</ShowWorkItem>
+      <PreCondition></PreCondition>
+      <PostCondition></PostCondition>
+      <WorkItemCompletePercent>0</WorkItemCompletePercent>
+      <ActivityCompleteNumber>1</ActivityCompleteNumber>
+      <ActivityResources dynamicResource="false" chooseRole="false">
+        <Resources />
+      </ActivityResources>
+      <ActivityActions />
+      <ActivityVariables />
+      <ActivityPresent>
+        <Shape>0</Shape>
+        <FillColor>8454016</FillColor>
+        <Left>266.666666666667</Left>
+        <Top>93.3333333333333</Top>
+        <Width>1200</Width>
+        <Height>400</Height>
+      </ActivityPresent>
+    </Activity>
+    <Activity key="N2">
+      <CodeName />
+      <Name>客源信息最终审批</Name>
+      <Priority>1</Priority>
+      <Description />
+      <TemplateID>WfRadioButton</TemplateID>
+      <ActivityURL />
+      <DefaultSelectUsers>false</DefaultSelectUsers>
+      <SelectSingleUser>false</SelectSingleUser>
+      <ActivitySpecial>ActivityExit</ActivitySpecial>
+      <AllowSelectNextActivity>false</AllowSelectNextActivity>
+      <SmsAudit>false</SmsAudit>
+      <ShowMessageItem>false</ShowMessageItem>
+      <ShowLog>true</ShowLog>
+      <ExpireTime>0</ExpireTime>
+      <SceneName />
+      <AutoItem>false</AutoItem>
+      <ShowWorkItem>false</ShowWorkItem>
+      <PreCondition></PreCondition>
+      <PostCondition></PostCondition>
+      <WorkItemCompletePercent>0</WorkItemCompletePercent>
+      <ActivityCompleteNumber>1</ActivityCompleteNumber>
+      <ActivityResources dynamicResource="false" chooseRole="false">
+        <Resources>
+          <Resource key="KHGLZY" type="Role" absoluteDept="" slideDept="rel_all">
+            <Name>客户管理专员</Name>
+          </Resource>
+          <Resource key="1f97a092-97ab-4036-9d14-5fdd0ec36bda" type="User" pathName="集团单位\十杰装饰\家装管理中心\胡雪欢">
+            <Name>胡雪欢</Name>
+          </Resource>
+        </Resources>
+      </ActivityResources>
+      <ActivityActions />
+      <ActivityVariables />
+      <ActivityPresent>
+        <Shape>0</Shape>
+        <FillColor>220</FillColor>
+        <Left>266.666666666667</Left>
+        <Top>333.333333333333</Top>
+        <Width>1200</Width>
+        <Height>400</Height>
+      </ActivityPresent>
+    </Activity> 
+  </Activities>
+  <Variables />
+  <Transitions>
+    <Transition key="L1">
+      <FromActName>N1</FromActName>
+      <ToActName>N2</ToActName>
+      <Name></Name>
+      <Description></Description>
+      <Priority>2</Priority>
+      <Condition></Condition>
+      <FunctionType>Forward</FunctionType>
+      <TransitionPresent>
+        <DrawStyle>0</DrawStyle>
+        <DrawColor>0</DrawColor>
+        <ArrowOrg>0</ArrowOrg>
+        <ArrowDst>3</ArrowDst>
+      </TransitionPresent>
+    </Transition>
+    <Transition key="L2">
+      <FromActName>N1</FromActName>
+      <ToActName>N3</ToActName>
+      <Name />
+      <Description />
+      <Priority>1</Priority>
+      <Condition />
+      <FunctionType>Forward</FunctionType>
+      <TransitionPresent>
+        <DrawStyle>0</DrawStyle>
+        <DrawColor>0</DrawColor>
+        <ArrowOrg>0</ArrowOrg>
+        <ArrowDst>3</ArrowDst>
+      </TransitionPresent>
+    </Transition>
+    <Transition key="L3">
+      <FromActName>N3</FromActName>
+      <ToActName>N2</ToActName>
+      <Name />
+      <Description />
+      <Priority>1</Priority>
+      <Condition />
+      <FunctionType>Forward</FunctionType>
+      <TransitionPresent>
+        <DrawStyle>0</DrawStyle>
+        <DrawColor>0</DrawColor>
+        <ArrowOrg>0</ArrowOrg>
+        <ArrowDst>3</ArrowDst>
+      </TransitionPresent>
+    </Transition>
+  </Transitions>
+</Process>
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<Process key="LeaveApply">
+  <Name>请假申请</Name><AppName>Leave</AppName><ProgramName /><Url /><Description>请假申请</Description><Version>0</Version>
+  
+  <Priority>0</Priority><Enabled>y</Enabled><Activities><Activity key="N1"><CodeName /><Name>请假申请录入</Name><Priority>1</Priority><Description /><TemplateID /><ActivityURL />
+     
+    
+  <DefaultSelectUsers>false</DefaultSelectUsers><SelectSingleUser>false</SelectSingleUser><ActivitySpecial>ActivityEntry</ActivitySpecial><AllowSelectNextActivity>true</AllowSelectNextActivity><SmsAudit>false</SmsAudit><ShowMessageItem>false</ShowMessageItem><ShowLog>true</ShowLog><ExpireTime>0</ExpireTime><SceneName /><AutoItem>false</AutoItem><ShowWorkItem>false</ShowWorkItem><PreCondition></PreCondition><PostCondition></PostCondition> <WorkItemCompletePercent>0</WorkItemCompletePercent><ActivityCompleteNumber>1</ActivityCompleteNumber><ActivityResources dynamicResource="false" chooseRole="false"><Resources> <Resource key="e96da4d0-2a98-46af-8ba2-f30b56d5cc0c" type="User" pathName="公司\管理部\admin"><Name>admin</Name> <Resources /></ActivityResources> <ActivityActions /><ActivityVariables /><ActivityPresent><Shape>0</Shape><FillColor>8454016</FillColor><Left>266.666666666667</Left><Top>93.3333333333333</Top> <Width>1200</Width> <Height>400</Height></ActivityPresent></Activity><Activity key="N2"><CodeName /><Name>请假申请最终审批</Name><Priority>1</Priority><Description /><TemplateID>WfRadioButton</TemplateID><ActivityURL /><DefaultSelectUsers>false</DefaultSelectUsers><SelectSingleUser>false</SelectSingleUser><ActivitySpecial>ActivityExit</ActivitySpecial><AllowSelectNextActivity>false</AllowSelectNextActivity><SmsAudit>false</SmsAudit><ShowMessageItem>false</ShowMessageItem> <ShowLog>true</ShowLog><ExpireTime>0</ExpireTime><SceneName /><AutoItem>false</AutoItem> <ShowWorkItem>false</ShowWorkItem><PreCondition></PreCondition><PostCondition></PostCondition><WorkItemCompletePercent>0</WorkItemCompletePercent> <ActivityCompleteNumber>1</ActivityCompleteNumber><ActivityResources dynamicResource="false" chooseRole="false"><Resources><Resource key="e96da4d0-2a98-46af-8ba2-f30b56d5cc0c" type="User" pathName="公司\管理部\admin"><Name>admin</Name></Resource></Resources></ActivityResources><ActivityActions /><ActivityVariables /><ActivityPresent><Shape>0</Shape> <FillColor>220</FillColor><Left>266.666666666667</Left><Top>333.333333333333</Top> <Width>1200</Width> <Height>400</Height></ActivityPresent></Activity></Activities><Variables /><Transitions> <Transition key="L1"><FromActName>N1</FromActName> <ToActName>N2</ToActName><Name></Name><Description></Description><Priority>2</Priority> <Condition></Condition><FunctionType>Forward</FunctionType><TransitionPresent><DrawStyle>0</DrawStyle><DrawColor>0</DrawColor><ArrowOrg>0</ArrowOrg><ArrowDst>3</ArrowDst> </TransitionPresent></Transition></Transitions></Process>
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<Process key="LeaveApply">
+  <Name>请假申请</Name>
+  <AppName>Leave</AppName>
+  <ProgramName />
+  <Url />
+  <Description>请假申请</Description>
+  <Version>0</Version>
+  <Priority>0</Priority>
+  <Enabled>y</Enabled>
+  <Activities>
+    <Activity key="N1">
+      <CodeName />
+      <Name>请假申请录入</Name>
+      <Priority>1</Priority>
+      <Description />
+      <TemplateID />
+      <ActivityURL />
+      <DefaultSelectUsers>false</DefaultSelectUsers>
+      <SelectSingleUser>false</SelectSingleUser>
+      <ActivitySpecial>ActivityEntry</ActivitySpecial>
+      <AllowSelectNextActivity>true</AllowSelectNextActivity>
+      <SmsAudit>false</SmsAudit>
+      <ShowMessageItem>false</ShowMessageItem>
+      <ShowLog>true</ShowLog>
+      <ExpireTime>0</ExpireTime>
+      <SceneName />
+      <AutoItem>false</AutoItem>
+      <ShowWorkItem>false</ShowWorkItem>
+      <PreCondition></PreCondition>
+      <PostCondition></PostCondition>
+      <WorkItemCompletePercent>0</WorkItemCompletePercent>
+      <ActivityCompleteNumber>1</ActivityCompleteNumber>
+      <ActivityResources dynamicResource="false" chooseRole="false">
+        <Resources>
+          <Resource key="10267269" type="User" pathName="公司\管理部\admin">
+            <Name>admin</Name>
+          </Resource>
+        </Resources>
+      </ActivityResources>
+      <ActivityActions />
+      <ActivityVariables />
+      <ActivityPresent>
+        <Shape>0</Shape>
+        <FillColor>8454016</FillColor>
+        <Left>266.666666666667</Left>
+        <Top>93.3333333333333</Top>
+        <Width>1200</Width>
+        <Height>400</Height>
+      </ActivityPresent>
+    </Activity>
+    <Activity key="N2">
+      <CodeName />
+      <Name>请假申请最终审批</Name>
+      <Priority>1</Priority>
+      <Description />
+      <TemplateID>WfRadioButton</TemplateID>
+      <ActivityURL />
+      <DefaultSelectUsers>false</DefaultSelectUsers>
+      <SelectSingleUser>false</SelectSingleUser>
+      <ActivitySpecial>ActivityExit</ActivitySpecial>
+      <AllowSelectNextActivity>false</AllowSelectNextActivity>
+      <SmsAudit>false</SmsAudit>
+      <ShowMessageItem>false</ShowMessageItem>
+      <ShowLog>true</ShowLog>
+      <ExpireTime>0</ExpireTime>
+      <SceneName />
+      <AutoItem>false</AutoItem>
+      <ShowWorkItem>false</ShowWorkItem>
+      <PreCondition></PreCondition>
+      <PostCondition></PostCondition>
+      <WorkItemCompletePercent>0</WorkItemCompletePercent>
+      <ActivityCompleteNumber>1</ActivityCompleteNumber>
+      <ActivityResources dynamicResource="false" chooseRole="false">
+        <Resources>
+          <Resource key="e96da4d0-2a98-46af-8ba2-f30b56d5cc0c" type="User" pathName="公司\管理部\admin">
+            <Name>admin</Name>
+          </Resource>
+        </Resources>
+      </ActivityResources>
+      <ActivityActions />
+      <ActivityVariables />
+      <ActivityPresent>
+        <Shape>0</Shape>
+        <FillColor>220</FillColor>
+        <Left>266.666666666667</Left>
+        <Top>333.333333333333</Top>
+        <Width>1200</Width>
+        <Height>400</Height>
+      </ActivityPresent>
+    </Activity>
+  </Activities>
+  <Variables />
+  <Transitions>
+    <Transition key="L1">
+      <FromActName>N1</FromActName>
+      <ToActName>N2</ToActName>
+      <Name></Name>
+      <Description></Description>
+      <Priority>2</Priority>
+      <Condition></Condition>
+      <FunctionType>Forward</FunctionType>
+      <TransitionPresent>
+        <DrawStyle>0</DrawStyle>
+        <DrawColor>0</DrawColor>
+        <ArrowOrg>0</ArrowOrg>
+        <ArrowDst>3</ArrowDst>
+      </TransitionPresent>
+    </Transition>
+  </Transitions>
+</Process>
+
+
+
+<?xml version="1.0" encoding="utf-8"?><Process key="LeaveApply"><Name>请假申请</Name><AppName>Leave</AppName><ProgramName /><Url /><Description>请假申请</Description><Version>0</Version>  <Priority>0</Priority><Enabled>y</Enabled><Activities><Activity key="N1"><CodeName /><Name>请假申请录入</Name><Priority>1</Priority><Description /><TemplateID /><ActivityURL /><DefaultSelectUsers>false</DefaultSelectUsers><SelectSingleUser>false</SelectSingleUser><ActivitySpecial>ActivityEntry</ActivitySpecial><AllowSelectNextActivity>true</AllowSelectNextActivity><SmsAudit>false</SmsAudit><ShowMessageItem>false</ShowMessageItem><ShowLog>true</ShowLog><ExpireTime>0</ExpireTime><SceneName /><AutoItem>false</AutoItem><ShowWorkItem>false</ShowWorkItem><PreCondition></PreCondition><PostCondition></PostCondition> <WorkItemCompletePercent>0</WorkItemCompletePercent><ActivityCompleteNumber>1</ActivityCompleteNumber><ActivityResources dynamicResource="false" chooseRole="false"><Resources> <Resource key="100566" type="User" pathName="公司\管理部\admin01"><Name>admin01</Name></Resource> </Resources></ActivityResources> <ActivityActions /><ActivityVariables /><ActivityPresent><Shape>0</Shape><FillColor>8454016</FillColor><Left>266.666666666667</Left><Top>93.3333333333333</Top> <Width>1200</Width> <Height>400</Height></ActivityPresent></Activity><Activity key="N2"><CodeName /><Name>请假申请最终审批</Name><Priority>1</Priority><Description /><TemplateID>WfRadioButton</TemplateID><ActivityURL /><DefaultSelectUsers>false</DefaultSelectUsers><SelectSingleUser>false</SelectSingleUser><ActivitySpecial>ActivityExit</ActivitySpecial><AllowSelectNextActivity>false</AllowSelectNextActivity><SmsAudit>false</SmsAudit><ShowMessageItem>false</ShowMessageItem> <ShowLog>true</ShowLog><ExpireTime>0</ExpireTime><SceneName /><AutoItem>false</AutoItem> <ShowWorkItem>false</ShowWorkItem><PreCondition></PreCondition><PostCondition></PostCondition><WorkItemCompletePercent>0</WorkItemCompletePercent> <ActivityCompleteNumber>1</ActivityCompleteNumber><ActivityResources dynamicResource="false" chooseRole="false"><Resources><Resource key="100566" type="User" pathName="公司\管理部\admin01"><Name>admin01</Name></Resource></Resources></ActivityResources><ActivityActions /><ActivityVariables /><ActivityPresent><Shape>0</Shape> <FillColor>220</FillColor><Left>266.666666666667</Left><Top>333.333333333333</Top> <Width>1200</Width> <Height>400</Height></ActivityPresent></Activity></Activities><Variables /><Transitions> <Transition key="L1"><FromActName>N1</FromActName> <ToActName>N2</ToActName><Name></Name><Description></Description><Priority>2</Priority> <Condition></Condition><FunctionType>Forward</FunctionType><TransitionPresent><DrawStyle>0</DrawStyle><DrawColor>0</DrawColor><ArrowOrg>0</ArrowOrg><ArrowDst>3</ArrowDst> </TransitionPresent></Transition></Transitions></Process>
+
+
+ 

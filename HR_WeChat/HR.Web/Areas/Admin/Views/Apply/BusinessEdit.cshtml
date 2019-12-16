@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_EditLayout.cshtml"; 
+}
+ 
+@model HR_ApplyInfo 
+
+@Html.HiddenFor(m => m.ID) 
+ 
+<div class="layui-collapse" style="margin-top:10px;" lay-filter="Info">
+
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">出差申请表</h2> 
+        <div class="layui-colla-content">  
+
+            <div class="layui-form-item" >
+                <label class="layui-form-label">出差人</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.ApplyUserName, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                        { "onclick","ChooseApplyName()" }
+                      })
+                </div>
+            </div> 
+
+            @Html.HiddenFor(m=>m.ApplyUserID) 
+             
+            <div class="layui-form-item">
+                <label class="layui-form-label">交通工具</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.Vehicle, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">单程/往返</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="BusinessType" value="0" title="单程" checked/>                                
+                    <input type="radio" name="BusinessType" value="1" title="往返" /> 
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">出发城市</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.StartCity, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">目的城市</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.DestinationCity, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>
+             
+            <div class="layui-form-item">
+                <label class="layui-form-label">开始时间</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.StartTime, new Dictionary<string, object>{
+                        { "class", "layui-input Date" },
+                      })
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">结束时间</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.EndTime, new Dictionary<string, object>{
+                        { "class", "layui-input Date" },
+                      })
+                </div>
+            </div>
+
+            @*<div class="layui-form-item">
+                <label class="layui-form-label">申请时长</label>
+                <div class="layui-input-block">
+                    @Html.TextBoxFor(m => m.ApplyDays, new Dictionary<string, object>{
+                        { "class", "layui-input" },
+                      })
+                </div>
+            </div>*@
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" style="margin-bottom:0px!important">申请原因</label>
+                <div class="layui-input-block">
+                    @Html.TextAreaFor(m => m.ApplyReason, new Dictionary<string, object>{
+                      { "class", "layui-textarea" },
+                    })
+
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">附件上传</label>
+                <div class="layui-input-block">
+                    <div class="layui-upload">
+                        <button type="button" class="layui-btn layui-btn-normal" id="testList">选择文件上传</button>
+                        <div class="layui-upload-list">
+                            <table class="layui-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:2em;text-align:center"></th>
+                                        <th>文件名</th>
+                                        <th>大小</th> 
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="demoList"></tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="layui-btn" id="UpListAction">开始上传</button>
+                    </div>
+                </div>
+            </div> 
+
+
+        </div> 
+    </div>  
+
+    <div class="layui-colla-item">
+        <div id="WorkFlow"></div>
+    </div>
+
+</div>
+  
+<script>
+
+
+    $(function () {
+        $("#WorkFlow").SetWorkFlow({
+            ProcessDinfineKey: "LeaveApply",
+            AppName: "Leave",
+            ActivityName: "事务申请",
+            TaskTitle: "事务申请",
+        })
+    })
+
+
+    function beforeSubmit() {
+
+        $(".TaskSubject").val("[" + $(".TaskTitle").val() + "]出差申请");
+        $("select").removeAttr("disabled");
+        $("input").removeAttr("disabled");
+        if ($("#NextUsers").val() == "") {
+            if ($(".IsExitNode").val() == "false" || $(".IsExitNode").val() == "") {
+                layer.msg("请选择审批人员！", { time: 2000 });
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else {
+            return true;
+        }
+    }
+     
+</script>
+
+ 
+   

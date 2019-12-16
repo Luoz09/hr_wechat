@@ -1,0 +1,294 @@
+﻿@{
+    ViewBag.Title = "Desktop";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; 
+}
+
+@section head{
+
+    <link href="~/Areas/Admin/Style/custom-styles.css" rel="stylesheet" /> 
+    <link href="~/Areas/Admin/plugins/layui/css/layui.css" rel="stylesheet" />  
+    <script src="~/Areas/Admin/plugins/layui/layui.js"></script> 
+    <script src="~/Areas/Admin/scripts/jquery.animateNumber.min.js"></script>
+}
+<style>
+
+    body {
+        background: none!important;
+        overflow-x: hidden;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .layui-row li {
+        height: 30%;
+        margin-top: 2%;
+        text-align: center;
+        width: 47%;
+        background: white;
+        margin-left: 2%;
+    }
+
+        .layui-row li a {
+            cursor: pointer;
+        }
+
+            .layui-row li a:hover {
+                text-decoration: none;
+            }
+
+        .layui-row li p {
+            font-size: 24px;
+            color: #63a2e5;
+            margin-top: 15px;
+        }
+
+        .layui-row li a h3 {
+            margin-top: 15px;
+        }
+
+
+    .item {
+        float: left;
+        height: 300px;
+        text-align: center;
+        width: 25%;
+    }
+
+    h3 {
+        font-size: 20px !important;
+        padding-top: 20px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+   .panel {
+       margin-top:20px;
+    }
+    .panel-left {
+       margin-right:0!important; 
+       margin-left:0px!important;
+       margin-top:20px;
+       width:50%!important;
+    }
+    .panel-right {
+       text-align:center;
+       width:50%;
+       padding:10px!important;
+       margin-top:5px;
+    }
+        .panel-right span { 
+           font-size:20px;
+           line-height:30px;
+        } 
+  
+      
+    .Details {
+        height: 220px;
+        overflow-y: auto;
+    }
+
+        .Details a {
+            text-decoration: none;
+        }
+
+    .DataShows {
+        height: 40px;
+        border-bottom: 1px solid #f8f8f8;
+        line-height: 40px;
+        overflow: hidden;
+        width: 100%;
+    }
+       
+</style>
+
+
+<div class="layui-row">
+    <div class="col-md-6" style="margin-top:20px;padding-left:0!important;">
+        <div class="layui-card">
+            <div class="layui-card-header" style="font-size:22px;">事务申请</div>
+            <div class="layui-card-body">
+                <div class="layui-carousel layadmin-carousel layadmin-backlog" lay-anim="" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 482px;">
+                    <div carousel-item="">
+                        <ul class="layui-this">
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left" style="background:#71bbf0!important;">
+                                    <a href=""><i class="fa fa-save fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>年假</h3>
+                                    <span>0</span>
+                                </div>
+                            </li>
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left" style="background:#71bbf0!important;">
+                                    <a href="@Url.Action("LeaveIndex","Apply")"><i class="fa fa-save fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>请假</h3>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left green">
+                                    <a href="@Url.Action("OutIndex","Apply")"><i class="fa fa-check fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>外出 </h3>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left" style="background:#6fe392">
+                                    <a href="@Url.Action("BusinessIndex","Apply")"><i class="fa fa-random fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>出差 </h3>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left" style="background:#b7ba6b!important">
+                                    <a href="@Url.Action("ExtWorkIndex","Apply")"><i class="fa fa-eye fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>加班 </h3>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="col-md-6" style="padding-left:10px!important;">
+                                <div class="panel-left pull-left" style="background:#C1D169!important;">
+                                    <a href="@Url.Action("AppleCardIndex","Apply")"><i class="fa fa-gavel fa-5x"></i></a>
+                                </div>
+                                <div class="panel-right">
+                                    <h3>补卡 </h3>
+                                    <span></span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--显示待办事项分类详情-->
+    <div class="col-md-6 WorkItem" style="margin-top:20px;padding-left:0!important">
+        <div class="layui-card">
+            <div class="layui-card-header" style="font-size:22px;">待办事项：<span class="Type"></span> </div>
+            <div class="layui-card-body Details"></div>
+        </div>
+    </div>
+
+    <!--显示在办事项分类详情-->
+    <div class="col-md-6 WorkIteming" style="margin-top:20px;padding-left:0!important">
+        <div class="layui-card">
+            <div class="layui-card-header" style="font-size:22px;">在办事项：<span class="Type"></span> </div>
+            <div class="layui-card-body Details">
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<script> 
+
+    var appName = "Leave";
+
+
+    $(function ()
+    {
+
+        GetWorkItem();
+        GetWorkIteming();
+        var timer = setInterval(function () {
+
+            GetWorkItem();
+            GetWorkIteming();
+
+        }, 10000)
+         
+    })
+      
+    for (var i = 1 ; i < 6; i++)
+    {
+        $.ajax({
+            url: "@Url.Action("GetCountByApplyType")?ApplyType=" + i,
+            async: false,
+            success: function (data) {
+                $(".panel-right span:eq(" + i + ")").text(data); 
+            }
+        })
+    }
+     
+    
+
+    function GetWorkItem()
+    {
+        //待办事项相关
+        $.ajax({
+            url: "@Url.Action("GetWorkItemCount","Home")?AppName=" + appName,
+            async: false,
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    $(".WorkItem .Type").animateNumber({ number: data[i].Count });
+                }
+            }
+        })
+
+        $.ajax({
+            url: "@Url.Action("GetWorkItemData","Home")?AppName=" + appName,
+            async: false,
+            success: function (data) {
+                if (data != null && data.length > 0) {
+                    $(".WorkItem .Details a").remove();
+                }
+                for (var i = 0; i < data.length; i++) {
+                    var self = $(".WorkItem .Details");
+                    if (data[i].DELIVER_TIME.indexOf("T") > 0) {
+                        self.append("<a href=" + data[i].URL + "&TaskID=" + data[i].SORT_ID + "><div class='DataShows'><div style='width:70%;overflow:hidden;float:left;height:40px'>" + data[i].TASK_TITLE + "</div><span style='float:left;'>" + data[i].DELIVER_TIME.replace("T", " ").split('.')[0] + "</span></div></a>")
+                    }
+                }
+
+            }
+        })
+    }
+
+    function GetWorkIteming() {
+        //在办事项相关
+        $.ajax({
+            url: "@Url.Action("GetWorkItemingCount","Home")?AppName=" + appName,
+            async: false,
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    $(".WorkIteming .Type").animateNumber({ number: data[i].Count });
+                }
+            }
+        })
+        $.ajax({
+            url: "@Url.Action("GetWorkItemingData","Home")?AppName=" + appName,
+            async: false,
+            success: function (data) {
+                if (data != null && data.length > 0) {
+                    $(".WorkIteming .Details a").remove();
+                }
+                for (var i = 0; i < data.length; i++) {
+                    var self = $(".WorkIteming .Details");
+                    if (data[i].DELIVER_TIME.indexOf("T") > 0) {
+                        self.append("<a href=" + data[i].URL.split('?')[0] + "?id=" + data[i].RESOURCE_ID + "&View=1><div class='DataShows'><div style='width:70%;overflow:hidden;float:left;height:40px'>" + data[i].TASK_TITLE + "</div><span style='float:left;'>" + data[i].DELIVER_TIME.replace("T", " ").split('.')[0] + "</span></div></a>")
+                    }
+                }
+            }
+        })
+    }
+
+
+
+
+</script>

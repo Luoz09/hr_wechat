@@ -1,0 +1,51 @@
+﻿ 
+<head> 
+    <link href="~/Areas/Mobile/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Areas/Mobile/scripts/jquery-1.10.2.js"></script> 
+    <link href="~/Areas/Mobile/css/login.css" rel="stylesheet" />
+</head>
+ 
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .input {
+       margin:20px 10px;
+       line-height:30px;
+    }
+     
+</style>
+
+ 
+<form>
+    <div style="text-align:center;margin-top:20px;">
+        原密码： <input type="password" class="input" name="oldpwd" /><br />
+        新密码： <input type="password" class="input" name="newpwd" />
+    </div> 
+</form>
+ <input type="button" id="btn-cancel" value="确  定"  style="color:blue;"  onclick="ChangePwd()" />
+ 
+<script>
+    function ChangePwd()
+    {
+        $.ajax({
+            url: "@Url.Action("ChangePassWord")",
+            async: false,
+            type: "post",
+            data: $("form").serialize(),
+            success: function (data)
+            {
+                if (!data.Success) {
+                    alert(data.Message)
+                } else {
+                    alert("修改密码成功");
+                }
+            }
+        })
+    }
+
+
+</script>
+ 
+ 
